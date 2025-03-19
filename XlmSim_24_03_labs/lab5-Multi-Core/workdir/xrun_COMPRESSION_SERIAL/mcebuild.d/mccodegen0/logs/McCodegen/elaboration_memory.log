@@ -1,0 +1,1370 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:52:57.937283
+  mce Version:           22.09-s010.493970
+  Report File Level:     REPORT_LEVEL_NONE (0)
+  Report Screen Level:   REPORT_LEVEL_NONE (0)
+
+Started CPU time : 0.0864794 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate workdir_COMPRESSION_1                                                                                                                      17:52:58
+. workdir_COMPRESSION_1                                                                                                                              17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_workdir_COMPRESSION_1                                                                                                                 17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   44.27  MB   44.27  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   44.27  MB   44.27  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   44.27  MB   44.27  MB           0           0           0           0   17:52:58      
+. . . cdnspack_workdir_COMPRESSION_1 ............... 0      KB   0      KB   44.27  MB   44.27  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 1.20   MB   1.20   MB   45.47  MB   45.47  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 1.20   MB   0      KB   45.47  MB   45.47  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 1.77   MB   584.00 KB   46.04  MB   46.04  MB           0           0           0           0   17:52:58      
+. workdir_COMPRESSION_1 ............................ 1.77   MB   1.77   MB   46.04  MB   46.04  MB           0           0           0           0   17:52:58      
+Elaborate workdir_COMPRESSION_1 .................... 1.77   MB   1.77   MB   46.04  MB   46.04  MB           0           0           0           0   17:52:58      Started CPU time : 0.100242 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate dtmf_large_recvr_core_235                                                                                                                  17:52:58
+. dtmf_large_recvr_core_235                                                                                                                          17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_dtmf_large_recvr_core_235                                                                                                             17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_dtmf_large_recvr_core_235 ........... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. dtmf_large_recvr_core_235 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate dtmf_large_recvr_core_235 ................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.103194 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate TLATNXL_1939                                                                                                                               17:52:58
+. TLATNXL_1939                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_TLATNXL_1939                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_TLATNXL_1939 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. TLATNXL_1939 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate TLATNXL_1939 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.105384 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFSHQX4_1963                                                                                                                             17:52:58
+. SDFFSHQX4_1963                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFSHQX4_1963                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFSHQX4_1963 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFSHQX4_1963 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFSHQX4_1963 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.107632 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFRHQX4_2032                                                                                                                             17:52:58
+. SDFFRHQX4_2032                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFRHQX4_2032                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFRHQX4_2032 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFRHQX4_2032 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFRHQX4_2032 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.110031 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFRHQX1_2109                                                                                                                             17:52:58
+. SDFFRHQX1_2109                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFRHQX1_2109                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFRHQX1_2109 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFRHQX1_2109 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFRHQX1_2109 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.112253 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_128x16_test_2186                                                                                                                       17:52:58
+. ram_128x16_test_2186                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_128x16_test_2186                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_128x16_test_2186 ................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. ram_128x16_test_2186 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate ram_128x16_test_2186 ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.114569 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQX1_2205                                                                                                                               17:52:58
+. SDFFQX1_2205                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQX1_2205                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQX1_2205 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQX1_2205 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQX1_2205 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.116868 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQX1_2258                                                                                                                               17:52:58
+. SDFFQX1_2258                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQX1_2258                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQX1_2258 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQX1_2258 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQX1_2258 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.119179 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_256x16_test_2259                                                                                                                       17:52:58
+. ram_256x16_test_2259                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_256x16_test_2259                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_256x16_test_2259 ................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. ram_256x16_test_2259 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate ram_256x16_test_2259 ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.12147 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate DFFHQX1_2278                                                                                                                               17:52:58
+. DFFHQX1_2278                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_DFFHQX1_2278                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_DFFHQX1_2278 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. DFFHQX1_2278 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate DFFHQX1_2278 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.123651 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFHQX2_2296                                                                                                                              17:52:58
+. SDFFHQX2_2296                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFHQX2_2296                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFHQX2_2296 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFHQX2_2296 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFHQX2_2296 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.125877 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFHQX1_2349                                                                                                                              17:52:58
+. SDFFHQX1_2349                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFHQX1_2349                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFHQX1_2349 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFHQX1_2349 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFHQX1_2349 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.128036 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQXL_2402                                                                                                                               17:52:58
+. SDFFQXL_2402                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQXL_2402                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQXL_2402 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQXL_2402 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQXL_2402 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.130302 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFHQX2_2455                                                                                                                              17:52:58
+. SDFFHQX2_2455                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFHQX2_2455                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFHQX2_2455 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFHQX2_2455 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFHQX2_2455 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.132468 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQX2_2456                                                                                                                               17:52:58
+. SDFFQX2_2456                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQX2_2456                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQX2_2456 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQX2_2456 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQX2_2456 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.134627 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate results_conv_2509                                                                                                                          17:52:58
+. results_conv_2509                                                                                                                                  17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_results_conv_2509                                                                                                                     17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_results_conv_2509 ................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. results_conv_2509 ................................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate results_conv_2509 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.137098 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQX2_7831                                                                                                                               17:52:58
+. SDFFQX2_7831                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQX2_7831                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQX2_7831 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQX2_7831 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQX2_7831 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.139261 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFSHQX1_7832                                                                                                                             17:52:58
+. SDFFSHQX1_7832                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFSHQX1_7832                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFSHQX1_7832 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFSHQX1_7832 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFSHQX1_7832 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.141457 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFHQX4_7901                                                                                                                              17:52:58
+. SDFFHQX4_7901                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFHQX4_7901                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFHQX4_7901 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFHQX4_7901 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFHQX4_7901 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.14368 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFRX2_7954                                                                                                                               17:52:58
+. SDFFRX2_7954                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFRX2_7954                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFRX2_7954 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFRX2_7954 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFRX2_7954 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.145867 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFRX2_8034                                                                                                                               17:52:58
+. SDFFRX2_8034                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFRX2_8034                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFRX2_8034 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFRX2_8034 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFRX2_8034 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.148033 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFRX4_8035                                                                                                                               17:52:58
+. SDFFRX4_8035                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFRX4_8035                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFRX4_8035 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFRX4_8035 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFRX4_8035 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.150208 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFSHQX1_8115                                                                                                                             17:52:58
+. SDFFSHQX1_8115                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFSHQX1_8115                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFSHQX1_8115 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFSHQX1_8115 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFSHQX1_8115 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.152417 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate alu_32_8116                                                                                                                                17:52:58
+. alu_32_8116                                                                                                                                        17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_alu_32_8116                                                                                                                           17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_alu_32_8116 ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. alu_32_8116 ...................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate alu_32_8116 .............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.154612 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFRHQX8_9684                                                                                                                             17:52:58
+. SDFFRHQX8_9684                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFRHQX8_9684                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFRHQX8_9684 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFRHQX8_9684 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFRHQX8_9684 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.156789 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFSHQX8_9761                                                                                                                             17:52:58
+. SDFFSHQX8_9761                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFSHQX8_9761                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFSHQX8_9761 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFSHQX8_9761 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFSHQX8_9761 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.158995 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFSX2_9830                                                                                                                               17:52:58
+. SDFFSX2_9830                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFSX2_9830                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFSX2_9830 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFSX2_9830 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFSX2_9830 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.161155 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate mult_32_9902                                                                                                                               17:52:58
+. mult_32_9902                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_mult_32_9902                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_mult_32_9902 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. mult_32_9902 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate mult_32_9902 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.163306 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQX1_10495                                                                                                                              17:52:58
+. SDFFQX1_10495                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQX1_10495                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQX1_10495 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQX1_10495 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQX1_10495 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.165516 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_10496                                                                                                                              17:52:58
+. bmux_32_10496                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_10496                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_10496 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. bmux_32_10496 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_10496 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.167675 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_10509                                                                                                                              17:52:58
+. bmux_30_10509                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_10509                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_10509 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. bmux_30_10509 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_10509 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.169825 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate DFFHQX1_10522                                                                                                                              17:52:58
+. DFFHQX1_10522                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_DFFHQX1_10522                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_DFFHQX1_10522 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. DFFHQX1_10522 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate DFFHQX1_10522 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.171998 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate MDFFHQX1_10523                                                                                                                             17:52:58
+. MDFFHQX1_10523                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_MDFFHQX1_10523                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_MDFFHQX1_10523 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. MDFFHQX1_10523 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate MDFFHQX1_10523 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.174204 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate DFFX1_10576                                                                                                                                17:52:58
+. DFFX1_10576                                                                                                                                        17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_DFFX1_10576                                                                                                                           17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_DFFX1_10576 ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. DFFX1_10576 ...................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate DFFX1_10576 .............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.176404 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate DFFQXL_10597                                                                                                                               17:52:58
+. DFFQXL_10597                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_DFFQXL_10597                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_DFFQXL_10597 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. DFFQXL_10597 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate DFFQXL_10597 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.178578 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate TLATNX1_10615                                                                                                                              17:52:58
+. TLATNX1_10615                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_TLATNX1_10615                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_TLATNX1_10615 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. TLATNX1_10615 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate TLATNX1_10615 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.180773 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate TLATXL_10639                                                                                                                               17:52:58
+. TLATXL_10639                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_TLATXL_10639                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_TLATXL_10639 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. TLATXL_10639 ..................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate TLATXL_10639 ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.182934 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate EDFFHQX2_10660                                                                                                                             17:52:58
+. EDFFHQX2_10660                                                                                                                                     17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_EDFFHQX2_10660                                                                                                                        17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_EDFFHQX2_10660 ...................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. EDFFHQX2_10660 ................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate EDFFHQX2_10660 ........................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.185093 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_4001_10694                                                                                                                         17:52:58
+. bmux_32_4001_10694                                                                                                                                 17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_4001_10694                                                                                                                    17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_4001_10694 .................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. bmux_32_4001_10694 ............................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_4001_10694 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.187343 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_4003_10707                                                                                                                         17:52:58
+. bmux_30_4003_10707                                                                                                                                 17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_4003_10707                                                                                                                    17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_4003_10707 .................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. bmux_30_4003_10707 ............................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_4003_10707 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.189619 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate DFFHQX4_10720                                                                                                                              17:52:58
+. DFFHQX4_10720                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_DFFHQX4_10720                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_DFFHQX4_10720 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. DFFHQX4_10720 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate DFFHQX4_10720 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.19184 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate DFFHQX1_10738                                                                                                                              17:52:58
+. DFFHQX1_10738                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_DFFHQX1_10738                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_DFFHQX1_10738 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. DFFHQX1_10738 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate DFFHQX1_10738 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.194045 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate DFFHQX4_10739                                                                                                                              17:52:58
+. DFFHQX4_10739                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_DFFHQX4_10739                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_DFFHQX4_10739 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. DFFHQX4_10739 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate DFFHQX4_10739 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.196285 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQX1_10740                                                                                                                              17:52:58
+. SDFFQX1_10740                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQX1_10740                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQX1_10740 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQX1_10740 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQX1_10740 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.198497 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFQX2_10741                                                                                                                              17:52:58
+. SDFFQX2_10741                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFQX2_10741                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFQX2_10741 ....................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. SDFFQX2_10741 .................................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate SDFFQX2_10741 ............................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.201032 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate dtmf_large_recvr_core_548_10742                                                                                                            17:52:58
+. dtmf_large_recvr_core_548_10742                                                                                                                    17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_dtmf_large_recvr_core_548_10742                                                                                                       17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_dtmf_large_recvr_core_548_10742 ..... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. dtmf_large_recvr_core_548_10742 .................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate dtmf_large_recvr_core_548_10742 .......... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.203599 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_128x16_test_598_12438                                                                                                                  17:52:58
+. ram_128x16_test_598_12438                                                                                                                          17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_128x16_test_598_12438                                                                                                             17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_128x16_test_598_12438 ........... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. ram_128x16_test_598_12438 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate ram_128x16_test_598_12438 ................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.205844 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_256x16_test_601_12457                                                                                                                  17:52:58
+. ram_256x16_test_601_12457                                                                                                                          17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_256x16_test_601_12457                                                                                                             17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_256x16_test_601_12457 ........... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+. ram_256x16_test_601_12457 ........................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      
+Elaborate ram_256x16_test_601_12457 ................ 0      KB   0      KB   48.11  MB   48.11  MB           0           0           0           0   17:52:58      Started CPU time : 0.208306 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate results_conv_604_12476                                                                                                                     17:52:58
+. results_conv_604_12476                                                                                                                             17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_results_conv_604_12476                                                                                                                17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_results_conv_604_12476 .............. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. results_conv_604_12476 ........................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate results_conv_604_12476 ................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.210866 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate SDFFRX4_17814                                                                                                                              17:52:58
+. SDFFRX4_17814                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_SDFFRX4_17814                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_SDFFRX4_17814 ....................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. SDFFRX4_17814 .................................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate SDFFRX4_17814 ............................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.213114 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate alu_32_511_17815                                                                                                                           17:52:58
+. alu_32_511_17815                                                                                                                                   17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_alu_32_511_17815                                                                                                                      17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_alu_32_511_17815 .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. alu_32_511_17815 ................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate alu_32_511_17815 ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.215349 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate mult_32_564_19383                                                                                                                          17:52:58
+. mult_32_564_19383                                                                                                                                  17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_mult_32_564_19383                                                                                                                     17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_mult_32_564_19383 ................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. mult_32_564_19383 ................................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate mult_32_564_19383 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.217686 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_1_19976                                                                                                                            17:52:58
+. bmux_32_1_19976                                                                                                                                    17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_1_19976                                                                                                                       17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_1_19976 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_32_1_19976 .................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_1_19976 .......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.219963 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_1_19989                                                                                                                            17:52:58
+. bmux_30_1_19989                                                                                                                                    17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_1_19989                                                                                                                       17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_1_19989 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_30_1_19989 .................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_1_19989 .......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.222128 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_4001_1_20002                                                                                                                       17:52:58
+. bmux_32_4001_1_20002                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_4001_1_20002                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_4001_1_20002 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_32_4001_1_20002 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_4001_1_20002 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.224302 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_4003_1_20015                                                                                                                       17:52:58
+. bmux_30_4003_1_20015                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_4003_1_20015                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_4003_1_20015 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_30_4003_1_20015 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_4003_1_20015 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.226467 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate dtmf_large_recvr_core_2_20028                                                                                                              17:52:58
+. dtmf_large_recvr_core_2_20028                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_dtmf_large_recvr_core_2_20028                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_dtmf_large_recvr_core_2_20028 ....... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. dtmf_large_recvr_core_2_20028 .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate dtmf_large_recvr_core_2_20028 ............ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.229006 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_128x16_test_597_21709                                                                                                                  17:52:58
+. ram_128x16_test_597_21709                                                                                                                          17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_128x16_test_597_21709                                                                                                             17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_128x16_test_597_21709 ........... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. ram_128x16_test_597_21709 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate ram_128x16_test_597_21709 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.231293 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_256x16_test_600_21728                                                                                                                  17:52:58
+. ram_256x16_test_600_21728                                                                                                                          17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_256x16_test_600_21728                                                                                                             17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_256x16_test_600_21728 ........... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. ram_256x16_test_600_21728 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate ram_256x16_test_600_21728 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.233554 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate results_conv_603_21747                                                                                                                     17:52:58
+. results_conv_603_21747                                                                                                                             17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_results_conv_603_21747                                                                                                                17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_results_conv_603_21747 .............. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. results_conv_603_21747 ........................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate results_conv_603_21747 ................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.236097 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate alu_32_510_27079                                                                                                                           17:52:58
+. alu_32_510_27079                                                                                                                                   17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_alu_32_510_27079                                                                                                                      17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_alu_32_510_27079 .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. alu_32_510_27079 ................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate alu_32_510_27079 ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.238369 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate mult_32_563_28647                                                                                                                          17:52:58
+. mult_32_563_28647                                                                                                                                  17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_mult_32_563_28647                                                                                                                     17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_mult_32_563_28647 ................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. mult_32_563_28647 ................................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate mult_32_563_28647 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.240585 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_2_29240                                                                                                                            17:52:58
+. bmux_32_2_29240                                                                                                                                    17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_2_29240                                                                                                                       17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_2_29240 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_32_2_29240 .................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_2_29240 .......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.242754 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_2_29253                                                                                                                            17:52:58
+. bmux_30_2_29253                                                                                                                                    17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_2_29253                                                                                                                       17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_2_29253 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_30_2_29253 .................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_2_29253 .......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.24494 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_4001_2_29266                                                                                                                       17:52:58
+. bmux_32_4001_2_29266                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_4001_2_29266                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_4001_2_29266 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_32_4001_2_29266 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_4001_2_29266 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.247089 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_4003_2_29279                                                                                                                       17:52:58
+. bmux_30_4003_2_29279                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_4003_2_29279                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_4003_2_29279 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_30_4003_2_29279 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_4003_2_29279 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.249246 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate dtmf_large_recvr_core_3_29292                                                                                                              17:52:58
+. dtmf_large_recvr_core_3_29292                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_dtmf_large_recvr_core_3_29292                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_dtmf_large_recvr_core_3_29292 ....... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. dtmf_large_recvr_core_3_29292 .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate dtmf_large_recvr_core_3_29292 ............ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.251765 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_128x16_test_596_30960                                                                                                                  17:52:58
+. ram_128x16_test_596_30960                                                                                                                          17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_128x16_test_596_30960                                                                                                             17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_128x16_test_596_30960 ........... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. ram_128x16_test_596_30960 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate ram_128x16_test_596_30960 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.254147 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate ram_256x16_test_599_30979                                                                                                                  17:52:58
+. ram_256x16_test_599_30979                                                                                                                          17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_ram_256x16_test_599_30979                                                                                                             17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_ram_256x16_test_599_30979 ........... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. ram_256x16_test_599_30979 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate ram_256x16_test_599_30979 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.256442 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate results_conv_602_30998                                                                                                                     17:52:58
+. results_conv_602_30998                                                                                                                             17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_results_conv_602_30998                                                                                                                17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_results_conv_602_30998 .............. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. results_conv_602_30998 ........................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate results_conv_602_30998 ................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.258936 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate alu_32_509_36322                                                                                                                           17:52:58
+. alu_32_509_36322                                                                                                                                   17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_alu_32_509_36322                                                                                                                      17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_alu_32_509_36322 .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. alu_32_509_36322 ................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate alu_32_509_36322 ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.261219 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate mult_32_562_37890                                                                                                                          17:52:58
+. mult_32_562_37890                                                                                                                                  17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_mult_32_562_37890                                                                                                                     17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_mult_32_562_37890 ................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. mult_32_562_37890 ................................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate mult_32_562_37890 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.263463 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_3_38483                                                                                                                            17:52:58
+. bmux_32_3_38483                                                                                                                                    17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_3_38483                                                                                                                       17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_3_38483 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_32_3_38483 .................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_3_38483 .......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.265723 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_3_38496                                                                                                                            17:52:58
+. bmux_30_3_38496                                                                                                                                    17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_3_38496                                                                                                                       17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_3_38496 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_30_3_38496 .................................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_3_38496 .......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.267986 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_32_4001_3_38509                                                                                                                       17:52:58
+. bmux_32_4001_3_38509                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_32_4001_3_38509                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_32_4001_3_38509 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_32_4001_3_38509 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_32_4001_3_38509 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.270251 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_30_4003_3_38522                                                                                                                       17:52:58
+. bmux_30_4003_3_38522                                                                                                                               17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_30_4003_3_38522                                                                                                                  17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_30_4003_3_38522 ................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_30_4003_3_38522 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_30_4003_3_38522 ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.272597 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate iopads_38535                                                                                                                               17:52:58
+. iopads_38535                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_iopads_38535                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_iopads_38535 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. iopads_38535 ..................................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate iopads_38535 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.27851 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate bmux_6_38896                                                                                                                               17:52:58
+. bmux_6_38896                                                                                                                                       17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_bmux_6_38896                                                                                                                          17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_bmux_6_38896 ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. bmux_6_38896 ..................................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate bmux_6_38896 ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      Started CPU time : 0.280861 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Elaborate TLATNX2_38909                                                                                                                              17:52:58
+. TLATNX2_38909                                                                                                                                      17:52:58
+. . Package Initialize                                                                                                                               17:52:58
+. . . cdnspack_TLATNX2_38909                                                                                                                         17:52:58
+. . . . Package Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Initialize ..................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . . Module Item Elaboration .................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . . cdnspack_TLATNX2_38909 ....................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Package Initialize ............................. 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Initialize ......................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. . Module Item Elaboration ........................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+. TLATNX2_38909 .................................... 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      
+Elaborate TLATNX2_38909 ............................ 0      KB   0      KB   48.37  MB   48.37  MB           0           0           0           0   17:52:58      

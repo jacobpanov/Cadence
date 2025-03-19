@@ -1,0 +1,65 @@
+CHECKPOINT 1 (Mcgfe : Begin):
+
+
+Memory Usage - Current physical: 22.9M, Current virtual: 90.5M
+CPU Usage - 0.0s system + 0.0s user = 0.0s total (100.0% cpu) wall=   0.0
+Delta CPU Usage - 0.0s system + 0.0s user = 0.0s total, wall = 0.0
+Peak memory till now:  90.5M
+
+
+CHECKPOINT 2 (After create_map_from_sig):
+
+
+Memory Usage - Current physical: 31.9M, Current virtual: 98.3M
+CPU Usage - 0.0s system + 0.0s user = 0.1s total (91.0% cpu) wall=   0.1
+Delta CPU Usage - 0.0s system + 0.0s user = 0.0s total, wall = 0.1
+Peak memory till now:  99.2M
+
+
+CHECKPOINT 3 (Before JupiterParserTreeAdaptorImpl object):
+
+
+Memory Usage - Current physical: 33.2M, Current virtual: 291.3M
+CPU Usage - 0.0s system + 0.1s user = 0.1s total (56.9% cpu) wall=   0.2
+Delta CPU Usage - 0.0s system + 0.0s user = 0.0s total, wall = 0.1
+Peak memory till now:  291.3M
+
+
+CHECKPOINT 4 (After JupiterParserTreeAdaptorImpl object):
+
+
+Memory Usage - Current physical: 35.3M, Current virtual: 292.1M
+CPU Usage - 0.0s system + 0.1s user = 0.1s total (58.2% cpu) wall=   0.2
+Delta CPU Usage - 0.0s system + 0.0s user = 0.0s total, wall = 0.0
+Peak memory till now:  292.1M
+
+
+CHECKPOINT 5 (After convert):
+
+
+Memory Usage - Current physical: 36.2M, Current virtual: 292.1M
+CPU Usage - 0.0s system + 0.1s user = 0.1s total (60.7% cpu) wall=   0.2
+Delta CPU Usage - 0.0s system + 0.0s user = 0.0s total, wall = 0.0
+Peak memory till now:  292.1M
+
+
+CHECKPOINT 6 (After mcgfe_xmelab_entry):
+
+
+Memory Usage - Current physical: 36.6M, Current virtual: 202.8M
+CPU Usage - 0.0s system + 0.1s user = 0.1s total (56.6% cpu) wall=   0.2
+Delta CPU Usage - 0.0s system + 0.0s user = 0.0s total, wall = 0.0
+Peak memory till now:  292.3M
+
+
+CHECKPOINT 7 (Mcgfe : End):
+
+
+Memory Usage - Current physical: 35.7M, Current virtual: 201.9M
+CPU Usage - 0.0s system + 0.1s user = 0.1s total (56.6% cpu) wall=   0.2
+Delta CPU Usage - 0.0s system + 0.0s user = 0.0s total, wall = 0.0
+Peak memory till now:  292.3M
+
+
+
+Memory Usage - Final: 35.7M, Peak: 36.6M, Peak virtual: 292.3M

@@ -1,0 +1,7 @@
+#
+# cds.lib: Defines the locations of compiled libraries.
+# Created by xrun on Tue Mar  4 17:25:20 2025
+#
+softinclude $CDS_INST_DIR/tools/inca/files/cds.lib
+
+define worklib ./xcelium.d/worklib

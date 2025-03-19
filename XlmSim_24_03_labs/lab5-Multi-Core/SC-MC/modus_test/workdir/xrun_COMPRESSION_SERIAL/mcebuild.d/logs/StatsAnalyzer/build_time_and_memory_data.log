@@ -1,0 +1,197 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:57:45.242303
+  mce Version:           22.09-s010.493970
+  Report File Level:     REPORT_LEVEL_LOW (1)
+  Report Screen Level:   REPORT_LEVEL_NONE (0)
+
+
+All high level stages:
+=======================
+
+Stage                                                                               CPU Time                  Real Time                 physical memory usage     physical memory peak      
+=====                                                                               =====================     =====================     =====================     =====================    
+
+<build>
+   Non Jupiter elab pass 1 (JUPITER_RTL_SC)                                             11                        12                    160.29  MB                160.29  MB               
+   Jupiter RTL ACC/NACC classification elab pass 1 (JUPITER_BRIDGE)                      1                         1                    177.22  MB                177.22  MB               
+   Non Jupiter elab pass 1                                                               4                         4                    160.45  MB                177.40  MB               
+   Jupiter per-type UDP/TCBox handling elab pass 1 (JUPITER_GLST)                        0                         0                    164.23  MB                177.40  MB               
+   Non Jupiter elab pass 1                                                               0                         0                    117.40  MB                177.40  MB               
+   Non Jupiter elab pass 2 before plugin                                                 2                         3                    155.77  MB                177.40  MB               
+   Jupiter pass 2 before plugin (JUPITER_GL_SC)                                          1                         1                    162.16  MB                177.40  MB               
+   Jupiter GLST pass 2 (JUPITER_GLST)                                                    0                         0                    162.16  MB                177.40  MB               
+   Jupiter GLST pass 2 (JUPITER_GLST)                                                    0                         0                    162.16  MB                177.40  MB               
+   Jupiter pass 2 before plugin (JUPITER_GL_SC)                                          1                         2                    163.66  MB                177.40  MB               
+   Waiting for MC code-gen to finish (JUPITER_BRIDGE/JUPITER_COMPILER)                   0                         0                    163.66  MB                177.40  MB               
+      McCodegen FE (JUPITER_BRIDGE) (number of codegens: 1)                              0                         0                    49.80   MB                50.20   MB               
+      McCodegen BE (JUPITER_COMPILER)                                                                              1                                                                       
+   Jupiter pass 2 before plugin (JUPITER_GL_SC)                                          0                         1                    163.93  MB                177.40  MB               
+   Jupiter lightweight graph creation                                                    0                         2                    195.52  MB                195.52  MB               
+   Jupiter splitting (JUPITER_COMPILER)                                                  0                         0                    167.77  MB                199.79  MB               
+   Jupiter creation of split DBs (JUPITER_PLUGIN)                                        4                         4                    185.36  MB                349.88  MB               
+   Jupiter pass 2 after plugin (JUPITER_GL_SC)                                           0                         0                    190.21  MB                349.88  MB               
+   Non Jupiter elab pass 2 after plugin                                                  1                         1                    175.59  MB                349.88  MB               
+   South (JUPITER_SOUTH) (number of Souths: 1)                                                                    26                                                                       
+   Linker (JUPITER_COMPILER)                                                             1                         3                    68.24   MB                69.54   MB               
+
+xmelab total time: 30
+mcebuild total time: 29
+sum of time: 59
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Most time consuming high level stages (more than 10%:)
+==========================================================
+
+Stage                                                                               CPU Time                  Real Time                 physical memory usage     physical memory peak      
+=====                                                                               =====================     =====================     =====================     =====================    
+   Non Jupiter elab pass 1 (JUPITER_RTL_SC) (20.6%)                                     11                        12                    160.29  MB                160.29  MB               
+   South (JUPITER_SOUTH) (44.2%)                                                                                  26                                                                       
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Performance information per build exe:
+=======================
+
+Stage                                                                               CPU Time                  Real Time                 physical memory usage     physical memory peak      
+=====                                                                               =====================     =====================     =====================     =====================    
+   Xmelab (No parallel processes included)                                              26                        30                    176.88  MB                349.88  MB               
+   McCodegen FE                                                                          0                         0                    49.80   MB                50.20   MB               
+   McCodegen BE (SUM of all processes)                                                   0                         0                    48.37   MB                48.75   MB               
+   McCodegen ASM - bytecode                                                              0                         0                    34.94   MB                35.20   MB               
+   Forks (SUM of all processes)                                                          4                         4                    17.58   MB                182.11  MB               
+   South (SUM of all processes)                                                         24                        24                    434.20  MB                454.17  MB               
+   Linker                                                                                1                         3                    68.24   MB                69.54   MB               
+   HviewDBGen                                                                                                                                                                              
+   Sum (excluding xmelab)                                                               28                        31                    653.12  MB                839.96  MB               
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DETAILS:
+========
+
+Stage                                                                               CPU Time                  Real Time                 physical memory usage     physical memory peak      
+=====                                                                               =====================     =====================     =====================     =====================    
+
+<Xmelab>
+ longest stages (used more than 5% of total Xmelab time):
+   Non Jupiter elab pass 1 (JUPITER_RTL_SC):
+   cu_doic1 after tops (14.3%)                                                           4                         4                    154.96  MB                154.96  MB               
+   after dump_and_clean_top_units (7.1%)                                                 2                         2                    122.36  MB                122.36  MB               
+   Non Jupiter elab pass 1:
+   after cu_xdo_ots (7.3%)                                                               2                         2                    162.79  MB                177.40  MB               
+   Jupiter creation of split DBs (JUPITER_PLUGIN):
+   create_splits_end (14.2%)                                                             4                         4                    185.36  MB                349.88  MB               
+   Non Jupiter elab pass 2 before plugin:
+   after cu_compute_driving_values (5.1%)                                                1                         1                    144.03  MB                177.40  MB               
+   Jupiter pass 2 after plugin (JUPITER_GL_SC):
+   create_splits_end (14.2%)                                                             4                         4                    185.36  MB                349.88  MB               
+
+<McCodegen BE>
+   longest codgen: codgen 0                                                              0                         0                    48.37   MB                48.75   MB               
+   shortest codgen: codgen 0                                                             0                         0                    48.37   MB                48.75   MB               
+   max memory peak :codgen 0                                                             0                         0                    48.37   MB                48.75   MB               
+   min memory peak: codgen 0                                                             0                         0                    48.37   MB                48.75   MB               
+
+
+   Codegens' average                                                                     0                         0                                                                       
+
+   longest stages (used more than 10% of total Codegens time):
+     Load saved modules from library (15.4%)
+     McCodegen by Netlist (167.5%)
+     Save SplitDb Stage (11.0%)
+
+   for more information look at:
+     <mcebuild_dir>/mccodegen.txt or <mcebuild>/mccodegen#/mccodegen.txt
+     <mcebuild_dir>/logs/Commander_BE/Commander_BE.log
+
+<Plugin>
+ No forks 
+   Do graph                                                                              1                         1                    195.52  MB                195.52  MB               
+   Create and save split databases                                                       4                         4                    185.36  MB                349.88  MB               
+   longest split-db creation: Create and save split 0                                    4                         4                    185.36  MB                349.88  MB               
+   shortest split-db creation: Create and save split 0                                   4                         4                    185.36  MB                349.88  MB               
+   max memory split-db creation: Create and save split 0                                 4                         4                    185.36  MB                349.88  MB               
+   min memory split-db creation: Create and save split 0                                 4                         4                    185.36  MB                349.88  MB               
+
+   for more information look at:
+     <mcebuild_dir>/logs/JupiterPlugin/jupiter.log
+     <mcebuild_dir>/logs/JupiterPlugin/splitting_report.log.gz
+     <mcebuild_dir>/split0/split0_plugin.log
+
+   for more information look at:
+     <mcebuild_dir>/logs/JupiterPlugin/jupiter.log
+     <mcebuild_dir>/logs/JupiterPlugin/splitting_report.log.gz
+
+<South>
+
+   longest south: south 0                                                               24                        24                    434.20  MB                454.17  MB               
+   shortest south: south 0                                                              24                        24                    434.20  MB                454.17  MB               
+   max memory peak :south 0                                                             24                        24                    434.20  MB                454.17  MB               
+   min memory peak: south 0                                                             24                        24                    434.20  MB                454.17  MB               
+
+   Souths' total memory peak 454.17  MB
+
+   Souths' average                                                                      24                        24                                                                       
+
+   longest stages (used more than 10% of total Souths time):
+     Merge cones (35.2%)
+     Asm generate recipes (14.0%)
+
+   for more information look at:
+     <mcebuild_dir>/logs/Commander/Commander.log
+     <mcebuild_dir>/split0/south.txt
+
+<Linker>
+   longest stage: Compile runtime native code                                            0                         2                    61.25   MB                67.50   MB               
+
+   for more information look at:
+     <mcebuild_dir>/linker.txt
+
+<HviewDBGen>
+
+   for more information look at:
+     <mcebuild_dir>/xmhviewdbgen.txt
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Max Memory Consumption For Flow Processes:
+	(*NOTE: Values are valid only when -status flag is used, there are multiple split threads (active fork pool), and build time is sufficiently large (> ~1 minute))
+==========================================
+
+	Xmelab peak memory (before splits fork pool including codgen processes)  Peak: 199.79  MB     
+	Xmelab peak memory (after splits fork pool, xmelab + splits processes)   Peak: 349.88  MB     
+	Mcebuild memory including south split processes                          Peak: 499.25  MB     
+	Linker memory                                                            Peak: 69.54   MB     
+	HviewDBGen memory                                                        Peak:               
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Memory utilization metrics:
+==========================================
+
+	Total anonymous pages (before splits fork pool)                          118.41  MB            
+	Total anonymous huge pages (before splits fork pool)                     0       MB            
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Using more threads (instead of the current 1 threads) may reduce the build time, provided there are sufficient threads and enough available memory.
+Using less threads may reduce the memory consumption (but increase the build time).
+Estimated values for varying thread counts:
+
+threads count       forks time        souths time       xmelab + mcebuild time   
+=============       ==========        ===========       ======================   
+current run             4                 26                59                       
+
+
+threads_count      forks memory peak    souths memory peak   total memory peak    forks peak time     souths peak time       threads in peak     
+=============      =================    ==================   =================    ===============     ================       ===============     
+current run             349.88  MB           499.25  MB           499.25  MB             1                   20                     forks:  0                          
+                                                                                                                                    souths: 0                       
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

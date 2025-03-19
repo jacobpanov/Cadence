@@ -1,0 +1,6 @@
+s1(04Mar2025:16:08:45):  xrun mux.v mux_test.v -access +rwc 
+s2(04Mar2025:20:56:06):  xrun mux.v mux_test.v -access +rwc -linedebug -debug_opts verisium_interactive 
+s3(04Mar2025:20:56:49):  xrun mux.v mux_test.v -access +rwc -linedebug -debug_opts verisium_interactive 
+s4(04Mar2025:20:57:51):  xrun mux.v mux_test.v -access +rwc -linedebug -gui -verisium 
+s5(04Mar2025:20:57:57):  xrun mux.v mux_test.v -access +rwc -linedebug -gui verisium 
+s6(04Mar2025:20:58:01):  xrun mux.v mux_test.v -access +rwc -linedebug -gui 

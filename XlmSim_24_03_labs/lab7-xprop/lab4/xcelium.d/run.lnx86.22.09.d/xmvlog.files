@@ -1,0 +1,12 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/cache_top.sv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/data_mem.sv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/extmem_interface.sv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/main_ctrl.sv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/processor_interface.sv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/tag_cmp.sv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/tag_mem.sv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/demo_top.sv

@@ -1,0 +1,13 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+mux.vhd
+t_mux.vhd
+-top
+TB_MUX
+-access
+rwc
+-v200x
+-gui
+-linedebug

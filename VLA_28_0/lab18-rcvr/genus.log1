@@ -1,0 +1,69 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[19:57:31.259025] Configured Lic search path (21.01-s002): 28070@license8.clemson.edu
+
+Version: 21.17-s066_1, built Wed Mar 15 06:43:30 PDT 2023
+Options: -files genus_shell.tcl 
+Date:    Thu Mar 13 19:57:31 2025
+Host:    node1721.palmetto.clemson.edu (x86_64 w/Linux 4.18.0-477.27.1.el8_8.x86_64) (8cores*16cpus*2physical cpus*Intel(R) Xeon(R) CPU E5-2665 0 @ 2.40GHz 20480KB) (65372060KB)
+PID:     1796701
+OS:      Rocky Linux release 8.8 (Green Obsidian)
+
+
+[19:57:31.380515] Periodic Lic check successful
+[19:57:31.380539] Feature usage summary:
+[19:57:31.380539] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (12 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source genus_shell.tcl
+#@ Begin verbose source ./genus_shell.tcl
+@file(genus_shell.tcl) 2: if ![info exists env(GENUSHOME)] {puts "PLEASE SET \"GENUSHOME\" VARIABLE!"; exit 1}
+@file(genus_shell.tcl) 3: set mod rcvr
+@file(genus_shell.tcl) 4: set_db library $env(GENUSHOME)/share/synth/tutorials/tech/tutorial.lib
+
+Threads Configured:3
+
+  Message Summary for Library tutorial.lib:
+  *****************************************
+  Missing threshold parameters. [LBR-519]: 1
+  Missing library level attribute. [LBR-516]: 9
+  *****************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 5.000000, 25.000000) in library 'tutorial.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+  Setting attribute of root '/': 'library' = /software/commercial/cadence/GENUS211/share/synth/tutorials/tech/tutorial.lib
+@file(genus_shell.tcl) 5: read_hdl $mod.v -v2001
+@file(genus_shell.tcl) 6: elaborate
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'rcvr' from file 'rcvr.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'rcvr' with default parameters value.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'head_reg' in file 'rcvr.v' on line 42.
+        : The following example shows an unallowed mix of blocking and non-blocking assignments.
+    if (in)
+        out = data1;
+    else
+        out <= data2;
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'rcvr' contains errors and cannot be elaborated.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+#@ End verbose source ./genus_shell.tcl
+1
+Encountered problems processing file: genus_shell.tcl
+WARNING: This version of the tool is 729 days old.

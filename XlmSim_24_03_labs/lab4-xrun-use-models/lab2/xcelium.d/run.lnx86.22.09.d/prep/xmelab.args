@@ -1,0 +1,5 @@
+// Top level module(s)
+mux_test
+// Design snapshot name
+-SNAPSHOT
+worklib.mux_test:v

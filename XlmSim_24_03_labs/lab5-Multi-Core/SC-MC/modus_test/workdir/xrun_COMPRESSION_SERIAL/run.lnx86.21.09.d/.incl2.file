@@ -1,0 +1,12 @@
+./LIBS/verilog/typical.v
+/home/manishap/my_wok/new_xlm/XLM21_09_labs/lab5-Multi-Core/SC-MC/modus_test/LIBS/verilog/typical.v
+./LIBS/verilog/pads.v
+/home/manishap/my_wok/new_xlm/XLM21_09_labs/lab5-Multi-Core/SC-MC/modus_test/LIBS/verilog/pads.v
+./LIBS/verilog/pllclk.v
+/home/manishap/my_wok/new_xlm/XLM21_09_labs/lab5-Multi-Core/SC-MC/modus_test/LIBS/verilog/pllclk.v
+./LIBS/verilog/CDK_R512x16.gv
+/home/manishap/my_wok/new_xlm/XLM21_09_labs/lab5-Multi-Core/SC-MC/modus_test/LIBS/verilog/CDK_R512x16.gv
+./LIBS/verilog/CDK_S128x16.gv
+/home/manishap/my_wok/new_xlm/XLM21_09_labs/lab5-Multi-Core/SC-MC/modus_test/LIBS/verilog/CDK_S128x16.gv
+./LIBS/verilog/CDK_S256x16.gv
+/home/manishap/my_wok/new_xlm/XLM21_09_labs/lab5-Multi-Core/SC-MC/modus_test/LIBS/verilog/CDK_S256x16.gv

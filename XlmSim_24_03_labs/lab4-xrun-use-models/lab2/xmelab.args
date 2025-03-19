@@ -1,0 +1,19 @@
+//
+// File created by:  xrun
+//
+-no_analogsolver
+
+// Turn on informative messages.
+-MESSAGES
+-WORK
+worklib
+// Top level module(s)
+mux_test
+// Design snapshot name
+-SNAPSHOT
+worklib.mux_test:v
+
+// Uncomment the following line to generate a named log file
+// -LOGFILE xmelab.log
+
+// -NOCOPYRIGHT

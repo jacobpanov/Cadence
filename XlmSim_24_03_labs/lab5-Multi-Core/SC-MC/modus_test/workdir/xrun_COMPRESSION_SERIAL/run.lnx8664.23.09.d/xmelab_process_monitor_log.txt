@@ -1,0 +1,13 @@
+Process Tree State Log:
+-------------------------
+Indicates all different states of the processes tree during the run. 
+Every line refers to a unique tree state. The lines are chronological.
+	'>' - down a level
+	'<' - up a level
+	']' - no child-processes
+
+
+xmelab]
+xmelab>mcebuild]<
+mce-plugin-0]
+mcebuild>mce-south0]<

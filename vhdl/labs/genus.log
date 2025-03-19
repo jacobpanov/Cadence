@@ -1,0 +1,41 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[19:11:24.258961] Configured Lic search path (21.01-s002): 28070@license8.clemson.edu
+
+Version: 21.17-s066_1, built Wed Mar 15 06:43:30 PDT 2023
+Options: -files genus_shell.tcl 
+Date:    Fri Mar 07 19:11:24 2025
+Host:    node1677.palmetto.clemson.edu (x86_64 w/Linux 4.18.0-477.27.1.el8_8.x86_64) (8cores*16cpus*2physical cpus*Intel(R) Xeon(R) CPU E5-2665 0 @ 2.40GHz 20480KB) (65372060KB)
+PID:     546074
+OS:      Rocky Linux release 8.8 (Green Obsidian)
+
+
+[19:11:24.409026] Periodic Lic check successful
+[19:11:24.409034] Feature usage summary:
+[19:11:24.409035] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (15 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source genus_shell.tcl
+#@ Begin verbose source ./genus_shell.tcl
+@file(genus_shell.tcl) 2: if ![info exists env(GENUSHOME)] {puts "PLEASE SET \"GENUSHOME\" VARIABLE!"; exit 1}
+PLEASE SET "GENUSHOME" VARIABLE!
+
+Lic Summary:
+[19:11:40.009096] Cdslmd servers:28070@license8.clemson.edu
+[19:11:40.009120] Feature usage summary:
+[19:11:40.009121] Genus_Synthesis
+
+Abnormal exit.Abnormal exit.

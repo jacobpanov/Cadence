@@ -1,0 +1,2 @@
+s1(04Mar2025:18:28:33):  xrun -sv test.sv -race_detect -log xrun.log 
+s2(04Mar2025:18:29:56):  xrun -sv test.sv -race_detect -unique_raceall -log xrun.log 

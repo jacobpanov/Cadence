@@ -1,0 +1,13 @@
+TIMED 0030     -- clock time to 00:30
+AL_HR 01       -- inc alarm hour to 01
+AL_MN 06       -- inc alarm minute to 06 (alarm 01:06)
+ALTOG          -- toggle alarm on
+TIMED 0110     -- clock time to 01:10
+SHALM          -- show alarm (01:06) 
+AL_HR 00       -- inc alarm hour to 00 (roll-over)
+AL_MN 04       -- inc alarm minute to 04 (roll-over)
+TI_HR 00       -- inc time hour to 00 (roll-over)
+TI_MN 01       -- inc time minute to 01 (roll-over)
+SHALM          -- show alarm (00:04)
+ALTOG          -- toggle alarm off
+TIMED 0100     -- clock time to 01:00

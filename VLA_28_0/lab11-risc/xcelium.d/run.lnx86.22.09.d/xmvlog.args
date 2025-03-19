@@ -1,0 +1,26 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+/home/jpanov/Cadence/VLA_28_0/lab3-mux/multiplexor.v
+/home/jpanov/Cadence/VLA_28_0/lab4-drvr/driver.v
+/home/jpanov/Cadence/VLA_28_0/lab5-alu/alu.v
+/home/jpanov/Cadence/VLA_28_0/lab6-ctrl/controller.v
+/home/jpanov/Cadence/VLA_28_0/lab8-mem/memory.v
+/home/jpanov/Cadence/VLA_28_0/lab7-reg/register.v
+/home/jpanov/Cadence/VLA_28_0/lab9-cntr/counter.v
+./risc.v
+./risc_test.v
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx86.22.09.d/xllibs
+-ALLOWUNBOUND

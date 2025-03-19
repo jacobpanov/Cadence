@@ -1,0 +1,38 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:56:48.991476
+  mce Version:           22.09-s010.493970
+  Report File Level:     REPORT_LEVEL_HIGH (3)
+  Report Screen Level:   REPORT_LEVEL_NONE (0)
+
+Started CPU time : 20.6855 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+netlist_phase                                                                                                                                        17:57:08
+. Load Codegen and Codegen-asm DBs ................. 792.00 KB   792.00 KB   164.43 MB   177.40 MB           0           0           0           1   17:57:08      
+. Splitting                                                                                                                                          17:57:08
+. . Do graph ....................................... 31.86  MB   31.32  MB   195.52 MB   195.52 MB           1           1           1           2   17:57:10      
+. . Save InterConnect CommID chain map ............. 31.86  MB   0      KB   195.52 MB   195.52 MB           0           0           1           2   17:57:10      
+. . Execute splitting .............................. 31.86  MB   0      KB   195.52 MB   195.52 MB           0           0           1           2   17:57:10      
+. . Get splits ..................................... 34.55  MB   2.69   MB   198.21 MB   199.79 MB           0           0           1           2   17:57:10      
+. . Clear graph .................................... 31.59  MB   -2.96  MB   195.25 MB   199.79 MB           0           0           1           2   17:57:10      
+. . Release memory ................................. 4.11   MB   -27.47 MB   167.77 MB   199.79 MB           0           0           1           2   17:57:10      
+. Splitting ........................................ 4.11   MB   3.84   MB   167.77 MB   199.79 MB           1           2           1           2   17:57:10 1 splits
+. Compute intersplit vars .......................... 4.11   MB   0      KB   167.77 MB   199.79 MB           0           0           1           2   17:57:10 0 intersplit vars
+. Load ByteCodeTemplateDB .......................... 4.11   MB   0      KB   167.77 MB   199.79 MB           0           0           1           2   17:57:10      
+. Create and save split databases
+. . Create and save split 0
+. . . Create pes and vars .......................... 88.05  MB   88.05  MB   256.06 MB   256.06 MB           2           2           2           2   17:57:12      
+. . . Save the split database ...................... 181.88 MB   93.82  MB   349.88 MB   349.88 MB           2           2           4           4   17:57:14      
+. . Create and save split 0 ........................ 17.35  MB   17.35  MB   185.36 MB   349.88 MB           4           4           4           4   17:57:14      
+. Create and save split databases .................. 21.70  MB   17.58  MB   185.36 MB   349.88 MB           4           4           4           6   17:57:14      
+. Save intersplit db ............................... 21.70  MB   0      KB   185.36 MB   349.88 MB           0           0           4           6   17:57:14      
+. Save stub DBs .................................... 21.70  MB   0      KB   185.36 MB   349.88 MB           0           0           4           6   17:57:14      
+netlist_phase ...................................... 19.36  MB   19.36  MB   183.02 MB   349.88 MB           4           6           4           6   17:57:14      
+acc_done                                                                                                                                             17:57:14
+. create names db .................................. 26.55  MB   0      KB   190.21 MB   349.88 MB           0           0           4           6   17:57:14      
+acc_done ........................................... 26.55  MB   0      KB   190.21 MB   349.88 MB           0           0           4           6   17:57:14      

@@ -1,0 +1,181 @@
+Starting Command: build_model 
+
+INFO (TDA-005): Command Line Invocation: 
+            build_model -designtop dtmf_chip -workdir /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir -allowmissingmodules yes -designsource /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../RTL/dtmf_chip.test_netlist.v -stdout summary -techlib /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 20.10-b013_1, built Apr 03 2020 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_build_model_040620153512-668247000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Monday Apr 06 15:35:12 2020  EDT
+            Host machine is end-curly, x86_64 running Linux 2.6.32-431.11.2.el6.x86_64.
+            This job is process number 20774.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir
+
+            -designtop dtmf_chip
+            -TECHLIB /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v
+            -allowmissingmodules yes
+            -LOGFILE /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_build_model_040620153512-668247000
+            -STDOUT summary
+            -DESIGNSOURCE /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../RTL/dtmf_chip.test_netlist.v
+[end TDA_009]
+INFO (TEI-195): Build Model - Controller starting: [end TEI_195] 
+
+
+Search Order  1:  "/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../RTL/dtmf_chip.test_netlist.v"
+Search Order  2:  "/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v"
+
+
+
+Reading Verilog data from /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../RTL/dtmf_chip.test_netlist.v
+
+Verilog Parser complete - 443 modules, 167 gates, 0 user defined primitives.
+
+
+Reading Verilog data from /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v
+
+primitive udp_dff (out, in, clk, clr, set, NOTIFIER);
+                |
+xmvlog: *W,RECOMP (./LIBS/atpg/pads.v,211|16): recompiling design unit worklib.udp_dff.
+	First compiled from line 21702 of ./LIBS/atpg/stdcell.v.
+(`include file: ./LIBS/atpg/pads.v line 211, file: /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v line 3)
+primitive udp_tlat (out, in, enable, clr, set, NOTIFIER);
+                 |
+xmvlog: *W,RECOMP (./LIBS/atpg/pads.v,237|17): recompiling design unit worklib.udp_tlat.
+	First compiled from line 21728 of ./LIBS/atpg/stdcell.v.
+(`include file: ./LIBS/atpg/pads.v line 237, file: /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v line 3)
+primitive udp_mux2 (out, in0, in1, sel);
+                 |
+xmvlog: *W,RECOMP (./LIBS/atpg/pads.v,282|17): recompiling design unit worklib.udp_mux2.
+	First compiled from line 21754 of ./LIBS/atpg/stdcell.v.
+(`include file: ./LIBS/atpg/pads.v line 282, file: /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v line 3)
+WARNING (TEI-275): Mixed signal strengths not supported on line 3763.  [end TEI_275] 
+Verilog Parser complete - 489 modules, 2811 gates, 4 user defined primitives.
+
+
+
+INFO (TEI-196): Build Model - Hierarchical Model Build starting: [end TEI_196] 
+
+WARNING (TEI-140): Pin direction OUTPUT converted to INOUT for pin 'tdigit[0]' of 'cell iopads'. All similar pins of cell will also be converted. Cell contents file: '/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/RTL/dtmf_chip.test_netlist.v'.  [end TEI_140] 
+WARNING (TEI-010): [Severe] Module 'CDK_R512x16' is undefined. The module will be defined as a black box. [end TEI_010] 
+WARNING (TEI-010): [Severe] Module 'CDK_S256x16' is undefined. The module will be defined as a black box. [end TEI_010] 
+WARNING (TEI-010): [Severe] Module 'CDK_S128x16' is undefined. The module will be defined as a black box. [end TEI_010] 
+WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_tlat' has no external net connection for any usage in the design. Cell contents file: '/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/LIBS/atpg/pads.v'.  [end TEI_110] 
+WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_dff' has no external net connection for any usage in the design. Cell contents file: '/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/LIBS/atpg/pads.v'.  [end TEI_110] 
+
+
+Number of blocks in the hierarchical model is: 144,125.
+
+Number of technology library cell instances in the hierarchical model is: 22,702.
+
+
+INFO (TEI-197): Build Model - Hierarchical Model Build completed. [end TEI_197] 
+
+
+
+INFO (TEI-198): Build Model - Flat Model Build starting: [end TEI_198] 
+
+ defaultTIE = X
+ defaultDFN = T
+
+WARNING (TLM-140): Cell 'CDK_S128x16' has output and/or inout pins with no internal net. TIEX generated to drive pin 'DATA_OUT[0]' and all similar pins.  [end TLM_140] 
+WARNING (TLM-140): Cell 'CDK_S256x16' has output and/or inout pins with no internal net. TIEX generated to drive pin 'DATA_OUT[0]' and all similar pins.  [end TLM_140] 
+WARNING (TLM-140): Cell 'CDK_R512x16' has output and/or inout pins with no internal net. TIEX generated to drive pin 'ROM_OUT[0]' and all similar pins.  [end TLM_140] 
+WARNING (TLM-117): TIEX is generated for sourceless net 'UNCONNECTED700' in 'cell iopads' based on input option 'defaultTIE' set to 'X'.  [end TLM_117] 
+WARNING (TLM-117): TIEX is generated for sourceless net 'UNCONNECTED701' in 'cell iopads' based on input option 'defaultTIE' set to 'X'.  [end TLM_117] 
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+        144,125  Blocks                      81,896  Blocks
+        436,169  Pins                        81,896  Nodes
+        247,745  Nets
+
+Primary Inputs:                      Primary Outputs:
+         21  Input Only                        10  Output Only
+         32  Input/Output                      32  Input/Output
+         53  Total Inputs                      42  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+      2,656  Tied to 0                          0  Two-State
+      1,547  Tied to 1                         40  Three-State
+        194  Tied to X                         40  Total Dotted Nets
+      4,397  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+         50  TSDs
+          0  Resistors
+          0  Transistors
+      3,052  MUX2s
+        234  Latches
+
+
+      2,334  Rising  Edge Flop w/Set-Dominant and Reset Port
+      2,334  Total Flops
+
+     22,702  Technology Library Cell Instances
+
+[end TLM_055] 
+Optimization removed logic for 22 of 126 cells in this design.
+
+Optimization removed a total of 4,228 tied Latch Ports.
+Optimization removed a total of 6,338 non-controlling inputs.
+Optimization removed a total of 35,026 dangling logic nodes.
+
+
+INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199] 
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =          135,722,320  bytes
+
+                      CPU Time =    0:00:04.45
+                  Elapsed Time =    0:00:12.47                    [end TDA_001]
+
+
+
+INFO (TEI-200): Build Model - Controller completed. [end TEI_200] 
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      2 WARNING (TEI-110): Pin 'NOTIFIER' of 'cell udp_tlat' has no external net connection for any usage in the design. Cell contents file: '/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/LIBS/atpg/pads.v'.   
+      1 WARNING (TEI-140): Pin direction OUTPUT converted to INOUT for pin 'tdigit[0]' of 'cell iopads'. All similar pins of cell will also be converted. Cell contents file: '/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/RTL/dtmf_chip.test_netlist.v'.   
+      1 WARNING (TEI-275): Mixed signal strengths not supported on line 3763.   
+      2 WARNING (TLM-117): TIEX is generated for sourceless net 'UNCONNECTED700' in 'cell iopads' based on input option 'defaultTIE' set to 'X'.   
+      3 WARNING (TLM-140): Cell 'CDK_S128x16' has output and/or inout pins with no internal net. TIEX generated to drive pin 'DATA_OUT[0]' and all similar pins.   
+
+  WARNING [Severe] Messages...
+      3 WARNING (TEI-010): [Severe] Module 'CDK_R512x16' is undefined. The module will be defined as a black box.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

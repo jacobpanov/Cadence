@@ -1,0 +1,5 @@
+cp ../solutions/lab4-mux/multiplexor.v . >> /dev/null 2>&1
+irun multiplexor.v multiplexor_test.v >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab4-mux

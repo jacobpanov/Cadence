@@ -1,0 +1,26 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INPUT
+tcl.in
+-XVERBOSE
+-MESSAGES
++EMGRLOG
+xrun_xprop_fox.log
+-XLSTIME
+1741132022
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun	22.09-s010"
+-XLNAME
+./xcelium.d/run.lnx86.22.09.d/node1677.palmetto.clemson.edu_1624585

@@ -1,0 +1,23 @@
+library celllib cell_lib.v;
+library projlib proj_lib.v;
+library worklib "../.../*";
+config risc_test;
+  design worklib.risc_test;
+  default liblist worklib projlib celllib;
+  cell alu        use projlib.alu        ;
+  cell controller use projlib.controller ;
+  cell counter    use projlib.counter    ;
+  cell driver     use projlib.driver     ;
+//cell memory     use projlib.memory     ;
+  cell register   use projlib.register   ;
+//instance risc_test.risc_inst.counter_clk     use projlib.counter     ;
+//instance risc_test.risc_inst.controller_inst use projlib.controller  ;
+//instance risc_test.risc_inst.counter_pc      use projlib.counter     ;
+//instance risc_test.risc_inst.address_mux     use projlib.multiplexor ;
+//instance risc_test.risc_inst.memory_inst     use projlib.memory      ;
+//instance risc_test.risc_inst.memory_inst     use projlib.memory      ;
+//instance risc_test.risc_inst.register_ir     use projlib.register    ;
+//instance risc_test.risc_inst.alu_inst        use projlib.alu         ;
+//instance risc_test.risc_inst.register_ac     use projlib.register    ;
+//instance risc_test.risc_inst.driver_inst     use projlib.driver      ;
+endconfig

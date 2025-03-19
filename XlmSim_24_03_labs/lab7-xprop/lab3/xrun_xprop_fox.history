@@ -1,0 +1,1 @@
+s1(04Mar2025:18:49:35):  xrun -clean -mess -access rwc -v93 tb_mux.vhd mux.vhd -input tcl.in -xfile xfile_fox.txt -top tb_mux -l xrun_xprop_fox.log -ENABLE_XP_DEBUG_CODE -xverbose 

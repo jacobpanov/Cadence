@@ -1,0 +1,25 @@
+xmelab: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xmelab	22.09-s010: Started on Mar 04, 2025 at 17:28:43 EST
+xmelab
+    -f xmelab.args
+        -no_analogsolver
+        -MESSAGES
+        -WORK worklib
+        mux_test
+        -SNAPSHOT worklib.mux_test:v
+
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           5       5
+		Scalar wires:        4       -
+		Always blocks:       1       1
+		Initial blocks:      1       1
+		Pseudo assignments:  3       3
+	Writing initial simulation snapshot: worklib.mux_test:v
+TOOL:	xmelab	22.09-s010: Exiting on Mar 04, 2025 at 17:28:43 EST  (total: 00:00:00)

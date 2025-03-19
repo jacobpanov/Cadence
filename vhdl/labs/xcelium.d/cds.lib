@@ -1,0 +1,14 @@
+
+DEFINE std       /software/commercial/cadence/XCELIUM2209/tools/inca/files/STD
+DEFINE synopsys  /software/commercial/cadence/XCELIUM2209/tools/inca/files/SYNOPSYS
+DEFINE ieee      /software/commercial/cadence/XCELIUM2209/tools/inca/files/IEEE
+DEFINE ambit     /software/commercial/cadence/XCELIUM2209/tools/inca/files/AMBIT
+DEFINE vital_memory /software/commercial/cadence/XCELIUM2209/tools/inca/files/VITAL_MEMORY
+DEFINE xmutils /software/commercial/cadence/XCELIUM2209/tools/inca/files/XMUTILS
+DEFINE xminternal /software/commercial/cadence/XCELIUM2209/tools/inca/files/XMINTERNAL
+DEFINE xmmodels /software/commercial/cadence/XCELIUM2209/tools/inca/files/XMMODELS
+DEFINE ncutils /software/commercial/cadence/XCELIUM2209/tools/inca/files/NCUTILS
+DEFINE ncinternal /software/commercial/cadence/XCELIUM2209/tools/inca/files/NCINTERNAL
+DEFINE ncmodels /software/commercial/cadence/XCELIUM2209/tools/inca/files/NCMODELS
+DEFINE cds_assertions /software/commercial/cadence/XCELIUM2209/tools/inca/files/CDS_ASSERTIONS
+DEFINE worklib worklib

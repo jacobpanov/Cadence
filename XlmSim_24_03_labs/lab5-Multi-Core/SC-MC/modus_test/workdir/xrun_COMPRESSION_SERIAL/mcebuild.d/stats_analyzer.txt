@@ -1,0 +1,23 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:57:45.242303
+  mce Version:           22.09-s010.493970
+  Command Line:          /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/tools/stats_analyzer --mce_build_dir=workdir/xrun_COMPRESSION_SERIAL/mcebuild.d --scratch_dir=workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d --database_filename=workdir/xrun_COMPRESSION_SERIAL/mcesim.d/Stats.db
+
+Stage                                                            VM RSS    VM HWM   Mem Delta CPU Time  User Time Total (C) Total (U)
+=====                                                           ========= ========= ========= ========= ========= ========= =========
+01. find xmelab crash ........................................  39.29  MB 39.38  MB 39.29  MB         0         0         0         0 Skipped
+02. Load statistics database .................................  39.85  MB 39.89  MB 572.00 KB         0         0         0         0
+03. compare perf report ......................................  39.91  MB 39.91  MB 64.00  KB         0         0         0         0 Skipped
+04. compare stats report .....................................  39.91  MB 39.91  MB 0      KB         0         0         0         0 Skipped
+05. Print time and memory report .............................  39.91  MB 39.91  MB 0      KB         0         0         0         0 Skipped
+06. Analyze compiler statistics ..............................  39.91  MB 39.91  MB 0      KB         0         0         0         0 Skipped
+07. Print raw compiler stages statistics .....................  39.91  MB 39.91  MB 0      KB         0         0         0         0 Skipped
+08. Print raw PEs histograms .................................  39.91  MB 39.91  MB 0      KB         0         0         0         0 Skipped
+09. Print basic PIE report ...................................  39.91  MB 39.91  MB 0      KB         0         0         0         0 Skipped
+10. Print build time report ..................................  40.08  MB 40.08  MB 168.00 KB         0         0         0         0
+11. Print build time unify report ............................  40.08  MB 40.08  MB 0      KB         0         0         0         0 Skipped
+12. Print Mc stats report ....................................  40.08  MB 40.08  MB 0      KB         0         0         0         0
+13. Print Mc stats unify report ..............................  40.21  MB 40.21  MB 132.00 KB         0         0         0         0 Skipped

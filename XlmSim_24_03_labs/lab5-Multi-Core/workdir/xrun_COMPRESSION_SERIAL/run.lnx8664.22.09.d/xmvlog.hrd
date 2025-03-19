@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-VFILE
+../workdir/../LIBS/verilog/include_libraries_sim.v
+-INCDIR
+../workdir/../LIBS/verilog/
+-NOSPECIFY
+-LIBEXT
+.v
+-LIBEXT
+.V
+-DELAY_TRIGGER

@@ -1,0 +1,5 @@
+cp ../solutions/lab11-func/counter.v . >> /dev/null 2>&1
+irun counter.v counter_test.v >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab11-func

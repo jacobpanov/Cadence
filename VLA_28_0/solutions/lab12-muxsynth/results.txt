@@ -1,0 +1,21 @@
+irun mux.v mux_test.v -define USE_CASE >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+sed s/read_hdl\(.\).*/read_hdl\1$mod.v\1-define\1USE_CASE\1-v2001/ rc_shell.tcl >> rc_shell.tcl.tmp 2>&1
+mv rc_shell.tcl.tmp rc_shell.tcl >> /dev/null 2>&1
+rc -rcl -files rc_shell.tcl >> /dev/null 2>&1
+grep Synthesis.succeeded rc.log >> /dev/null 2>&1
+rm -fr INCA_libs irun.log >> /dev/null 2>&1
+irun mux.vg mux_test.v -v ../tutorial.v -vlogext vg >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+irun mux.v mux_test.v -define USE_IF >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+sed s/read_hdl\(.\).*/read_hdl\1$mod.v\1-define\1USE_IF\1-v2001/ rc_shell.tcl >> rc_shell.tcl.tmp 2>&1
+mv rc_shell.tcl.tmp rc_shell.tcl >> /dev/null 2>&1
+rc -rcl -files rc_shell.tcl >> /dev/null 2>&1
+grep Synthesis.succeeded rc.log >> /dev/null 2>&1
+rm -fr INCA_libs irun.log >> /dev/null 2>&1
+irun mux.vg mux_test.v -v ../tutorial.v -vlogext vg >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab13-muxsynth

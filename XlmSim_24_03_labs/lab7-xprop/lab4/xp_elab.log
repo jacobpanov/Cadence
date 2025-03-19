@@ -1,0 +1,145 @@
+
+XPROP options:
+-XFILE xfile.txt -XVERBOSE -ENABLE_XP_SEMETHOD -ENABLE_XP_DEBUG_CODE 
+
+
+XFILE(xfile.txt):
+SCOPE demo_top.dut C
+SCOPE demo_top.dut... C
+
+
+
+Final Set of XFILE Flags:
+
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/extmem_interface.sv 
+	Line: 79
+	Reasons:
+		INVXPC: BA and NBA on same LHS - Line : 115
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/extmem_interface.sv 
+	Line: 160
+	Reasons:
+		INVXPC: BA and NBA on same LHS - Line : 203
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/main_ctrl.sv 
+	Line: 174
+		2 state destination cannot give X result(bit) - Line : 187
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/main_ctrl.sv 
+	Line: 569
+		2 state destination cannot give X result(int) - Line : 580
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/main_ctrl.sv 
+	Line: 584
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/processor_interface.sv 
+	Line: 37
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/data_mem.sv 
+	Line: 63
+	Reasons:
+		UNSXPC: Large size Array; Use -XPELSA to enable - Line : 81
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/tag_cmp.sv 
+	Line: 47
+	Reasons:
+		UNSXPC: Large size Array; Use -XPELSA to enable - Line : 73
+xmelab: *W,XPARRD: Array corruption feature has not been enabled for Verilog/SV in X-Propagation. To enable this feature, set xfile flag VL_INVALID_IDX_FOX/VL_OUTOFRANGE_IDX_FOX for FOX Mode Array Corruption or xfile flag VL_INVALID_IDX_CAT/VL_OUTOFRANGE_IDX_CAT for CAT Mode Array Corruption.
+xmelab: *W,XPWDIS: There are blocks in the design which have not been enabled for Xprop. See xp_elab.log for details.
+
+XPROP METRICS FOR VERILOG:
+		Total modules in environment                             = 9
+		Total instances in environment                           = 9
+		Total modules enabled using xfile/xprop                  = 6
+		Total instances enabled using xfile/xprop                = 6
+		Total always blocks in xprop enabled hierarchy           = 8
+		Total xprop enabled always block in xprop enabled hierarchy = 4
+		Total xprop enabled always block with x-edge enabled in xprop enabled hierarchy   = 4
+		Total always block which are edge sensitive in xprop enabled hierarchy   = 6
+		Module cover percentage(6/9)                           = 66.67%
+		Instance cover percentage(6/9)                         = 66.67%
+		Block cover percentage(4/8)                            = 50.00%
+		FF cover percentage(4/6)                               = 66.67%
+
+
+--------------------------------------------------------------------------
+
+XPROP options:
+-XFILE xfile.txt -XVERBOSE -ENABLE_XP_SEMETHOD -ENABLE_XP_DEBUG_CODE 
+
+
+XFILE(xfile.txt):
+SCOPE demo_top.dut C
+SCOPE demo_top.dut... C
+
+
+
+Final Set of XFILE Flags:
+
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/extmem_interface.sv 
+	Line: 79
+	Reasons:
+		INVXPC: BA and NBA on same LHS - Line : 115
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/extmem_interface.sv 
+	Line: 160
+	Reasons:
+		INVXPC: BA and NBA on same LHS - Line : 203
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/main_ctrl.sv 
+	Line: 174
+		2 state destination cannot give X result(bit) - Line : 187
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/main_ctrl.sv 
+	Line: 569
+		2 state destination cannot give X result(int) - Line : 580
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/main_ctrl.sv 
+	Line: 584
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/processor_interface.sv 
+	Line: 37
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/data_mem.sv 
+	Line: 63
+	Reasons:
+		UNSXPC: Large size Array; Use -XPELSA to enable - Line : 81
+
+XPROP:	X-propagation disabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab4/examples/tag_cmp.sv 
+	Line: 47
+	Reasons:
+		UNSXPC: Large size Array; Use -XPELSA to enable - Line : 73
+xmelab: *W,XPARRD: Array corruption feature has not been enabled for Verilog/SV in X-Propagation. To enable this feature, set xfile flag VL_INVALID_IDX_FOX/VL_OUTOFRANGE_IDX_FOX for FOX Mode Array Corruption or xfile flag VL_INVALID_IDX_CAT/VL_OUTOFRANGE_IDX_CAT for CAT Mode Array Corruption.
+xmelab: *W,XPWDIS: There are blocks in the design which have not been enabled for Xprop. See xp_elab.log for details.
+
+XPROP METRICS FOR VERILOG:
+		Total modules in environment                             = 9
+		Total instances in environment                           = 9
+		Total modules enabled using xfile/xprop                  = 6
+		Total instances enabled using xfile/xprop                = 6
+		Total always blocks in xprop enabled hierarchy           = 8
+		Total xprop enabled always block in xprop enabled hierarchy = 4
+		Total xprop enabled always block with x-edge enabled in xprop enabled hierarchy   = 4
+		Total always block which are edge sensitive in xprop enabled hierarchy   = 6
+		Module cover percentage(6/9)                           = 66.67%
+		Instance cover percentage(6/9)                         = 66.67%
+		Block cover percentage(4/8)                            = 50.00%
+		FF cover percentage(4/6)                               = 66.67%

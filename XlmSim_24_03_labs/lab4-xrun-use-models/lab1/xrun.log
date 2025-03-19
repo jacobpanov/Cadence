@@ -1,0 +1,14 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 17:19:16 EST
+xrun
+	-R
+Loading snapshot worklib.mux_test:v .................... Done
+xcelium> run
+time=1 ns s=0 i1=0 i0=1 y=1
+time=2 ns s=0 i1=1 i0=0 y=0
+time=3 ns s=1 i1=0 i0=1 y=0
+time=4 ns s=1 i1=1 i0=0 y=1
+TEST PASSED
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 17:19:17 EST  (total: 00:00:01)

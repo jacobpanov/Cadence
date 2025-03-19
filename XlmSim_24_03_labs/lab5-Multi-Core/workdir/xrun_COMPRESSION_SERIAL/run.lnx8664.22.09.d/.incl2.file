@@ -1,0 +1,12 @@
+../workdir/../LIBS/verilog/typical.v
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/typical.v
+../workdir/../LIBS/verilog/pads.v
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/pads.v
+../workdir/../LIBS/verilog/pllclk.v
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/pllclk.v
+../workdir/../LIBS/verilog/CDK_R512x16.gv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/CDK_R512x16.gv
+../workdir/../LIBS/verilog/CDK_S128x16.gv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/CDK_S128x16.gv
+../workdir/../LIBS/verilog/CDK_S256x16.gv
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/CDK_S256x16.gv

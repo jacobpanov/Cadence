@@ -1,0 +1,6 @@
+./typical.v
+./pads.v
+./pllclk.v
+./CDK_R512x16.gv
+./CDK_S128x16.gv
+./CDK_S256x16.gv

@@ -1,0 +1,18 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:52:43.676723
+  mce Version:           22.09-s010.493970
+  Report File Level:     REPORT_LEVEL_NONE (0)
+  Report Screen Level:   REPORT_LEVEL_NONE (0)
+
+Started CPU time : 21.7057 sec
+
+Stage                                                Mem process Mem Stage   Mem Total   Mem Peak    CPU Time    User Time   Total (C)   Total (U)   Time       
+=====                                                ==========  =========   =========   =========   =========   =========   =========   =========   =========  
+
+Create and save split 0                                                                                                                              17:53:05
+. Create pes and vars .............................. 88.27  MB   88.27  MB   255.80 MB   255.80 MB           2           2           2           2   17:53:07      
+. Save the split database .......................... 182.09 MB   93.82  MB   349.62 MB   349.62 MB           2           2           3           3   17:53:09      
+Create and save split 0 ............................ 17.54  MB   17.54  MB   185.07 MB   349.62 MB           4           4           4           4   17:53:09      

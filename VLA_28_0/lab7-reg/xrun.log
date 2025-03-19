@@ -1,0 +1,47 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 12, 2025 at 19:06:50 EDT
+xrun
+	-f filelist.txt
+		register.v
+		register_test.v
+	-access rwc
+Recompiling... reason: file './register.v' is newer than expected.
+	expected: Wed Mar 12 19:06:24 2025
+	actual:   Wed Mar 12 19:06:48 2025
+file: register.v
+	module worklib.register:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		register_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.register:v <0x480ff311>
+			streams:   2, words:   455
+		worklib.register_test:v <0x1d8d7ab4>
+			streams:   7, words:  9795
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           6       6
+		Scalar wires:        3       -
+		Vectored wires:      2       -
+		Always blocks:       1       1
+		Initial blocks:      2       2
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.register_test:v
+Loading snapshot worklib.register_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+At time 20 rst=0 load=1 data_in=01010101 data_out=01010101
+At time 30 rst=0 load=1 data_in=10101010 data_out=10101010
+At time 40 rst=0 load=1 data_in=11111111 data_out=11111111
+At time 50 rst=1 load=1 data_in=11111111 data_out=00000000
+TEST PASSED
+Simulation complete via $finish(1) at time 50 NS + 0
+./register_test.v:47     $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 12, 2025 at 19:06:51 EDT  (total: 00:00:01)

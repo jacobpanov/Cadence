@@ -1,0 +1,37 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INPUT
+"@source /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl"
+-uvmhome
+/software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
+-sv_lib
+/software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/libuvmpli.so
++UVM_TESTNAME=mul_sequence_test
+-STATUS
+-XVERBOSE
+-INPUT
+gui_tcl.in
+-gui
+-MESSAGES
+-SV_LIB
+/software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/libuvmdpi.so
++EMGRLOG
+xrun_xprop.log
+-XLSTIME
+1741132331
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun	22.09-s010"
+-XLNAME
+./xcelium.d/run.lnx86.22.09.d/node1677.palmetto.clemson.edu_1625083

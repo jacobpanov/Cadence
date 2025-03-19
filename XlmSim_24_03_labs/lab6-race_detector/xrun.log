@@ -1,0 +1,10 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:29:56 EST
+xrun
+	-sv
+	test.sv
+	-race_detect
+	-unique_raceall
+	-log xrun.log
+xrun: *E,BDOPT: Unknown option -unique_raceall.
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:29:56 EST  (total: 00:00:00)

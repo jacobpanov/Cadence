@@ -1,0 +1,131 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:57:16.127641
+  mce Version:           22.09-s010.493970
+  Command Line:          /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/bin/64bit/south --xmlibdirname workdir/xrun_COMPRESSION_SERIAL --SEQUDP_NBA_DELAY --mce_sim_dir workdir/xrun_COMPRESSION_SERIAL/mcesim.d --mce_jupiter 1 --mce_scratch_dir workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d --mce_home=/software/commercial/cadence/XCELIUM2209/tools.lnx86/mce --pe_debugging_support=0 --enable_dump_aliases=1 --nospecify --native_code_compilation_concurrency=4 --update_sequential_udps_in_nba=1 --pulse_int_r=100 --pulse_e=100 --pulse_int_e=100 --run_sequential_udps_in_nba=0 --enable_intersplit=0 --nba_graph_optimization=0 --global_memory_allocation_mode=7 --create_nba_reg_ram_writers_during_rtl_elab=1 --allow_ram_w_from_every_always_block=1 --minimum_time_before_timeout=65 --mce_build_dir=workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/split0 --split_num=0 --split_instance_num=0 --user_report_file_name=UserReport_South --db_index=0
+
+Stage                                                            VM RSS    VM HWM   Mem Delta CPU Time  User Time Total (C) Total (U)
+=====                                                           ========= ========= ========= ========= ========= ========= =========
+01. South Initialization .....................................  31.42  MB 31.43  MB 31.42  MB         0         0         0         0
+02. Load DBs and create south netlist ........................  31.43  MB 31.43  MB 4.00   KB         0         0         0         0
+    02.01. Load Compiler Configuration DB ....................  31.42  MB 31.43  MB -4.00  KB         0         0         0         0
+    02.02. Load Optimizer Split DB ...........................  107.62 MB 127.81 MB 76.20  MB         1         1         1         1
+    02.03. Load Optimizer Template Split DB ..................  107.62 MB 127.81 MB 0      KB         0         0         1         1
+    02.04. Load South McProcesses DB .........................  107.65 MB 127.81 MB 36.00  KB         0         0         1         1
+    02.05. Populate South Split DB ...........................  237.30 MB 246.17 MB 129.65 MB         1         1         2         2
+    02.06. Handle signal types  ..............................  237.36 MB 246.17 MB 64.00  KB         0         0         2         2
+03. Netlist pre-processing 1 .................................  237.36 MB 246.17 MB 0      KB         0         0         2         2
+    03.01. Assert event pes dont use temp values  ............  237.36 MB 246.17 MB 0      KB         0         0         2         2
+    03.02. remove shift and masks and ram reads before even ..  237.36 MB 246.17 MB 0      KB         0         0         2         2
+    03.03. Handle XProp PEs ..................................  237.42 MB 246.17 MB 60.00  KB         0         0         2         2 Skipped
+    03.04. Adapt to new north interface  .....................  237.61 MB 246.60 MB 188.00 KB         0         0         2         2
+    03.05. Handle Circles in South  ..........................  237.82 MB 246.60 MB 216.00 KB         0         0         2         2 Added 0 buffers
+    03.06. Add BA Buffers after non delayed cutting points ...  237.82 MB 246.60 MB 4.00   KB         0         0         2         2 Added 0 buffers
+    03.07. Remove the TStampers ..............................  237.82 MB 246.60 MB 0      KB         0         0         2         2
+    03.08. Break long chains .................................  237.82 MB 246.60 MB 0      KB         0         0         2         2 Skipped
+    03.09. Add strength buffer and strength disposal pes .....  237.83 MB 246.60 MB 8.00   KB         0         0         2         2 Added: 42 strength buffers, 0 strength disposals 0 buffers
+    03.10. Remove dead Pes first .............................  237.89 MB 246.60 MB 68.00  KB         0         0         2         3
+04. Netlist optimizations ....................................  237.89 MB 246.60 MB 0      KB         0         0         2         3
+    04.01. Remove TcBoxes with all zero limits ...............  238.02 MB 246.60 MB 128.00 KB         0         0         2         3 0 out of: 0
+    04.02. Path Delays Optimize ..............................  238.02 MB 246.60 MB 4.00   KB         0         0         2         3 Skipped
+    04.03. South Remove Duplications  ........................  240.73 MB 253.08 MB 2.71   MB         1         1         3         3 Removed 5773 instances
+    04.04. Mark events as combinatorial ......................  240.81 MB 253.08 MB 84.00  KB         0         0         3         3 Marked 0 events as comb
+    04.05. Remove redundant temp values ......................  240.90 MB 253.08 MB 88.00  KB         0         0         3         3 Removed total 0 temp-value reg-writers, from 0 chains
+    04.06. Remove simple Reg-Writers .........................  240.90 MB 253.08 MB 0      KB         0         0         3         3
+    04.07. Handle Constant Operators .........................  241.27 MB 253.08 MB 384.00 KB         0         0         3         3 54 pes marked for removal
+    04.08. Remove Buffers in South ...........................  241.27 MB 253.08 MB 0      KB         0         0         4         4 removed: 63 buffers, 31724 identity luts
+    04.09. Optimize Reduce To 2State Logic ...................  241.27 MB 253.08 MB 0      KB         0         0         4         4 Skipped
+    04.10. Add Latch or FF Pes ...............................  249.42 MB 253.08 MB 8.15   MB         0         0         4         4 228 Latch pes were created: 0-from reg-writers and 228-from udps. 25486 FF pes were created.
+    04.11. Replace clock gaters ..............................  249.52 MB 253.08 MB 96.00  KB         0         0         4         4
+    04.12. Merge gated clocks ................................  249.62 MB 253.08 MB 104.00 KB         0         0         4         4 CGs before: 0, CGs after: 0 
+    04.13. Add BA delay for clock gater enable ...............  249.62 MB 253.08 MB 0      KB         0         0         4         4
+    04.14. Handle Circles in South Final .....................  249.62 MB 253.08 MB 0      KB         0         0         4         4 Added 0 buffers
+    04.15. Handle Equals .....................................  249.62 MB 253.08 MB 0      KB         0         0         4         4 Total: 0 Equals/CaseEquals, 0 lut_equal, Skipped: 0, Replaced with buffer : 0, Replaced with Has4state: 0
+    04.16. Optimize meaningful transitions of dff_err udp ....  249.62 MB 253.08 MB 0      KB         0         0         4         4 Optimized 0 udps
+    04.17. Handle output of high level ffs ...................  249.62 MB 253.08 MB 0      KB         0         0         4         4
+    04.18. Wide FF optimization ..............................  249.84 MB 253.08 MB 224.00 KB         0         0         4         4
+    04.19. South Lutmap  .....................................  263.95 MB 268.73 MB 14.11  MB         1         1         5         5 added 71177 LUTs, reused 400 LUTs
+    04.20. Remove dead Pes after lutmap ......................  259.53 MB 268.73 MB -4.41  MB         0         0         5         5
+    04.21. Handle Constant Operators .........................  259.53 MB 268.73 MB 0      KB         0         0         5         5
+    04.22. Update high level ffs with luts ...................  259.53 MB 268.73 MB 0      KB         0         0         5         5 Skipped
+    04.23. Dismantle Power Gating Chains  ....................  259.53 MB 268.73 MB 0      KB         0         0         5         5 removed 0 PGs, created 0 PGs, couldn't remove 0 PGs because of different metadata
+    04.24. Remove Power Gates ................................  259.53 MB 268.73 MB 0      KB         0         0         5         5 0 PGs
+    04.25. Remove Buffers in South ...........................  259.47 MB 268.73 MB -60.00 KB         0         0         5         5 removed: 380 buffers, 24817 identity luts
+    04.26. Merge buffers and inverters into Pes ..............  259.47 MB 268.73 MB 0      KB         0         0         5         5 Swallowed 0 buffers and 0 inverters, Removed 0 pes
+    04.27. Handle delay bufs .................................  259.47 MB 268.73 MB 0      KB         0         0         5         5
+    04.28. Create clock gater tree pes .......................  259.47 MB 268.73 MB 0      KB         0         0         5         5 Skipped
+    04.29. Remove dead Pes ...................................  259.47 MB 268.73 MB 0      KB         0         0         5         5
+    04.30. Remove duplicated events ..........................  259.47 MB 268.73 MB 0      KB         0         0         5         6
+05. Netlist pre-processing 2 .................................  259.47 MB 268.73 MB 0      KB         0         0         5         6
+    05.01. Create Timing Logic Optimization Histogram ........  259.47 MB 268.73 MB 0      KB         0         0         5         6 Skipped
+    05.02. Handle comb reg writers ...........................  259.47 MB 268.73 MB 0      KB         0         0         6         6
+    05.03. Handle var delay bufs .............................  259.47 MB 268.73 MB 0      KB         0         0         6         6
+    05.04. Add packers to table based comb pes ...............  259.47 MB 268.73 MB 0      KB         0         0         6         6
+    05.05. Handle Packers ....................................  259.47 MB 268.73 MB 0      KB         0         0         6         6
+    05.06. Remove redundant combination Of shiftmask and Pa ..  259.55 MB 268.73 MB 84.00  KB         0         0         6         6
+    05.07. Add deposit resolvers .............................  259.55 MB 268.73 MB 0      KB         0         0         6         6 Skipped
+    05.08. Add sva disable handles pes .......................  259.55 MB 268.73 MB 0      KB         0         0         6         6
+    05.09. Duplicate cells shared pes and vars ...............  259.62 MB 268.73 MB 64.00  KB         0         0         6         6 Skipped
+06. Netlist post-processing ..................................  259.62 MB 268.73 MB 0      KB         0         0         6         6
+    06.01. Create virtual events .............................  281.93 MB 285.94 MB 22.32  MB         0         0         6         6
+    06.02. Handle events .....................................  281.93 MB 285.94 MB 0      KB         0         0         6         6
+    06.03. Add buffers to prevent races ......................  281.93 MB 285.94 MB 0      KB         0         0         6         6
+    06.04. Compute Two State Driver Mask .....................  281.93 MB 285.94 MB 0      KB         0         0         6         6
+    06.05. Add two state casting pes .........................  281.93 MB 285.94 MB 0      KB         0         0         6         6
+    06.06. Add trigger distribution buffers ..................  281.93 MB 285.94 MB 0      KB         0         0         6         6 0 buffers added
+    06.07. Remove dead Pes final .............................  281.93 MB 285.94 MB 0      KB         0         0         6         6
+    06.08. Delays Tree Optimization ..........................  281.93 MB 285.94 MB 0      KB         0         0         6         6 Skipped
+07. Netlist marking ..........................................  281.93 MB 285.94 MB 0      KB         0         0         6         6
+    07.01. Mark counter driving logic for RW .................  281.93 MB 285.94 MB 0      KB         0         0         6         6 0 RW marked as counter
+    07.02. Find and handle reg-writer chains .................  281.93 MB 285.94 MB 0      KB         0         0         6         6
+        07.02.01. Create chains ..............................  281.94 MB 285.94 MB 4.00   KB         0         0         6         6
+        07.02.02. Unify intersecting chains ..................  281.94 MB 285.94 MB 0      KB         0         0         6         6
+        07.02.03. Unify cycle creating chains ................  281.94 MB 285.94 MB 0      KB         0         0         6         6
+        07.02.04. Discard chains above threshold .............  281.94 MB 285.94 MB 0      KB         0         0         6         6
+    07.03. Compute ingress groups for pes ....................  281.94 MB 285.94 MB 0      KB         0         0         6         7
+    07.04. Mark cell PEs .....................................  281.94 MB 285.94 MB 0      KB         0         0         6         7 Skipped
+    07.05. Give all pes temperature ..........................  282.00 MB 285.94 MB 64.00  KB         1         1         7         7
+    07.06. Mark living dead ..................................  282.00 MB 285.94 MB 0      KB         0         0         7         7 Marked 3855 living dead PEs
+    07.07. Merge Cells .......................................  282.00 MB 285.94 MB 0      KB         0         0         7         7 Skipped
+    07.08. Mark transition vars ..............................  282.00 MB 285.94 MB 0      KB         0         0         7         7
+08. Netlist partitioning .....................................  282.00 MB 285.94 MB 0      KB         0         0         7         7
+    08.01. Partition pes into graphs .........................  282.56 MB 285.94 MB 576.00 KB         0         0         7         8
+    08.02. Add dependencies for triggers .....................  282.56 MB 285.94 MB 0      KB         0         0         8         8
+    08.03. Partition graphs into phases ......................  283.42 MB 338.32 MB 880.00 KB         1         1         9         9
+    08.04. Remove dependencies for triggers ..................  283.42 MB 338.32 MB 0      KB         0         0         9         9
+    08.05. Resolve interphase vars ...........................  283.42 MB 338.32 MB 0      KB         0         0         9         9
+    08.06. Create single cone groups .........................  302.67 MB 338.32 MB 19.25  MB         0         0         9         9
+    08.07. Merge overlap cone groups .........................  302.67 MB 338.32 MB 0      KB         0         0         9         9
+    08.08. Merge cones inside cells ..........................  302.67 MB 338.32 MB 0      KB         0         0         9         9 Skipped
+    08.09. Merge cones of multiple drivers ...................  302.67 MB 338.32 MB 0      KB         0         0         9         9
+    08.10. Merge cones of delays trees .......................  302.67 MB 338.32 MB 0      KB         0         0         9         9 Skipped
+    08.11. Calc cone group triggers ..........................  304.39 MB 338.32 MB 1.72   MB         0         0         9         9
+    08.12. Apply reg writer optimizations ....................  304.39 MB 338.32 MB 0      KB         0         0         9         9
+    08.13. Merge cones .......................................  334.79 MB 346.89 MB 30.40  MB         8         8        18        18
+    08.14. Merge cones filling phase .........................  334.79 MB 346.89 MB 0      KB         0         0        18        18
+    08.15. duplicate shared pes ..............................  334.88 MB 346.89 MB 88.00  KB         1         1        18        19
+    08.16. Balance phases ....................................  334.88 MB 346.89 MB 0      KB         0         0        18        19 Skipped
+09. Partitioned netlist processing ...........................  334.88 MB 346.89 MB 0      KB         0         0        18        19
+    09.01. Create trigger request lists ......................  334.88 MB 346.89 MB 0      KB         0         0        18        19
+    09.02. duplicate trigger distribution buffers ............  334.88 MB 346.89 MB 0      KB         0         0        18        19 Skipped
+    09.03. Create sensitivity request lists ..................  334.88 MB 346.89 MB 0      KB         0         0        18        19
+10. Assembler ................................................  334.88 MB 346.89 MB 0      KB         0         0        18        19
+    10.01. Asm create execution units and phases .............  359.46 MB 359.46 MB 24.58  MB         0         1        19        19 EUs with multiple versions: 755, EUs marked as living dead: 235, other EUs that can't have versions: 0
+    10.02. Asm add deposit resolvers .........................  359.46 MB 359.46 MB 4.00   KB         0         0        19        19
+    10.03. Asm collect signals ...............................  359.46 MB 359.46 MB 0      KB         0         0        19        19
+    10.04. Asm mark var flags ................................  359.46 MB 359.46 MB 0      KB         0         0        19        19
+    10.05. Asm allocate xprop states .........................  359.46 MB 359.46 MB 0      KB         0         0        19        19 Skipped
+    10.06. Asm resolve input output vars .....................  367.45 MB 367.45 MB 7.99   MB         0         0        19        20
+    10.07. Asm create indirect dependency graph ..............  367.45 MB 367.45 MB 0      KB         0         0        19        20
+    10.08. Asm compile execution units .......................  411.81 MB 411.81 MB 44.36  MB         1         1        20        21
+    10.09. Asm initialize mce linker dbs .....................  414.95 MB 414.95 MB 3.14   MB         0         0        20        21
+    10.10. Asm generate recipes ..............................  437.29 MB 454.17 MB 22.34  MB         3         3        24        24
+    10.11. Asm generate debug info ...........................  437.29 MB 454.17 MB 0      KB         0         0        24        24 Skipped
+    10.12. Asm save mce linker dbs ...........................  434.34 MB 454.17 MB -2.95  MB         0         0        24        24
+    10.13. Asm create split db ...............................  434.20 MB 454.17 MB -148.00 KB         0         0        24        24
+11. Dump statistics database .................................  434.20 MB 454.17 MB 8.00   KB         0         0        24        24
+12. Cleanup binaries .........................................  434.20 MB 454.17 MB 0      KB         0         0        24        24 Skipped
+13. South end stage ..........................................  434.01 MB 454.17 MB -200.00 KB         1         1        25        25
+14. Recompress Reports .......................................  431.53 MB 454.17 MB -2.48  MB         0         0        25        26

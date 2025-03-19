@@ -1,0 +1,9 @@
+1741816197 /home/jpanov/Cadence/VLA_28_0/lab5-alu/alu.v
+1702636378 /home/jpanov/Cadence/VLA_28_0/lab11-risc/risc.v
+1741820808 /home/jpanov/Cadence/VLA_28_0/lab7-reg/register.v
+1741817494 /home/jpanov/Cadence/VLA_28_0/lab6-ctrl/controller.v
+1741822627 /home/jpanov/Cadence/VLA_28_0/lab8-mem/memory.v
+1741826773 /home/jpanov/Cadence/VLA_28_0/lab9-cntr/counter.v
+1741814448 /home/jpanov/Cadence/VLA_28_0/lab3-mux/multiplexor.v
+1741815150 /home/jpanov/Cadence/VLA_28_0/lab4-drvr/driver.v
+1741829038 /home/jpanov/Cadence/VLA_28_0/lab11-risc/risc_test.v

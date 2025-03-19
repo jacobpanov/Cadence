@@ -1,0 +1,359 @@
+Starting Command: verify_test_structures 
+
+INFO (TDA-005): Command Line Invocation: 
+            verify_test_structures -testmode COMPRESSION -workdir /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 20.10-b013_1, built Apr 03 2020 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_verify_test_structures_COMPRESSION_040620153532-453407000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Monday Apr 06 15:35:32 2020  EDT
+            Host machine is end-curly, x86_64 running Linux 2.6.32-431.11.2.el6.x86_64.
+            This job is process number 20889.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir
+            -TESTMODE COMPRESSION
+
+            -LOGFILE /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_verify_test_structures_COMPRESSION_040620153532-453407000
+            -STDOUT summary
+[end TDA_009]
+INFO (TSV-900): verify_test_structures processing has started Mon Apr  6 15:35:32 2020    [end TSV_900] 
+INFO (TSV-911): verify_test_structures ignores user specified effort. 'Effort' keyword will be removed in the future.   [end TSV_911] 
+------------------- verify_test_structures Process Preview ---------------------
+  apply constraints ...................................... constraints=yes    
+  Print 1 message per source of clock race ............... limitcisource=yes  
+  Print 1 Message per capture of clock race .............. limitcicapture=yes 
+  Check for mutually exclusive gating logic (MEG) ........ megraces=yes       
+  Use raise message severity attributes if they exist .... raisemsgsev=no    
+  Reporting options ...................................... report[option]=yes/no 
+    Process Preview ......................................   preview=yes     
+    Circuit Statistics ...................................   circuit=yes      
+    Message Summary ......................................   summary=yes      
+    Specific Messages ....................................   specific=yes     
+    Tests Status .........................................   status=no       
+    Output File Names and Size ...........................   filestats=yes    
+    Display messages for cloaked objects .................   cloakedobj=no   
+  Rerun verify_test_structures test(s) ................... reruntests=no     
+  Use message suppression attributes if they exist ....... suppressmsg=no    
+  Test selected .......................................... test[option]=yes/no 
+    Analyze test clock control of memory elements ........   testclockusage=yes 
+    Analyze three-state drivers for contention ...........   tsdcontention=yes 
+    Analyze feedback loops and keeper devices ............   feedback=yes 
+    Analyze clock choppers ...............................   clockchopper=yes 
+    Analyze flip-flop and latch scan characteristics .....   latchusage=yes 
+    Analyze explicit fixed value latches .................   explicitfvlatch=yes 
+    Analyze potential clock signal races .................   clocksignalraces=yes 
+    Ensure X-sources cannot be observed ..................   xsource=yes 
+    Analyze internal scan chains .........................   internalscanchains=yes 
+
+--------------------Circuit Statistics--------------------
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+        144,125  Blocks                      81,896  Blocks
+        436,169  Pins                        81,896  Nodes
+        247,745  Nets
+
+Primary Inputs:                      Primary Outputs:
+         21  Input Only                        10  Output Only
+         32  Input/Output                      32  Input/Output
+         53  Total Inputs                      42  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+      2,656  Tied to 0                          0  Two-State
+      1,547  Tied to 1                         40  Three-State
+        194  Tied to X                         40  Total Dotted Nets
+      4,397  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+         50  TSDs
+          0  Resistors
+          0  Transistors
+      3,052  MUX2s
+        234  Latches
+
+
+      2,334  Rising  Edge Flop w/Set-Dominant and Reset Port
+      2,334  Total Flops
+
+     22,702  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Test Function Pin Information for Test Mode:  COMPRESSION
+-------------------------------------------
+
+          3  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          2  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          5  TI    (Test Inhibit)              Pins
+          1  TC    (Test Constraint)           Pins
+          6  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+          3  SI    (Scan Input)                Pins
+          3  SO    (Scan Output)               Pins
+          3  CMI   (Channel Mask Input)        Pins
+          1  CME   (Channel Mask Enable)       Pins
+          1  CML   (Channel Mask Load)         Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+         15      PI  -SC                                  reset / reset
+          4      PI  -EC  -SC                             OPCG_LOADCLK / OPCG_LOADCLK
+         16      PI  -EC  -SC                             scan_clk / scan_clk
+          1      PI  -CML                                 DFT_mask_clk / DFT_mask_clk
+          2      PI  -TC  -CME                            DFT_mask_enable / DFT_mask_enable
+          5      PI  -TI                                  OPCG_ON / OPCG_ON
+          9      PI  +TI                                  TRIGGER / TRIGGER
+         12      PI  -TI                                  mbist_test_mode / mbist_test_mode
+         19      PI  -TI                                  spi_fs / spi_fs
+         20      PI  +TI                                  test_mode / test_mode
+          0      PI  +SE                                  DFT_compression_enable / DFT_compression_enable
+          3      PI  +SE                                  DFT_spreader / DFT_spreader
+         17      PI  +SE                                  scan_en / scan_en
+         31      PI* ZSE                                  port_pad_data_in[3] / port_pad_data_in[3]
+         38      PI* ZSE                                  port_pad_data_out[0] / port_pad_data_out[0]
+         45      PI* ZSE                                  port_pad_data_out[1] / port_pad_data_out[1]
+         22      PI*  SI   CMI                            port_pad_data_in[0] / port_pad_data_in[0]
+         29      PI*  SI   CMI                            port_pad_data_in[1] / port_pad_data_in[1]
+         30      PI*  SI   CMI                            port_pad_data_in[2] / port_pad_data_in[2]
+         38      PO*  SO                                  port_pad_data_out[0] / port_pad_data_out[0]
+         45      PO*  SO1                                 port_pad_data_out[1] / port_pad_data_out[1]
+         31      PO*  SO2                                 port_pad_data_in[3] / port_pad_data_in[3]
+
+                   *  pin is Input/Output
+
+  
+   Analyze test clocks' control of memory elements    
+
+Analyze test clocks' control of memory elements process has completed.
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.06
+  
+   Analyze three-state drivers for contention 
+
+Analyze three-state drivers for contention process has completed.
+                             CPU time =  0:00:00.10  Elapsed time =  0:00:00.22
+  
+   Analyze feedback loops and keeper devices          
+
+Analyze feedback loops and keeper devices process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.06
+  
+   Analyze clock choppers                             
+
+Analyze clock choppers process has completed.
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.06
+  
+   Analyze flip-flop and latch scan characteristics   
+INFO (TSV-068): The length of the longest scan chain is 48 bit positions, which is 108% of the average scan chain length 45 (based on 2280 total scan chain bits and 51 valid scan chains).   [end TSV_068] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_0.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 34 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_1.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g315.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_10.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g308.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_11.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g307.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_12.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g296.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_13.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_14.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_15.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[2]' and ending at 'pin COMPACTOR.compressor.g_16.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 7 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g315.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_17.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 34 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g308.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_18.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g307.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_19.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[2]' and ending at 'pin COMPACTOR.compressor.g_2.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g296.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_20.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_21.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_22.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[2]' and ending at 'pin COMPACTOR.compressor.g_23.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g315.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_24.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g308.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_25.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g307.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_26.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g296.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_27.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_28.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_29.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g315.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_3.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[2]' and ending at 'pin COMPACTOR.compressor.g_30.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g315.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_31.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g308.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_32.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g307.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_33.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 6 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g296.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_34.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 33 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_35.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_36.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[2]' and ending at 'pin COMPACTOR.compressor.g_37.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g315.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_38.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g308.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_39.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g308.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_4.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g307.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_40.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g296.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_41.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_42.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_43.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[2]' and ending at 'pin COMPACTOR.compressor.g_44.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g315.__iNsT0.01' and ending at 'pin COMPACTOR.compressor.g_45.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g308.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_46.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g307.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_47.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g296.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_48.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_49.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g307.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_5.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_50.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 6 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin COMPACTOR.decompressor.g296.__iNsT2.01' and ending at 'pin COMPACTOR.compressor.g_6.g44.__iNsT1.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_7.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[1]' and ending at 'pin COMPACTOR.compressor.g_8.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[2]' and ending at 'pin COMPACTOR.compressor.g_9.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 48 bit positions.   [end TSV_378] 
+INFO (TSV-567): There are 7 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
+INFO (TSV-568): There are 51 observable scan chains feeding to Scan Out (SO) primary outputs.   [end TSV_568] 
+INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).   [end TSV_569] 
+INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
+WARNING (TSV-390): There are 17 inactive (non-scan) latches.   [end TSV_390] 
+INFO (TSV-383): There are 184 floating latches.   [end TSV_383] 
+INFO (TSV-328): The length of the longest Channel Mask Scan Register is 17 bit positions, which is 100% of the average Channel Mask Scan Register length of 17 (based on 51 total Channel Mask Scan Register bits and 3 Channel Mask Scan Registers). In addition, there are a total of 1 Channel Mask Registers and each has a length of 51 bits.   [end TSV_328] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_0_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_10_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_11_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_12_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_13_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_14_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_15_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_16_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_1_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_2_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_3_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_4_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_5_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_6_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_7_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_8_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_9_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_0_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_10_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_11_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_12_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_13_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_14_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_15_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_16_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_1_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_2_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_3_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_4_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_5_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_6_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_7_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_8_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg1_reg_9_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_0_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_10_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_11_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_12_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_13_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_14_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_15_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_16_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_1_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_2_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_3_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_4_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_5_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_6_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_7_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_8_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg2_reg_9_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.  [end TSV_346] 
+
+Analyze flip-flop and latch scan characteristics process has completed.
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.09
+  
+   Analyze explicit fixed value latches 
+
+Analyze explicit fixed value latches process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.04
+  
+   Analyze potential clock signal races               
+   Check for mutually exclusive gating logic (MEG)    
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST0.RESULTS_CONV_INST.g17647.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST0.RESULTS_CONV_INST.g17652.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST1.RESULTS_CONV_INST.g17779.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST1.RESULTS_CONV_INST.g17784.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST2.RESULTS_CONV_INST.g17647.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST2.RESULTS_CONV_INST.g17652.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST3.RESULTS_CONV_INST.g17647.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST3.RESULTS_CONV_INST.g17652.__iNsT0.udp_1_mux is fed by a clock pin reset.   [end TSV_024] 
+
+Analyze potential clock signal races process has completed.
+                             CPU time =  0:00:00.07  Elapsed time =  0:00:00.13
+  
+   Ensure X-sources cannot be observed 
+WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking Scan Register block COMPACTOR.compressor.mreg0_reg_16_.__iNsT0.dff_primitive may be observed at block DFT_TRIGGER.trigger_dly_reg_0_.__iNsT0.dff_primitive.   [end TSV_101] 
+WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking Scan Register block COMPACTOR.compressor.mreg1_reg_16_.__iNsT0.dff_primitive may be observed at block DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_6_.__iNsT0.dff_primitive.   [end TSV_101] 
+WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking Scan Register block COMPACTOR.compressor.mreg2_reg_16_.__iNsT0.dff_primitive may be observed at block DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_6_.__iNsT0.dff_primitive.   [end TSV_101] 
+WARNING (TSV-101): [Severe] Unpredictable signal value (X) from Unterminated TSD net int may be observed at block DTMF_REG1_digit_out_reg_10_.__iNsT2.dff_primitive.   [end TSV_101] 
+WARNING (TSV-101): [Severe] Unpredictable signal value (X) from Unterminated TSD net spi_data may be observed at block DTMF_INST0.SPI_INST.spi_sr_reg_0_.__iNsT1.dff_primitive.   [end TSV_101] 
+
+Analyze X-sources to ensure they cannot be observed process has completed.
+                             CPU time =  0:00:00.09  Elapsed time =  0:00:00.19
+  
+   Analyze internal scan chains 
+
+Analyze channel inputs for validity process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.05
+
+--------------------File Information----------------------
+          65536 /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/tbdata/TSVmessageFile.COMPRESSION 
+
+INFO (TSV-908): verify_test_structures processing complete.   [end TSV_908] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           36,800,496  bytes
+
+                      CPU Time =    0:00:00.39
+                  Elapsed Time =    0:00:01.43                    [end TDA_001]
+
+     Date Ended:  Monday Apr 06 15:35:33 2020  EDT
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-068): The length of the longest scan chain is 48 bit positions, which is 108% of the average scan chain length 45 (based on 2280 total scan chain bits and 51 valid scan chains).    
+      1 INFO (TSV-328): The length of the longest Channel Mask Scan Register is 17 bit positions, which is 100% of the average Channel Mask Scan Register length of 17 (based on 51 total Channel Mask Scan Register bits and 3 Channel Mask Scan Registers). In addition, there are a total of 1 Channel Mask Registers and each has a length of 51 bits.    
+     51 INFO (TSV-346): Channel mask shift register element block COMPACTOR.compressor.mreg0_reg_0_.__iNsT0.dff_primitive may be corrupted in the Test Constraint state. This condition may prevents the creation of a single Load Channel Mask event for use by multiple test sequences.   
+     51 INFO (TSV-378): Scan chain beginning at 'pin port_pad_data_in[0]' and ending at 'pin COMPACTOR.compressor.g_0.g43.__iNsT0.01' is controllable and observable. The length of the scan chain is 34 bit positions.    
+      1 INFO (TSV-383): There are 184 floating latches.    
+      1 INFO (TSV-567): There are 7 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 51 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Mon Apr  6 15:35:32 2020     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+      1 INFO (TSV-911): verify_test_structures ignores user specified effort. 'Effort' keyword will be removed in the future.    
+
+  WARNING Messages...
+      1 WARNING (TSV-390): There are 17 inactive (non-scan) latches.    
+
+  WARNING [Severe] Messages...
+      8 WARNING (TSV-024): [Severe] The select input of MUX block DTMF_INST0.RESULTS_CONV_INST.g17647.__iNsT0.udp_1_mux is fed by a clock pin reset.    
+      5 WARNING (TSV-101): [Severe] Unpredictable signal value (X) from  Channel Masking Scan Register block COMPACTOR.compressor.mreg0_reg_16_.__iNsT0.dff_primitive may be observed at block DFT_TRIGGER.trigger_dly_reg_0_.__iNsT0.dff_primitive.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

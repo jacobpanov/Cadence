@@ -1,0 +1,2 @@
+s1(04Mar2025:17:16:14):  xrun mux.v mux_test.v -compile -messages 
+s2(04Mar2025:17:17:16):  xrun -elaborate -noupdate -top worklib.mux_test:v 

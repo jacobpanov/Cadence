@@ -1,0 +1,5 @@
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *E,STRPIN: Could not initialize SimVision connection: SimVision/Indago process terminated before a connection was established.
+xmsim: Memory Usage - Final: 26.9M, Peak: 26.9M, Peak virtual: 73.5M
+xmsim: CPU Usage - 0.0s system + 0.1s user = 0.1s total (1.1s, 8.5% cpu)
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:52:19 EST  (total: 00:00:08)

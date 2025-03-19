@@ -1,0 +1,145 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:46:18 EST
+xrun
+	-clean
+	-mess
+	-access rwc
+	tb.v
+	dut.v
+	-input tcl.in
+	-xfile xfile_cat.txt
+	-xverbose
+	-ENABLE_XP_DEBUG_CODE
+	-l xrun_xprop_cat.log
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: tb.v
+	module worklib.tb:v
+		errors: 0, warnings: 0
+file: dut.v
+	module worklib.dut:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.dut:v <0x084b2323>
+			streams:   2, words:  2557
+		worklib.tb:v <0x551e47c7>
+			streams:   7, words:  4764
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+xmelab: *W,XPARRD: Array corruption feature has not been enabled for Verilog/SV in X-Propagation. To enable this feature, set xfile flag VL_INVALID_IDX_FOX/VL_OUTOFRANGE_IDX_FOX for FOX Mode Array Corruption or xfile flag VL_INVALID_IDX_CAT/VL_OUTOFRANGE_IDX_CAT for CAT Mode Array Corruption.
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           4       4
+		Scalar wires:        4       -
+		Always blocks:       1       1
+		Initial blocks:      1       1
+		Pseudo assignments:  3       3
+	Writing initial simulation snapshot: worklib.tb:v
+Loading snapshot worklib.tb:v .................... Done
+This snapshot is X-propagation enabled.
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> xprop -off
+X-propagation is disabled
+xcelium> probe -screen sel a b q
+Created probe 1
+xcelium> run 1 fs
+Ran until 1 FS + 0
+xcelium> xprop -on
+X-propagation is enabled
+xcelium> run 200 ns
+Time: 10 NS: tb.sel = 1'hx: tb.a = 1'h0: tb.b = 1'hx: tb.q = 1'hx
+
+Time: 10 NS: tb.sel = 1'hx: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'hx
+
+Time: 10 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'hx
+
+Time: 10 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h0
+
+Time: 20 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'h0
+
+Time: 20 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'h1
+
+Time: 30 NS: tb.sel = 1'h0: tb.a = 1'h1: tb.b = 1'h1: tb.q = 1'h1
+
+Time: 30 NS: tb.sel = 1'h0: tb.a = 1'h1: tb.b = 1'h0: tb.q = 1'h1
+
+Time: 30 NS: tb.sel = 1'h0: tb.a = 1'h1: tb.b = 1'h0: tb.q = 1'h0
+
+Time: 40 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h0
+
+Time: 40 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'h0
+
+Time: 40 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'h1
+
+Time: 50 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h1
+
+Time: 50 NS: tb.sel = 1'h1: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h1
+
+Time: 50 NS: tb.sel = 1'h1: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h0
+
+Time: 60 NS: tb.sel = 1'h1: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'h0
+
+Time: 70 NS: tb.sel = 1'h1: tb.a = 1'h1: tb.b = 1'h1: tb.q = 1'h0
+
+Time: 70 NS: tb.sel = 1'h1: tb.a = 1'h1: tb.b = 1'h0: tb.q = 1'h0
+
+Time: 70 NS: tb.sel = 1'h1: tb.a = 1'h1: tb.b = 1'h0: tb.q = 1'h1
+
+Time: 80 NS: tb.sel = 1'h1: tb.a = 1'h1: tb.b = 1'h1: tb.q = 1'h1
+
+Time: 90 NS: tb.sel = 1'h1: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'h1
+
+Time: 90 NS: tb.sel = 1'h1: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h1
+
+Time: 90 NS: tb.sel = 1'hx: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h1
+
+XPROP:	'X' detected in if block
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab1/dut.v
+	LINE: 22
+	SCOPE: tb.dut_inst
+	TIME: 90 NS + 2
+Time: 90 NS: tb.sel = 1'hx: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h0
+
+Time: 100 NS: tb.sel = 1'hx: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'h0
+
+XPROP:	'X' detected in if block
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab1/dut.v
+	LINE: 22
+	SCOPE: tb.dut_inst
+	TIME: 100 NS + 2
+Time: 100 NS: tb.sel = 1'hx: tb.a = 1'h0: tb.b = 1'h1: tb.q = 1'hx
+
+Time: 110 NS: tb.sel = 1'hx: tb.a = 1'h1: tb.b = 1'h1: tb.q = 1'hx
+
+XPROP:	'X' detected in if block
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab1/dut.v
+	LINE: 22
+	SCOPE: tb.dut_inst
+	TIME: 110 NS + 2
+Time: 110 NS: tb.sel = 1'hx: tb.a = 1'h1: tb.b = 1'h1: tb.q = 1'h1
+
+Time: 120 NS: tb.sel = 1'hx: tb.a = 1'h1: tb.b = 1'h0: tb.q = 1'h1
+
+XPROP:	'X' detected in if block
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab1/dut.v
+	LINE: 22
+	SCOPE: tb.dut_inst
+	TIME: 120 NS + 2
+Time: 120 NS: tb.sel = 1'hx: tb.a = 1'h1: tb.b = 1'h0: tb.q = 1'hx
+
+Time: 130 NS: tb.sel = 1'hx: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'hx
+
+Time: 130 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'hx
+
+Time: 130 NS: tb.sel = 1'h0: tb.a = 1'h0: tb.b = 1'h0: tb.q = 1'h0
+
+Simulation complete via $finish(1) at time 140 NS + 0
+./tb.v:22 #10 $finish;
+xcelium> #exit
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:46:19 EST  (total: 00:00:01)

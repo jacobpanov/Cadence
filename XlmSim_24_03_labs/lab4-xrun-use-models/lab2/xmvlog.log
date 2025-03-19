@@ -1,0 +1,13 @@
+xmvlog: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xmvlog	22.09-s010: Started on Mar 04, 2025 at 17:28:43 EST
+xmvlog
+    -f xmvlog_ver.args
+        -no_analogsolver
+        -MESSAGES
+        -UPDATE
+        mux.v
+        mux_test.v
+
+file: mux.v
+file: mux_test.v
+TOOL:	xmvlog	22.09-s010: Exiting on Mar 04, 2025 at 17:28:43 EST  (total: 00:00:00)

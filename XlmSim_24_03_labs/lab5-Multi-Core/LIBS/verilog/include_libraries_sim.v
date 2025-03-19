@@ -1,0 +1,6 @@
+`include "typical.v"
+`include "pads.v"
+`include "pllclk.v"
+`include "CDK_R512x16.gv"
+`include "CDK_S128x16.gv"
+`include "CDK_S256x16.gv"

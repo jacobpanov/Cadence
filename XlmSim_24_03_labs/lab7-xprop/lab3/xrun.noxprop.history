@@ -1,0 +1,1 @@
+s1(04Mar2025:18:49:16):  xrun -clean -mess -access rwc -v93 tb_mux.vhd mux.vhd -top tb_mux -l xrun.noxprop.log 

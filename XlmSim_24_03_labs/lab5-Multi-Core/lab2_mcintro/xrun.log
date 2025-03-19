@@ -1,0 +1,1552 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 04, 2025 at 17:52:38 EST
+xrun
+	-64bit
+	-mce
+	-licinfo
+	+TESTFILE1=../workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.scan.ex1.ts1.verilog
+	+TESTFILE2=../workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.logic.ex1.ts2.verilog
+	-incdir ../workdir/../LIBS/verilog/
+	-v ../workdir/../LIBS/verilog/include_libraries_sim.v
+	../workdir/../RTL/dtmf_chip.test_netlist.v
+	../workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v
+	+nospecify
+	+access+r
+	-profile
+	-rdprofile
+	-status
+	-status3
+	+xmstatus
+	+xmtimescale+1ns/1ps
+	+xmoverride_timescale
+	+xmseq_udp_delay+2ps
+	+libext+.v+.V
+	+xmlibdirname+../workdir/xrun_COMPRESSION_SERIAL
+	+HEARTBEAT
+	+FAILSET
+	+miscompare_limit=10
+
+   User defined plus("+") options:
+	+TESTFILE1=../workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.scan.ex1.ts1.verilog
+	+TESTFILE2=../workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.logic.ex1.ts2.verilog
+	+HEARTBEAT
+	+FAILSET
+	+miscompare_limit=10
+
+file: ../workdir/../RTL/dtmf_chip.test_netlist.v
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip:v
+		errors: 0, warnings: 0
+	module worklib.arb:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_1:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_2:v
+		errors: 0, warnings: 0
+	module worklib.dma:v
+		errors: 0, warnings: 0
+	module worklib.ram_128x16_test:v
+		errors: 0, warnings: 0
+	module worklib.ram_256x16_test:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_9:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_10:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_11:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_12:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_13:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_14:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_15:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_16:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_3:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_4:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_5:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_6:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_7:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_8:v
+		errors: 0, warnings: 0
+	module worklib.results_conv:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_17:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_18:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_19:v
+		errors: 0, warnings: 0
+	module worklib.spi:v
+		errors: 0, warnings: 0
+	module worklib.accum_stat:v
+		errors: 0, warnings: 0
+	module worklib.add_unsigned_858:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned:v
+		errors: 0, warnings: 0
+	module worklib.sub_unsigned_860:v
+		errors: 0, warnings: 0
+	module worklib.alu_32:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_20:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_21:v
+		errors: 0, warnings: 0
+	module worklib.data_bus_mach:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_22:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_23:v
+		errors: 0, warnings: 0
+	module worklib.decode_i:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_24:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_25:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_26:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_27:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_28:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_29:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_30:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_31:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_32:v
+		errors: 0, warnings: 0
+	module worklib.execute_i:v
+		errors: 0, warnings: 0
+	module worklib.mult_unsigned:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned_4:v
+		errors: 0, warnings: 0
+	module worklib.mult_32:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_33:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_34:v
+		errors: 0, warnings: 0
+	module worklib.port_bus_mach:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_35:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_36:v
+		errors: 0, warnings: 0
+	module worklib.prog_bus_mach:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned_444:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_glue:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_37:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_38:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_mach:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_ds_cs:v
+		errors: 0, warnings: 0
+	module worklib.test_control_opcg:v
+		errors: 0, warnings: 0
+	module worklib.ulaw_lin_conv:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4000:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_delay_counter_DWNCNTWIDTH4:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_domain_icg:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_pge_icg:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_PULSEGENWIDTH4:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32_4001:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4002:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30_4003:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31_4004:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25_4005:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26_4006:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_delay_counter_DWNCNTWIDTH4:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_domain_icg:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_pge_icg:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_PULSEGENWIDTH2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1:v
+		errors: 0, warnings: 0
+	module worklib.dtmf_large_recvr_core:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_39:v
+		errors: 0, warnings: 0
+	module worklib.arb_514:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_40:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_41:v
+		errors: 0, warnings: 0
+	module worklib.dma_547:v
+		errors: 0, warnings: 0
+	module worklib.ram_128x16_test_598:v
+		errors: 0, warnings: 0
+	module worklib.ram_256x16_test_601:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_42:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_43:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_44:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_45:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_46:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_47:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_48:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_49:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_50:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_51:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_52:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_53:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_54:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_55:v
+		errors: 0, warnings: 0
+	module worklib.results_conv_604:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_56:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_57:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_58:v
+		errors: 0, warnings: 0
+	module worklib.spi_616:v
+		errors: 0, warnings: 0
+	module worklib.accum_stat_467:v
+		errors: 0, warnings: 0
+	module worklib.add_unsigned_858_501:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned_2:v
+		errors: 0, warnings: 0
+	module worklib.sub_unsigned_860_739:v
+		errors: 0, warnings: 0
+	module worklib.alu_32_511:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_59:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_60:v
+		errors: 0, warnings: 0
+	module worklib.data_bus_mach_532:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_61:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_62:v
+		errors: 0, warnings: 0
+	module worklib.decode_i_541:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_63:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_64:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_65:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_66:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_67:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_68:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_69:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_70:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_71:v
+		errors: 0, warnings: 0
+	module worklib.execute_i_557:v
+		errors: 0, warnings: 0
+	module worklib.mult_unsigned_3966:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned_6:v
+		errors: 0, warnings: 0
+	module worklib.mult_32_564:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_72:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_73:v
+		errors: 0, warnings: 0
+	module worklib.port_bus_mach_589:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_74:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_75:v
+		errors: 0, warnings: 0
+	module worklib.prog_bus_mach_595:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned_444_3640:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned_607:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_glue_745:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_76:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_77:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_mach_748:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_742:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_ds_cs_754:v
+		errors: 0, warnings: 0
+	module worklib.test_control_opcg_755:v
+		errors: 0, warnings: 0
+	module worklib.ulaw_lin_conv_758:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4000_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26_1:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_delay_counter_DWNCNTWIDTH4_1:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_1_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_domain_icg_1:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_2_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_pge_icg_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_PULSEGENWIDTH4_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32_4001_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4002_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30_4003_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31_4004_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25_4005_1:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26_4006_1:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_delay_counter_DWNCNTWIDTH4_1:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_1_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_domain_icg_1:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_2_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_pge_icg_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_PULSEGENWIDTH2_1:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_1:v
+		errors: 0, warnings: 0
+	module worklib.dtmf_large_recvr_core_548:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_78:v
+		errors: 0, warnings: 0
+	module worklib.arb_513:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_79:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_80:v
+		errors: 0, warnings: 0
+	module worklib.dma_546:v
+		errors: 0, warnings: 0
+	module worklib.ram_128x16_test_597:v
+		errors: 0, warnings: 0
+	module worklib.ram_256x16_test_600:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_81:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_82:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_83:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_84:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_85:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_86:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_87:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_88:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_89:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_90:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_91:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_92:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_93:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_94:v
+		errors: 0, warnings: 0
+	module worklib.results_conv_603:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_95:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_96:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_97:v
+		errors: 0, warnings: 0
+	module worklib.spi_615:v
+		errors: 0, warnings: 0
+	module worklib.accum_stat_466:v
+		errors: 0, warnings: 0
+	module worklib.add_unsigned_858_500:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned_1:v
+		errors: 0, warnings: 0
+	module worklib.sub_unsigned_860_738:v
+		errors: 0, warnings: 0
+	module worklib.alu_32_510:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_99:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_98:v
+		errors: 0, warnings: 0
+	module worklib.data_bus_mach_531:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_100:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_101:v
+		errors: 0, warnings: 0
+	module worklib.decode_i_540:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_102:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_103:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_104:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_105:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_106:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_107:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_108:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_109:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_110:v
+		errors: 0, warnings: 0
+	module worklib.execute_i_556:v
+		errors: 0, warnings: 0
+	module worklib.mult_unsigned_3967:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned_5:v
+		errors: 0, warnings: 0
+	module worklib.mult_32_563:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_111:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_112:v
+		errors: 0, warnings: 0
+	module worklib.port_bus_mach_588:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_113:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_114:v
+		errors: 0, warnings: 0
+	module worklib.prog_bus_mach_594:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned_444_3641:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned_3740:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_glue_744:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_115:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_116:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_mach_747:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_741:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_ds_cs_753:v
+		errors: 0, warnings: 0
+	module worklib.ulaw_lin_conv_757:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4000_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26_2:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_4:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_delay_counter_DWNCNTWIDTH4_2:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_1_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_domain_icg_2:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_2_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_pge_icg_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_PULSEGENWIDTH4_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32_4001_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4002_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30_4003_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31_4004_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25_4005_2:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26_4006_2:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_4:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_delay_counter_DWNCNTWIDTH4_2:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_1_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_domain_icg_2:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_2_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_pge_icg_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_PULSEGENWIDTH2_2:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_2:v
+		errors: 0, warnings: 0
+	module worklib.dtmf_large_recvr_core_2:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_117:v
+		errors: 0, warnings: 0
+	module worklib.arb_512:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_118:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_119:v
+		errors: 0, warnings: 0
+	module worklib.dma_545:v
+		errors: 0, warnings: 0
+	module worklib.ram_128x16_test_596:v
+		errors: 0, warnings: 0
+	module worklib.ram_256x16_test_599:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_120:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_121:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_122:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_123:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_124:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_125:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_126:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_127:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_128:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_129:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_130:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_131:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_132:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_133:v
+		errors: 0, warnings: 0
+	module worklib.results_conv_602:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_134:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_135:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_136:v
+		errors: 0, warnings: 0
+	module worklib.spi_614:v
+		errors: 0, warnings: 0
+	module worklib.accum_stat_465:v
+		errors: 0, warnings: 0
+	module worklib.add_unsigned_858_499:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned_3:v
+		errors: 0, warnings: 0
+	module worklib.sub_unsigned_860_737:v
+		errors: 0, warnings: 0
+	module worklib.alu_32_509:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_137:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_138:v
+		errors: 0, warnings: 0
+	module worklib.data_bus_mach_530:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_139:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_140:v
+		errors: 0, warnings: 0
+	module worklib.decode_i_539:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_141:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_142:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_143:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_144:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_145:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_146:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_147:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_148:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_149:v
+		errors: 0, warnings: 0
+	module worklib.execute_i_555:v
+		errors: 0, warnings: 0
+	module worklib.mult_unsigned_3965:v
+		errors: 0, warnings: 0
+	module worklib.increment_unsigned_7:v
+		errors: 0, warnings: 0
+	module worklib.mult_32_562:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_150:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_151:v
+		errors: 0, warnings: 0
+	module worklib.port_bus_mach_587:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_152:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_153:v
+		errors: 0, warnings: 0
+	module worklib.prog_bus_mach_593:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned_444_3639:v
+		errors: 0, warnings: 0
+	module worklib.shift_left_vlog_unsigned_3739:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_glue_743:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_154:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_dtmf_chip_155:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_mach_746:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_core_740:v
+		errors: 0, warnings: 0
+	module worklib.tdsp_ds_cs_752:v
+		errors: 0, warnings: 0
+	module worklib.ulaw_lin_conv_756:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4000_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26_3:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_5:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_delay_counter_DWNCNTWIDTH4_3:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_1_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_domain_icg_3:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_4_p4_d4_b1_2_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_pge_icg_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_opcg_pulse_gen_PULSEGENWIDTH4_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_4_p4_d4_b1_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_32_4001_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_4002_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_30_4003_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_31_4004_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_25_4005_3:v
+		errors: 0, warnings: 0
+	module worklib.bmux_26_4006_3:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_5:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_delay_counter_DWNCNTWIDTH4_3:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_1_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_domain_icg_3:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_my_opcg_macro_2_p2_d4_b1_2_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_pge_icg_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_opcg_pulse_gen_PULSEGENWIDTH2_3:v
+		errors: 0, warnings: 0
+	module worklib.my_opcg_macro_2_p2_d4_b1_3:v
+		errors: 0, warnings: 0
+	module worklib.dtmf_large_recvr_core_3:v
+		errors: 0, warnings: 0
+	module worklib.iopads:v
+		errors: 0, warnings: 0
+	module worklib.mult_unsigned_567:v
+		errors: 0, warnings: 0
+	module worklib.RC_CG_MOD_AUTO_TRIGGER:v
+		errors: 0, warnings: 0
+	module worklib.bmux_6:v
+		errors: 0, warnings: 0
+	module worklib.bmux:v
+		errors: 0, warnings: 0
+	module worklib.TRIGGER_trigger_icg:v
+		errors: 0, warnings: 0
+	module worklib.TRIGGER:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_1:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_1:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_2:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_6:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_2:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_4:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_5:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_3:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_4:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_5:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_7:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_20:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_8:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_9:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_10:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_6:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_7:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_8:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_20_1:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_11:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_12:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_9:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_13:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_10:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_11:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_12:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_6_1:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_14:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_15:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_16:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_13:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_14:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_15:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_16:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_6_2:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_17:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_18:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_19:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_17:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_18:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_19:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_6_3:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_21:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_3_20:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_22:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_6_4:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_23:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_24:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110_gate_25:v
+		errors: 0, warnings: 0
+	module worklib.comp_51_3_1x3_21100110:v
+		errors: 0, warnings: 0
+	module worklib.decomp_51_3_1x3_21100110_gate:v
+		errors: 0, warnings: 0
+	module worklib.decomp_51_3_1x3_21100110_gate_1:v
+		errors: 0, warnings: 0
+	module worklib.decomp_51_3_1x3_21100110_gate_2:v
+		errors: 0, warnings: 0
+	module worklib.decomp_51_3_1x3_21100110:v
+		errors: 0, warnings: 0
+	module worklib.XOR_COMPRESSION_51_3_1x3_21100110:v
+		errors: 0, warnings: 0
+	module worklib.dtmf_chip:v
+		errors: 0, warnings: 0
+file: ../workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v
+	module worklib.workdir_COMPRESSION:v
+		errors: 0, warnings: 0
+file: ../workdir/../LIBS/verilog/include_libraries_sim.v
+	module include_libraries_sim.AND2XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AND3X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AND3XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AND4X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AO21X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AO21XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AO22X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AO22X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AO22XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI21X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI21XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI22X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI22XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.BUFX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.BUFX20:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.BUFX3:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.BUFX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX20:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKXOR2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.DFFHQX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.DFFX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.EDFFHQX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.INVX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.INVX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.MX2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.MX2XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.MXI2XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2BX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2BXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3BXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND4BBXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2BX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2X6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3BX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3BXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OA21X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OA22X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI21XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI22X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI31XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI33X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR2XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFQX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFRHQX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFRX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.TLATNX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.TLATNXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.TLATXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.XNOR2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.XOR2XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.ADDHX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AO22X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI221X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI31X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI32X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.MDFFHQX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR4BBX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI21X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI222X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI2BB1X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR3X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFRHQX8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFRX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFSX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AND2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AO21X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI222X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI2BB1X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI33XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKMX2X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKMX2X3:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.DFFQXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2X8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND4BXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND4XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR4X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI221X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI22XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI2BB1XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR4X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFHQX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFSHQX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFSHQX8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.TLATNX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.ADDFX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AND2X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI211XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI22X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR4BX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI211X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI31X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI32X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR2X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.INVXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND4BX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR3XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFQX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI222XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.DFFHQX4:v
+		errors: 0, warnings: 0
+	primitive include_libraries_sim.udp_dff:v
+		errors: 0, warnings: 0
+	primitive include_libraries_sim.udp_tlat:v
+		errors: 0, warnings: 0
+	primitive include_libraries_sim.udp_mux2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.PADDB:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.PADDI:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.PADDOZ:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.pll:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CDK_R512x16:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CDK_S128x16:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CDK_S256x16:v
+		errors: 0, warnings: 0
+file: ../workdir/../LIBS/verilog/include_libraries_sim.v
+	module include_libraries_sim.AND2X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AND2X6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI211X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI211X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI22X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI2BB1X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI2BB1X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI31X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI32X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI33X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKAND2X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKAND2X6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX12:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX16:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX3:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.INVX3:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.MXI2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2BX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2X6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND4X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2BX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2BX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2BXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3BX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR4X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI211X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI211X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI21X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI22X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI2BB1X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI2BB2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI32XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AND3X6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI21X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI2BB2X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.BUFX8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKAND2X12:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKAND2X3:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.CLKINVX8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2BX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND2X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI22X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI2BB1X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI31X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR2X4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OR2X6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFHQX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFHQX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.SDFFQXL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI211X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI21X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.AOI221X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.BUFX6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.INVX6:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3BX1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3X8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND4X1:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3BX4:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OA21XL:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI21X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI31X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI32X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.INVX16:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NAND3BX2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR2X8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.OAI221X2:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3X8:v
+		errors: 0, warnings: 0
+	module include_libraries_sim.NOR3X4:v
+		errors: 0, warnings: 0
+xmvlog: Memory Usage - Final: 39.0M, Peak: 39.0M, Peak virtual: 77.2M
+xmvlog: CPU Usage - 0.1s system + 1.5s user = 1.5s total (1.7s, 91.7% cpu)
+xmelab: *N,INFSUD: -NOSPECIFY is automatically used with -SEQ_UDP_DELAY.
+		Caching library 'include_libraries_sim' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy for Multi Core Simulation:
+	Top level design units:
+		workdir_COMPRESSION
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.XOR_COMPRESSION_51_3_1x3_21100110:v <0x248717d3>
+			streams:   0, words:     0
+		worklib.bmux_6:v <0x461fbd0a>
+			streams:   1, words:   146
+		worklib.iopads:v <0x2db7c3cc>
+			streams:   2, words:   306
+		worklib.bmux_30_4003_3:v <0x3b51d228>
+			streams:   1, words:   146
+		worklib.bmux_32_4001_3:v <0x650c4809>
+			streams:   1, words:   146
+		worklib.bmux_30_3:v <0x73441ad5>
+			streams:   1, words:   146
+		worklib.bmux_32_3:v <0x4df788b3>
+			streams:   1, words:   146
+		worklib.tdsp_core_glue_743:v <0x33b5363a>
+			streams:   0, words:     0
+		worklib.mult_32_562:v <0x2e51fc5b>
+			streams:   1, words:   160
+		worklib.alu_32_509:v <0x6406c940>
+			streams:   1, words:   160
+		worklib.tdsp_core_740:v <0x37558e21>
+			streams:   0, words:     0
+		worklib.results_conv_602:v <0x7d7b2aa2>
+			streams:   2, words:   306
+		worklib.ram_256x16_test_599:v <0x5667751f>
+			streams:   1, words:   146
+		worklib.ram_128x16_test_596:v <0x1f42169f>
+			streams:   1, words:   146
+		worklib.dtmf_large_recvr_core_3:v <0x7a068d0e>
+			streams:   1, words:   146
+		worklib.bmux_30_4003_2:v <0x2bc88ad0>
+			streams:   1, words:   146
+		worklib.bmux_32_4001_2:v <0x759510f1>
+			streams:   1, words:   146
+		worklib.bmux_30_2:v <0x1a068302>
+			streams:   1, words:   146
+		worklib.bmux_32_2:v <0x24b51164>
+			streams:   1, words:   146
+		worklib.tdsp_core_glue_744:v <0x7bd81200>
+			streams:   0, words:     0
+		worklib.mult_32_563:v <0x77eb8c4d>
+			streams:   1, words:   160
+		worklib.alu_32_510:v <0x34996794>
+			streams:   1, words:   160
+		worklib.tdsp_core_741:v <0x206ba520>
+			streams:   0, words:     0
+		worklib.results_conv_603:v <0x55668c77>
+			streams:   2, words:   306
+		worklib.ram_256x16_test_600:v <0x738c4594>
+			streams:   1, words:   146
+		worklib.ram_128x16_test_597:v <0x64d8fe73>
+			streams:   1, words:   146
+		worklib.dtmf_large_recvr_core_2:v <0x64f7e95e>
+			streams:   1, words:   146
+		worklib.bmux_30_4003_1:v <0x2b85d34a>
+			streams:   1, words:   146
+		worklib.bmux_32_4001_1:v <0x75d8496b>
+			streams:   1, words:   146
+		worklib.bmux_30_1:v <0x4b569fa8>
+			streams:   1, words:   146
+		worklib.bmux_32_1:v <0x75e50dce>
+			streams:   1, words:   146
+		worklib.test_control_opcg_755:v <0x643a8237>
+			streams:   0, words:     0
+		worklib.tdsp_core_glue_745:v <0x6ed1771a>
+			streams:   0, words:     0
+		worklib.mult_32_564:v <0x27b9667e>
+			streams:   1, words:   160
+		worklib.alu_32_511:v <0x08a0c525>
+			streams:   1, words:   160
+		worklib.tdsp_core_742:v <0x75caa67e>
+			streams:   0, words:     0
+		worklib.results_conv_604:v <0x2ff30d0a>
+			streams:   2, words:   306
+		worklib.ram_256x16_test_601:v <0x3b7f4f33>
+			streams:   1, words:   146
+		worklib.ram_128x16_test_598:v <0x1b69a17f>
+			streams:   1, words:   146
+		worklib.dtmf_large_recvr_core_548:v <0x07c85f40>
+			streams:   2, words:   306
+		worklib.bmux_30_4003:v <0x14723068>
+			streams:   1, words:   146
+		worklib.bmux_32_4001:v <0x01ac67ef>
+			streams:   1, words:   146
+		worklib.bmux_30:v <0x1b18607c>
+			streams:   1, words:   146
+		worklib.bmux_32:v <0x483c1a74>
+			streams:   1, words:   146
+		worklib.test_control_opcg:v <0x5dd47cc6>
+			streams:   0, words:     0
+		worklib.tdsp_core_glue:v <0x51a0807c>
+			streams:   0, words:     0
+		worklib.mult_32:v <0x746d5341>
+			streams:   1, words:   160
+		worklib.alu_32:v <0x0d3e5ba5>
+			streams:   1, words:   160
+		worklib.tdsp_core:v <0x76ea8aa4>
+			streams:   0, words:     0
+		worklib.results_conv:v <0x5403d748>
+			streams:   2, words:   306
+		worklib.ram_256x16_test:v <0x347d88c3>
+			streams:   1, words:   146
+		worklib.ram_128x16_test:v <0x688a3a23>
+			streams:   1, words:   146
+		worklib.dtmf_large_recvr_core:v <0x3a3c96a5>
+			streams:   2, words:   306
+		worklib.dtmf_chip:v <0x15f70880>
+			streams:   0, words:     0
+		worklib.workdir_COMPRESSION:v <0x7f9d3bad>
+			streams: 110, words: 258206
+		include_libraries_sim.TLATNX2:v <0x43433ec9>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFRX4:v <0x17817cd7>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQX2:v <0x0eca0356>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQX1:v <0x327aeb85>
+			streams:   1, words:   120
+		include_libraries_sim.DFFHQX4:v <0x3025c092>
+			streams:   1, words:   120
+		include_libraries_sim.DFFHQX1:v <0x27d6d9c5>
+			streams:   1, words:   120
+		include_libraries_sim.DFFHQX4:v <0x6520bcee>
+			streams:   1, words:   120
+		include_libraries_sim.EDFFHQX2:v <0x25608b88>
+			streams:   1, words:   120
+		include_libraries_sim.TLATXL:v <0x66c1b3bd>
+			streams:   1, words:   120
+		include_libraries_sim.TLATNX1:v <0x155b5dc5>
+			streams:   1, words:   120
+		include_libraries_sim.DFFQXL:v <0x404be296>
+			streams:   1, words:   120
+		include_libraries_sim.DFFX1:v <0x600cd1cc>
+			streams:   1, words:   120
+		include_libraries_sim.MDFFHQX1:v <0x23c928e4>
+			streams:   1, words:   120
+		include_libraries_sim.DFFHQX1:v <0x72d3a5b9>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQX1:v <0x20453e0e>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFSX2:v <0x08f266da>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFSHQX8:v <0x5510eeff>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFRHQX8:v <0x31179806>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFSHQX1:v <0x0f73a527>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFRX4:v <0x05ff79de>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFRX2:v <0x25aa16e1>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFRX2:v <0x37d413e8>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFHQX4:v <0x67fb7625>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFSHQX1:v <0x795ede27>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQX2:v <0x66cbcfc6>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQX2:v <0x108dfe94>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFHQX2:v <0x297d49a8>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQXL:v <0x680ca80b>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFHQX1:v <0x4be3f986>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFHQX2:v <0x34b6938b>
+			streams:   1, words:   120
+		include_libraries_sim.DFFHQX1:v <0x273c8b23>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQX1:v <0x56030f5c>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFQX1:v <0x4bc8d57f>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFRHQX1:v <0x3648742d>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFRHQX4:v <0x2cbb18a8>
+			streams:   1, words:   120
+		include_libraries_sim.SDFFSHQX4:v <0x282f407b>
+			streams:   1, words:   120
+		include_libraries_sim.TLATNXL:v <0x5786e6a9>
+			streams:   1, words:   120
+xmvlog_cg: Memory Usage - Final: 25.2M, Peak: 35.0M, Peak virtual: 56.5M
+xmvlog_cg: CPU Usage - 0.0s system + 0.2s user = 0.2s total (0.2s, 86.5% cpu)
+	Building instance specific data structures.
+	MC build: splitting started at Mar 04, 2025 at 17:53:04 EST
+	MC build: splitting finished at Mar 04, 2025 at 17:53:05 EST after 1 seconds with 1 splits
+	MC build: generate and save splits started (total of 1 splits, using thread count of 4) at Mar 04, 2025 at 17:53:05 EST
+	MC build: generate and save splits finished at Mar 04, 2025 at 17:53:09 EST after 4 seconds
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:               107806     639
+		UDPs:                   55032       3
+		Primitives:            456433       6
+		Registers:              27297     116
+		Scalar wires:           27527       -
+		Vectored wires:            32       -
+		Initial blocks:             1       1
+		Cont. assignments:          0      10
+		Pseudo assignments:       140     107
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.workdir_COMPRESSION:v
+	MC build: split processing started (total of 1 splits, using thread count of 4) at Mar 04, 2025 at 17:53:11 EST
+	MC build: split processing finished at Mar 04, 2025 at 17:53:37 EST after 26 seconds
+	MC build: splits linking started at Mar 04, 2025 at 17:53:37 EST
+	MC build: splits linking finished at Mar 04, 2025 at 17:53:40 EST after 3 seconds
+	Elaboration finished successfully
+xmelab: Memory Usage - Final: 45.6M, Peak: 500.0M, Peak virtual: 1141.5M
+xmelab: CPU Usage - 7.3s system + 87.3s user = 94.6s total (59.1s, 160.2% cpu) (node1677.palmetto.clemson.edu)
+xmelab: xmvlog_cg Time - 0.0s system + 0.2s user = 0.2s total (0.2s, 100.0% cpu)
+1 Xcelium_Multi_Core
+Loading snapshot worklib.workdir_COMPRESSION:v .................... Done
+xmsim: Memory Usage - Final: 97.3M, Peak: 97.3M, Peak virtual: 392.7M
+xmsim: CPU Usage - 0.1s system + 0.1s user = 0.1s total (0.3s, 52.8% cpu) (node1677.palmetto.clemson.edu)
+xrun: Time - 62.2s
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 04, 2025 at 17:53:41 EST  (total: 00:01:03)

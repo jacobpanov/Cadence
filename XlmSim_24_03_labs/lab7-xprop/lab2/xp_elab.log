@@ -1,0 +1,65 @@
+
+XPROP options:
+-XFILE xfile_cat.txt -XVERBOSE -ENABLE_XP_SEMETHOD -ENABLE_XP_DEBUG_CODE 
+
+
+XFILE(xfile_cat.txt):
+SCOPE top.dut C
+
+
+
+Final Set of XFILE Flags:
+
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab2/dut.v 
+	Line: 3
+xmelab: *W,XPARRD: Array corruption feature has not been enabled for Verilog/SV in X-Propagation. To enable this feature, set xfile flag VL_INVALID_IDX_FOX/VL_OUTOFRANGE_IDX_FOX for FOX Mode Array Corruption or xfile flag VL_INVALID_IDX_CAT/VL_OUTOFRANGE_IDX_CAT for CAT Mode Array Corruption.
+
+XPROP METRICS FOR VERILOG:
+		Total modules in environment                             = 2
+		Total instances in environment                           = 2
+		Total modules enabled using xfile/xprop                  = 1
+		Total instances enabled using xfile/xprop                = 1
+		Total always blocks in xprop enabled hierarchy           = 1
+		Total xprop enabled always block in xprop enabled hierarchy = 1
+		Total xprop enabled always block with x-edge enabled in xprop enabled hierarchy   = 1
+		Total always block which are edge sensitive in xprop enabled hierarchy   = 1
+		Module cover percentage(1/2)                           = 50.00%
+		Instance cover percentage(1/2)                         = 50.00%
+		Block cover percentage(1/1)                            = 100.00%
+		FF cover percentage(1/1)                               = 100.00%
+
+
+--------------------------------------------------------------------------
+
+XPROP options:
+-XFILE xfile_fox.txt -XVERBOSE -ENABLE_XP_SEMETHOD -ENABLE_XP_DEBUG_CODE 
+
+
+XFILE(xfile_fox.txt):
+SCOPE top.dut F
+
+
+
+Final Set of XFILE Flags:
+
+
+XPROP:	FOX Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab2/dut.v 
+	Line: 3
+xmelab: *W,XPARRD: Array corruption feature has not been enabled for Verilog/SV in X-Propagation. To enable this feature, set xfile flag VL_INVALID_IDX_FOX/VL_OUTOFRANGE_IDX_FOX for FOX Mode Array Corruption or xfile flag VL_INVALID_IDX_CAT/VL_OUTOFRANGE_IDX_CAT for CAT Mode Array Corruption.
+
+XPROP METRICS FOR VERILOG:
+		Total modules in environment                             = 2
+		Total instances in environment                           = 2
+		Total modules enabled using xfile/xprop                  = 1
+		Total instances enabled using xfile/xprop                = 1
+		Total always blocks in xprop enabled hierarchy           = 1
+		Total xprop enabled always block in xprop enabled hierarchy = 1
+		Total xprop enabled always block with x-edge enabled in xprop enabled hierarchy   = 1
+		Total always block which are edge sensitive in xprop enabled hierarchy   = 1
+		Module cover percentage(1/2)                           = 50.00%
+		Instance cover percentage(1/2)                         = 50.00%
+		Block cover percentage(1/1)                            = 100.00%
+		FF cover percentage(1/1)                               = 100.00%

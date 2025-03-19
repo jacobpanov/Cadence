@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-ACCESS
+rwc
+-V93
+-XFILE
+xfile_fox.txt
+-ENABLE_XP_DEBUG_CODE
+-XVERBOSE
+-no_analogsolver
+-MESSAGES
+tb_mux
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdl.var
+-WORK
+worklib
+-IRUNHASTOP

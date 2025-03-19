@@ -1,0 +1,1 @@
+Severity cutoff of logger 'south_mark_living_dead.txt' was set to ERROR

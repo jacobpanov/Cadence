@@ -1,0 +1,3 @@
+SOURCE=/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../RTL/dtmf_chip.test_netlist.v
+TECHLIB=/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/../LIBS/atpg/include_libraries.v
+RUNDIR=/vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/

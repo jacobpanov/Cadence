@@ -1,0 +1,62 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 12, 2025 at 21:24:02 EDT
+xrun
+	-f files.txt
+		/home/jpanov/Cadence/VLA_28_0/lab3-mux/multiplexor.v
+		/home/jpanov/Cadence/VLA_28_0/lab4-drvr/driver.v
+		/home/jpanov/Cadence/VLA_28_0/lab5-alu/alu.v
+		/home/jpanov/Cadence/VLA_28_0/lab6-ctrl/controller.v
+		/home/jpanov/Cadence/VLA_28_0/lab8-mem/memory.v
+		/home/jpanov/Cadence/VLA_28_0/lab7-reg/register.v
+		/home/jpanov/Cadence/VLA_28_0/lab9-cntr/counter.v
+		./risc.v
+		./risc_test.v
+Recompiling... reason: file './risc_test.v' is newer than expected.
+	expected: Fri Dec 15 05:32:58 2023
+	actual:   Wed Mar 12 21:23:58 2025
+file: ./risc_test.v
+	module worklib.risc_test:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		risc_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.risc_test:v <0x10597fad>
+			streams:   4, words: 25197
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:             11       9
+		Resolved nets:        0       1
+		Registers:           26      23
+		Scalar wires:        15       -
+		Expanded wires:       8       1
+		Vectored wires:       9       -
+		Always blocks:       10       7
+		Initial blocks:       1       1
+		Cont. assignments:    2       2
+		Pseudo assignments:   2       2
+	Writing initial simulation snapshot: worklib.risc_test:v
+Loading snapshot worklib.risc_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+Testing reset
+Testing HLT instruction
+Testing JMP instruction
+Testing SKZ instruction
+Testing LDA instruction
+Testing STO instruction
+Testing AND instruction
+Testing XOR instruction
+Testing ADD instruction
+Doing test CPUtest1.txt
+Doing test CPUtest2.txt
+Doing test CPUtest3.txt
+TEST PASSED
+Simulation complete via $finish(1) at time 2898 NS + 0
+./risc_test.v:150       $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 12, 2025 at 21:24:04 EDT  (total: 00:00:02)

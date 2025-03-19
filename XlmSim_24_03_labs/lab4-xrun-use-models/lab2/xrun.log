@@ -1,0 +1,8 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 17:25:20 EST
+xrun
+	-prep
+	mux.v
+	mux_test.v
+Translation successful.
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 17:25:21 EST  (total: 00:00:01)

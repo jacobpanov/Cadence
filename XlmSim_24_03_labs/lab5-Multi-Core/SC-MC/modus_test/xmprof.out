@@ -1,0 +1,243 @@
+xmsim(64): 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+
+Linux dvfinperf2 3.10.0-693.el7.x86_64 #1 SMP Thu Jul 6 19:56:57 EDT 2017 x86_64 12 CPUs, 120664 Meg RAM, 500 hits/sec, (manishap)
+
+	model name:Intel(R) Xeon(R) CPU X5680 @ 3.33GHz
+ 
+	cache size:12288 KB
+ 
+xmelab options:
+	-ENABLE_INACTIVEQUEUE
+	-AMSDLIBDIR
+	workdir/xrun_COMPRESSION_SERIAL/AMSD
+	-CDSLIB
+	./workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.23.09.d/cds.lib
+	-HDLVAR
+	./workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.23.09.d/hdl.var
+	-DISGATECHAINEVAL
+	-DISGATECHAINEVAL_PES
+	-WORK
+	worklib
+	-NOCAXL
+	-DISABLE_UPVC
+	-ENABLE_FRCRELCONCATOPT
+	-DISABLE_JPRUNE_OPT
+	-DISABLE_PES_ROOMR
+	-DISABLE_PORTVAR_PES
+	-DISABLE_PES_BIGBLK
+	-DISABLE_ALWAYS_LATCH_PES
+	-DISABLE_OSCA_WRITE_ACCESS
+	-DISABLE_OSCA_SUBP
+	-DISABLE_ACA_OSCA
+	-DISABLE_CA_OPT
+	-NOCAOPT
+	-NOCALOCALOPT
+	-NO_CA_SHARE
+	-ALWAYS_TRIGGER
+	-NOFORWOPT
+	-DISCDPTMUX
+	-DISCDPTMUX_XBACK
+	-DISCDPTINV
+	-NO_VARACA_ESWAIT
+	-NO_CA_PRUNE
+	-DISABLE_WIDE_NET_CONDITIONAL_READ
+	-SEQUDP_NBA_DELAY
+	-NO_DPRUNE
+	-DISABLE_LOCAL_SHARE_CA_BUILD
+	-NO_LATCH_PRUNE
+	-DISABLE_RSWT
+	-DISABLE_TF_DEADCODE_CONSTRUCTOR
+	-DISABLE_SHORTCT_OPT
+	-DISABLE_CLKGEN_OPT
+	-NO_GPRUNE
+	-NO_REG_GPRUNE
+	-DISABLE_OSCA_WITHR_REG
+	-DISABLE_OSCA_WITHR
+	-DISABLE_RAW
+	-DISABLE_RAW_DELBUF
+	-DISABLE_REG_PORT_OPT
+	-ENABLE_ALIAS_RING_OPT
+	-DISABLE_FORGEN_CAOPT
+	-DISABLE_PES_FRCREL_EXT
+	-DISABLE_ALWAYS_CA
+	-DISABLE_INIT_PSTATE_OPT
+	-DISABLE_CAG_WIDECONST
+	-DISABLE_VTW_FULL_READWRITE
+	-DISABLE_PIB_OPT_FOR_NDI
+	-NOSPECIFY
+	-SEQ_UDP_DELAY
+	2ps
+	+HEARTBEAT
+	+FAILSET
+	+miscompare_limit=10
+	+TESTFILE1=workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.scan.ex1.ts1.verilog
+	+TESTFILE2=workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.logic.ex1.ts2.verilog
+	+nospecify
+	+access+r
+	+xmstatus
+	+xmtimescale+1ns/1ps
+	+xmoverride_timescale
+	+xmseq_udp_delay+2ps
+	+libext+.v+.V+.z+.Z+.gz
+	+xmlibdirname+workdir/xrun_COMPRESSION_SERIAL
+	-TIMESCALE
+	1ns/1ps
+	-OVERRIDE_TIMESCALE
+	-MESSAGES
+	-NOTOOPT
+	-NOTOSHARE
+	-NOGATESHARE
+	-ACCESS
+	+r
+	-NOCELLACCESS
+	worklib.workdir_COMPRESSION:v
+
+Profiled Intervals: 
+ #Id                                PBSR Info               #start                  #stop             #start_CPU          #stop_CPU               #CPS
+[ 1]                                                          0 NS   to     6907451200 NS                 0.5150           127.9838      54189346.4007
+
+Memory Usage - 50.5M program + 1113.0M data + 1.0M profile = 1164.5M total
+CPU Usage - 0.2s system + 128.2s user = 128.5s total (599.3% cpu)
+
+License Acquisition Time - 0.000001s
+Snapshot Loading: CPU Usage - 0.0s system + 0.1s user = 0.1s total (1.2s, 10.0% cpu)
+
+Derived hit_rate: 82 hps
+
+------------------------------------------------------------
+CPU time of the main thread Stream Counts (10572 hits total) 21.188717 sec
+Additional non-CPU (file I/O etc.) time 0.121275 sec (equivalent to 60 hits)
+------------------------------------------------------------
+%hits #hits  #inst  name
+ 94.5 10044 [     ] MC Engines
+  1.1   115 [    1] Task cmd_code (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 966 in worklib.workdir_COMPRESSION [module])
+                        0.3    36  Library function rtl_fwrite_char
+                        0.3    34  Library function rtl_fwrite
+                        0.3    31  Library function systf_sscanf
+
+  0.9    97 [     ] MC Ingress
+  0.6    67 [     ] User defined task/function $ftell
+  0.4    44 [     ] Method SSS_MT_MINNOW (method)
+                        0.3    37  Library function minnow (time callbacks)
+
+  0.2    24 [     ] Method SSS_KM_CL2TA (method)
+  0.2    23 [     ] MC Egress
+  0.2    19 [    1] Task sim_vector_file (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 450 in worklib.workdir_COMPRESSION [module])
+                        0.2    18  Library function systf_sscanf
+
+  0.2    18 [    1] Task Scan_Sequence_TM_1_SEQ_3_SOP_1 (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 695 in worklib.workdir_COMPRESSION [module])
+  0.2    16 [     ] ssslib tracelist handler
+  0.1    12 [     ] ssslib tracelist action function
+  0.1    12 [     ] ssslib pvscheck
+  0.1    11 [     ] ssslib pvscheck action function
+  0.1    10 [     ] Waveform Dump Internal
+  0.1     7 [     ] Stream rts_pvscode (process)
+  0.1     6 [     ] Wire 'WIRE' (3 inputs) (ws=0) (method)
+  0.1     6 [     ] outside engine
+  0.1     6 [     ] engine support
+  0.0     5 [    1] Task test_cycle (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 536 in worklib.workdir_COMPRESSION [module])
+  0.0     4 [     ] Logic primitive 'bufif0' (zero delay) (method)
+  0.0     4 [     ] Method SSS_MT_DU_BYTENFW (method)
+  0.0     3 [     ] Method SSS_MT_JUPACCR_BYTE (method)
+  0.0     2 [     ] Method SSS_MT_UGTR_PW_AB_8LU_NRM (method)
+  0.0     2 [     ] Method SSS_KM_FINDRFT (method)
+  0.0     2 [    1] Task Scan_Preconditioning_Sequence_TM_1_SEQ_1_SOP_1 (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 627 in worklib.workdir_COMPRESSION [module])
+  0.0     2 [    1] Task scan_cycle (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 873 in worklib.workdir_COMPRESSION [module])
+  0.0     1 [     ] Wire 'WIRE' (2 inputs) (ws=0) (method)
+  0.0     1 [     ] Wire 'WIRE' (3 inputs) (ws=0) (method)
+  0.0     1 [     ] Logic primitive 'bufif0' (zero delay) (method)
+  0.0     1 [     ] Wire 'WIRE' (2 inputs) (ws=0) (method)
+  0.0     1 [     ] Method SSS_MT_CNE_PW_AB_8LU_NRM (method)
+  0.0     1 [     ] Method SSS_MT_EQU_FW_AB_8LU_RM (method)
+  0.0     1 [     ] Method SSS_MT_DPINCCSETUP (method)
+  0.0     1 [     ] Method SSS_MT_RETURN_BYTE (method)
+  0.0     1 [     ] Stream rts_xfer (process)
+  0.0     1 [    1] Task ChannelMask_Cycle_Sequence_TM_1_SEQ_2_SOP_1 (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 664 in worklib.workdir_COMPRESSION [module])
+  0.0     1 [     ] simulation setup time 
+
+------------------------------------------------------------
+Most Active Modules (behavioral)
+------------------------------------------------------------
+%hits #hits  #inst  name
+  1.5   162 [    1] worklib.workdir_COMPRESSION:v (file: /home/manishap/my_wok/test22.09/XLM22_09_labs/lab6-Multi-Core/SC-MC/modus_test/workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v line: 47)
+
+
+
+------------------------------------------------------------
+CA Summary Counts (0 hits, 0.0% of total) 
+CA Prune Counts (0 hits, 0.0% of total) (CA Prune elements: 0, 0.0%)
+CA Amalg Counts (0 hits, 0.0% of total) (CA Amalg elements: 0, 0.0%)
+CA Twostate Counts (0 hits, 0.0% of total) (CA twostate elements: 0, 0.0%)
+CA Vector Counts (0 hits, 0.0% of total) (CA Vector elements: 0, 0.0%)
+CA Misc(CAG/DELBUF/PCA/) Counts (0 hits, 0.0% of total) (CA MISC elements: 0, 0.0%)
+CA EWA Counts (0 hits, 0.0% of total) (CA EWA elements: 74, 100.0%)
+CA Unopt Counts (0 hits, 0.0% of total) (CA Unopt elements: 0, 0.0%)
+------------------------------------------------------------
+
+------------------------------------------------------------
+Misc R&D Info
+------------------------------------------------------------
+%hits  Flags		Name
+
+
+------------------------------------------------------------
+  Summary of function calls by origin 
+------------------------------------------------------------
+Library function systf_sscanf (  0.46% ) 
+		%hits #hits  name
+		0.29%    31  Task cmd_code (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 966 in worklib.workdir_COMPRESSION [module])
+		0.17%    18  Task sim_vector_file (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 450 in worklib.workdir_COMPRESSION [module])
+
+Library function minnow (time callbacks) (  0.35% ) 
+		%hits #hits  name
+		0.35%    37  Method SSS_MT_MINNOW (method)
+
+Library function rtl_fwrite_char (  0.34% ) 
+		%hits #hits  name
+		0.34%    36  Task cmd_code (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 966 in worklib.workdir_COMPRESSION [module])
+
+Library function rtl_fwrite (  0.32% ) 
+		%hits #hits  name
+		0.32%    34  Task cmd_code (file: ./workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v, line: 966 in worklib.workdir_COMPRESSION [module])
+
+Library function rtl_fwrite_dec (  0.04% ) 
+Library function ssl_tracelist_handler (  0.03% ) 
+Library function rtl_fwrite_string (  0.03% ) 
+Library function rtl_fwrite_time (  0.01% ) 
+
+------------------------------------------------------------
+Logic Primitives Summary (5 logic primitive hits, 10632 total hits)
+L: % wrt Logic Primitive hits
+T: % wrt Total hits
+------------------------------------------------------------
+%hits(L) %hits(T) #hits name
+  100.0      0.0      5 Logic Primitive 'BUFIF0' 
+
+------------------------------------------------------------
+Stream Type Summary Counts (10632 hits total)
+------------------------------------------------------------
+%hits #hits  #inst  name
+ 95.6 10164 [     ] MC Total 
+  1.5   162 [    7] Verilog tasks 
+  0.9    91 [     ] Simulation Engine Time 
+  0.6    67 [     ] User defined system tasks/functions 
+  0.6    60 [     ] Non-CPU time 
+  0.3    28 [     ] General tracing support (VCD/SHM/VPI/UI) 
+  0.2    23 [     ] Support for callbacks (or UI) 
+  0.1    10 [     ] Waveform Dump 
+  0.1     9 [     ] Wire evaluation 
+  0.1     6 [     ] Engine support 
+  0.1     6 [     ] Outside engine 
+  0.0     5 [     ] Logic primitives 
+  0.0     1 [     ] Simulation Setup Time 
+
+------------------------------------------------------------
+Technology-wise Summary Counts (10632 hits total)
+------------------------------------------------------------
+%hits   #hits  name
+ 95.6   10164 MCE 
+  2.2     229 TB/SV 
+  1.5     164 Miscellaneous 
+  0.6      61 Analysis 
+  0.1      14 GLS 
+

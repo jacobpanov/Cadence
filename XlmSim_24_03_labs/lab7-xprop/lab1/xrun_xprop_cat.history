@@ -1,0 +1,2 @@
+s1(04Mar2025:18:45:53):  xrun -clean -mess -access rwc tb.v dut.v -l xrun.noxprop.log 
+s2(04Mar2025:18:46:18):  xrun -clean -mess -access rwc tb.v dut.v -input tcl.in -xfile xfile_cat.txt -xverbose -ENABLE_XP_DEBUG_CODE -l xrun_xprop_cat.log 

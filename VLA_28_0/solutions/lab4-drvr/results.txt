@@ -1,0 +1,5 @@
+cp ../solutions/lab5-drvr/driver.v . >> /dev/null 2>&1
+irun driver.v driver_test.v >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab5-drvr

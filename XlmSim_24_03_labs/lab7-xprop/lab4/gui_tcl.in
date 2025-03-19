@@ -1,0 +1,4 @@
+probe demo_top -depth all -shm
+assertion -off -ALL
+run 50 ns
+assertion -on -ALL

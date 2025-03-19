@@ -1,0 +1,4 @@
+s1(30Oct2023:16:05:20):  xrun ../solutions/lab6-ctrl/controller.v controller_test.v 
+s2(12Mar2025:18:09:06):  xrun -f filelist.txt -access rwc 
+s3(12Mar2025:18:10:19):  xrun -f filelist.txt -access rwc 
+s4(12Mar2025:18:11:36):  xrun -f filelist.txt -access rwc 

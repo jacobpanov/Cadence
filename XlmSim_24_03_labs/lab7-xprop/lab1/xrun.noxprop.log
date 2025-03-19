@@ -1,0 +1,44 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:45:53 EST
+xrun
+	-clean
+	-mess
+	-access rwc
+	tb.v
+	dut.v
+	-l xrun.noxprop.log
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: tb.v
+	module worklib.tb:v
+		errors: 0, warnings: 0
+file: dut.v
+	module worklib.dut:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.dut:v <0x33927ad6>
+			streams:   2, words:   381
+		worklib.tb:v <0x551e47c7>
+			streams:   7, words:  4764
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           4       4
+		Scalar wires:        4       -
+		Always blocks:       1       1
+		Initial blocks:      1       1
+		Pseudo assignments:  3       3
+	Writing initial simulation snapshot: worklib.tb:v
+Loading snapshot worklib.tb:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+Simulation complete via $finish(1) at time 140 NS + 0
+./tb.v:22 #10 $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:45:55 EST  (total: 00:00:02)

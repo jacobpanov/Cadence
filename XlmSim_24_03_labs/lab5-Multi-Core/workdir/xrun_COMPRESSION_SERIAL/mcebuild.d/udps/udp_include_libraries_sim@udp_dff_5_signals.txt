@@ -1,0 +1,8 @@
+//This file tells for each port of the UDP 'include_libraries_sim@udp_dff_5' what are its attributes. Ports are sorted in their order of appearance in the UDP primitive.
+//order of evaluation, offset of var in packer, lut2X table of the detector (0 = no detector is needed), name of port
+output: out
+input: 3, 0, 21780, in1 d
+input: 0, 1, 21764, in2 clock pos
+input: 1, 2, 4478228, in3 no_name
+input: 2, 3, 5592340, in4 no_name
+input: 4, 4, 5592340, in5 notifier

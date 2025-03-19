@@ -1,0 +1,30 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:57:15.993279
+  mce Version:           22.09-s010.493970
+  Command Line:          /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/bin/64bit/mcebuild --do_south --flow_order_checks=0 --memory_monitor_pid=1622969 --LOG_FD=4 -f workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/splits_mcebuild.args --do_link --do_link_build_cosim --mce_scratch_dir workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d
+
+Stage                                                            VM RSS    VM HWM   Mem Delta CPU Time  User Time Total (C) Total (U)
+=====                                                           ========= ========= ========= ========= ========= ========= =========
+01. Commander Init ...........................................  44.55  MB 45.35  MB 44.55  MB         0         0         0         0
+02. mcebuild Init ............................................  44.62  MB 45.35  MB 72.00  KB         0         0         0         0
+03. Commander Internal Running Engine ........................  44.62  MB 45.35  MB 0      KB         0         0         0         0
+    03.01. Debug Pack Only ...................................  44.62  MB 45.35  MB 0      KB         0         0         0         0 Skipped
+    03.02. Prepare Compilations Arguments ....................  44.62  MB 45.35  MB 0      KB         0         0         0         0
+    03.03. Create Post Build Report ..........................  44.88  MB 45.35  MB 260.00 KB         0         0         0         0 Skipped
+    03.04. Run Interpreter ...................................  45.21  MB 45.35  MB 344.00 KB         0         0         0         0 Skipped
+    03.05. Run Codegens and Codegen-asms .....................  44.82  MB 45.35  MB -396.00 KB         0         0         0         0 Skipped
+    03.06. Compile runtime native code .......................  44.82  MB 45.35  MB 0      KB         0         0         0         0 Skipped
+    03.07. Merge TemplateSplitDBs ............................  44.82  MB 45.35  MB 0      KB         0         0         0         0 Skipped
+    03.08. Run Codegen South for CDP's and CAG's .............  44.81  MB 45.35  MB -12.00 KB         0         0         0         0 Skipped
+    03.09. Run Splits ........................................  44.95  MB 45.35  MB 136.00 KB         5        26         5        26
+    03.10. Run Linker ........................................  44.96  MB 45.35  MB 12.00  KB         0         3         6        29
+    03.11. Prepare mce Arguments .............................  45.19  MB 45.50  MB 236.00 KB         0         0         6        29
+04. mcebuild Finalize ........................................  45.18  MB 45.50  MB -12.00 KB         0         0         6        29
+05. Dump statistics database .................................  45.18  MB 45.50  MB 0      KB         0         0         6        29
+06. Merge and save compiler stats ............................  45.41  MB 45.66  MB 236.00 KB         0         0         6        29
+07. Run stats analyzer .......................................  45.41  MB 45.66  MB 0      KB         0         0         6        29
+08. Commander Finalize .......................................  45.40  MB 45.66  MB -8.00  KB         0         0         6        30
+09. Copy Logs ................................................  45.40  MB 45.66  MB 4.00   KB         0         0         6        30 Skipped

@@ -1,0 +1,140 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:52:11 EST
+xrun
+	-clean
+	-sv
+	-mess
+	-access +r
+	-uvm
+	-incdir ./examples
+	-incdir ./sv
+	./examples/cache_top.sv
+	./examples/data_mem.sv
+	./examples/extmem_interface.sv
+	./examples/main_ctrl.sv
+	./examples/processor_interface.sv
+	./examples/tag_cmp.sv
+	./examples/tag_mem.sv
+	./examples/demo_top.sv
+	+UVM_TESTNAME=mul_sequence_test
+	-status
+	-xfile xfile.txt
+	-xverbose
+	-ENABLE_XP_DEBUG_CODE
+	-log_ncsim xrun_xprop.log
+	-input gui_tcl.in
+	-gui
+	-rmkeyword checker
+xrun: *W,OPDEPRREN: Command Line Option (-log_ncsim) is deprecated. Use (-log_xmsim) instead.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
+xmvlog: Memory Usage - Current physical: 23.0M, Current virtual: 46.8M
+xmvlog: CPU Usage - 0.1s system + 0.7s user = 0.8s total (1.1s, 78.8% cpu)
+file: ./examples/cache_top.sv
+	module worklib.cache_top:sv
+		errors: 0, warnings: 0
+file: ./examples/data_mem.sv
+	module worklib.data_mem:sv
+		errors: 0, warnings: 0
+file: ./examples/extmem_interface.sv
+	module worklib.extmem_interface:sv
+		errors: 0, warnings: 0
+file: ./examples/main_ctrl.sv
+	module worklib.main_ctrl:sv
+		errors: 0, warnings: 0
+file: ./examples/processor_interface.sv
+	module worklib.processor_interface:sv
+		errors: 0, warnings: 0
+file: ./examples/tag_cmp.sv
+	module worklib.tag_cmp:sv
+		errors: 0, warnings: 0
+file: ./examples/tag_mem.sv
+	module worklib.tag_mem:sv
+		errors: 0, warnings: 0
+file: ./examples/demo_top.sv
+	interface worklib.cache_pkg_if:sv
+		errors: 0, warnings: 0
+package cache_pkg_pkg;
+                    |
+xmvlog: *W,TSNSPK (./sv/cache_pkg_pkg.sv,16|20): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+	package worklib.cache_pkg_pkg:sv
+		errors: 0, warnings: 1
+		 golden_mem::mem[i]         = memory [i];
+		          |
+xmvlog: *W,NOUNAD (./examples/demo_top.sv,134|12): This unadorned reference to a parameterized class (golden_mem) is not legal. A class specialization of '#()' is assumed.
+		 cache_slave_checker::tag_mem[i] = tag_mem[i];
+		                   |
+xmvlog: *W,NOUNAD (./examples/demo_top.sv,141|21): This unadorned reference to a parameterized class (cache_slave_checker) is not legal. A class specialization of '#()' is assumed.
+	module worklib.demo_top:sv
+		errors: 0, warnings: 2
+xmvlog: Memory Usage - Current physical: 21.5M, Current virtual: 46.7M
+xmvlog: CPU Usage - 0.0s system + 0.1s user = 0.1s total (0.3s, 50.3% cpu)
+xmelab: *W,DEAPF: FILE xp_elab.log already exists and will be appended..
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		cache_pkg_pkg
+		tag_mem
+		demo_top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.extmem_interface:sv <0x7d1a8ba6>
+			streams:  16, words:  8410
+		worklib.main_ctrl:sv <0x6e5fb4a1>
+			streams:  52, words: 423067
+		worklib.processor_interface:sv <0x26806caa>
+			streams:   2, words:  7492
+		worklib.tag_mem:sv <0x4beabc0a>
+			streams:   1, words:   597
+		worklib.demo_top:sv <0x614a97dc>
+			streams: 126, words: 72200
+		worklib.cache_pkg_pkg:sv <0x097ba953>
+			streams: 870, words: 826461
+		worklib.cache_pkg_if:sv <0x05430a82>
+			streams:  29, words: 11180
+		worklib.cdns_uvm_pkg:sv <0x088231a7>
+			streams: 183, words: 234931
+		worklib.cdns_uvmapi:svp <0x188bdc58>
+			streams:  27, words: 24834
+		worklib.cdns_assert2uvm_pkg:sv <0x0389a8b9>
+			streams:   3, words:  1329
+		worklib.uvm_pkg:sv <0x130fa4a6>
+			streams: 5407, words: 6822607
+		worklib.data_mem:sv <0x7719c1b7>
+			streams:   1, words:  4021
+		worklib.tag_cmp:sv <0x3ed2ee3f>
+			streams:   1, words:  2033
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+xmelab: *W,XPARRD: Array corruption feature has not been enabled for Verilog/SV in X-Propagation. To enable this feature, set xfile flag VL_INVALID_IDX_FOX/VL_OUTOFRANGE_IDX_FOX for FOX Mode Array Corruption or xfile flag VL_INVALID_IDX_CAT/VL_OUTOFRANGE_IDX_CAT for CAT Mode Array Corruption.
+xmelab: *W,XPWDIS: There are blocks in the design which have not been enabled for Xprop. See xp_elab.log for details.
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       8       8
+		Interfaces:                    1       1
+		Verilog packages:              5       5
+		Registers:                 14577   10576
+		Scalar wires:                 41       -
+		Vectored wires:               25       -
+		Named events:                  5      13
+		Always blocks:                23      23
+		Initial blocks:              328     178
+		Clocking blocks:               2       2
+		Clocking items:                2       2
+		Parallel blocks:              31      32
+		Cont. assignments:            18      18
+		Pseudo assignments:            3       3
+		Assertions:                   10      10
+		Covergroup Instances:          0       2
+		Sparse arrays:                 1       -
+		SV Class declarations:       212     326
+		SV Class specializations:    405     405
+	Writing initial simulation snapshot: worklib.tag_mem:sv
+xmelab: Memory Usage - Final: 61.4M, Peak: 62.3M, Peak virtual: 126.6M
+xmelab: CPU Usage - 0.2s system + 4.5s user = 4.7s total (4.8s, 96.7% cpu)
+Output for xmsim is being redirected to xrun_xprop.log

@@ -1,0 +1,43 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 12, 2025 at 17:32:32 EDT
+xrun
+	-f filelist.txt
+		driver.v
+		driver_test.v
+	-access rwc
+file: driver.v
+	module worklib.driver:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		driver_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.driver:v <0x68acfe9a>
+			streams:   1, words:   231
+		worklib.driver_test:v <0x6a61eb1b>
+			streams:   4, words:  5673
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           3       3
+		Scalar wires:        1       -
+		Vectored wires:      2       -
+		Initial blocks:      1       1
+		Cont. assignments:   1       1
+		Pseudo assignments:  2       2
+	Writing initial simulation snapshot: worklib.driver_test:v
+Loading snapshot worklib.driver_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+At time 1 data_en=0 data_in=xxxxxxxx data_out=zzzzzzzz
+At time 2 data_en=1 data_in=01010101 data_out=01010101
+At time 3 data_en=1 data_in=10101010 data_out=10101010
+TEST PASSED
+Simulation complete via $finish(1) at time 3 NS + 0
+./driver_test.v:40     $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 12, 2025 at 17:32:33 EDT  (total: 00:00:01)

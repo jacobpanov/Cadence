@@ -1,0 +1,49 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 12, 2025 at 22:53:54 EDT
+xrun
+	mux.v
+	mux_test.v
+file: mux.v
+	module worklib.mux:v
+		errors: 0, warnings: 0
+file: mux_test.v
+	module worklib.mux_test:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		mux_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.mux:v <0x6f05b20d>
+			streams:   3, words:   524
+		worklib.mux_test:v <0x428d4792>
+			streams:   8, words: 13954
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           8       8
+		Scalar wires:        5       -
+		Vectored wires:      1       -
+		Always blocks:       2       2
+		Initial blocks:      2       2
+		Pseudo assignments:  5       5
+	Writing initial simulation snapshot: worklib.mux_test:v
+Loading snapshot worklib.mux_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+time=15 select=00 in1=0 in2=x in3=x mux_out=0
+time=25 select=00 in1=1 in2=x in3=x mux_out=1
+time=35 select=01 in1=1 in2=x in3=x mux_out=1
+time=45 select=01 in1=0 in2=x in3=x mux_out=0
+time=55 select=10 in1=x in2=0 in3=x mux_out=0
+time=65 select=10 in1=x in2=1 in3=x mux_out=1
+time=75 select=11 in1=x in2=x in3=1 mux_out=1
+time=85 select=11 in1=x in2=x in3=0 mux_out=0
+TEST PASSED
+Simulation complete via $finish(1) at time 85 NS + 0
+./mux_test.v:36    $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 12, 2025 at 22:53:57 EDT  (total: 00:00:03)

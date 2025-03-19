@@ -1,0 +1,12 @@
+cp ../solutions/lab14-lib/lib.v . >> /dev/null 2>&1
+irun lib.v lib_test.v >> /dev/null 2>&1
+grep TEST.FAILED irun.log >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rc -rcl -files rc_shell.tcl >> /dev/null 2>&1
+grep Synthesis.succeeded rc.log >> /dev/null 2>&1
+rm -fr INCA_libs irun.log >> /dev/null 2>&1
+irun *.vg lib_test.v -v ../tutorial.v -vlogext vg >> /dev/null 2>&1
+grep TEST.FAILED irun.log >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab14-lib

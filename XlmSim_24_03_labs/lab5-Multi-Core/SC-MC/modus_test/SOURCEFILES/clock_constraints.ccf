@@ -1,0 +1,4 @@
+# Basic Clock Constraint Format
+# <clock_name> { <active_clock_edge>, <time_after_active_clock_edge_to_stay_at_level>  }
+#              { <clock_period_active_edge_to_active_edge> } ;
+scan_clk {posedge, 1.25ns} {2.5ns};

@@ -1,0 +1,22 @@
+
+ MSGID = CSV118 :
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLK ;
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLKbar ;
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLR ;
+   SUPPRESS_MSG USAGE = udp_tlat.udp_port1_dom_and ;
+   SUPPRESS_MSG USAGE = udp_tlat.udp_port2_dom_and ;
+
+ MSGID = CSV018 :
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLK ;
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLKbar ;
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLR ;
+   SUPPRESS_MSG USAGE = udp_tlat.udp_port1_dom_and ;
+   SUPPRESS_MSG USAGE = udp_tlat.udp_port2_dom_and ;
+
+ MSGID = CSV019 :
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLK ;
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLKbar ;
+   SUPPRESS_MSG USAGE = __rDFF_cS.dominatedCLR ;
+   SUPPRESS_MSG USAGE = udp_tlat.udp_port1_dom_and ;
+   SUPPRESS_MSG USAGE = udp_tlat.udp_port2_dom_and ;
+

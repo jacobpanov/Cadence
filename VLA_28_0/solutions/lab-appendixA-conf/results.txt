@@ -1,0 +1,5 @@
+cp ../solutions/lab-appendixA-conf/risc_test.v . >> /dev/null 2>&1
+irun -f files.txt >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab-appendixA-conf

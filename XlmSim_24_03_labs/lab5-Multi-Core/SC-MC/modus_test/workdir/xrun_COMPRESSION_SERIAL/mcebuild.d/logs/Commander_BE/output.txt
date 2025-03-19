@@ -1,0 +1,20 @@
+01. Commander Init ...........................................  44.57  MB 45.37  MB 44.57  MB         0         0         0         0
+02. mcebuild Init ............................................  44.65  MB 45.37  MB 80.00  KB         0         0         0         0
+03. Commander Internal Running Engine ........................  44.65  MB 45.37  MB 0      KB         0         0         0         0
+    03.01. Debug Pack Only ...................................  44.65  MB 45.37  MB 0      KB         0         0         0         0 Skipped
+    03.02. Prepare Compilations Arguments ....................  44.65  MB 45.37  MB 0      KB         0         0         0         0
+    03.03. Create Post Build Report ..........................  44.91  MB 45.37  MB 260.00 KB         0         0         0         0 Skipped
+    03.04. Run Interpreter ...................................  45.23  MB 45.37  MB 336.00 KB         0         0         0         0 Skipped
+    03.05. Run Codegens and Codegen-asms .....................  45.23  MB 45.78  MB -4.00  KB         0         0         0         1
+    03.06. Compile runtime native code .......................  45.23  MB 45.78  MB 0      KB         0         0         0         1
+    03.07. Merge TemplateSplitDBs ............................  45.23  MB 45.78  MB 0      KB         0         0         0         1 Skipped
+    03.08. Run Codegen South for CDP's and CAG's .............  45.23  MB 45.78  MB -4.00  KB         0         0         0         1 Skipped
+    03.09. Run Splits ........................................  45.23  MB 45.78  MB 0      KB         0         0         0         1 Skipped
+    03.10. Run Linker ........................................  45.23  MB 45.78  MB 8.00   KB         0         0         0         1 Skipped
+    03.11. Prepare mce Arguments .............................  45.23  MB 45.78  MB 0      KB         0         0         0         1 Skipped
+04. mcebuild Finalize ........................................  45.23  MB 45.78  MB 0      KB         0         0         0         1
+05. Dump statistics database .................................  45.32  MB 45.78  MB 88.00  KB         0         0         0         1
+06. Merge and save compiler stats ............................  45.32  MB 45.78  MB 0      KB         0         0         0         1 Skipped
+07. Run stats analyzer .......................................  45.32  MB 45.78  MB 0      KB         0         0         0         1 Skipped
+08. Commander Finalize .......................................  45.31  MB 45.78  MB -8.00  KB         0         0         0         1
+09. Copy Logs ................................................  45.31  MB 45.78  MB 0      KB         0         0         0         1 Skipped

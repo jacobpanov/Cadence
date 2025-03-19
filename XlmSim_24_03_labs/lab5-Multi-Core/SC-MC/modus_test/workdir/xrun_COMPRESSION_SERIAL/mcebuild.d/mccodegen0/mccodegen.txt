@@ -1,0 +1,26 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:57:02.773659
+  mce Version:           22.09-s010.493970
+  Command Line:          /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/bin/64bit/mccodegen --library_name mccodegen_lib0 --modules_path workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/accdir/RTL/libs/mccodegen_lib0 --NOSPECIFY --timescale 1ns/1ps --OVERRIDE_TIMESCALE --xmlibdirname workdir/xrun_COMPRESSION_SERIAL --SEQUDP_NBA_DELAY --mce_sim_dir workdir/xrun_COMPRESSION_SERIAL/mcesim.d --mce_jupiter 1 --mce_process_log_name Commander:Commander_BE --rtl_codegen 1 --xcelium_home /software/commercial/cadence/XCELIUM2209 --mce_home=/software/commercial/cadence/XCELIUM2209/tools.lnx86/mce --ReleaseVerXrun=22.09-s010 --pe_debugging_support=0 --delayed_ingress=1 --override_timescale --nospecify --cdslib=workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d/cdsrun.lib --error_on_duplicate_modules=0 --do_not_replace_modules=0 --mce_vmm_in_skeleton=0 --update_sequential_udps_in_nba=1 --pulse_int_r=100 --pulse_e=100 --pulse_int_e=100 --mccodegen_by_netlist=1 --enable_intersplit=0 --create_nba_reg_ram_writers_during_rtl_elab=1 --allow_ram_w_from_every_always_block=1 --allow_any_ram_in_loop=1 --minimum_time_before_timeout=65 --mce_build_dir=workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/mccodegen0 --db_index=0 --user_report_file_name=UserReport_McCodegen --is_protected=0
+
+Stage                                                            VM RSS    VM HWM   Mem Delta CPU Time  User Time Total (C) Total (U)
+=====                                                           ========= ========= ========= ========= ========= ========= =========
+01. Initialize McCodegen  ....................................  41.33  MB 41.33  MB 41.33  MB         0         0         0         0
+02. Load saved modules from library ..........................  44.07  MB 44.07  MB 2.74   MB         0         0         0         0 80 modules 80 packages
+03. Print the parse-tree memory measurements  ................  44.08  MB 44.08  MB 4.00   KB         0         0         0         0 Skipped
+04. Var usage  ...............................................  44.14  MB 44.14  MB 64.00  KB         0         0         0         0 Skipped
+05. Create map and save PDH to Linefile  .....................  44.23  MB 44.23  MB 92.00  KB         0         0         0         0
+06. Perform parse tree manipulations  ........................  44.33  MB 44.33  MB 104.00 KB         0         0         0         0
+07. Elaborate modules ........................................  44.33  MB 44.33  MB 0      KB         0         0         0         0 Skipped
+08. McCodegen by Netlist .....................................  48.23  MB 48.50  MB 3.90   MB         0         0         0         0
+09. Propogate signals and vars indices .......................  48.23  MB 48.50  MB 0      KB         0         0         0         0
+10. Update initializers map in SplitDb .......................  48.23  MB 48.50  MB 0      KB         0         0         0         0 Skipped
+11. Save SplitDb Stage .......................................  48.37  MB 48.75  MB 140.00 KB         0         0         0         0
+12. Print the netlist memory measurements  ...................  48.37  MB 48.75  MB 0      KB         0         0         0         0 Skipped
+13. Print summaries of runner stages .........................  48.37  MB 48.75  MB 0      KB         0         0         0         0
+14. Dump statistics database .................................  48.70  MB 48.84  MB 340.00 KB         0         0         0         0
+15. Recompress Reports .......................................  47.82  MB 48.84  MB -900.00 KB         0         0         0         0
+16. Finalize McCodegen .......................................  47.89  MB 48.84  MB 68.00  KB         0         0         0         0

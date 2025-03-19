@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-ACCESS
+rwc
+-XFILE
+xfile_fox.txt
+-XVERBOSE
+-ENABLE_XP_DEBUG_CODE

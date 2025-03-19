@@ -1,0 +1,134 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:49:35 EST
+xrun
+	-clean
+	-mess
+	-access rwc
+	-v93
+	tb_mux.vhd
+	mux.vhd
+	-input tcl.in
+	-xfile xfile_fox.txt
+	-top tb_mux
+	-l xrun_xprop_fox.log
+	-ENABLE_XP_DEBUG_CODE
+	-xverbose
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+tb_mux.vhd:
+	errors: 0, warnings: 0
+mux.vhd:
+	errors: 0, warnings: 0
+WORKLIB.TB_MUX (entity):
+	streams: 1, words: 38
+WORKLIB.TB_MUX:TEST_TB_MUX (architecture):
+	streams: 1, words: 1660
+WORKLIB.MUX4TO1 (entity):
+	streams: 11, words: 1183
+WORKLIB.MUX4TO1:MUX4TO1_RTL (architecture):
+	streams: 1, words: 114
+xmelab: *W,DEAPF: FILE xp_elab.log already exists and will be appended..
+xmelab: *W,ARCMRA: Elaborating the WORKLIB.TB_MUX:TEST_TB_MUX, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+	Top level design units:
+		:tb_mux(test_tb_mux):
+	Building instance specific data structures.
+	Design hierarchy summary:
+		           Instances  Unique
+		Components:        3       2
+		Default bindings:  1       -
+		Processes:         2       2
+		Signals:           5       5
+	Writing initial simulation snapshot: WORKLIB.TB_MUX:TEST_TB_MUX
+Loading snapshot worklib.tb_mux:test_tb_mux .................... Done
+This snapshot is X-propagation enabled.
+xcelium> xprop -off
+X-propagation is disabled
+xcelium> probe -screen sel a b c q
+Created probe 1
+xcelium> run 10 fs
+Time: 0 FS: :sel = "UU": :a = "UU": :b = "UU": :c = "UU": :q = "00"
+
+Ran until 10 FS + 0
+xcelium> xprop -on
+X-propagation is enabled
+xcelium> run 200 ns
+Time: 10 NS: :sel = "00": :a = "00": :b = "00": :c = "00": :q = "00"
+
+Time: 20 NS: :sel = "01": :a = "00": :b = "01": :c = "10": :q = "00"
+
+Time: 20 NS: :sel = "01": :a = "00": :b = "01": :c = "10": :q = "01"
+
+Time: 30 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "01"
+
+Time: 30 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "00"
+
+Time: 40 NS: :sel = "XX": :a = "00": :b = "01": :c = "10": :q = "00"
+
+XPROP:	'X' detected in when statement
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	LINE: 23
+	SCOPE: :mux_inst
+	TIME: 40 NS + 1
+XPROP:	'X' detected in when statement
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	LINE: 24
+	SCOPE: :mux_inst
+	TIME: 40 NS + 1
+XPROP:	'X' detected in when statement
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	LINE: 25
+	SCOPE: :mux_inst
+	TIME: 40 NS + 1
+Time: 40 NS: :sel = "XX": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 50 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 50 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "00"
+
+Time: 60 NS: :sel = "X1": :a = "00": :b = "01": :c = "10": :q = "00"
+
+XPROP:	'X' detected in when statement
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	LINE: 24
+	SCOPE: :mux_inst
+	TIME: 60 NS + 1
+Time: 60 NS: :sel = "X1": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 70 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 70 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "00"
+
+Time: 80 NS: :sel = "0X": :a = "00": :b = "01": :c = "10": :q = "00"
+
+XPROP:	'X' detected in when statement
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	LINE: 23
+	SCOPE: :mux_inst
+	TIME: 80 NS + 1
+XPROP:	'X' detected in when statement
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	LINE: 24
+	SCOPE: :mux_inst
+	TIME: 80 NS + 1
+Time: 80 NS: :sel = "0X": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 90 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 90 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "00"
+
+Time: 100 NS: :sel = "1X": :a = "00": :b = "01": :c = "10": :q = "00"
+
+XPROP:	'X' detected in when statement
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	LINE: 25
+	SCOPE: :mux_inst
+	TIME: 100 NS + 1
+Time: 100 NS: :sel = "1X": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 110 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "XX"
+
+Time: 110 NS: :sel = "11": :a = "00": :b = "01": :c = "10": :q = "00"
+
+Ran until 200000010 FS + 0
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:49:36 EST  (total: 00:00:01)

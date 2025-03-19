@@ -1,0 +1,5 @@
+assertion -off -ALL
+run 50 ns
+assertion -on -ALL
+run 5000 ns
+exit

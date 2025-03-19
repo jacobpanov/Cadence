@@ -1,0 +1,49 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 12, 2025 at 18:11:36 EDT
+xrun
+	-f filelist.txt
+		controller.v
+		controller_test.v
+	-access rwc
+Recompiling... reason: file './controller.v' is newer than expected.
+	expected: Wed Mar 12 18:08:50 2025
+	actual:   Wed Mar 12 18:11:34 2025
+file: controller.v
+	module worklib.controller:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		controller_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.controller:v <0x74d7b985>
+			streams:   1, words:  7656
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              2       2
+		Registers:           13      13
+		Scalar wires:        10       -
+		Vectored wires:       2       -
+		Always blocks:        1       1
+		Initial blocks:       1       1
+		Pseudo assignments:   3       3
+	Writing initial simulation snapshot: worklib.controller_test:v
+Loading snapshot worklib.controller_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+Testing opcode HLT phase 0 1 2 3 4 5 6 7
+Testing opcode SKZ phase 0 1 2 3 4 5 6 7
+Testing opcode ADD phase 0 1 2 3 4 5 6 7
+Testing opcode AND phase 0 1 2 3 4 5 6 7
+Testing opcode XOR phase 0 1 2 3 4 5 6 7
+Testing opcode LDA phase 0 1 2 3 4 5 6 7
+Testing opcode STO phase 0 1 2 3 4 5 6 7
+Testing opcode JMP phase 0 1 2 3 4 5 6 7
+TEST PASSED
+Simulation complete via $finish(1) at time 65 NS + 0
+./controller_test.v:142     $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 12, 2025 at 18:11:36 EDT  (total: 00:00:00)

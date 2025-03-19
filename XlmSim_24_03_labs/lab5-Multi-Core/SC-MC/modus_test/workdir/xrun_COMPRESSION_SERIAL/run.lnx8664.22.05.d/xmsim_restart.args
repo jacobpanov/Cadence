@@ -1,0 +1,43 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++HEARTBEAT
++FAILSET
++miscompare_limit=10
++TESTFILE1=workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.scan.ex1.ts1.verilog
++TESTFILE2=workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.data.logic.ex1.ts2.verilog
++nospecify
++access+r
++xmstatus
++xmtimescale+1ns/1ps
++xmoverride_timescale
++xmseq_udp_delay+2ps
++libext+.v+.V+.z+.Z+.gz
++xmlibdirname+workdir/xrun_COMPRESSION_SERIAL
+-amsdlibdir
+workdir/xrun_COMPRESSION_SERIAL/AMSD
+-STATUS
+-STATUS3
+-PROFILE
+-RDPROFILE
+-STATUS
+-MESSAGES
++EMGRLOG
+workdir/xrun.sim.COMPRESSION_SERIAL.log
+-XLSTIME
+1666350244
+-XLKEEP
+-XLMODE
+workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.05.d
+-RUNMODE
+-CDSLIB
+workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.05.d/cds.lib
+-HDLVAR
+workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.05.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	22.05-a001"
+-XLNAME
+./workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.05.d/dvfinperf2_13756

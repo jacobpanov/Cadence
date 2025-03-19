@@ -1,0 +1,37 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INCDIR
+../workdir/../LIBS/verilog/
+-v
+../workdir/../LIBS/verilog/include_libraries_sim.v
+-NOSPECIFY
+-nospecify
+-profile
+-rdprofile
+-status
+-status3
+-status
+-timescale
+1ns/1ps
+-OVERRIDE_TIMESCALE
+-LIBEXT
+.v
+-LIBEXT
+.V
+-xmlibdirname
+../workdir/xrun_COMPRESSION_SERIAL
+-SEQUDP_NBA_DELAY
+-CDSLIB
+../workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d/cdsrun.lib
+-MESSAGES
+-mce_sim_dir
+../workdir/xrun_COMPRESSION_SERIAL/mcesim.d
+-mce_sim_logs_dir
+./mcesim.run
+-RUNMODE
+-mce_jupiter
+1
+-mce_build_dir
+../workdir/xrun_COMPRESSION_SERIAL/mcebuild.d

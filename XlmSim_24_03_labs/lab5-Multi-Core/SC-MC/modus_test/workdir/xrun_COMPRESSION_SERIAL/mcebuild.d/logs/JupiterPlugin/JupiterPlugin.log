@@ -1,0 +1,10 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:56:48.991476
+  mce Version:           22.09-s010.493970
+  Command Line:          xmelab -LOG_FD 4 -NOSPECIFY -nospecify -status -status3 -profile -rdprofile -pie -status -timescale 1ns/1ps -OVERRIDE_TIMESCALE -LIBEXT .v -LIBEXT .V -LIBEXT .z -LIBEXT .Z -LIBEXT .gz -xmlibdirname workdir/xrun_COMPRESSION_SERIAL -v workdir/../LIBS/verilog/include_libraries_sim.v -SEQUDP_NBA_DELAY -CDSLIB workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d/cdsrun.lib -MESSAGES -mce_sim_dir workdir/xrun_COMPRESSION_SERIAL/mcesim.d -mce_sim_logs_dir ./mcesim.run -RUNMODE -mce_jupiter 1 -mce_build_dir workdir/xrun_COMPRESSION_SERIAL/mcebuild.d
+
+Stage                                                            VM RSS    VM HWM   Mem Delta CPU Time  User Time Total (C) Total (U)
+=====                                                           ========= ========= ========= ========= ========= ========= =========

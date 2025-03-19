@@ -1,0 +1,23 @@
+#!/bin/csh -f
+# 
+# File created by xrun to show multistep compile
+# 
+# 
+xmvlog -file xmvlog_ver.args
+if ($status != 0) then
+  echo "Error detected while executing xmvlog. Now exiting."
+  exit
+endif
+
+xmelab -file xmelab.args
+if ($status != 0) then
+  echo "Error detected while executing xmelab. Now exiting."
+  exit
+endif
+
+xmsim -file xmsim.args
+if ($status != 0) then
+  echo "Error detected while executing xmsim. Now exiting."
+  exit
+endif
+

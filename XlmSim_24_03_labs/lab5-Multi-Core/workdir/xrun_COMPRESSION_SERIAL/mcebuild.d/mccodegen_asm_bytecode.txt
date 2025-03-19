@@ -1,0 +1,35 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:53:03.736421
+  mce Version:           22.09-s010.493970
+  Command Line:          /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/bin/64bit/mccodegen_asm --mce_process_log_name=Commander:Commander_BYTECODE --xmlibdirname ../workdir/xrun_COMPRESSION_SERIAL --SEQUDP_NBA_DELAY --mce_sim_dir ../workdir/xrun_COMPRESSION_SERIAL/mcesim.d --mce_jupiter 1 --mce_build_dir ../workdir/xrun_COMPRESSION_SERIAL/mcebuild.d --mce_home=/software/commercial/cadence/XCELIUM2209/tools.lnx86/mce --pe_debugging_support=0 --enable_dump_aliases=1 --nospecify --update_sequential_udps_in_nba=1 --pulse_int_r=100 --pulse_e=100 --pulse_int_e=100 --run_sequential_udps_in_nba=0 --enable_intersplit=0 --nba_graph_optimization=0 --global_memory_allocation_mode=7 --create_nba_reg_ram_writers_during_rtl_elab=1 --allow_ram_w_from_every_always_block=1 --minimum_time_before_timeout=65 --codegen_asm_kind=bytecode --user_report_file_name=UserReport_McCodegenAsm_bytecode
+
+Stage                                                            VM RSS    VM HWM   Mem Delta CPU Time  User Time Total (C) Total (U)
+=====                                                           ========= ========= ========= ========= ========= ========= =========
+01. South Initialization .....................................  30.38  MB 30.38  MB 30.38  MB         0         0         0         0
+02. Load Compiler Configuration DB ...........................  30.38  MB 30.38  MB 0      KB         0         0         0         0 Skipped
+03. Load Optimizer Template Split DB .........................  30.92  MB 30.97  MB 556.00 KB         0         0         0         0
+04. Load Optimizer McProcesses DB ............................  33.66  MB 33.66  MB 2.75   MB         0         0         0         0
+05. Remove external PEs ......................................  33.66  MB 33.66  MB 0      KB         0         0         0         0
+06. Handle XProp PEs .........................................  33.66  MB 33.66  MB 0      KB         0         0         0         0
+07. Partition McProcesses ....................................  33.66  MB 33.66  MB 0      KB         0         0         0         0 Skipped
+08. Adapt to new north interface  ............................  33.90  MB 33.90  MB 240.00 KB         0         0         0         0
+09. Preserve clobbered temp values ...........................  33.93  MB 33.93  MB 36.00  KB         0         0         0         0
+10. Handle Packers ...........................................  33.97  MB 33.97  MB 40.00  KB         0         0         0         0
+11. South Lutmap  ............................................  34.08  MB 34.08  MB 108.00 KB         0         0         0         0 added 60 LUTs, reused 0 LUTs
+12. Remove dead Pes ..........................................  34.13  MB 34.13  MB 56.00  KB         0         0         0         0
+13. Compute Two State Driver Mask ............................  34.13  MB 34.13  MB 0      KB         0         0         0         0
+14. Add two state casting pes ................................  34.13  MB 34.13  MB 0      KB         0         0         0         0
+15. Check mc-process native code .............................  34.24  MB 34.24  MB 112.00 KB         0         0         0         0
+16. Build McProcesses Properties .............................  34.24  MB 34.24  MB 0      KB         0         0         0         0
+17. Create mc-process native code ............................  34.65  MB 34.68  MB 416.00 KB         0         0         0         0 Creating 2 versions of NC for 50 out of 50 processes
+18. Asm create mc-process execution units ....................  34.65  MB 34.68  MB 0      KB         0         0         0         0 Skipped
+19. Asm resolve mc-process input output vars .................  34.65  MB 34.68  MB 0      KB         0         0         0         0 Skipped
+20. Asm compile mc-process execution units ...................  34.65  MB 34.68  MB 0      KB         0         0         0         0 Skipped
+21. Asm generate mc-process recipes ..........................  34.65  MB 34.68  MB 0      KB         0         0         0         0 Skipped
+22. Asm create mc-process dbs ................................  34.66  MB 34.91  MB 16.00  KB         0         0         0         0
+23. Dump statistics database .................................  34.68  MB 34.91  MB 16.00  KB         0         0         0         0
+24. Cleanup binaries .........................................  34.68  MB 34.91  MB 0      KB         0         0         0         0 Skipped
+25. South end stage ..........................................  34.61  MB 34.91  MB -76.00 KB         0         0         0         0

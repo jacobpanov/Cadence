@@ -1,0 +1,54 @@
+mce(64) 22.09-s010 (build 493970): (c) Copyright 1995-2025 Cadence Design System, Inc.
+MCE_HOME = /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce
+HOSTNAME = node1677.palmetto.clemson.edu
+
+Full command Line: /software/commercial/cadence/XCELIUM2209//tools/mce/bin/64bit/mcebuild -CHECK_VERSION TOOL:	xmelab(64)	22.09-s010 -library_name worklib -modules_path workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/accdir/RTL/libs/worklib -mce_build_dir workdir/xrun_COMPRESSION_SERIAL/mcebuild.d -f workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/be_mcebuild.args -do_codegen -mce_process_log_name Commander:Commander_BE -rtl_codegen 1 -xcelium_home /software/commercial/cadence/XCELIUM2209
+
+mcebuild command line arguments: --CHECK_VERSION TOOL:	xmelab(64)	22.09-s010 --library_name worklib --modules_path workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/accdir/RTL/libs/worklib --mce_build_dir workdir/xrun_COMPRESSION_SERIAL/mcebuild.d --NOSPECIFY --status --status3 --profile --rdprofile --pie --status --timescale 1ns/1ps --OVERRIDE_TIMESCALE --xmlibdirname workdir/xrun_COMPRESSION_SERIAL --SEQUDP_NBA_DELAY --MESSAGES --mce_sim_dir workdir/xrun_COMPRESSION_SERIAL/mcesim.d --mce_sim_logs_dir ./mcesim.run --RUNMODE --mce_jupiter 1 --mce_build_dir workdir/xrun_COMPRESSION_SERIAL/mcebuild.d --do_codegen --mce_process_log_name Commander:Commander_BE --rtl_codegen 1 --xcelium_home /software/commercial/cadence/XCELIUM2209 --mce_home=/software/commercial/cadence/XCELIUM2209/tools.lnx86/mce --ReleaseVerXrun=22.09-s010 --pe_debugging_support=0 --use_unified_probing=1 --wdl_parallel_mode=1 --enable_dump_aliases=1 --delayed_ingress=1 --override_timescale --nospecify --cdslib=workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d/cdsrun.lib --error_on_duplicate_modules=0 --do_not_replace_modules=0 --mce_build_thread_count=4 --mce_vmm_in_skeleton=0 --update_sequential_udps_in_nba=1 --pulse_int_r=100 --pulse_e=100 --pulse_int_e=100 --mce_sim_cpu_configuration=auto-performance --run_sequential_udps_in_nba=0 --mccodegen_by_netlist=1 --registration_utd_mode=dki_ingress_list --nba_invocation_mode=start-of-nba --enable_intersplit=0 --nba_graph_optimization=0 --consistent_mode=1 --mce_splitting_allowed_split_size=3000000 --global_memory_allocation_mode=7 --create_nba_reg_ram_writers_during_rtl_elab=1 --allow_ram_w_from_every_always_block=1 --allow_any_ram_in_loop=1 --display_progress_bars=0
+
+Created runnable directory on {workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/RunnableDirs/1741129022628222662}.
+
+launched process mccodegen-0 (pid 1622989) at Tue Mar  4 17:57:02 2025
+process mccodegen-0 (pid 1622989) completed successfully at Tue Mar  4 17:57:03 2025
+*** mcebuild completed successfully at Tue Mar  4 17:57:03 2025 after 1 seconds ***
+mce(64) 22.09-s010 (build 493970): (c) Copyright 1995-2025 Cadence Design System, Inc.
+MCE_HOME = /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce
+HOSTNAME = node1677.palmetto.clemson.edu
+
+Full command Line: /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/bin/64bit/mcebuild --do_codegen_asm_bytecode --flow_order_checks=0 --mce_process_log_name=Commander:Commander_BYTECODE --LOG_FD=4 -f workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/bytecode_mcebuild.args
+
+mcebuild command line arguments: --do_codegen_asm_bytecode --flow_order_checks=0 --mce_process_log_name=Commander:Commander_BYTECODE --LOG_FD=4 --NOSPECIFY --status --status3 --profile --rdprofile --pie --status --timescale 1ns/1ps --OVERRIDE_TIMESCALE --xmlibdirname workdir/xrun_COMPRESSION_SERIAL --SEQUDP_NBA_DELAY --MESSAGES --mce_sim_dir workdir/xrun_COMPRESSION_SERIAL/mcesim.d --mce_sim_logs_dir ./mcesim.run --RUNMODE --mce_jupiter 1 --mce_build_dir workdir/xrun_COMPRESSION_SERIAL/mcebuild.d --mce_home=/software/commercial/cadence/XCELIUM2209/tools.lnx86/mce --pe_debugging_support=0 --use_unified_probing=1 --wdl_parallel_mode=1 --enable_dump_aliases=1 --delayed_ingress=1 --override_timescale --nospecify --cdslib=workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d/cdsrun.lib --error_on_duplicate_modules=0 --do_not_replace_modules=0 --mce_vmm_in_skeleton=0 --update_sequential_udps_in_nba=1 --pulse_int_r=100 --pulse_e=100 --pulse_int_e=100 --mce_sim_cpu_configuration=auto-performance --run_sequential_udps_in_nba=0 --mccodegen_by_netlist=1 --registration_utd_mode=dki_ingress_list --nba_invocation_mode=start-of-nba --enable_intersplit=0 --nba_graph_optimization=0 --consistent_mode=1 --mce_splitting_allowed_split_size=3000000 --global_memory_allocation_mode=7 --create_nba_reg_ram_writers_during_rtl_elab=1 --allow_ram_w_from_every_always_block=1 --allow_any_ram_in_loop=1 --display_progress_bars=0
+
+Created runnable directory on {workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/RunnableDirs/1741129028624121398}.
+
+CodegenAsm<bytecode> started at Mar 04, 2025 at 17:57:08 EST
+
+		0 critical(s), 0 error(s), 0 warning(s), 0 info(s), 0 notify(s)
+
+*** mcebuild completed successfully at Tue Mar  4 17:57:08 2025 after 0 seconds ***
+mce(64) 22.09-s010 (build 493970): (c) Copyright 1995-2025 Cadence Design System, Inc.
+MCE_HOME = /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce
+HOSTNAME = node1677.palmetto.clemson.edu
+
+Full command Line: /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/bin/64bit/mcebuild --do_south --flow_order_checks=0 --memory_monitor_pid=1622969 --LOG_FD=4 -f workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/splits_mcebuild.args --do_link --do_link_build_cosim --mce_scratch_dir workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d
+
+mcebuild command line arguments: --do_south --flow_order_checks=0 --memory_monitor_pid=1622969 --LOG_FD=4 --NOSPECIFY --status --status3 --profile --rdprofile --pie --status --timescale 1ns/1ps --OVERRIDE_TIMESCALE --xmlibdirname workdir/xrun_COMPRESSION_SERIAL --SEQUDP_NBA_DELAY --MESSAGES --mce_sim_dir workdir/xrun_COMPRESSION_SERIAL/mcesim.d --mce_sim_logs_dir ./mcesim.run --RUNMODE --mce_jupiter 1 --mce_build_dir workdir/xrun_COMPRESSION_SERIAL/mcebuild.d --do_link --do_link_build_cosim --mce_scratch_dir workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d --mce_home=/software/commercial/cadence/XCELIUM2209/tools.lnx86/mce --pe_debugging_support=0 --use_unified_probing=1 --wdl_parallel_mode=1 --enable_dump_aliases=1 --delayed_ingress=1 --override_timescale --nospecify --cdslib=workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d/cdsrun.lib --error_on_duplicate_modules=0 --do_not_replace_modules=0 --mce_build_thread_count=4 --native_code_compilation_concurrency=4 --mce_vmm_in_skeleton=0 --update_sequential_udps_in_nba=1 --pulse_int_r=100 --pulse_e=100 --pulse_int_e=100 --mce_sim_cpu_configuration=auto-performance --run_sequential_udps_in_nba=0 --mccodegen_by_netlist=1 --registration_utd_mode=dki_ingress_list --nba_invocation_mode=start-of-nba --enable_intersplit=0 --nba_graph_optimization=0 --consistent_mode=1 --mce_splitting_allowed_split_size=3000000 --global_memory_allocation_mode=7 --create_nba_reg_ram_writers_during_rtl_elab=1 --allow_ram_w_from_every_always_block=1 --allow_any_ram_in_loop=1 --display_progress_bars=0
+
+Created runnable directory on {workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/RunnableDirs/1741129036006791917}.
+
+Starting compilation of South-0 (pid 1622998) at Tue Mar  4 17:57:16 2025
+	still running pids: 1622998 
+Task South-0 has completed successfully at Tue Mar  4 17:57:42 2025 after 26 seconds
+	still running pids: 
+		0 critical(s), 0 error(s), 0 warning(s), 0 info(s), 0 notify(s)
+
+Split 0 has completed successfully at Tue Mar  4 17:57:42 2025 after 26 seconds
+
+Compilation of splits completed successfully at Mar 04, 2025 at 17:57:42 EST after 26 seconds
+		0 critical(s), 0 error(s), 0 warning(s), 0 info(s), 0 notify(s)
+
+*** mcebuild completed successfully at Tue Mar  4 17:57:45 2025 after 29 seconds ***
+
+Stats analyzer started at 
+Stats analyzer has finished successfully at Tue Mar  4 17:57:45 2025 after 0 seconds
+

@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALARM_CLOCK	alarm_clock.vhd	/^entity ALARM_CLOCK is$/;"	e
+ALARM_TEST	p_alarm_test.vhd	/^   package ALARM_TEST is$/;"	P
+ALARM_TEST	p_alarm_test.vhd	/^package body ALARM_TEST is$/;"	P
+ALARM_TYPES	p_alarm_types.vhd	/^package ALARM_TYPES is$/;"	P
+BCD2CHAR	t_ac_script.vhd	/^      function BCD2CHAR (BCD : std_logic_vector(3 downto 0)) return character is$/;"	f
+BCD2_COUNT	bcd2_count.vhd	/^entity BCD2_COUNT is$/;"	e
+CHAR2VEC	p_alarm_test.vhd	/^  function CHAR2VEC (CHAR : character) return std_logic_vector is$/;"	f
+CLK_DIV_RATIO	p_alarm_types.vhd	/^  constant CLK_DIV_RATIO : positive := 4;$/;"	c
+COUNT_LED_OFF	p_alarm_types.vhd	/^  constant COUNT_LED_OFF : natural := 2*NUM_SECS_BETWEEN_PULSES;$/;"	c
+DEBOUNCE	debounce.vhd	/^entity DEBOUNCE is$/;"	e
+DEBOUNCE_STATE_TYPE	debounce.vhd	/^  type DEBOUNCE_STATE_TYPE is (WAIT_FOR_PRESS, PRESSED, WAIT_FOR_RELEASE, RELEASED);$/;"	t
+DEBOUNCE_STATE_TYPE	debounce_toggle.vhd	/^  type DEBOUNCE_STATE_TYPE is (WAIT_FOR_PRESS, PRESSED, WAIT_FOR_RELEASE, RELEASED);$/;"	t
+DEBOUNCE_TOGGLE	debounce_toggle.vhd	/^entity DEBOUNCE_TOGGLE is$/;"	e
+DISP1	p_disp1.vhd	/^procedure DISP1(signal DISPLAY:std_logic_vector(6 downto 0)) is$/;"	p
+DISP4	p_disp4.vhd	/^procedure DISP4(signal MS_HR, LS_HR, MS_MIN, LS_MIN: std_logic_vector(6 downto 0)) is$/;"	p
+DISP7_T	p_alarm_types.vhd	/^  type DISP7_T is array (3 downto 0) of std_logic_vector(6 downto 0);$/;"	t
+DISPLAY_2	p_alarm_types.vhd	/^  subtype DISPLAY_2 is DISPLAY_T(1 downto 0);$/;"	T
+DISPLAY_4	p_alarm_types.vhd	/^  subtype DISPLAY_4 is DISPLAY_T(3 downto 0);$/;"	T
+DISPLAY_T	p_alarm_types.vhd	/^  type DISPLAY_T is array (natural range <>) of unsigned(3 downto 0);$/;"	t
+DO_AL_MN	p_alarm_test.vhd	/^  procedure DO_AL_MN (SETTING: in string(1 to 2);$/;"	p
+DO_SHALM	p_alarm_test.vhd	/^  procedure DO_SHALM (signal SHARLM: out std_logic) is$/;"	p
+EIGHT_SEG	p_alarm_types.vhd	/^  constant EIGHT_SEG : std_logic_vector(6 downto 0):= "1111111";  -- FF$/;"	c
+ESTR	t_control.vhd	/^     RESP : unsigned(5 downto 0);   -- expected results$/;"	r
+FIVE_SEC_PERIOD	p_alarm_test.vhd	/^  constant FIVE_SEC_PERIOD : time := 10 * HALF_SEC_PERIOD;$/;"	c
+FIVE_SEG	p_alarm_types.vhd	/^  constant FIVE_SEG  : std_logic_vector(6 downto 0):= "1011011";  -- 6D$/;"	c
+FLASH_PERIOD	t_ac_script.vhd	/^     constant FLASH_PERIOD : time := LED_ON + LED_OFF;$/;"	c
+FOUR_SEG	p_alarm_types.vhd	/^  constant FOUR_SEG  : std_logic_vector(6 downto 0):= "1100110";  -- 66$/;"	c
+GND	alarm_clock.vhd	/^  constant GND : std_logic := '0';$/;"	c
+GND	t_ac_script.vhd	/^   constant GND : std_logic := '0';$/;"	c
+GND	t_alarm_clock.vhd	/^   constant GND : std_logic := '0';$/;"	c
+HALFPERIOD	p_alarm_test.vhd	/^  constant HALFPERIOD : time := PERIOD\/2;$/;"	c
+HALFPERIOD	t_alarm_clock.vhd	/^   constant HALFPERIOD : time := PERIOD\/2;$/;"	c
+HALF_SEC_PERIOD	p_alarm_test.vhd	/^  constant HALF_SEC_PERIOD : time := 64 * PERIOD;    --  assuming 128Hz clock$/;"	c
+IO_ARR	t_control.vhd	/^   constant IO_ARR : IO_ARR_T :=$/;"	c
+IO_ARR_T	t_control.vhd	/^   type IO_ARR_T is array (1 to 19) of IO_VEC;  -- array of 18 stimulus\/response\/error data$/;"	t
+IO_VEC	t_control.vhd	/^   type IO_VEC is record$/;"	t
+LCD_DRIVER	lcd_driver.vhd	/^    entity LCD_DRIVER is $/;"	e
+LED_DRV_STATE_TYPE	lcd_driver.vhd	/^      type LED_DRV_STATE_TYPE is (LED_ON, WAIT_FOR_NEXT_PULSE);$/;"	t
+LED_OFF	t_ac_script.vhd	/^     constant LED_OFF : time :=  (COUNT_LED_OFF - 1) * HALF_SEC_PERIOD;$/;"	c
+LED_ON	t_ac_script.vhd	/^     constant LED_ON  : time := NUM_LED_ON_CYCLES * PERIOD;$/;"	c
+MAXCOUNT	lcd_driver.vhd	/^      constant MAXCOUNT: natural := (CLK_DIV_RATIO\/2) - 1;$/;"	c
+MAX_CNT_VAL	lcd_driver.vhd	/^      constant MAX_CNT_VAL: natural := COUNT_LED_OFF-1;$/;"	c
+MAX_HOUR_SET	p_alarm_test.vhd	/^  constant MAX_HOUR_SET : time := 48 *  HALF_SEC_PERIOD;$/;"	c
+MAX_MIN_SET	p_alarm_test.vhd	/^  constant MAX_MIN_SET : time := 120 * HALF_SEC_PERIOD;    $/;"	c
+MAX_TIME_SET	p_alarm_test.vhd	/^  constant MAX_TIME_SET : time := 60 * 24 * ONE_MIN_PERIOD;$/;"	c
+MUX	mux.vhd	/^entity MUX is$/;"	e
+NINE	bcd2_count.vhd	/^  constant NINE : unsigned(3 downto 0) := "1001";$/;"	c
+NINE_SEG	p_alarm_types.vhd	/^  constant NINE_SEG  : std_logic_vector(6 downto 0):= "1101111";  -- 6F$/;"	c
+NUM_DEBOUNCE_CYCLES	p_alarm_types.vhd	/^  constant NUM_DEBOUNCE_CYCLES : natural := 8;$/;"	c
+NUM_LED_ON_CYCLES	p_alarm_types.vhd	/^  constant NUM_LED_ON_CYCLES : natural := 4;$/;"	c
+NUM_SECS_BETWEEN_PULSES	p_alarm_types.vhd	/^  constant NUM_SECS_BETWEEN_PULSES : natural := 4;$/;"	c
+ONE_MIN_PERIOD	p_alarm_test.vhd	/^  constant ONE_MIN_PERIOD : time := 7680 * PERIOD;   --  $/;"	c
+ONE_SEG	p_alarm_types.vhd	/^  constant ONE_SEG   : std_logic_vector(6 downto 0):= "0000110";  -- 06$/;"	c
+PERIOD	p_alarm_test.vhd	/^  constant PERIOD : time := 10 ns;$/;"	c
+PERIOD	t_alarm_clock.vhd	/^   constant PERIOD : time := 10 ns;$/;"	c
+PERIOD	t_alarm_reg.vhd	/^   constant PERIOD       : time := 10 ns;$/;"	c
+PERIOD	t_pulsegen.vhd	/^   constant PERIOD       : time := 10 ns;$/;"	c
+PERIOD	t_time_count.vhd	/^  constant PERIOD : time := 10 ns;$/;"	c
+P_DISP1	p_disp1.vhd	/^package P_DISP1 is$/;"	P
+P_DISP1	p_disp1.vhd	/^package body P_DISP1 is$/;"	P
+P_DISP4	p_disp4.vhd	/^package P_DISP4 is$/;"	P
+P_DISP4	p_disp4.vhd	/^package body P_DISP4 is$/;"	P
+RESP	t_control.vhd	/^     STIM : unsigned(2 downto 0);   -- stimulus$/;"	r
+SECOND	t_time_count.vhd	/^  constant SECOND : time := PERIOD * 2;$/;"	c
+SEVEN_SEG	p_alarm_types.vhd	/^  constant SEVEN_SEG : std_logic_vector(6 downto 0):= "0000111";  -- 07$/;"	c
+SIX_SEG	p_alarm_types.vhd	/^  constant SIX_SEG   : std_logic_vector(6 downto 0):= "1111101";  -- 7D$/;"	c
+SPACE	t_ac_script.vhd	/^      constant SPACE : character := ' ';$/;"	c
+STIM	t_control.vhd	/^   type IO_VEC is record$/;"	r
+TB_AC_SCRIPT	t_ac_script.vhd	/^entity TB_AC_SCRIPT is$/;"	e
+TB_ALARM_CLOCK	t_alarm_clock.vhd	/^entity TB_ALARM_CLOCK is$/;"	e
+TB_CONTROL	t_control.vhd	/^entity TB_CONTROL is$/;"	e
+TB_DEBOUNCE	t_debounce.vhd	/^entity TB_DEBOUNCE is$/;"	e
+TB_MUX	t_mux.vhd	/^entity TB_MUX is$/;"	e
+TEST_TIME_SET	t_time_set.vhd	/^entity TEST_TIME_SET is$/;"	e
+THREE_SEG	p_alarm_types.vhd	/^  constant THREE_SEG : std_logic_vector(6 downto 0):= "1001111";  -- 4F$/;"	c
+TIME_COUNT	test.vhd	/^entity TIME_COUNT is$/;"	e
+TIME_COUNT	time_count.vhd	/^entity TIME_COUNT is$/;"	e
+TIME_COUNT	trial.vhd	/^entity TIME_COUNT is$/;"	e
+TWO_SEG	p_alarm_types.vhd	/^  constant TWO_SEG   : std_logic_vector(6 downto 0):= "1011011";  -- 56$/;"	c
+T_ALREG	t_alarm_reg.vhd	/^entity T_ALREG is$/;"	e
+T_CLOCK_TIME	p_disp4.vhd	/^   type T_CLOCK_TIME is array (3 downto 0) of std_logic_vector (6 downto 0);$/;"	t
+T_DIGIT_ARRAY	p_disp1.vhd	/^   type T_DIGIT_ARRAY is array (1 to 11) of string (1 to 9);$/;"	t
+T_DIGIT_ARRAY	p_disp4.vhd	/^   type T_DIGIT_ARRAY is array (1 to 11) of string (1 to 36);$/;"	t
+T_PULSEGEN	t_pulsegen.vhd	/^entity T_PULSEGEN is$/;"	e
+T_TIMECOUNT	t_time_count.vhd	/^entity T_TIMECOUNT is$/;"	e
+VCC	alarm_clock.vhd	/^  constant VCC : std_logic := '1';$/;"	c
+VCC	t_ac_script.vhd	/^   constant VCC : std_logic := '1';$/;"	c
+VCC	t_alarm_clock.vhd	/^   constant VCC : std_logic := '1';$/;"	c
+ZERO	test.vhd	/^   constant ZERO : unsigned(3 downto 0) := "0000";$/;"	c
+ZERO	time_count.vhd	/^   constant ZERO : unsigned(3 downto 0) := "0000";$/;"	c
+ZERO	trial.vhd	/^   constant ZERO : unsigned(3 downto 0) := "0000";$/;"	c
+ZERO_SEG	p_alarm_types.vhd	/^  constant ZERO_SEG  : std_logic_vector(6 downto 0):= "0111111";  -- 3F$/;"	c

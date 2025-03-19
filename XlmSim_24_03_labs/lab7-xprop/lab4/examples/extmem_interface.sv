@@ -1,0 +1,218 @@
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ****************************************************************************               //
+// *         CONFIDENTIAL AND PROPRIETARY INFORMATION OF CADENCE India        *               //
+// *                                                                          *               //
+// *               Copyright (c) Cadence, Inc. 2007                           *               //
+// *                                                                          *               //
+// *     Use of the material contained herein requires the written consent    *               //
+// *         of Cadence India, and is subject to the terms of Cadence's       *               //
+// *                         Nondisclosure Agreement.                         *               //
+// ****************************************************************************               //
+//                                                                                            //
+// File        : extmem_interface.sv                                                          //  
+// Description : This is external memory interface of cache controller IP.                    //  
+//                                                                                            //  
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+module extmem_interface 
+   (
+                  clk,                          // clock input
+		  reset,                        // reset input
+		  mctrl_extmem_en,              // Enable the external memory interface
+		  mctrl_extmem_rdwr,            // read write input to the external memory, = 0 read ; = 1 write;
+		  mctrl_extmem_addr_in,         // external memory address to read
+		  mctrl_extmem_data_in,         // data to be written into the external memory
+		  extmem_mctrl_data_out,        // data read from the external memory
+		  extmem_mctrl_rdy,             // external memory read data ready, = 0 read data not ready; = 1 read data done
+		  extmem_mctrl_wrrdy,           // external memory write data ready, = 0 write data not ready; = 1 write data done
+		  extmem_top_en,                // Enable the external memory
+		  extmem_top_rdwr,              // read write input to the external memory, = 0 read ; = 1 write;
+		  extmem_top_addr_in,           // external memory address to read
+		  extmem_top_data_in,           // data to be written into the external memory
+		  top_extmem_data_out,          // data read from the external memory
+		  top_extmem_rdy                // external memory read data ready, = 0 read data not ready; = 1 read data done
+   );
+
+  input  [31:0]     mctrl_extmem_addr_in,
+                    top_extmem_data_out;
+  input  [4*32-1:0] mctrl_extmem_data_in;
+  input             clk,
+                    reset,
+                    mctrl_extmem_en,
+                    mctrl_extmem_rdwr,
+                    top_extmem_rdy;
+
+  output [4*32-1:0] extmem_mctrl_data_out;
+  output [31:0]     extmem_top_addr_in,
+                    extmem_top_data_in;    
+  output	    extmem_mctrl_rdy,        
+                    extmem_mctrl_wrrdy,
+                    extmem_top_en,
+                    extmem_top_rdwr;
+
+
+  reg    [4*32-1:0] extmem_mctrl_data_out;
+  reg    [31:0]     extmem_top_addr_in,
+                    extmem_top_data_in;    
+  reg  	            extmem_mctrl_rdy,        
+                    extmem_mctrl_wrrdy,   
+                    extmem_top_en,
+                    extmem_top_rdwr;
+
+    // State machine states. Using SysV enum construct
+  enum {WAIT, ADDR_INC} addr_status;
+  enum {IDLE, WAIT_EXT, READ_EXT, WRITE_EXT} status;
+
+    // Counters to keep track of the number of address and data
+  reg [2:0] addr_cnt;
+  reg [2:0] read_cnt;
+
+    // Temperory register to hold read/write information
+  reg       extmem_top_rdwr_temp;
+    // This block deals with the address manipulation and write cycles. 
+    // When a read or write request is recieved, the address on the 
+    // address bus from extmem_interface to DRAM is automatically incremented
+    // line size number of times. This operation is done irrespective of the
+    // read or write operations. The state machine also deals with the write
+    // cycle. An assumption here is that the DRAM controller stores
+    // and handles the addresses sent.
+  always @( posedge clk or negedge reset) 
+  begin
+    if (reset == 1'b0) begin
+      addr_cnt <= 3'b000;
+      extmem_top_en <= 1'b0;
+      extmem_mctrl_wrrdy <= 1'b0;
+      extmem_top_addr_in <= 32'b0;
+      extmem_top_data_in <= 32'b0;
+      extmem_mctrl_rdy   <= 1'b0;
+      extmem_mctrl_wrrdy <= 1'b0;
+      extmem_top_en      <= 1'b0;
+      extmem_top_rdwr    <= 1'b0;
+    end
+    else begin
+      case (addr_status)
+        WAIT    : begin
+            if ( mctrl_extmem_en == 1'b1) begin
+              extmem_top_en <= 1'b1;
+              extmem_mctrl_wrrdy <= 1'b0;
+              extmem_top_rdwr <= mctrl_extmem_rdwr;
+              extmem_top_rdwr_temp <= mctrl_extmem_rdwr;
+              extmem_top_addr_in <= mctrl_extmem_addr_in + addr_cnt;
+              if (extmem_top_rdwr_temp == 1'b1) begin
+                case (addr_cnt)
+                  3'b000 : extmem_top_data_in <= mctrl_extmem_data_in[ 31: 0];
+                  3'b001 : extmem_top_data_in <= mctrl_extmem_data_in[ 63:32];
+                  3'b010 : extmem_top_data_in <= mctrl_extmem_data_in[ 95:64];
+                  3'b011 : extmem_top_data_in <= mctrl_extmem_data_in[127:96];
+                  3'b100 : extmem_mctrl_wrrdy <= 1'b1;
+                  default: begin
+		             addr_cnt <= 3'b000;
+//			     addr_status <= WAIT;
+                             extmem_mctrl_wrrdy <= 1'b0;
+                    end
+                endcase
+              end
+              addr_cnt++;
+              addr_status <= ADDR_INC;
+            end
+          end
+
+        ADDR_INC: begin
+//            extmem_top_en <= 1'b1;
+            extmem_top_rdwr <= mctrl_extmem_rdwr;
+            extmem_top_addr_in <= mctrl_extmem_addr_in + addr_cnt;
+            if (extmem_top_rdwr_temp == 1'b1) begin
+              case (addr_cnt)
+                3'b000 : extmem_top_data_in <= mctrl_extmem_data_in[ 31: 0];
+                3'b001 : extmem_top_data_in <= mctrl_extmem_data_in[ 63:32];
+                3'b010 : extmem_top_data_in <= mctrl_extmem_data_in[ 95:64];
+                3'b011 : extmem_top_data_in <= mctrl_extmem_data_in[127:96];
+                3'b100 : extmem_mctrl_wrrdy <= 1'b1;
+                default: begin
+		           addr_cnt <= 3'b000;
+			   addr_status <= WAIT;
+                  end
+              endcase
+            end
+            addr_cnt++;
+            if (addr_cnt == 3'b101) begin
+              addr_cnt <= 3'b000;
+              extmem_top_en <= 1'b0;
+              addr_status <= WAIT;
+            end
+          end
+        default : begin
+                    addr_cnt <= 3'b000;
+                    extmem_top_en <= 1'b0;
+                    addr_status <= WAIT;
+          end
+      endcase
+    end
+  end
+
+    // The following blocks deals with the read operation to be performed on
+    // external memory. When a read request is received from the cache
+    // controller, the addresses are sent to the external memory in a
+    // sequence irrespective of the status of the external memory. The state
+    // machine then waits to receive the data. Once the data is received, it
+    // is then appended to form a 128-bit value and is then passed on to the
+    // main controller to be written into the data memory.
+  always @( posedge clk or negedge reset) begin
+    if (reset == 1'b0) begin
+      status <= IDLE;
+      read_cnt <= 3'b000;
+      extmem_mctrl_rdy <= 1'b0;
+    end
+    else begin
+      case (status)
+      	  // IDLE state
+        IDLE      : begin
+            read_cnt <= 3'b000;
+            extmem_mctrl_rdy <= 1'b0;
+            if ( mctrl_extmem_en == 1'b1 && mctrl_extmem_rdwr == 1'b0) begin
+              status <= READ_EXT;
+            end
+          end
+
+      	  // WAIT for DRAM
+      	  // READ state. Here the state machine waits till all the
+      	  // data is received, sets the ready signal to the
+      	  // main controller and resets the data counter
+        READ_EXT  : begin
+            case (top_extmem_rdy)
+              1'b1 : begin 
+//                  status <= READ_EXT;
+
+      	            // If DRAM is ready and the READ operation,
+      	            // do the initial assignment and then pass
+      	            // control to next state
+      	          case (read_cnt)
+                    3'b000 : extmem_mctrl_data_out[ 31: 0] <= top_extmem_data_out;
+                    3'b001 : extmem_mctrl_data_out[ 63:32] <= top_extmem_data_out;
+                    3'b010 : extmem_mctrl_data_out[ 95:64] <= top_extmem_data_out;
+                    3'b011 : begin
+                               extmem_mctrl_data_out[127:96] <= top_extmem_data_out;
+                               status <= IDLE;
+                       	       extmem_mctrl_rdy <= 1'b1;
+                      end
+                    default: begin
+                               status <= IDLE;
+                               read_cnt <= 3'b000;
+                      end
+                  endcase
+                  read_cnt++;
+      	        end
+
+              default : status <= READ_EXT;
+
+            endcase
+          end
+
+	default : begin
+	            status <= IDLE;
+		    read_cnt <= 3'b000;
+	  end
+      endcase
+    end
+  end
+endmodule

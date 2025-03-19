@@ -1,0 +1,41 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:49:16 EST
+xrun
+	-clean
+	-mess
+	-access rwc
+	-v93
+	tb_mux.vhd
+	mux.vhd
+	-top tb_mux
+	-l xrun.noxprop.log
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+tb_mux.vhd:
+	errors: 0, warnings: 0
+mux.vhd:
+	errors: 0, warnings: 0
+WORKLIB.TB_MUX (entity):
+	streams: 1, words: 38
+WORKLIB.TB_MUX:TEST_TB_MUX (architecture):
+	streams: 1, words: 1660
+WORKLIB.MUX4TO1 (entity):
+	streams: 11, words: 1183
+WORKLIB.MUX4TO1:MUX4TO1_RTL (architecture):
+	streams: 1, words: 114
+xmelab: *W,ARCMRA: Elaborating the WORKLIB.TB_MUX:TEST_TB_MUX, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+	Top level design units:
+		:tb_mux(test_tb_mux):
+	Building instance specific data structures.
+	Design hierarchy summary:
+		           Instances  Unique
+		Components:        3       2
+		Default bindings:  1       -
+		Processes:         2       2
+		Signals:           5       5
+	Writing initial simulation snapshot: WORKLIB.TB_MUX:TEST_TB_MUX
+Loading snapshot worklib.tb_mux:test_tb_mux .................... Done
+xcelium> run
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:49:17 EST  (total: 00:00:01)

@@ -1,0 +1,16 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+-V93
+tb_mux.vhd
+mux.vhd
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdlrun.var
+-MESSAGES
+-UPDATE

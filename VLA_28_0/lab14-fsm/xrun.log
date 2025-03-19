@@ -1,0 +1,119 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 13, 2025 at 19:09:37 EDT
+xrun
+	rcvr.v
+	rcvr_test.v
+	-gui
+	-64bit
+file: rcvr.v
+	module worklib.rcvr:v
+		errors: 0, warnings: 0
+file: rcvr_test.v
+	module worklib.rcvr_test:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		rcvr_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.rcvr:v <0x65c53082>
+			streams:   6, words:  4635
+		worklib.rcvr_test:v <0x7bb64192>
+			streams:   5, words: 13362
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              2       2
+		Registers:           16      16
+		Scalar wires:         6       -
+		Vectored wires:       1       -
+		Always blocks:        1       1
+		Initial blocks:       4       4
+		Pseudo assignments:   1       1
+	Writing initial simulation snapshot: worklib.rcvr_test:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> scope -set rcvr_test.rcvr_i
+xcelium> run
+Message sending:  I Love Verilog
+At time 35: Put character "I"
+At time 39: Got character "I"
+At time 77: Put character " "
+At time 95: Got character " "
+At time 117: Put character "L"
+At time 127: Got character "L"
+At time 153: Put character "o"
+At time 175: Got character "o"
+At time 193: Put character "v"
+At time 207: Got character "v"
+At time 231: Put character "e"
+At time 257: Got character "e"
+At time 275: Put character " "
+At time 297: Got character " "
+At time 309: Put character "V"
+At time 313: Got character "V"
+At time 349: Put character "e"
+At time 365: Got character "e"
+At time 391: Put character "r"
+At time 423: Got character "r"
+At time 425: Put character "i"
+At time 433: Got character "i"
+At time 459: Put character "l"
+At time 487: Got character "l"
+At time 495: Put character "o"
+At time 507: Got character "o"
+At time 537: Put character "g"
+At time 563: Got character "g"
+Message received: I Love Verilog
+TEST DONE
+Simulation complete via $finish(1) at time 563 NS + 0
+./rcvr_test.v:60       $finish;
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> reset
+Loaded snapshot worklib.rcvr_test:v
+xcelium> run
+Message sending:  I Love Verilog
+At time 35: Put character "I"
+At time 39: Got character "I"
+At time 77: Put character " "
+At time 95: Got character " "
+At time 117: Put character "L"
+At time 127: Got character "L"
+At time 153: Put character "o"
+At time 175: Got character "o"
+At time 193: Put character "v"
+At time 207: Got character "v"
+At time 231: Put character "e"
+At time 257: Got character "e"
+At time 275: Put character " "
+At time 297: Got character " "
+At time 309: Put character "V"
+At time 313: Got character "V"
+At time 349: Put character "e"
+At time 365: Got character "e"
+At time 391: Put character "r"
+At time 423: Got character "r"
+At time 425: Put character "i"
+At time 433: Got character "i"
+At time 459: Put character "l"
+At time 487: Got character "l"
+At time 495: Put character "o"
+At time 507: Got character "o"
+At time 537: Put character "g"
+At time 563: Got character "g"
+Message received: I Love Verilog
+TEST DONE
+Simulation complete via $finish(1) at time 563 NS + 0
+./rcvr_test.v:60       $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 13, 2025 at 19:13:28 EDT  (total: 00:03:51)

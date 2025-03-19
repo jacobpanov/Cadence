@@ -1,0 +1,6 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(13Mar2025:19:01:35):( xrun rcvr.v rcvr_test.v )
+s2::(13Mar2025:19:09:37):( xrun rcvr.v rcvr_test.v -gui -64bit )

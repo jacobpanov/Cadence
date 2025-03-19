@@ -1,0 +1,8 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+rcvr.v
+rcvr_test.v
+-gui
+-64bit

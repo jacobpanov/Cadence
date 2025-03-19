@@ -1,0 +1,37 @@
+rm -fr INCA_libs rcvr.v *.log >> /dev/null 2>&1
+cp ../solutions/lab15-fsm/rcvr1.v ./rcvr.v >> /dev/null 2>&1
+irun rcvr.v rcvr_test.v >> /dev/null 2>&1
+grep I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1
+rm -fr fv rcvr.vg rc.cmd* rc.log* >> /dev/null 2>&1
+rc -rcl -files rc_shell.tcl >> /dev/null 2>&1
+grep Synthesis.succeeded rc.log >> /dev/null 2>&1
+irun rcvr.vg rcvr_test.v -v ../tutorial.v -vlogext vg >> /dev/null 2>&1
+grep I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1
+
+rm -fr INCA_libs rcvr.v *.log >> /dev/null 2>&1
+cp ../solutions/lab15-fsm/rcvr2.v ./rcvr.v >> /dev/null 2>&1
+irun rcvr.v rcvr_test.v >> /dev/null 2>&1
+grep I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1
+rm -fr fv rcvr.vg rc.cmd* rc.log* >> /dev/null 2>&1
+rc -rcl -files rc_shell.tcl >> /dev/null 2>&1
+grep Synthesis.succeeded rc.log >> /dev/null 2>&1
+irun rcvr.vg rcvr_test.v -v ../tutorial.v -vlogext vg >> /dev/null 2>&1
+grep I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1
+
+rm -fr INCA_libs rcvr.v *.log >> /dev/null 2>&1
+cp ../solutions/lab15-fsm/rcvr3.v ./rcvr.v >> /dev/null 2>&1
+irun rcvr.v rcvr_test.v >> /dev/null 2>&1
+grep I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1
+rm -fr fv rcvr.vg rc.cmd* rc.log* >> /dev/null 2>&1
+rc -rcl -files rc_shell.tcl >> /dev/null 2>&1
+grep Synthesis.succeeded rc.log >> /dev/null 2>&1
+irun rcvr.vg rcvr_test.v -v ../tutorial.v -vlogext vg >> /dev/null 2>&1
+grep I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1
+
+#PASS: lab15-fsm

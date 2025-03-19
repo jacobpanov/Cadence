@@ -1,0 +1,5 @@
+cp ../solutions/lab9-mem/memory.v . >> /dev/null 2>&1
+irun memory.v memory_test.v >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab9-mem

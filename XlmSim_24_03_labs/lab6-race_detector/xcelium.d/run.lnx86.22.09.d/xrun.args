@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-sv
+test.sv
+-race_detect
+-log
+xrun.log

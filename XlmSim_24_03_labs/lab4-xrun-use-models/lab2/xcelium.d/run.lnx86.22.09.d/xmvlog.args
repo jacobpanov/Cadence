@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+//
+-no_analogsolver
+
+// Turn on informative messages.
+-MESSAGES
+
+// Comment the following line to force recompilation.
+-UPDATE

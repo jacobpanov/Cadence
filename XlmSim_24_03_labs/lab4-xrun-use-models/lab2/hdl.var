@@ -1,0 +1,9 @@
+#
+# hdl.var: Defines variables used by the INCA tools.
+# Created by xrun on Tue Mar  4 17:25:20 2025
+#
+softinclude $CDS_INST_DIR/tools/inca/files/hdl.var
+
+define VIEW_MAP ( $VIEW_MAP, .v => v)
+define XMSIMRC	( /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
+DEFINE LIB_MAP ( + => worklib )

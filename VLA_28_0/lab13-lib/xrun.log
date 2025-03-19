@@ -1,0 +1,48 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 12, 2025 at 23:21:39 EDT
+xrun
+	lib.v
+	lib_test.v
+	-define macrolib
+Recompiling... reason: file './lib.v' is newer than expected.
+	expected: Wed Mar 12 23:16:02 2025
+	actual:   Wed Mar 12 23:21:37 2025
+file: lib.v
+	module worklib.dffrs:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		lib_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.drive8:v <0x2ae8f8fa>
+			streams:   1, words:   256
+		worklib.dffrs:v <0x338978b9>
+			streams:   2, words:   527
+		worklib.latchrs:v <0x6e7d52ff>
+			streams:   2, words:   494
+		worklib.lib_test:v <0x34859a19>
+			streams:  21, words: 28983
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              5       5
+		Registers:           21      21
+		Scalar wires:        12       -
+		Vectored wires:       4       -
+		Always blocks:        4       4
+		Initial blocks:       5       5
+		Pseudo assignments:  12      12
+	Writing initial simulation snapshot: worklib.lib_test:v
+Loading snapshot worklib.lib_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+TEST PASSED - DRIVER
+TEST PASSED - PRIORITY
+TEST PASSED - LATCH
+TEST PASSED - DFF
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 12, 2025 at 23:21:41 EDT  (total: 00:00:02)

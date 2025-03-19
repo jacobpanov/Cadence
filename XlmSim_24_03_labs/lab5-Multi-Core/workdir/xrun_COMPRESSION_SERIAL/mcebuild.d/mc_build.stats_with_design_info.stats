@@ -1,0 +1,168 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:53:40.452218
+  mce Version:           22.09-s010.493970
+  Report File Level:     REPORT_LEVEL_LOW (1)
+  Report Screen Level:   REPORT_LEVEL_NONE (0)
+
+Codegens Stats
+===============
+ ------------- Type based pes linefiles histograms (only RTL processes)  -------------
+
+Only up to 5 files and 15 lines per file are presented here.
+To see full Linefiles data, please view ../workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/logs/StatsAnalyzer/pes_per_linefile_by_type
+
+file histogram
+--------------
+filename                                                         # pes                                           
+========                                                         =====                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/RTL/dtmf_chip.test_netlist.v
+                                                                   163                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v
+                                                                   148                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/typical.v
+                                                                    37                                           
+
+
+linefile histogram
+------------------
+filename                                   line                  # pes                                           
+========                                   ====                  =====                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/RTL/dtmf_chip.test_netlist.v
+                                          38807:                     2                                           
+                                          38773:                     2                                           
+                                          38771:                     2                                           
+                                          38769:                     2                                           
+                                          38767:                     2                                           
+                                          38765:                     2                                           
+                                          38763:                     2                                           
+                                          38761:                     2                                           
+                                          38759:                     2                                           
+                                          38757:                     2                                           
+                                          38755:                     2                                           
+                                          38753:                     2                                           
+                                          38751:                     2                                           
+                                          38747:                     2                                           
+                                          38745:                     2                                           
+                                          38743:                     2                                           
+                                          38723:                     2                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v
+                                            204:                     2                                           
+                                            203:                     2                                           
+                                            202:                     2                                           
+                                            201:                     2                                           
+                                            200:                     2                                           
+                                            199:                     2                                           
+                                            198:                     2                                           
+                                            197:                     2                                           
+                                            196:                     2                                           
+                                            195:                     2                                           
+                                            194:                     2                                           
+                                            193:                     2                                           
+                                            192:                     2                                           
+                                            191:                     2                                           
+                                            190:                     2                                           
+                                            189:                     2                                           
+                                            188:                     2                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/typical.v
+                                           6851:                     4                                           
+                                          20600:                     3                                           
+                                           2265:                     3                                           
+                                          21237:                     2                                           
+                                          14486:                     2                                           
+                                          14196:                     2                                           
+                                           7343:                     2                                           
+                                           7170:                     2                                           
+                                          18604:                     1                                           
+                                          18157:                     1                                           
+                                          18079:                     1                                           
+                                          17704:                     1                                           
+                                          16396:                     1                                           
+                                          14762:                     1                                           
+                                          14405:                     1                                           
+                                          14334:                     1                                           
+                                          14127:                     1                                           
+
+
+South Stats
+===============
+ ------------- Sequential udp optimization table per udp  -------------
+include_libraries_sim@udp_dff_5
+    optimized                                                    1,488                                           
+        pos: 0->1 0->X                                           1,488                                           
+        trigger distribution optimization                        1,488                                           Don't distribute trigger if data changes when clk is not 'x
+    not optimized                                                    0                                           
+    2 identical temperature                                          0                                           
+    2 different temperature                                          0                                           
+
+ ------------- Flat pes linefiles histograms  -------------
+
+Only up to 5 files and 15 lines per file are presented here.
+To see full Linefiles data, please view ../workdir/xrun_COMPRESSION_SERIAL/mcebuild.d/logs/StatsAnalyzer/pes_per_linefile_flat
+
+file histogram
+--------------
+filename                                                         # pes                                           
+========                                                         =====                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/typical.v
+                                                               101,417                                           
+<no file>                                                       27,203                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v
+                                                                    54                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/pads.v
+                                                                    46                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/RTL/dtmf_chip.test_netlist.v
+                                                                     2                                           
+
+
+linefile histogram
+------------------
+filename                                   line                  # pes                                           
+========                                   ====                  =====                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/typical.v
+                                           6851:                48,416                                           
+                                            884:                 4,178                                           
+                                          15923:                 4,108                                           
+                                           5123:                 2,667                                           
+                                          19035:                 2,559                                           
+                                           3763:                 2,094                                           
+                                          18755:                 2,044                                           
+                                          19344:                 1,864                                           
+                                           5012:                 1,752                                           
+                                           7002:                 1,644                                           
+                                          16910:                 1,433                                           
+                                           2265:                 1,342                                           
+                                          10632:                 1,226                                           
+                                          13272:                 1,137                                           
+                                           1152:                 1,124                                           
+                                          17366:                   963                                           
+                                          11207:                   909                                           
+<no file>
+                                              0:                27,203                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/workdir/testresults/verilog/COMPRESSION_SERIAL/VER.COMPRESSION.mainsim.v
+                                            206:                     1                                           
+                                            204:                     1                                           
+                                            203:                     1                                           
+                                            202:                     1                                           
+                                            201:                     1                                           
+                                            200:                     1                                           
+                                            199:                     1                                           
+                                            198:                     1                                           
+                                            197:                     1                                           
+                                            196:                     1                                           
+                                            195:                     1                                           
+                                            194:                     1                                           
+                                            193:                     1                                           
+                                            192:                     1                                           
+                                            191:                     1                                           
+                                            190:                     1                                           
+                                            189:                     1                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/LIBS/verilog/pads.v
+                                             10:                    46                                           
+/home/jpanov/Cadence/XlmSim_24_03_labs/lab5-Multi-Core/RTL/dtmf_chip.test_netlist.v
+                                           9145:                     1                                           
+                                           1577:                     1                                           
+
+

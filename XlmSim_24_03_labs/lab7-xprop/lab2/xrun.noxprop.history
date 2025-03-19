@@ -1,0 +1,1 @@
+s1(04Mar2025:18:47:50):  xrun -clean -mess -sv -access rwc top.v dut.v -l xrun.noxprop.log 

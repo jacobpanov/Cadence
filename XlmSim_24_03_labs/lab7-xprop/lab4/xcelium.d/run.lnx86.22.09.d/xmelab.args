@@ -1,0 +1,26 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-loadpli
+/software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/libuvmpli.so:uvm_pli_boot
+-ACCESS
++r
++UVM_TESTNAME=mul_sequence_test
+-STATUS
+-XFILE
+xfile.txt
+-XVERBOSE
+-ENABLE_XP_DEBUG_CODE
+-no_analogsolver
+-MESSAGES
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdl.var
+-WORK
+worklib
+-HASXLMODE

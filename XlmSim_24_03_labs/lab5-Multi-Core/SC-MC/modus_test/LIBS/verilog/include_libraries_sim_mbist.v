@@ -1,0 +1,6 @@
+`include "./../LIBS/verilog/typical.v"
+`include "./../LIBS/verilog/pads.v"
+`include "./../LIBS/verilog/pllclk.v"
+`include "./../LIBS/verilog/CDK_R512x16.gv"
+`include "./../LIBS/verilog/CDK_S128x16.gv"
+`include "./../LIBS/verilog/CDK_S256x16.gv"

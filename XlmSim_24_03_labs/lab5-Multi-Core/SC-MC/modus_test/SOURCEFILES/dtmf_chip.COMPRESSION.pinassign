@@ -1,0 +1,76 @@
+assign pin=DFT_compression_enable 	test_function= +SE; 	# compression_enable
+assign pin=DFT_mask_enable 	test_function= -CME; 	# mask_enable
+assign pin=DFT_spreader 	test_function= -SE; 	# spread_enable
+assign pin=test_mode 	test_function= +TI; 	# test_mode
+assign pin=spi_fs 	test_function= -TI; 	# test_mode
+assign pin=reset 	test_function= -SC; 	# test_mode
+assign pin=mbist_test_mode 	test_function= -TI; 	# test_mode
+assign pin=OPCG_ON 	test_function= -TI; 	# test_mode
+assign pin=scan_en 	test_function= +SE; 	# shift_enable
+assign pin=scan_clk 	test_function= -ES; 	
+assign pin=DFT_mask_clk 	test_function= -CML; 	# mask_clock
+assign pin=OPCG_LOADCLK 	test_function= -ES; 	
+assign pin=port_pad_data_in[0] 	test_function= SI0;
+assign pin=port_pad_data_out[0] 	test_function= SO0;
+assign pin=port_pad_data_in[1] 	test_function= SI1;
+assign pin=port_pad_data_out[1] 	test_function= SO1;
+assign pin=port_pad_data_in[2] 	test_function= SI2;
+assign pin=port_pad_data_in[3] 	test_function= SO2;
+assign pin=TRIGGER 	test_function= +TI; 	
+
+Assign Pin = "port_pad_data_in[0]"  test_function = CHI,SI,OLI;
+Assign Pin = "port_pad_data_in[1]"  test_function = CHI,SI,OLI;
+Assign Pin = "port_pad_data_in[2]"  test_function = CHI,SI,OLI;
+
+Assign Pin = "COMPACTOR.compressor.g_1.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_17.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_15.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_16.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_18.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_20.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_19.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_21.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_22.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_23.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_24.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_25.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_26.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_2.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_0.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_39.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_28.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_30.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_29.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_31.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_32.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_33.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_35.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_36.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_37.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_38.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_3.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_34.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_49.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_50.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_40.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_41.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_43.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_42.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_27.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_44.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_45.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_46.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_47.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_48.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_5.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_6.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_8.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_7.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_9.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_10.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_11.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_12.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_13.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_14.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_4.g44.__iNsT1.01" test_function = CHO;
+

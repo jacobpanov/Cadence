@@ -1,0 +1,1 @@
+Severity cutoff of logger 'giving_all_pes_power_notifier_rst_temperature.txt' was set to OFF

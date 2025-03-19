@@ -1,0 +1,6 @@
+`include "./LIBS/atpg/stdcell.v"
+`include "./LIBS/atpg/pllclk_dft.v"
+`include "./LIBS/atpg/pads.v"
+`include "./LIBS/atpg/CDK_R512x16_dft.v"
+`include "./LIBS/atpg/CDK_S128x16_dft.v"
+`include "./LIBS/atpg/CDK_S256x16_dft.v"

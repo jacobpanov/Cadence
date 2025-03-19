@@ -1,0 +1,17 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-clean
+-mess
+-sv
+-access
+rwc
+top.v
+dut.v
+-xfile
+xfile_fox.txt
+-xverbose
+-ENABLE_XP_DEBUG_CODE
+-l
+xrun_xprop_fox.log

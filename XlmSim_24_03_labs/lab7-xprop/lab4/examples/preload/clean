@@ -1,0 +1,1 @@
+rm -rf fillmem.o tagmem.txt extmem.txt datamem.txt core.*

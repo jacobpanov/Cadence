@@ -1,0 +1,12 @@
+AUTOTYPE                                                         00000004
+CELLTYPE                                                         00000122
+FAULTS                                                           00000008
+LTYPE                                                            00000002
+PFLT                                                             00000028
+SOURCE_BUSLIST                                                   00000142
+SOURCE_PORTLIST                                                  00000567
+SUPPRESS_MSG                                                     00000005
+TB_METAPRIMITIVE                                                 00000001
+TB_SYMBOL                                                        00000001
+TFLT                                                             00000028
+ZDLY                                                             00000002

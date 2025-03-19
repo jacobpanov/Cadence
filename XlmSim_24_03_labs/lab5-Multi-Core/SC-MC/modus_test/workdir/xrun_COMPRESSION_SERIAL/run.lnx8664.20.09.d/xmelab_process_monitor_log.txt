@@ -1,0 +1,14 @@
+Process Tree State Log:
+-------------------------
+Indicates all different states of the processes tree during the run. 
+Every line refers to a unique tree state. The lines are chronological.
+	'>' - down a level
+	'<' - up a level
+	']' - no child-processes
+
+
+xmelab]
+xmelab>mcgfe_cg (x)]<
+xmelab]
+mcebuild>mce-south0]<
+mcebuild>mce-linker>bash>bash>gcc>collect2>bash>bash>ld]<<<<<<<<

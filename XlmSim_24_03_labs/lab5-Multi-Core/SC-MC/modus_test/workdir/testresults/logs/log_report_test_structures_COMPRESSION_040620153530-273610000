@@ -1,0 +1,699 @@
+Starting Command: report_test_structures 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_test_structures -testmode COMPRESSION -workdir /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 20.10-b013_1, built Apr 03 2020 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_report_test_structures_COMPRESSION_040620153530-273610000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Monday Apr 06 15:35:30 2020  EDT
+            Host machine is end-curly, x86_64 running Linux 2.6.32-431.11.2.el6.x86_64.
+            This job is process number 20865.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir
+            -TESTMODE COMPRESSION
+
+            -LOGFILE /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_report_test_structures_COMPRESSION_040620153530-273610000
+            -STDOUT summary
+[end TDA_009]
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+        144,125  Blocks                      81,896  Blocks
+        436,169  Pins                        81,896  Nodes
+        247,745  Nets
+
+Primary Inputs:                      Primary Outputs:
+         21  Input Only                        10  Output Only
+         32  Input/Output                      32  Input/Output
+         53  Total Inputs                      42  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+      2,656  Tied to 0                          0  Two-State
+      1,547  Tied to 1                         40  Three-State
+        194  Tied to X                         40  Total Dotted Nets
+      4,397  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+         50  TSDs
+          0  Resistors
+          0  Transistors
+      3,052  MUX2s
+        234  Latches
+
+
+      2,334  Rising  Edge Flop w/Set-Dominant and Reset Port
+      2,334  Total Flops
+
+     22,702  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Information for Test Mode:  COMPRESSION
+-------------------------
+
+         Scan Type = GSD
+
+  Test Mode uses Linear Decompression.
+  Test Mode uses Linear Compression.
+
+
+
+Control/Observe Chain Information for Test Mode:  COMPRESSION
+-----------------------------------------------
+
+     7 Control Chains (0 Control Only)
+    51 Observe Chains (0 Observe Only)
+    51 Chains are Control and Observe
+
+  Longest Scan Chain: 48 bits
+  Average Scan Chain Length: 45 bits
+
+
+  Control Chain: 1
+    Fed by: XOR of Scan-Ins
+    Number of Control Points: 3
+      Control Point Pin Index/Name          22/port:port_pad_data_in[0]    Pipeline Stages: 0 
+      Control Point Pin Index/Name          29/port:port_pad_data_in[1]    Pipeline Stages: 0 
+      Control Point Pin Index/Name          30/port:port_pad_data_in[2]    Pipeline Stages: 0 
+    Feeds: 7 Observe Chains
+    Load Point Pin Index/Name  5133/prim_pin:COMPACTOR.decompressor.g296.__iNsT2.01
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 6
+    Number of Observe Points: 3
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  874/prim_pin:COMPACTOR.compressor.g_13.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 14
+    Number of Observe Points: 3
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1062/pin:COMPACTOR.compressor.g_20.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 21
+    Number of Observe Points: 3
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1235/pin:COMPACTOR.compressor.g_27.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 29
+    Number of Observe Points: 3
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1447/prim_pin:COMPACTOR.compressor.g_34.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 33
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 37
+    Number of Observe Points: 3
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1651/prim_pin:COMPACTOR.compressor.g_41.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 44
+    Number of Observe Points: 3
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1828/prim_pin:COMPACTOR.compressor.g_48.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 48
+    Number of Observe Points: 3
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1928/prim_pin:COMPACTOR.compressor.g_6.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+
+
+  Control Chain: 2
+    Fed by: XNOR of Scan-Ins
+    Number of Control Points: 2
+      Control Point Pin Index/Name          22/port:port_pad_data_in[0]    Pipeline Stages: 0 
+      Control Point Pin Index/Name          30/port:port_pad_data_in[2]    Pipeline Stages: 0 
+    Feeds: 7 Observe Chains
+    Load Point Pin Index/Name  5247/prim_pin:COMPACTOR.decompressor.g307.__iNsT2.01
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 5
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  847/prim_pin:COMPACTOR.compressor.g_12.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 12
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1024/prim_pin:COMPACTOR.compressor.g_19.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 20
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1220/prim_pin:COMPACTOR.compressor.g_26.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 28
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1420/prim_pin:COMPACTOR.compressor.g_33.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 6
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 36
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1624/prim_pin:COMPACTOR.compressor.g_40.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 43
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1801/prim_pin:COMPACTOR.compressor.g_47.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 46
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1878/prim_pin:COMPACTOR.compressor.g_5.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+
+
+  Control Chain: 3
+    Fed by: XNOR of Scan-Ins
+    Number of Control Points: 2
+      Control Point Pin Index/Name          29/port:port_pad_data_in[1]    Pipeline Stages: 0 
+      Control Point Pin Index/Name          30/port:port_pad_data_in[2]    Pipeline Stages: 0 
+    Feeds: 7 Observe Chains
+    Load Point Pin Index/Name  5263/prim_pin:COMPACTOR.decompressor.g308.__iNsT2.01
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 4
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  820/prim_pin:COMPACTOR.compressor.g_11.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 11
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  997/prim_pin:COMPACTOR.compressor.g_18.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 19
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1193/prim_pin:COMPACTOR.compressor.g_25.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 27
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1393/prim_pin:COMPACTOR.compressor.g_32.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 34
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1570/prim_pin:COMPACTOR.compressor.g_39.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 35
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1597/prim_pin:COMPACTOR.compressor.g_4.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 42
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1774/prim_pin:COMPACTOR.compressor.g_46.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+
+
+  Control Chain: 4
+    Fed by: XOR of Scan-Ins
+    Number of Control Points: 2
+      Control Point Pin Index/Name          22/port:port_pad_data_in[0]    Pipeline Stages: 0 
+      Control Point Pin Index/Name          29/port:port_pad_data_in[1]    Pipeline Stages: 0 
+    Feeds: 7 Observe Chains
+    Load Point Pin Index/Name  5319/prim_pin:COMPACTOR.decompressor.g315.__iNsT0.01
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 3
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  793/prim_pin:COMPACTOR.compressor.g_10.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 10
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  970/prim_pin:COMPACTOR.compressor.g_17.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 34
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 18
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1166/prim_pin:COMPACTOR.compressor.g_24.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 24
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1316/prim_pin:COMPACTOR.compressor.g_3.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 26
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1366/prim_pin:COMPACTOR.compressor.g_31.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 33
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1543/prim_pin:COMPACTOR.compressor.g_38.g44.__iNsT1.01
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 41
+    Number of Observe Points: 2
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1747/prim_pin:COMPACTOR.compressor.g_45.g44.__iNsT1.01
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+
+
+  Control Chain: 5
+    Fed by: Scan-In
+    Number of Control Points: 1
+      Control Point Pin Index/Name          22/port:port_pad_data_in[0]    Pipeline Stages: 0 
+    Feeds: 8 Observe Chains
+    Load Point Pin Index/Name  22/port:port_pad_data_in[0]
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 1
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  735/pin:COMPACTOR.compressor.g_0.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 34
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 7
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  889/pin:COMPACTOR.compressor.g_14.g43.Y
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 15
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1085/pin:COMPACTOR.compressor.g_21.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 22
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1258/pin:COMPACTOR.compressor.g_28.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 30
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1462/pin:COMPACTOR.compressor.g_35.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 38
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1666/pin:COMPACTOR.compressor.g_42.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 45
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1843/pin:COMPACTOR.compressor.g_49.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 49
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          38/port:port_pad_data_out[0]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1943/pin:COMPACTOR.compressor.g_7.g43.Y
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+
+
+  Control Chain: 6
+    Fed by: Scan-In
+    Number of Control Points: 1
+      Control Point Pin Index/Name          29/port:port_pad_data_in[1]    Pipeline Stages: 0 
+    Feeds: 8 Observe Chains
+    Load Point Pin Index/Name  29/port:port_pad_data_in[1]
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 2
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  758/pin:COMPACTOR.compressor.g_1.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 8
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  912/pin:COMPACTOR.compressor.g_15.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 16
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1108/pin:COMPACTOR.compressor.g_22.g43.Y
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 23
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1281/pin:COMPACTOR.compressor.g_29.g43.Y
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 31
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1485/pin:COMPACTOR.compressor.g_36.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 39
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1689/pin:COMPACTOR.compressor.g_43.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 47
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1893/pin:COMPACTOR.compressor.g_50.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 6
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 50
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          45/port:port_pad_data_out[1]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1966/pin:COMPACTOR.compressor.g_8.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+
+
+  Control Chain: 7
+    Fed by: Scan-In
+    Number of Control Points: 1
+      Control Point Pin Index/Name          30/port:port_pad_data_in[2]    Pipeline Stages: 0 
+    Feeds: 7 Observe Chains
+    Load Point Pin Index/Name  30/port:port_pad_data_in[2]
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 9
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  935/pin:COMPACTOR.compressor.g_16.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 7
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 13
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1039/pin:COMPACTOR.compressor.g_2.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 17
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1131/pin:COMPACTOR.compressor.g_23.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 25
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1331/pin:COMPACTOR.compressor.g_30.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 32
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1508/pin:COMPACTOR.compressor.g_37.g43.Y
+    Unload Point In Phase with Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 40
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1712/pin:COMPACTOR.compressor.g_44.g43.Y
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+  Observe Chain: 51
+    Number of Observe Points: 1
+      Observe Point Pin Index/Name          31/port:port_pad_data_in[3]    Pipeline Stages: 0 
+    Unload Point Pin Index/Name  1989/pin:COMPACTOR.compressor.g_9.g43.Y
+    Unload Point Inverted from Load Point
+    Length: 48
+    Scan Section: Scan_Section_Sequence
+
+
+
+Scan Out Information for Test Mode:  COMPRESSION
+----------------------------------
+
+  Number of Scan Outs: 3
+
+  Scan Out: 1
+  --------------
+  Pin Name: port:port_pad_data_out[0]
+  Fed by: XOR Not Inverted
+  Fed by: 29 sources
+
+  ObserveChain  Block Name
+  ------------  ----------------
+             1  inst:COMPACTOR.compressor.g_0.g43
+             3  inst:COMPACTOR.compressor.g_10.g44
+             5  inst:COMPACTOR.compressor.g_12.g44
+             6  inst:COMPACTOR.compressor.g_13.g44
+             7  inst:COMPACTOR.compressor.g_14.g43
+            10  inst:COMPACTOR.compressor.g_17.g44
+            12  inst:COMPACTOR.compressor.g_19.g44
+            14  inst:COMPACTOR.compressor.g_20.g43
+            15  inst:COMPACTOR.compressor.g_21.g43
+            18  inst:COMPACTOR.compressor.g_24.g44
+            20  inst:COMPACTOR.compressor.g_26.g44
+            21  inst:COMPACTOR.compressor.g_27.g43
+            22  inst:COMPACTOR.compressor.g_28.g43
+            24  inst:COMPACTOR.compressor.g_3.g44
+            26  inst:COMPACTOR.compressor.g_31.g44
+            28  inst:COMPACTOR.compressor.g_33.g44
+            29  inst:COMPACTOR.compressor.g_34.g44
+            30  inst:COMPACTOR.compressor.g_35.g43
+            33  inst:COMPACTOR.compressor.g_38.g44
+            36  inst:COMPACTOR.compressor.g_40.g44
+            37  inst:COMPACTOR.compressor.g_41.g44
+            38  inst:COMPACTOR.compressor.g_42.g43
+            41  inst:COMPACTOR.compressor.g_45.g44
+            43  inst:COMPACTOR.compressor.g_47.g44
+            44  inst:COMPACTOR.compressor.g_48.g44
+            45  inst:COMPACTOR.compressor.g_49.g43
+            46  inst:COMPACTOR.compressor.g_5.g44
+            48  inst:COMPACTOR.compressor.g_6.g44
+            49  inst:COMPACTOR.compressor.g_7.g43
+
+  Scan Out: 2
+  --------------
+  Pin Name: port:port_pad_data_out[1]
+  Fed by: XOR Not Inverted
+  Fed by: 29 sources
+
+  ObserveChain  Block Name
+  ------------  ----------------
+             2  inst:COMPACTOR.compressor.g_1.g43
+             3  inst:COMPACTOR.compressor.g_10.g44
+             4  inst:COMPACTOR.compressor.g_11.g44
+             6  inst:COMPACTOR.compressor.g_13.g44
+             8  inst:COMPACTOR.compressor.g_15.g43
+            10  inst:COMPACTOR.compressor.g_17.g44
+            11  inst:COMPACTOR.compressor.g_18.g44
+            14  inst:COMPACTOR.compressor.g_20.g43
+            16  inst:COMPACTOR.compressor.g_22.g43
+            18  inst:COMPACTOR.compressor.g_24.g44
+            19  inst:COMPACTOR.compressor.g_25.g44
+            21  inst:COMPACTOR.compressor.g_27.g43
+            23  inst:COMPACTOR.compressor.g_29.g43
+            24  inst:COMPACTOR.compressor.g_3.g44
+            26  inst:COMPACTOR.compressor.g_31.g44
+            27  inst:COMPACTOR.compressor.g_32.g44
+            29  inst:COMPACTOR.compressor.g_34.g44
+            31  inst:COMPACTOR.compressor.g_36.g43
+            33  inst:COMPACTOR.compressor.g_38.g44
+            34  inst:COMPACTOR.compressor.g_39.g44
+            35  inst:COMPACTOR.compressor.g_4.g44
+            37  inst:COMPACTOR.compressor.g_41.g44
+            39  inst:COMPACTOR.compressor.g_43.g43
+            41  inst:COMPACTOR.compressor.g_45.g44
+            42  inst:COMPACTOR.compressor.g_46.g44
+            44  inst:COMPACTOR.compressor.g_48.g44
+            47  inst:COMPACTOR.compressor.g_50.g43
+            48  inst:COMPACTOR.compressor.g_6.g44
+            50  inst:COMPACTOR.compressor.g_8.g43
+
+  Scan Out: 3
+  --------------
+  Pin Name: port:port_pad_data_in[3]
+  Fed by: XOR Not Inverted
+  Fed by: 28 sources
+
+  ObserveChain  Block Name
+  ------------  ----------------
+             4  inst:COMPACTOR.compressor.g_11.g44
+             5  inst:COMPACTOR.compressor.g_12.g44
+             6  inst:COMPACTOR.compressor.g_13.g44
+             9  inst:COMPACTOR.compressor.g_16.g43
+            11  inst:COMPACTOR.compressor.g_18.g44
+            12  inst:COMPACTOR.compressor.g_19.g44
+            13  inst:COMPACTOR.compressor.g_2.g43
+            14  inst:COMPACTOR.compressor.g_20.g43
+            17  inst:COMPACTOR.compressor.g_23.g43
+            19  inst:COMPACTOR.compressor.g_25.g44
+            20  inst:COMPACTOR.compressor.g_26.g44
+            21  inst:COMPACTOR.compressor.g_27.g43
+            25  inst:COMPACTOR.compressor.g_30.g43
+            27  inst:COMPACTOR.compressor.g_32.g44
+            28  inst:COMPACTOR.compressor.g_33.g44
+            29  inst:COMPACTOR.compressor.g_34.g44
+            32  inst:COMPACTOR.compressor.g_37.g43
+            34  inst:COMPACTOR.compressor.g_39.g44
+            35  inst:COMPACTOR.compressor.g_4.g44
+            36  inst:COMPACTOR.compressor.g_40.g44
+            37  inst:COMPACTOR.compressor.g_41.g44
+            40  inst:COMPACTOR.compressor.g_44.g43
+            42  inst:COMPACTOR.compressor.g_46.g44
+            43  inst:COMPACTOR.compressor.g_47.g44
+            44  inst:COMPACTOR.compressor.g_48.g44
+            46  inst:COMPACTOR.compressor.g_5.g44
+            48  inst:COMPACTOR.compressor.g_6.g44
+            51  inst:COMPACTOR.compressor.g_9.g43
+
+
+
+Report completed.
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           20,476,800  bytes
+
+                      CPU Time =    0:00:00.02
+                  Elapsed Time =    0:00:00.15                    [end TDA_001]
+
+     Date Ended:  Monday Apr 06 15:35:30 2020  EDT
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TLM-055): Design Summary
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

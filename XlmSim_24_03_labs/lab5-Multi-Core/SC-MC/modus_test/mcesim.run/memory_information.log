@@ -1,0 +1,1944 @@
+/proc/self/numa_maps
+====================
+0000f000 default
+00400000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/bin/64bit/xmsim mapped=1705 active=11 N0=1663 N1=42 kernelpagesize_kB=4
+03242000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/bin/64bit/xmsim anon=3 dirty=3 mapped=17 active=3 N0=17 kernelpagesize_kB=4
+03283000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/bin/64bit/xmsim anon=78 dirty=78 mapped=126 active=78 N0=125 N1=1 kernelpagesize_kB=4
+03452000 default anon=3699 dirty=3699 N0=3696 N1=3 kernelpagesize_kB=4
+04df9000 default heap anon=590 dirty=590 N0=477 N1=113 kernelpagesize_kB=4
+0505a000 default heap anon=2 dirty=2 N0=2 kernelpagesize_kB=4
+0505c000 default heap anon=31 dirty=31 N0=31 kernelpagesize_kB=4
+0509c000 default heap
+0509e000 default heap anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+0509f000 default heap anon=2 dirty=2 N0=2 kernelpagesize_kB=4
+050a1000 default heap anon=31 dirty=31 N0=31 kernelpagesize_kB=4
+050e1000 default heap
+050e3000 default heap anon=4484 dirty=4484 N0=4484 kernelpagesize_kB=4
+3fb2cbe00000 bind:0 anon=8192 dirty=8192 N0=8192 kernelpagesize_kB=4
+7f08e4000000 default anon=50 dirty=50 N0=50 kernelpagesize_kB=4
+7f08e4032000 default
+7f08ec000000 default anon=52 dirty=52 N0=52 kernelpagesize_kB=4
+7f08ec034000 default
+7f08f0000000 default anon=45 dirty=45 N0=45 kernelpagesize_kB=4
+7f08f002d000 default
+7f08f8000000 default anon=51 dirty=51 N0=51 kernelpagesize_kB=4
+7f08f8033000 default
+7f08fc000000 default anon=47 dirty=47 N0=47 kernelpagesize_kB=4
+7f08fc02f000 default
+7f0900000000 default anon=49 dirty=49 N0=49 kernelpagesize_kB=4
+7f0900031000 default
+7f0926b68000 default file=/usr/lib64/gconv/ISO8859-1.so mapped=2 mapmax=5 N0=2 kernelpagesize_kB=4
+7f0926b6a000 default file=/usr/lib64/gconv/ISO8859-1.so
+7f0926d69000 default file=/usr/lib64/gconv/ISO8859-1.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0926d6a000 default file=/usr/lib64/gconv/ISO8859-1.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0926d6b000 default anon=772 dirty=772 N0=772 kernelpagesize_kB=4
+7f092706f000 default file=/usr/lib64/libnuma.so.1 mapped=8 mapmax=2 N0=8 kernelpagesize_kB=4
+7f0927079000 default file=/usr/lib64/libnuma.so.1
+7f0927279000 default file=/usr/lib64/libnuma.so.1 anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092727a000 default file=/usr/lib64/libnuma.so.1 anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092727b000 default file=/usr/lib64/librt-2.17.so mapped=3 mapmax=15 N0=3 kernelpagesize_kB=4
+7f0927282000 default file=/usr/lib64/librt-2.17.so
+7f0927481000 default file=/usr/lib64/librt-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0927482000 default file=/usr/lib64/librt-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f09274cc000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so mapped=1682 active=21 N0=1682 kernelpagesize_kB=4
+7f092877e000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so
+7f092877f000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so anon=177 dirty=177 N0=177 kernelpagesize_kB=4
+7f0928830000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so anon=2 dirty=2 N0=2 kernelpagesize_kB=4
+7f0928832000 default anon=9894 dirty=9894 N0=9894 kernelpagesize_kB=4
+7f092aed8000 default
+7f092aeda000 default
+7f092b6d6000 default
+7f092b6d8000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libStrapNC.so mapped=119 active=2 N1=119 kernelpagesize_kB=4
+7f092b85d000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libStrapNC.so anon=2 dirty=2 N0=2 kernelpagesize_kB=4
+7f092b85f000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libStrapNC.so anon=31 dirty=31 N0=31 kernelpagesize_kB=4
+7f092b895000 default anon=2 dirty=2 N0=2 kernelpagesize_kB=4
+7f092b89e000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so mapped=118 active=13 N1=118 kernelpagesize_kB=4
+7f092b951000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so
+7f092b952000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092b953000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so anon=10 dirty=10 N0=9 N1=1 kernelpagesize_kB=4
+7f092b95e000 default anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092b95f000 default file=/usr/lib64/libnss_files-2.17.so mapped=4 mapmax=9 N0=4 kernelpagesize_kB=4
+7f092b96b000 default file=/usr/lib64/libnss_files-2.17.so
+7f092bb6a000 default file=/usr/lib64/libnss_files-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092bb6b000 default file=/usr/lib64/libnss_files-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092bb6c000 default
+7f092bb7e000 default file=/home/manishap/my_wok/test22.09/XLM22_09_labs/lab6-Multi-Core/SC-MC/modus_test/workdir/xrun_COMPRESSION_SERIAL/mcesim.d/runtime_linker.so mapped=6 N1=6 kernelpagesize_kB=4
+7f092bb95000 default file=/home/manishap/my_wok/test22.09/XLM22_09_labs/lab6-Multi-Core/SC-MC/modus_test/workdir/xrun_COMPRESSION_SERIAL/mcesim.d/runtime_linker.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092bb96000 default file=/home/manishap/my_wok/test22.09/XLM22_09_labs/lab6-Multi-Core/SC-MC/modus_test/workdir/xrun_COMPRESSION_SERIAL/mcesim.d/runtime_linker.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092bb97000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so mapped=6 active=2 N0=6 kernelpagesize_kB=4
+7f092bbb9000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092bbba000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f092bbbb000 default file=/usr/lib/locale/locale-archive mapped=11 mapmax=22 N0=7 N1=4 kernelpagesize_kB=4
+7f09320e4000 default file=/usr/lib64/libc-2.17.so mapped=206 mapmax=57 N0=206 kernelpagesize_kB=4
+7f093229c000 default file=/usr/lib64/libc-2.17.so
+7f093249c000 default file=/usr/lib64/libc-2.17.so anon=4 dirty=4 N0=4 kernelpagesize_kB=4
+7f09324a0000 default file=/usr/lib64/libc-2.17.so anon=2 dirty=2 N0=2 kernelpagesize_kB=4
+7f09324a2000 default anon=5 dirty=5 N0=5 kernelpagesize_kB=4
+7f09324a7000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libstdc++.so.6.0.28 mapped=201 active=189 N0=201 kernelpagesize_kB=4
+7f0932670000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libstdc++.so.6.0.28 anon=11 dirty=11 N0=11 kernelpagesize_kB=4
+7f093267b000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libstdc++.so.6.0.28 anon=3 dirty=3 N0=3 kernelpagesize_kB=4
+7f093267e000 default anon=3 dirty=3 N0=3 kernelpagesize_kB=4
+7f0932681000 default file=/usr/lib64/libm-2.17.so mapped=17 mapmax=18 N1=17 kernelpagesize_kB=4
+7f0932782000 default file=/usr/lib64/libm-2.17.so
+7f0932981000 default file=/usr/lib64/libm-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932982000 default file=/usr/lib64/libm-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932983000 default file=/usr/lib64/libdl-2.17.so mapped=2 mapmax=36 N0=2 kernelpagesize_kB=4
+7f0932985000 default file=/usr/lib64/libdl-2.17.so
+7f0932b85000 default file=/usr/lib64/libdl-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932b86000 default file=/usr/lib64/libdl-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932b87000 default file=/usr/lib64/libpthread-2.17.so mapped=18 mapmax=35 N0=18 kernelpagesize_kB=4
+7f0932b9e000 default file=/usr/lib64/libpthread-2.17.so
+7f0932d9d000 default file=/usr/lib64/libpthread-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932d9e000 default file=/usr/lib64/libpthread-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932d9f000 default anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932da3000 default file=/usr/lib64/ld-2.17.so mapped=31 mapmax=49 N0=31 kernelpagesize_kB=4
+7f0932dc5000 default anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932dc7000 default file=/usr/lib64/gconv/gconv-modules.cache mapped=6 mapmax=12 N0=6 kernelpagesize_kB=4
+7f0932dce000 default anon=129 dirty=129 N0=129 kernelpagesize_kB=4
+7f0932e4f000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/oss/judy-1.0.5/lib/64bit/libxmjudy.so.1.0.3 mapped=33 N0=33 kernelpagesize_kB=4
+7f0932ee6000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/oss/judy-1.0.5/lib/64bit/libxmjudy.so.1.0.3 anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932ee7000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/oss/judy-1.0.5/lib/64bit/libxmjudy.so.1.0.3 anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932ee8000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so mapped=35 N1=35 kernelpagesize_kB=4
+7f0932f4d000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+7f0932f4e000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932f4f000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so anon=3 dirty=3 N0=3 kernelpagesize_kB=4
+7f0932f52000 default anon=9 dirty=9 N0=9 kernelpagesize_kB=4
+7f0932f5e000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libgcc_s.so.1 mapped=12 active=5 N0=12 kernelpagesize_kB=4
+7f0932f76000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libgcc_s.so.1 anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932f77000 default file=/grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libgcc_s.so.1 anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932f78000 default anon=3 dirty=3 N0=3 kernelpagesize_kB=4
+7f0932f7c000 default anon=68 dirty=68 N0=68 kernelpagesize_kB=4
+7f0932fc4000 default file=/usr/lib64/ld-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932fc5000 default file=/usr/lib64/ld-2.17.so anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7f0932fc6000 default anon=1 dirty=1 N0=1 kernelpagesize_kB=4
+7ffe7e4bd000 default stack anon=58 dirty=58 N0=58 kernelpagesize_kB=4
+7ffe7e57e000 default
+
+
+/proc/self/smaps
+==================
+0000f000-00010000 ---p 00000000 00:00 0 
+Size:                  4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me lo sd 
+00400000-03241000 r-xp 00000000 00:7d 206829353                          /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/bin/64bit/xmsim
+Size:              47364 kB
+Rss:                6820 kB
+Pss:                6820 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:      6820 kB
+Private_Dirty:         0 kB
+Referenced:         6820 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me dw sd 
+03242000-03283000 r-xp 02e41000 00:7d 206829353                          /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/bin/64bit/xmsim
+Size:                260 kB
+Rss:                  68 kB
+Pss:                  68 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:        56 kB
+Private_Dirty:        12 kB
+Referenced:           68 kB
+Anonymous:            12 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me dw ac sd 
+03283000-03452000 rwxp 02e82000 00:7d 206829353                          /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/bin/64bit/xmsim
+Size:               1852 kB
+Rss:                 504 kB
+Pss:                 504 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:       192 kB
+Private_Dirty:       312 kB
+Referenced:          504 kB
+Anonymous:           312 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me dw ac sd 
+03452000-04481000 rwxp 00000000 00:00 0 
+Size:              16572 kB
+Rss:               14796 kB
+Pss:               14796 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:     14796 kB
+Referenced:        14796 kB
+Anonymous:         14796 kB
+AnonHugePages:     14336 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+04df9000-0505a000 rwxp 00000000 00:00 0                                  [heap]
+Size:               2436 kB
+Rss:                2360 kB
+Pss:                2360 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      2360 kB
+Referenced:         2360 kB
+Anonymous:          2360 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+0505a000-0505c000 ---p 00000000 00:00 0                                  [heap]
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me ac sd 
+0505c000-0509c000 rwxp 00000000 00:00 0                                  [heap]
+Size:                256 kB
+Rss:                 124 kB
+Pss:                 124 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       124 kB
+Referenced:          124 kB
+Anonymous:           124 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+0509c000-0509e000 ---p 00000000 00:00 0                                  [heap]
+Size:                  8 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me ac sd 
+0509e000-0509f000 rwxp 00000000 00:00 0                                  [heap]
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+0509f000-050a1000 ---p 00000000 00:00 0                                  [heap]
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me ac sd 
+050a1000-050e1000 rwxp 00000000 00:00 0                                  [heap]
+Size:                256 kB
+Rss:                 124 kB
+Pss:                 124 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       124 kB
+Referenced:          124 kB
+Anonymous:           124 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+050e1000-050e3000 ---p 00000000 00:00 0                                  [heap]
+Size:                  8 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me ac sd 
+050e3000-062b9000 rwxp 00000000 00:00 0                                  [heap]
+Size:              18264 kB
+Rss:               17936 kB
+Pss:               17936 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:     17936 kB
+Referenced:        17936 kB
+Anonymous:         17936 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+3fb2cbe00000-3fb2cde00000 rwxp 00000000 00:00 0 
+Size:              32768 kB
+Rss:               32768 kB
+Pss:               32768 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:     32768 kB
+Referenced:        32768 kB
+Anonymous:         32768 kB
+AnonHugePages:     32768 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd hg 
+7f08e4000000-7f08e4032000 rwxp 00000000 00:00 0 
+Size:                200 kB
+Rss:                 200 kB
+Pss:                 200 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       200 kB
+Referenced:          200 kB
+Anonymous:           200 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me nr sd 
+7f08e4032000-7f08e8000000 ---p 00000000 00:00 0 
+Size:              65336 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f08ec000000-7f08ec034000 rwxp 00000000 00:00 0 
+Size:                208 kB
+Rss:                 208 kB
+Pss:                 208 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       208 kB
+Referenced:          208 kB
+Anonymous:           208 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me nr sd 
+7f08ec034000-7f08f0000000 ---p 00000000 00:00 0 
+Size:              65328 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f08f0000000-7f08f002d000 rwxp 00000000 00:00 0 
+Size:                180 kB
+Rss:                 180 kB
+Pss:                 180 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       180 kB
+Referenced:          180 kB
+Anonymous:           180 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me nr sd 
+7f08f002d000-7f08f4000000 ---p 00000000 00:00 0 
+Size:              65356 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f08f8000000-7f08f8033000 rwxp 00000000 00:00 0 
+Size:                204 kB
+Rss:                 204 kB
+Pss:                 204 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       204 kB
+Referenced:          204 kB
+Anonymous:           204 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me nr sd 
+7f08f8033000-7f08fc000000 ---p 00000000 00:00 0 
+Size:              65332 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f08fc000000-7f08fc02f000 rwxp 00000000 00:00 0 
+Size:                188 kB
+Rss:                 188 kB
+Pss:                 188 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       188 kB
+Referenced:          188 kB
+Anonymous:           188 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me nr sd 
+7f08fc02f000-7f0900000000 ---p 00000000 00:00 0 
+Size:              65348 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f0900000000-7f0900031000 rwxp 00000000 00:00 0 
+Size:                196 kB
+Rss:                 196 kB
+Pss:                 196 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       196 kB
+Referenced:          196 kB
+Anonymous:           196 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me nr sd 
+7f0900031000-7f0904000000 ---p 00000000 00:00 0 
+Size:              65340 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f0926b68000-7f0926b6a000 r-xp 00000000 08:05 33577079                   /usr/lib64/gconv/ISO8859-1.so
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   1 kB
+Shared_Clean:          8 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            8 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0926b6a000-7f0926d69000 ---p 00002000 08:05 33577079                   /usr/lib64/gconv/ISO8859-1.so
+Size:               2044 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f0926d69000-7f0926d6a000 r-xp 00001000 08:05 33577079                   /usr/lib64/gconv/ISO8859-1.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0926d6a000-7f0926d6b000 rwxp 00002000 08:05 33577079                   /usr/lib64/gconv/ISO8859-1.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0926d6b000-7f092706f000 rwxp 00000000 00:00 0 
+Size:               3088 kB
+Rss:                3088 kB
+Pss:                3088 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:      3088 kB
+Referenced:         3088 kB
+Anonymous:          3088 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092706f000-7f0927079000 r-xp 00000000 08:05 16321                      /usr/lib64/libnuma.so.1
+Size:                 40 kB
+Rss:                  32 kB
+Pss:                  16 kB
+Shared_Clean:         32 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           32 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0927079000-7f0927279000 ---p 0000a000 08:05 16321                      /usr/lib64/libnuma.so.1
+Size:               2048 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f0927279000-7f092727a000 r-xp 0000a000 08:05 16321                      /usr/lib64/libnuma.so.1
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f092727a000-7f092727b000 rwxp 0000b000 08:05 16321                      /usr/lib64/libnuma.so.1
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092727b000-7f0927282000 r-xp 00000000 08:05 15539                      /usr/lib64/librt-2.17.so
+Size:                 28 kB
+Rss:                  12 kB
+Pss:                   0 kB
+Shared_Clean:         12 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           12 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0927282000-7f0927481000 ---p 00007000 08:05 15539                      /usr/lib64/librt-2.17.so
+Size:               2044 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f0927481000-7f0927482000 r-xp 00006000 08:05 15539                      /usr/lib64/librt-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0927482000-7f0927483000 rwxp 00007000 08:05 15539                      /usr/lib64/librt-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f09274cc000-7f092877e000 r-xp 00000000 00:7d 10030069                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so
+Size:              19144 kB
+Rss:                6728 kB
+Pss:                6728 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:      6728 kB
+Private_Dirty:         0 kB
+Referenced:         6728 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f092877e000-7f092877f000 ---p 012b2000 00:7d 10030069                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so
+Size:                  4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f092877f000-7f0928830000 r-xp 012b2000 00:7d 10030069                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so
+Size:                708 kB
+Rss:                 708 kB
+Pss:                 708 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       708 kB
+Referenced:          708 kB
+Anonymous:           708 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0928830000-7f0928832000 rwxp 01363000 00:7d 10030069                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/mce/lib/64bit/mce.so
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0928832000-7f092aed8000 rwxp 00000000 00:00 0 
+Size:              39576 kB
+Rss:               39576 kB
+Pss:               39576 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:     39576 kB
+Referenced:        39576 kB
+Anonymous:         39576 kB
+AnonHugePages:     20480 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092aed8000-7f092aeda000 ---p 00000000 00:00 0 
+Size:                  8 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f092aeda000-7f092b6d6000 rwxp 00000000 00:00 0 
+Size:               8176 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me nr sd 
+7f092b6d6000-7f092b6d8000 ---p 00000000 00:00 0 
+Size:                  8 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me nr sd 
+7f092b6d8000-7f092b85d000 r-xp 00000000 00:7d 125500987                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libStrapNC.so
+Size:               1556 kB
+Rss:                 476 kB
+Pss:                 476 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:       476 kB
+Private_Dirty:         0 kB
+Referenced:          476 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f092b85d000-7f092b85f000 r-xp 00184000 00:7d 125500987                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libStrapNC.so
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f092b85f000-7f092b895000 rwxp 00186000 00:7d 125500987                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libStrapNC.so
+Size:                216 kB
+Rss:                 124 kB
+Pss:                 124 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       124 kB
+Referenced:          124 kB
+Anonymous:           124 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092b895000-7f092b89e000 rwxp 00000000 00:00 0 
+Size:                 36 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092b89e000-7f092b951000 r-xp 00000000 00:7d 230462779                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:                716 kB
+Rss:                 472 kB
+Pss:                 472 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:       472 kB
+Private_Dirty:         0 kB
+Referenced:          472 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f092b951000-7f092b952000 ---p 000b3000 00:7d 230462779                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:                  4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f092b952000-7f092b953000 r-xp 000b3000 00:7d 230462779                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f092b953000-7f092b95e000 rwxp 000b4000 00:7d 230462779                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/simvision/lib/64bit/libdcapi.so
+Size:                 44 kB
+Rss:                  40 kB
+Pss:                  40 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        40 kB
+Referenced:           40 kB
+Anonymous:            40 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092b95e000-7f092b95f000 rwxp 00000000 00:00 0 
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092b95f000-7f092b96b000 r-xp 00000000 08:05 15527                      /usr/lib64/libnss_files-2.17.so
+Size:                 48 kB
+Rss:                  16 kB
+Pss:                   1 kB
+Shared_Clean:         16 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           16 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f092b96b000-7f092bb6a000 ---p 0000c000 08:05 15527                      /usr/lib64/libnss_files-2.17.so
+Size:               2044 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f092bb6a000-7f092bb6b000 r-xp 0000b000 08:05 15527                      /usr/lib64/libnss_files-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f092bb6b000-7f092bb6c000 rwxp 0000c000 08:05 15527                      /usr/lib64/libnss_files-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092bb6c000-7f092bb72000 rwxp 00000000 00:00 0 
+Size:                 24 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092bb7e000-7f092bb95000 r-xp 00000000 00:8f 2743519278                 /home/manishap/my_wok/test22.09/XLM22_09_labs/lab6-Multi-Core/SC-MC/modus_test/workdir/xrun_COMPRESSION_SERIAL/mcesim.d/runtime_linker.so
+Size:                 92 kB
+Rss:                  24 kB
+Pss:                  24 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:        24 kB
+Private_Dirty:         0 kB
+Referenced:           24 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f092bb95000-7f092bb96000 r-xp 00016000 00:8f 2743519278                 /home/manishap/my_wok/test22.09/XLM22_09_labs/lab6-Multi-Core/SC-MC/modus_test/workdir/xrun_COMPRESSION_SERIAL/mcesim.d/runtime_linker.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f092bb96000-7f092bb97000 rwxp 00017000 00:8f 2743519278                 /home/manishap/my_wok/test22.09/XLM22_09_labs/lab6-Multi-Core/SC-MC/modus_test/workdir/xrun_COMPRESSION_SERIAL/mcesim.d/runtime_linker.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092bb97000-7f092bbb9000 r-xp 00000000 00:7d 36696650                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+Size:                136 kB
+Rss:                  24 kB
+Pss:                  24 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:        24 kB
+Private_Dirty:         0 kB
+Referenced:           24 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f092bbb9000-7f092bbba000 r-xp 00021000 00:7d 36696650                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f092bbba000-7f092bbbb000 rwxp 00022000 00:7d 36696650                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/methodology/UVM/CDNS-1.1d/ml/lib/64bit/libml_uvm.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f092bbbb000-7f09320e4000 r-xp 00000000 08:05 16779745                   /usr/lib/locale/locale-archive
+Size:             103588 kB
+Rss:                  44 kB
+Pss:                   7 kB
+Shared_Clean:         44 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           44 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f09320e4000-7f093229c000 r-xp 00000000 08:05 15509                      /usr/lib64/libc-2.17.so
+Size:               1760 kB
+Rss:                 824 kB
+Pss:                  52 kB
+Shared_Clean:        820 kB
+Shared_Dirty:          0 kB
+Private_Clean:         4 kB
+Private_Dirty:         0 kB
+Referenced:          824 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f093229c000-7f093249c000 ---p 001b8000 08:05 15509                      /usr/lib64/libc-2.17.so
+Size:               2048 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f093249c000-7f09324a0000 r-xp 001b8000 08:05 15509                      /usr/lib64/libc-2.17.so
+Size:                 16 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f09324a0000-7f09324a2000 rwxp 001bc000 08:05 15509                      /usr/lib64/libc-2.17.so
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f09324a2000-7f09324a7000 rwxp 00000000 00:00 0 
+Size:                 20 kB
+Rss:                  20 kB
+Pss:                  20 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        20 kB
+Referenced:           20 kB
+Anonymous:            20 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f09324a7000-7f0932670000 r-xp 00000000 00:7d 234364597                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libstdc++.so.6.0.28
+Size:               1828 kB
+Rss:                 804 kB
+Pss:                 804 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:       804 kB
+Private_Dirty:         0 kB
+Referenced:          804 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0932670000-7f093267b000 r-xp 001c8000 00:7d 234364597                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libstdc++.so.6.0.28
+Size:                 44 kB
+Rss:                  44 kB
+Pss:                  44 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        44 kB
+Referenced:           44 kB
+Anonymous:            44 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f093267b000-7f093267e000 rwxp 001d3000 00:7d 234364597                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libstdc++.so.6.0.28
+Size:                 12 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f093267e000-7f0932681000 rwxp 00000000 00:00 0 
+Size:                 12 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932681000-7f0932782000 r-xp 00000000 08:05 15517                      /usr/lib64/libm-2.17.so
+Size:               1028 kB
+Rss:                  68 kB
+Pss:                   6 kB
+Shared_Clean:         68 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           68 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0932782000-7f0932981000 ---p 00101000 08:05 15517                      /usr/lib64/libm-2.17.so
+Size:               2044 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f0932981000-7f0932982000 r-xp 00100000 08:05 15517                      /usr/lib64/libm-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0932982000-7f0932983000 rwxp 00101000 08:05 15517                      /usr/lib64/libm-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932983000-7f0932985000 r-xp 00000000 08:05 15515                      /usr/lib64/libdl-2.17.so
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   0 kB
+Shared_Clean:          8 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            8 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0932985000-7f0932b85000 ---p 00002000 08:05 15515                      /usr/lib64/libdl-2.17.so
+Size:               2048 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f0932b85000-7f0932b86000 r-xp 00002000 08:05 15515                      /usr/lib64/libdl-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0932b86000-7f0932b87000 rwxp 00003000 08:05 15515                      /usr/lib64/libdl-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932b87000-7f0932b9e000 r-xp 00000000 08:05 15535                      /usr/lib64/libpthread-2.17.so
+Size:                 92 kB
+Rss:                  72 kB
+Pss:                   3 kB
+Shared_Clean:         72 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           72 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0932b9e000-7f0932d9d000 ---p 00017000 08:05 15535                      /usr/lib64/libpthread-2.17.so
+Size:               2044 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f0932d9d000-7f0932d9e000 r-xp 00016000 08:05 15535                      /usr/lib64/libpthread-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0932d9e000-7f0932d9f000 rwxp 00017000 08:05 15535                      /usr/lib64/libpthread-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932d9f000-7f0932da3000 rwxp 00000000 00:00 0 
+Size:                 16 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932da3000-7f0932dc4000 r-xp 00000000 08:05 15502                      /usr/lib64/ld-2.17.so
+Size:                132 kB
+Rss:                 124 kB
+Pss:                   3 kB
+Shared_Clean:        124 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          124 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me dw sd 
+7f0932dc5000-7f0932dc7000 rwxp 00000000 00:00 0 
+Size:                  8 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932dc7000-7f0932dce000 r-xs 00000000 08:05 33577142                   /usr/lib64/gconv/gconv-modules.cache
+Size:                 28 kB
+Rss:                  24 kB
+Pss:                   2 kB
+Shared_Clean:         24 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           24 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr me ms sd 
+7f0932dce000-7f0932e4f000 rwxp 00000000 00:00 0 
+Size:                516 kB
+Rss:                 516 kB
+Pss:                 516 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       516 kB
+Referenced:          516 kB
+Anonymous:           516 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932e4f000-7f0932ee6000 r-xp 00000000 00:7d 211705738                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/oss/judy-1.0.5/lib/64bit/libxmjudy.so.1.0.3
+Size:                604 kB
+Rss:                 132 kB
+Pss:                 132 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:       132 kB
+Private_Dirty:         0 kB
+Referenced:          132 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0932ee6000-7f0932ee7000 r-xp 00096000 00:7d 211705738                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/oss/judy-1.0.5/lib/64bit/libxmjudy.so.1.0.3
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0932ee7000-7f0932ee8000 rwxp 00097000 00:7d 211705738                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/oss/judy-1.0.5/lib/64bit/libxmjudy.so.1.0.3
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932ee8000-7f0932f4d000 r-xp 00000000 00:7d 204686758                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:                404 kB
+Rss:                 140 kB
+Pss:                 140 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:       140 kB
+Private_Dirty:         0 kB
+Referenced:          140 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0932f4d000-7f0932f4e000 ---p 00065000 00:7d 204686758                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:                  4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: mr mw me sd 
+7f0932f4e000-7f0932f4f000 r-xp 00065000 00:7d 204686758                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0932f4f000-7f0932f52000 rwxp 00066000 00:7d 204686758                  /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/inca/lib/64bit/libcbreakpad.so
+Size:                 12 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932f52000-7f0932f5e000 rwxp 00000000 00:00 0 
+Size:                 48 kB
+Rss:                  36 kB
+Pss:                  36 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        36 kB
+Referenced:           36 kB
+Anonymous:            36 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932f5e000-7f0932f76000 r-xp 00000000 00:7d 71087969                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libgcc_s.so.1
+Size:                 96 kB
+Rss:                  48 kB
+Pss:                  48 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:        48 kB
+Private_Dirty:         0 kB
+Referenced:           48 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me sd 
+7f0932f76000-7f0932f77000 r-xp 00017000 00:7d 71087969                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libgcc_s.so.1
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me ac sd 
+7f0932f77000-7f0932f78000 rwxp 00018000 00:7d 71087969                   /grid/avs/install/xcelium/2309/23.09.001/tools.lnx86/lib/64bit/libgcc_s.so.1
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932f78000-7f0932f7c000 rwxp 00000000 00:00 0 
+Size:                 16 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932f7c000-7f0932fc4000 rwxp 00000000 00:00 0 
+Size:                288 kB
+Rss:                 272 kB
+Pss:                 272 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       272 kB
+Referenced:          272 kB
+Anonymous:           272 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7f0932fc4000-7f0932fc5000 r-xp 00021000 08:05 15502                      /usr/lib64/ld-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me dw ac sd 
+7f0932fc5000-7f0932fc6000 rwxp 00022000 08:05 15502                      /usr/lib64/ld-2.17.so
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me dw ac sd 
+7f0932fc6000-7f0932fc7000 rwxp 00000000 00:00 0 
+Size:                  4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me ac sd 
+7ffe7e4bd000-7ffe7e509000 rwxp 00000000 00:00 0                          [stack]
+Size:                304 kB
+Rss:                 232 kB
+Pss:                 232 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       232 kB
+Referenced:          232 kB
+Anonymous:           232 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd wr ex mr mw me gd ac 
+7ffe7e57e000-7ffe7e580000 r-xp 00000000 00:00 0                          [vdso]
+Size:                  8 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex mr mw me de sd 
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Size:                  4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+AnonHugePages:         0 kB
+Swap:                  0 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Locked:                0 kB
+VmFlags: rd ex 
+

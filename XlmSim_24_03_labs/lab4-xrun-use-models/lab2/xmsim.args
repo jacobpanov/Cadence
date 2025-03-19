@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+//
+
+// Turn on informative messages.
+-MESSAGES
+
+// Design snapshot name
+worklib.mux_test:v
+
+// Uncomment the following line to generate a named log file
+// -LOGFILE xmsim.log
+
+// -NOCOPYRIGHT

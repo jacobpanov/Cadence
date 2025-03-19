@@ -1,0 +1,122 @@
+Starting Command: commit_tests 
+
+INFO (TDA-005): Command Line Invocation: 
+            commit_tests -inexperiment dynamic -testmode COMPRESSION -workdir /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir -stdout summary  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 20.10-b013_1, built Apr 03 2020 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_commit_tests_COMPRESSION_dynamic_040620153836-200085000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Monday Apr 06 15:38:36 2020  EDT
+            Host machine is end-curly, x86_64 running Linux 2.6.32-431.11.2.el6.x86_64.
+            This job is process number 22140.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir
+            -TESTMODE COMPRESSION
+
+            -INEXPERIMENT dynamic
+            -LOGFILE /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/testresults/logs/log_commit_tests_COMPRESSION_dynamic_040620153836-200085000
+            -STDOUT summary
+[end TDA_009]
+
+INFO (TBD-806): Input test vector File(s) (bytes, name):  [end TBD_806] 
+        3977131 /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/tbdata/TBDbin.COMPRESSION.dynamic
+
+INFO (TBD-807): Experiment dynamic odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.106.15 (Relative test numbers 1 thru 1618).  [end TBD_807] 
+
+Testmode and Global statistics prior to commit_tests
+
+                   ---- ATCov ----   ---------------- Testmode Faults --------------------  ------------------ Global Faults --------------------
+                 Testmode Global      Total     Tested   Possibly  Redundant   Untested      Total     Tested   Possibly  Redundant   Untested
+
+Total Static         0.00   0.00     158641          0          0          0     158641     161588          0          0          0     161588
+Collapsed Static     0.00   0.00      93095          0          0          0      93095      94961          0          0          0      94961
+PI Static            0.00   0.00         86          0          0          0         86         96          0          0          0         96
+PO Static            0.00   0.00         82          0          0          0         82         82          0          0          0         82
+
+Total Dynamic        0.00   0.00     147912          0          0          0     147912     161322          0          0          0     161322
+Collapsed Dynamic    0.00   0.00     105842          0          0          0     105842     117770          0          0          0     117770
+PI Dynamic           0.00   0.00         74          0          0          0         74         96          0          0          0         96
+PO Dynamic           0.00   0.00         82          0          0          0         82         82          0          0          0         82
+
+Parametric        
+
+IDDq                 0.00   0.00     161588          0                           161588     161588          0                           161588
+
+Path                 0.00   0.00          0          0                                0          0          0                                0
+
+
+
+Testmode and Global statistics after commit_tests
+
+                   ---- ATCov ----   ---------------- Testmode Faults --------------------  ------------------ Global Faults --------------------
+                 Testmode Global      Total     Tested   Possibly  Redundant   Untested      Total     Tested   Possibly  Redundant   Untested
+
+Total Static        96.22  94.46     158641     152188        302        478       5673     161588     152188        302        478       8620
+Collapsed Static    95.60  93.72      93095      88684        280        330       3801      94961      88684        280        330       5667
+PI Static           59.30  53.12         86         51          0          0         35         96         51          0          0         45
+PO Static            7.32   7.32         82          6          0          0         76         82          6          0          0         76
+
+Total Dynamic       93.45  85.65     147912     137770         28        478       9636     161322     137770         28        478      23046
+Collapsed Dynamic   92.80  83.36     105842      97807         28        442       7565     117770      97807         28        442      19493
+PI Dynamic          16.22  12.50         74         12          0          0         62         96         12          0          0         84
+PO Dynamic           7.32   7.32         82          6          0          0         76         82          6          0          0         76
+
+Parametric        
+
+IDDq                 0.00   0.00     161588          0                           161588     161588          0                           161588
+
+Path                 0.00   0.00          0          0                                0          0          0                                0
+
+
+INFO (TBD-810): Experiment dynamic is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.106.15 (Relative test numbers 1 to 1618).  [end TBD_810] 
+
+INFO (TBD-809): Master test vector file statistics:  [end TBD_809]   
+  experiments     = 1
+  test sections   = 2
+  tester loops    = 2
+  test procedures = 111
+  test sequence   = 1618
+  init sequencess = 2
+
+INFO (TBD-805): File(s) generated (bytes and name):  [end TBD_805] 
+        3977131 /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/tbdata/TBDbin.COMPRESSION 
+        1482752 /vols/ATPG/geramian/projects/Cadence/DaveCBTestcase/workdir/tbdata/faultStatus 
+
+INFO (TBD-831): commit_tests completed successfully.  [end TBD_831] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =           17,431,248  bytes
+
+                      CPU Time =    0:00:00.31
+                  Elapsed Time =    0:00:00.73                    [end TDA_001]
+
+     Date Ended:  Monday Apr 06 15:38:37 2020  EDT
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-805): File(s) generated (bytes and name):   
+      1 INFO (TBD-806): Input test vector File(s) (bytes, name):   
+      1 INFO (TBD-807): Experiment dynamic odometers prior to commit_tests: 1.1.1.2.1 thru 1.2.1.106.15 (Relative test numbers 1 thru 1618).   
+      1 INFO (TBD-809): Master test vector file statistics:     
+      1 INFO (TBD-810): Experiment dynamic is saved to the master test vectors odometers: 1.1.1.2.1 to 1.2.1.106.15 (Relative test numbers 1 to 1618).   
+      1 INFO (TBD-831): commit_tests completed successfully.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

@@ -1,0 +1,7 @@
+irun test.v >> /dev/null 2>&1
+diff ../solutions/lab20-lock/outfile1.txt outfile.txt >> /dev/null 2>&1
+cp ../solutions/lab20-lock/test.v . >> /dev/null 2>&1
+irun test.v >> /dev/null 2>&1
+diff ../solutions/lab20-lock/outfile2.txt outfile.txt >> /dev/null 2>&1
+
+#PASS: lab20-lock

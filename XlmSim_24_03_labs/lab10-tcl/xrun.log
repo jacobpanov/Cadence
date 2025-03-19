@@ -1,0 +1,97 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 20:40:45 EST
+xrun
+	risc.v
+	risc_test.v
+	-access +rwc
+	-tcl
+	-linedebug
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+Loading snapshot worklib.risc_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> probe -create -shm risc_test.risc_inst.memory_inst
+Created default SHM database xcelium.shm
+Created probe 1
+xcelium> input stop_vlog.tcl
+xcelium> scope -set risc_test.risc_inst
+xcelium> stop -create -name stop_1 -condition {#opcode==7 && #ir_addr=='h0a}
+Created stop stop_1
+xcelium> stop -create -name stop_2 -line 246 memory_inst -if {#addr=='h1c}
+Created stop stop_2
+xcelium> scope -set register_ac
+xcelium> stop -create -name stop_3 -condition {#clk==1 && #load==1}
+Created stop stop_3
+xcelium> 
+xcelium> stop -create -name stop_4 -time 50 ns -absolute
+Created stop stop_4
+xcelium> 
+xcelium> 
+xcelium> run 60ns
+Testing reset
+Testing HLT instruction
+Testing JMP instruction
+Testing SKZ instruction
+50 NS + 0 (stop stop_4)
+xcelium> stop -show
+stop_1 	Enabled  	Condition {#opcode==7 && #ir_addr=='h0a}
+stop_2 	Enabled  	Line: ./risc.v:246 (scope: risc_test.risc_inst.memory_inst) (if {#addr=='h1c})
+stop_3 	Enabled  	Condition {#clk==1 && #load==1}
+xcelium> r
+xmsim: *E,TCLERR: ambiguous command name "r": read regexp regsub release rename reset restart return run.
+xcelium> run
+Testing LDA instruction
+81 NS + 4 (stop stop_3: risc_test.risc_inst.register_ac.load = 1, risc_test.risc_inst.register_ac.clk = 1)
+xcelium> stop -show
+stop_1 	Enabled  	Condition {#opcode==7 && #ir_addr=='h0a}
+stop_2 	Enabled  	Line: ./risc.v:246 (scope: risc_test.risc_inst.memory_inst) (if {#addr=='h1c})
+stop_3 	Enabled  	Condition {#clk==1 && #load==1}
+xcelium> stop -disable stop_3
+xcelium> run
+Testing STO instruction
+Testing AND instruction
+Testing XOR instruction
+Testing ADD instruction
+Doing test CPUtest1.txt
+619 NS + 3 (stop stop_1: risc_test.risc_inst.ir_addr = 0a, risc_test.risc_inst.opcode = 7)
+xcelium> run -timepoint 50 ns
+639 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> run
+641 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> 
+xcelium> run
+643 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> run
+645 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> run
+671 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> run
+673 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> run
+675 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> run
+677 NS + 1 (stop stop_2: ./risc.v:246)
+./risc.v:246   always @(posedge clk)
+xcelium> stop -show
+stop_1 	Enabled  	Condition {#opcode==7 && #ir_addr=='h0a}
+stop_2 	Enabled  	Line: ./risc.v:246 (scope: risc_test.risc_inst.memory_inst) (if {#addr=='h1c})
+stop_3 	Disabled 	Condition {#clk==1 && #load==1}
+xcelium> stop -disable stop_2
+xcelium> stop -show
+stop_1 	Enabled  	Condition {#opcode==7 && #ir_addr=='h0a}
+stop_2 	Disabled 	Line: ./risc.v:246 (scope: risc_test.risc_inst.memory_inst) (if {#addr=='h1c})
+stop_3 	Disabled 	Condition {#clk==1 && #load==1}
+xcelium> run
+Doing test CPUtest2.txt
+Doing test CPUtest3.txt
+TEST PASSED
+Simulation complete via $finish(1) at time 2898 NS + 0
+./risc_test.v:157       $finish;
+xcelium> quit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 20:48:22 EST  (total: 00:07:37)

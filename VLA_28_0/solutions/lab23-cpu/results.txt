@@ -1,0 +1,8 @@
+rm -fr INCA_libs irun.log >> /dev/null 2>&1
+cp ../solutions/lab24-cpu/test.v . >> /dev/null 2>&1
+irun cpu.v test.v -access rwc -input .ncsim.tcl -q >> /dev/null 2>&1
+grep address.=.17 irun.log >> /dev/null 2>&1
+grep address.=.10 irun.log >> /dev/null 2>&1
+grep address.=.0c irun.log >> /dev/null 2>&1
+
+#PASS: lab24-cpu

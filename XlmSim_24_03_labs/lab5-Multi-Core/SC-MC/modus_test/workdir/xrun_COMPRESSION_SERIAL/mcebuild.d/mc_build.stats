@@ -1,0 +1,356 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:57:45.242303
+  mce Version:           22.09-s010.493970
+  Report File Level:     REPORT_LEVEL_LOW (1)
+  Report Screen Level:   REPORT_LEVEL_NONE (0)
+
+Xmelab Stats
+===============
+ ------------- RTL processes NACC reasons  -------------
+unsupported initial block                                            1                                           
+unsupported system task/function call ($dumpfile)                    1                                           
+unsupported system task/function call ($dumpvars)                    1                                           
+unsupported system task/function call ($fopen())                     1                                           
+unsupported system task/function call ($fscanf())                    1                                           
+unsupported system task/function call ($sformat)                     1                                           
+unsupported system task/function call ($shm_open)                    1                                           
+unsupported system task/function call ($shm_probe)                   1                                           
+unsupported system task/function call ($timeformat)                  1                                           
+unsupported system task/function call ($fgets())                     2                                           
+unsupported system task/function call ($ftell())                     2                                           
+reference of nacced id                                               3                                           
+unpacked array                                                       3                                           
+unsupported display format                                           3                                           
+unsupported data type                                                5                                           
+unsupported delay control statement                                  5                                           
+unsupported loop                                                     6                                           
+
+
+Codegens Stats
+===============
+ ------------- Type Based Must Processes  -------------
+Total number of items marked as type based must                      0                                           
+Always blocks marked as type based must                              0                                           
+Assigns marked as type based must                                    0                                           
+Functions marked as type based must                                  0                                           
+Items marked as type based must due to threshold                     0                                           
+Items marked as type based must due to loops                         0                                           
+Items marked as type based must due to blocking delay                0                                           
+
+ ------------- McCodegen Optimizations  -------------
+Remove dead elements
+    Instances removed                                              160                                           
+    Nets removed                                                   160                                           
+
+ ------------- mccodegen pe hist  -------------
+* Update portbuses (beginning of mccodegen):
+
+Type                                                             Total                                           
+----                                                             -----                                           
+kPe_PWR                                                             15                                           
+kPe_GND                                                             34                                           
+kPe_BUF                                                            295                                           
+-------                                                        -------                                           
+SUM PES                                                            344                                           
+
+* 
+
+
+* 
+
+
+* Generate Variables SplitDb (end of mccodegen):
+
+Type                                                             Total                                           
+----                                                             -----                                           
+kPe_PWR                                                             15                                           
+kPe_GND                                                             34                                           
+kPe_SHIFTMASK                                                       53                                           
+kPe_WIDE_BUF                                                       295                                           
+-------                                                        -------                                           
+SUM PES                                                            397                                           
+
+
+Plugin Stats
+===============
+ ------------- splitting data  -------------
+Number of splits                                                     1                                           
+Total number of pes                                            171,015                                           
+Total number of RTL processes                                      144                                           
+Total number of Gates                                          163,896                                           
+
+Total number of PD-Boxes                                             0                                           
+Total number of TC-Boxes                                             0                                           
+Total number of ICPEs                                                0                                           
+Total number of Always-Blocks                                        0                                           
+
+ ------------- cdp PES data  -------------
+Number of cdps turned into luts                                 112486.000      4294967295.000      4294854809.000   
+    Sum cdp sizes                                               235591.000      4294967295.000      4294731704.000   
+Number of cdps turned into processes                                 0.000      4294967295.000      4294967295.000   
+    Sum cdp sizes                                                    0.000      4294967295.000      4294967295.000   
+Number of cdps flattened                                          2217.000      4294967295.000      4294965078.000   
+
+ ------------- delay PEs data  -------------
+By delay greatest divisor
+    Number of Buffer delays
+        ps
+            w/ duplicated delays                                27,208                                           
+            w/o duplicated delays                               27,208                                           
+
+
+By delay range
+    Number of Buffer delays
+        1-10ps
+            w/ duplicated delays                                27,208                                           
+            w/o duplicated delays                               27,208                                           
+
+
+
+South Stats
+===============
+ ------------- Sequential GL elements  -------------
+Total number of sequential GL elements                          27,202                                           
+
+Sequential UDPs                                                  1,488                                           
+    Seq Udps with ff_sens optimization                           1,488                                           
+        pos: 0->1 0->X                                           1,488                                           
+        trigger distribution optimization                        1,488                                           Don't distribute trigger if data changes when clk is not 'x
+    Seq Udps without ff_sens optimization                            0                                           (0% of total number of sequential GL elements)
+Ffs                                                             25,486                                           
+    Swallowed Two State Casting pes                                  0                                           
+    Swallowed Lut pes                                                0                                           
+    Created wide high level ff pes                                   0                                           
+    Average ffs swallowed by wide high level ffs                     0.000                       
+Latches                                                            228                                           
+Clock gaters                                                         0                                           
+
+ ------------- Reg-writer/MC-process ff_sens optimization  -------------
+Total relevant reg-writers/mc-processes                              0                                           
+Enabled                                                              0                                           
+Disabled (Multiple drivers)                                          0                                           
+Disabled (External ingress)                                          0                                           
+Disabled (RAM)                                                       0                                           
+Disabled (MC process mixed delays)                                   0                                           
+Disabled (No CG trigger)                                             0                                           
+Disabled (Non atomic chain)                                          0                                           
+Disabled (Level trigger)                                             0                                           
+Disabled (Event triggers)                                            0                                           
+
+ ------------- Reg-writer VC optimization  -------------
+Total relevant reg-writers                                           0                                           
+Enabled                                                              0                                           
+Disabled (RAM)                                                       0                                           
+Disabled (Custom delays)                                             0                                           
+Disabled (Multiple drivers)                                          0                                           
+Disabled (External ingress)                                          0                                           
+Disabled (2-state)                                                   0                                           
+
+ ------------- merge cone group  -------------
+Total num of pes                                                73,105                                           
+Total num of pes duplicated                                     74,318                                           
+Duplication factor                                                   1.017                       
+
+ ------------- Cone-groups statistics  -------------
+Total cone-groups                                                3,274                                           
+Total cone-groups with variable trigger                          1,184                                           
+Regular cone-groups                                              2,087                                           
+FF cone-groups                                                   1,184                                           
+Const cone-groups                                                    3                                           
+Single PE cone-groups                                                0                                           
+Regular cone-groups size histogram:
+  [  16 -   31]                                                    631                                           
+  [  32 -   63]                                                    533                                           
+  [   8 -   15]                                                    311                                           
+  [   2 -    3]                                                    222                                           
+  [   4 -    7]                                                    222                                           
+  [  64 -  127]                                                    101                                           
+  [   1 -    1]                                                     67                                           
+
+FF cone-groups size histogram:
+  [  32 -   63]                                                    773                                           
+  [   1 -    1]                                                    110                                           
+  [   4 -    7]                                                     99                                           
+  [   2 -    3]                                                     96                                           
+  [  16 -   31]                                                     65                                           
+  [   8 -   15]                                                     41                                           
+
+
+ ------------- Global memory and recipes  -------------
+Total compound (shared trigger) unit states                          0                                           
+Total units part of compound states                                  0                                           
+Compound unit states size histogram:
+
+Xprop tree recipes size                                              0                                           
+Total cells                                                          0                                           
+Total exec units in cells                                            0                                           
+Total notifier exec units                                            0                                           
+Total regular exec units                                         4,029                                           
+Total global memory size for all cells                               0                                           
+Total global memory padding size                                    58                                           
+simple_cell_input_vars_count                                         0                                           
+cells_with_simple_input_vars_count                                   0                                           
+CG states near clock                                             1,337                                           
+CG states with multiple clock                                        0                                           
+CG compound states near clock                                        0                                           
+CG compound states with multiple clock                               0                                           
+Total global memory size for non cell vars                     517,120                                           
+Total global memory padding size for non cell vars             180,258                                           
+Execution units (cells) recipes size                                 0                                           
+Execution units (regular) recipes size                       5,683,717                                           
+Execution units (notifier) recipes size                              0                                           
+Execution units (delays-trees superseded) recipes size               0                                           
+External ingress recipes size                                    4,021                                           
+Unlikely internal ingress recipes size                               0                                           
+Initialization recipes size                                      9,469                                           
+
+ ------------- Trigger/sensitivity distribution stats  -------------
+sensitivity:
+  sens_only                                                     72,587                                           
+  parallel_sens_trigger                                         31,511                                           
+  living_dead                                                    8,169                                           
+
+trigger:
+  parallel_sens_trigger                                         32,337                                           
+  sens_trigger                                                      79                                           
+
+trigger_sensitivity:
+
+self_sensitivity:
+
+initialization:
+  sens_only                                                      1,855                                           
+  parallel_sens_trigger                                            790                                           
+  sens_trigger                                                     394                                           
+  living_dead                                                      235                                           
+
+
+ ------------- South Optimizations  -------------
+Create latch or ff pe
+    Created Ffs
+        Udps                                                    25,486                                           
+    Created Latch
+        Udps                                                       228                                           
+Handle const operators
+    Luts removed                                                    54                                           
+Lutmap
+    Lut pes added                                               71,177                                           
+    Lut pes reused                                                 400                                           
+Mark living dead
+    PEs marked as living dead                                    3,855                                           
+Remove Buffers
+    Buffers removed                                                443                                           
+    Identity luts removed                                       56,541                                           
+Remove Duplications
+    Instances removed                                            5,773                                           
+
+ ------------- south pe hist  -------------
+* After populate split DB (beginning of south):
+
+Type                                                             Total                                           
+----                                                             -----                                           
+kPe_BUF                                                             10                                           
+kPe_SHIFTMASK                                                       53                                           
+kPe_WIDE_BUF                                                       144                                           
+kPe_ROCK_DELAY_BUF                                              27,208                                           
+kPe_OPER_SEQ_ORANGE_UDP                                         27,208                                           
+kPe_ROCK_LUT                                                   143,602                                           
+-------                                                        -------                                           
+SUM PES                                                        198,225                                           
+
+* After Remove dead Pes first (before the optimizations):
+
+Type                                                             Total                                           
+----                                                             -----                                           
+kPe_BUF                                                             10                                           
+kPe_STRENGTH_BUFFER                                                 42                                           
+kPe_SHIFTMASK                                                       53                                           
+kPe_WIDE_BUF                                                       144                                           
+kPe_ROCK_DELAY_BUF                                              27,208                                           
+kPe_OPER_SEQ_ORANGE_UDP                                         27,208                                           
+kPe_ROCK_LUT                                                   143,602                                           
+-------                                                        -------                                           
+SUM PES                                                        198,267                                           
+
+* After Handle comb reg writers (after the optimizations):
+
+Type                                                             Total                                           
+----                                                             -----                                           
+kPe_BUF                                                              1                                           
+kPe_STRENGTH_BUFFER                                                  1                                           
+kPe_WIDE_BUF                                                         2                                           
+kPe_SHIFTMASK                                                       53                                           
+kPe_ROCK_LATCH                                                     228                                           
+kPe_OPER_SEQ_ORANGE_UDP                                          1,488                                           
+kPe_ROCK_HIGH_LEVEL_FF                                          25,486                                           
+kPe_ROCK_DELAY_BUF                                              27,202                                           
+kPe_ROCK_LUT                                                    45,846                                           
+-------                                                        -------                                           
+SUM PES                                                        100,307                                           
+
+* After Asm create split db (end of south):
+
+Type                                                             Total                                           
+----                                                             -----                                           
+kPe_BUF                                                              1                                           
+kPe_STRENGTH_BUFFER                                                  1                                           
+kPe_WIDE_BUF                                                         2                                           
+kPe_SHIFTMASK                                                       53                                           
+kPe_ROCK_LATCH                                                     228                                           
+kPe_OPER_SEQ_ORANGE_UDP                                          1,488                                           
+kPe_ROCK_HIGH_LEVEL_FF                                          25,486                                           
+kPe_ROCK_DELAY_BUF                                              27,202                                           
+kPe_ROCK_EVENT                                                  27,202                                           
+kPe_ROCK_LUT                                                    47,059                                           
+-------                                                        -------                                           
+SUM PES                                                        128,722                                           
+
+ ------------- Temperature pe hist  -------------
+
+* After Asm create split db (end of south) including colors:
+
+Type                                                             Total                                           
+----                                                             -----                                           
+kPe_BUF                                                              1                                           
+          TEMP_CONST                                                 1                                           
+                                                                                                                 
+kPe_STRENGTH_BUFFER                                                  1                                           
+kPe_WIDE_BUF                                                         2                                           
+          TEMP_CONST                                                 2                                           
+                                                                                                                 
+kPe_SHIFTMASK                                                       53                                           
+          TEMP_DEBUG                                                 5                                           
+          TEMP_CLK                                                  48                                           
+                                                                                                                 
+kPe_ROCK_LATCH                                                     228                                           
+kPe_OPER_SEQ_ORANGE_UDP                                          1,488                                           
+kPe_ROCK_HIGH_LEVEL_FF                                          25,486                                           
+          TEMP_CLK                                              25,486                                           
+                                                                                                                 
+kPe_ROCK_DELAY_BUF                                              27,202                                           
+          TEMP_REG                                              27,194                                           
+          TEMP_RST_SET                                               8                                           
+                                                                                                                 
+kPe_ROCK_EVENT                                                  27,202                                           
+          TEMP_CLK_FOR_SURE                                     27,202                                           
+                                                                                                                 
+kPe_ROCK_LUT                                                    47,059                                           
+          TEMP_REG                                              40,512                                           
+          TEMP_DEBUG                                             3,850                                           
+          TEMP_RST_SET                                              10                                           
+          TEMP_CLK                                               2,433                                           
+          TEMP_CLK_FOR_SURE                                        254                                           
+                                                                                                                 
+------------Total of 128722 PEs (3 const PEs) ------------
+
+
+Linker Stats
+===============
+ ------------- Native code compilation  -------------
+Unique update var functions                                         78                                           
+Update vars code size (KB)                                         152                                           
+
+

@@ -1,0 +1,9 @@
+xrun -clean
+rm -rf *.key
+rm -rf *.log
+rm -rf *.history
+rm -rf *.args
+rm -rf cds.lib
+rm -rf hdl.var
+rm -rf *.shm
+

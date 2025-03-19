@@ -1,0 +1,154 @@
+rm -f techlib.v >> /dev/null 2>&1
+cp ../solutions/lab-appendixB-primitives/techlib1.v ./techlib.v >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/ao211_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/ao21_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dff_neg_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffrs_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffr_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffs_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/inv_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd3_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd8_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nr2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nr3_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/oa211_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/oa21_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/or2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/tribuf_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+rm -f techlib.v >> /dev/null 2>&1
+cp ../solutions/lab-appendixB-primitives/techlib2.v ./techlib.v >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/ao211_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/ao21_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dff_neg_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffrs_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffr_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffs_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/inv_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd3_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd8_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nr2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nr3_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/oa211_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/oa21_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/or2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/tribuf_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+rm -f techlib.v >> /dev/null 2>&1
+cp ../solutions/lab-appendixB-primitives/techlib3.v ./techlib.v >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/ao211_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/ao21_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dff_neg_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffrs_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffr_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/dffs_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/inv_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd3_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nd8_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nr2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/nr3_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/oa211_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/oa21_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/or2_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+rm -f irun.log >> /dev/null 2>&1
+irun testdir/tribuf_test.v -v techlib.v -q >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab-appendixB-primitives

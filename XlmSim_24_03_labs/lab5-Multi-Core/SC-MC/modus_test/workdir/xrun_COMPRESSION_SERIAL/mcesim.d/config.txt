@@ -1,0 +1,698 @@
+# string to use for checking version compatibility with xrun
+ReleaseVerXrun = 
+
+# If true, SC and MC are doing SVA 1 cycle optimization for 2 cycle specific pattern
+abv2copt = 0
+
+# If true, SC and MC are doing SVA the old 1 cycle optimization meaning avoid running  multiple times the action block after finished/failed in a row 
+abvsvaabopt = 0
+
+adaptive_clearing_stage = 1
+
+adaptive_engines_mode = 1
+
+adaptive_global_resolvers_stage = 1
+
+adaptive_int_ingress_stage = 1
+
+advise_huge_pages = 1
+
+analysis_cover_file = 
+
+cg_tracing = 0
+
+cg_tracing_cover_file = 
+
+cluster_sizes = 
+
+cluster_splits = 
+
+comb_debug_mode = 0
+
+comb_vpi_zero_delay = 0
+
+conflicting_affinity_interval = 0
+
+consistent_egress_mode = 0
+
+consistent_egress_seed = 0
+
+consistent_invocations_mode = 0
+
+# When set to 1, multi-threaded simulation will be totally consistent, i.e. two subsequent runs should behave absolutely identical from host's point of view.
+# However this has performance penalty (mostly on egress time)
+# This is a master flag that sets: consistent_egress_mode=1, consistent_nba_registration_mode=1, consistent_invocations_mode=1
+consistent_mode = 1
+
+consistent_nba_registration_mode = 0
+
+console_verbose_level = 3
+
+console_verbose_mask = 
+
+cookies_hottest_pes_num = 0
+
+cookies_invocation_sample_pes_num = 50
+
+cookies_temperature_file = 
+
+# Create a backup directory with some of mce logs (default list or user given list) in mc_logs_for_support_build_<data and time>, mc_logs_for_support_sim_<data and time>
+copy_logs = 0
+
+# Zip the backup directory created with the flag copy_logs
+copy_logs_zip = 0
+
+# Deprecated and soon-to-be unsupported. Please refer to -mce_sim_cpu_configuration instead.
+cpu_configuration = auto-performance
+
+cpu_engine_on_main_thread = 0
+
+# Deprecated and soon-to-be unsupported. Please refer to -mce_sim_thread_count instead.
+cpu_engines_count = 0
+
+# Format:
+#  * Use '-' for not using affinity at all.
+#  * Use '<host_id> <engine0_id> <engine1_id> ... <engineN_id>' to set affinity to each used thread.
+#    Ids are 'processor_id' as they appear in /proc/cpuinfo. They are also printed by mce at initialization.
+cpu_manual_affinity = 
+
+# Enables CPU performance counters (not available on ARM). Provide comma separated list of following values:
+#  * engine_cache        - counters of cache misses for load instructions on engine-0 thread
+#  * engine_cache_reqs   - counters of cache misses for all cache requests on engine-0 thread
+#  * engine_stalls       - counters of stalled cycles due to cache misses on engine-0 thread
+#  * engine_all          - all the above counters on engine-0 thread
+#  * host_cache          - counters of cache misses for load instructions on host thread
+#  * host_cache_reqs     - counters of cache misses for all cache requests on host thread
+#  * host_stalls         - counters of stalled cycles due to cache misses on host thread
+#  * host_all            - all the above counters on host thread
+#  * all                 - all the above counters for host and engine-0 threads
+cpu_perf_counters = all
+
+cpu_sockets_count = 0
+
+cpu_utilization_interval = 20
+
+cpu_utilization_threshold = 0.97
+
+deferred_exec_units_capacity = 32
+
+# Specifies the desired implementation for delayed_queues_set.
+#  * 0 - map.
+#  * 1 - vector of vectors.
+delayed_queues_set_implementation = 0
+
+delayed_queues_set_shift_size = 10
+
+# Detect event glitches; 0:none, 1:sequential, 2:all
+detect_event_glitches = 1
+
+detect_event_glitches_cover_file = 
+
+detect_event_glitches_error = 0
+
+detect_glitches = 0
+
+# Detect UDP races
+detect_udp_races = 0
+
+detect_udp_races_cover_file = 
+
+detect_udp_races_error = 0
+
+disable_triggers_clearing = 0
+
+do_egress_from_engine_on_main_thread = 1
+
+dump_inout_races = 1
+
+dump_pe_activity_info = 0
+
+# If true, dump mc simulation stable counters
+dump_sim_stable_counters = 0
+
+# Configures the probability for enabling execution_unit counters for some invocation stage, used for dynamic_splits_allocation decisions. See also 'pie_detailed_counters_sampling_prob_log2
+# Execution_units counters don't have too much overhead and therefore are activated pretty often by default (with 1/16 chance).
+dynamic_execution_units_counters_sampling_prob_log2 = 4
+
+# Configures the probability for enabling Ingress counters for some invocation, used for dynamic_splits_allocation decisions. See also 'pie_detailed_counters_sampling_prob_log2'.
+# Ingress counters introduce heavier performance overhead and therefore are activated only with 1/128 probability by default.
+dynamic_ingress_counters_sampling_prob_log2 = 7
+
+# Allows moving split instances between clusters during run_time
+dynamic_splits_allocation = 0
+
+# Try to do a smart reshuffle of split among clusters and use it if it gives a better result
+dynamic_splits_allocation_allow_reshuffle = 1
+
+# The delay in seconds until the first time we dynamically changing the split instances allocation to clusters.If this is 0, this feature is not used and only dynamic_splits_allocation_interval is used
+dynamic_splits_allocation_first_delay = 0
+
+# The interval in seconds between dynamically changing the split instances allocation to clusters.
+dynamic_splits_allocation_interval = 60
+
+# Try to move up-to this number of splits if not doing reshuffle
+dynamic_splits_allocation_max_splits_to_move = 1
+
+# For testing only. Will cause dynamic_splits_allocation to not actually move splits around.
+dynamic_splits_allocation_no_switch = 0
+
+dynamic_splits_allocation_stats = 0
+
+# For testing only. Will randomly move splits between clusters. It will also set dynamic_splits_allocation.
+dynamic_splits_allocation_stress = 0
+
+enable_cpu_spin_wait = 1
+
+# To capture the message, it should have an end-marker to indicate the ending of the message
+enable_msg_marker = 0
+
+# Filter canceled events (negative pulses) to e
+epulse_neg = 0
+
+# Don't print error messages for error pulses
+epulse_no_msg = 0
+
+# Use on-detect filtering of error pulses
+epulse_ondetect = 0
+
+# Use on-event filtering of error pulses
+epulse_onevent = 0
+
+essential_cache_size = 1024
+
+# Format: comma-separated list of following values:
+#  * dump-short-phases-log     - dumps one short line per phase being executed.
+#  * dump-detailed-phases-log  - dumps list of executed cone-groups for each phase
+#  * dump-state-diff           - dumps all modifications in state vector between consecutive phases.
+#  * dump-state-diff-consistent - dumps all modifications that are supposed to be consistent in state vector between consecutive phases.
+#  * dump-comm                 - dumps compact log of ingress/egress communication.
+execution_trace_config = 
+
+execution_trace_cover_file = 
+
+expansion_build_dir = 
+
+expansion_db_session_id = 1
+
+file_verbose_cover_file = 
+
+file_verbose_level = 0
+
+file_verbose_mask = 
+
+# Specifies how mce handles RHS of $mce_force/$mce_force_id:
+#  * 0 - don't follow changes in RHS at all. Fastest option, but may simulate incorrectly.
+#  * 1 - follow changes in RHS.
+# 
+force_rhs_mode = 1
+
+force_sanity_check = 0
+
+force_sanity_check_error = 1
+
+# Disable Sequential UDP's working at zero time
+force_sequdp_xminitialize = 0
+
+fsdb_writer_lib_path = 
+
+# Possible values:
+#  * launcher_init                - launch GDB in the beginning of launcher initialization (just after reading config.txt). This occurs both during elaboration and simulation.
+#  * launcher_start               - launch GDB in the beginning of launcher start (before loading co-simulators). This occurs only in simulation.
+#  * mce_init                     - launch GDB in the beginning of mce initialization.
+#  * mce_sim                      - launch GDB in the beginning of first invocation callback.
+#  * mce_restart                  - launch GDB when restarting simulation from a previous save. Should be given in the session that does the save.
+#  * mce_simtime_<simtime>        - launch GDB in the beginning of the specified simtime, e.g. mce_simtime_31ns
+#  * mce_assert                   - launch GDB just before firing an assert
+gdb = 
+
+# Choose gdb version
+# 
+gdb_exec = /usr/bin/gdb
+
+# Possible values:
+#  * attach - launch GDB and attach to simulator's process.
+#  * wait   - print PID and wait. When you attach with GDB, first execute "set var g_gdb_wait=0", and then continue as usual.
+gdb_mode = attach
+
+generate_nacc_drivers_log = 0
+
+# Disable the PDPE plus-one bypass
+glst_disable_pdpe_plus_one_bypass = 0
+
+host_egress_profiling = 0
+
+ht_polling_mode = 1
+
+idle_time_tracing = 0
+
+# Issue only warning, When process has affinity and cpu configuration is not one of: auto-performance or process-affinity
+ignore_process_affinity = 0
+
+ingress_egress_hvook_error = 1
+
+# Validate that value-change/force/release VPI callbacks are received only for expected signals. Possible values:
+# * 0 - disable
+# * 1 - enable basic checks (vpi_put_value succeeds, force succeeds)
+# * 2 - enable full checks (force/assign/value-change are called only for expected signals)
+ingress_sanity_check = 1
+
+# What to do when ingress_sanity_check is violated:
+# * 0 - print a warning and continue
+# * 1 - print an error and terminate the simulation
+ingress_sanity_check_error = 1
+
+# If set to 0, then errors of type 'Ingress/deposit is not supported for this signal ...' will be turned into warnings.
+# But note that simulation will run incorrectly, since the ingress/deposit was ignored!
+ingress_type_check_error = 1
+
+initialization_threads_count = 0
+
+# MC do nothing except initialization- just in case we have a fail in time 0 and we want to know if because MC or SC.
+initialize_only = 0
+
+# 0 - No optimization. 1 - Don't call SC Facade callbacks if don't have to. 2 - Use putValue instead of forceValue if possible.
+interconnect_forces_optimization_level = 1
+
+lazy_initialization = 0
+
+lazy_initialization_read_size = 1048576
+
+libdwapi_name = libdwapi.so
+
+libpdwapi_name = libpdwapi.so
+
+# Explicitly load debug recipes, even if they are not required. Can be useful for debugging
+load_debug_recipes = 0
+
+# If true, we print Warning only, if false, we trow Error
+loop_warning_only = 1
+
+# Specifies after how many invocations the loopdetector will abort the simulation even if it didn't find any repeating invocations.
+looperror_abort_threshold = 1000000
+
+# Specifies how many apperantly repeating invocations will be counted before reporting the loop detection error.
+looperror_collisions_threshold = 50
+
+# Specifies how many subsequent invocations in the simtime are allowed before the loopdetector starts identifying repeating invocations.
+looperror_invocations_threshold = 0
+
+# Specifies how many subsequent invocations to include in loop report, after loop is detected.
+looperror_report_invocations_count = 10
+
+# *WORKAROUND* mce skips its initialization. Skeleton should explicitly initialize mce.
+manual_init = 0
+
+# If true, mark pes needed only for debug as dead
+mark_living_dead = 1
+
+# max count allowed for prefrtching signals in fast api calls in each invocation
+max_signal_prefetching_allowed_in_fast_api_calls = 10
+
+# Percentage of threads allocated for VWDB dumping. Must be between 0 and 1
+mce_allocate_vwdb_percentage_threads = 0
+
+# Disable signals analysis .csv
+mce_disable_vpi_analysis = 0
+
+mce_force_engines_optimization = 1
+
+# When set to 1 tcbox's event caching optimization is enabled.
+mce_glst_tcbox_cache_events = 0
+
+# When set to 1 tcbox's pci caching optimization is enabled.
+mce_glst_tcbox_cache_pcis = 0
+
+# mce Home Directory
+mce_home = /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce
+
+# We are running in multi-core mode.
+mce_jupiter = 1
+
+# Controls MCE dump waves in parallel
+mce_parallel_probing = 0
+
+# Location of mce_regenerate logs directory (If not set, the name will be the same as mce_sim_logs_dir with suffix _regenerate)
+mce_regenerate_logs_dir = 
+
+mce_signals_counters = 0
+
+# Possible values:
+#  * auto-performance         - automatically chosen mode aimed for best performance.
+#  * all-cores                - use all cores on the machine, one for Host and others for Engines.
+#  * all-cores-except-one     - as above, but leave one spare core for background processes
+#  * all-cores-exclusive      - as above, but puts host alone on separate socket. Requires at least 2 sockets.
+#  * multi-socket             - use engine clusters, one per socket. Can specify number of engines (0 for all) and number of sockets (0 for all).
+#  * multi-socket-except-one  - as above, but leave one spare core for background processes
+#  * multi-socket-exclusive   - as above, but runs the host on a separate socket without engines. Requires at least 3 sockets.
+#  * single-socket            - occupy one full socket - one core for host, others for engines. Allows up-to N processes (N = number of sockets).
+#  * single-socket-dump-socket - Same as single-socket, but the threads writing to waves DB will be allocated on a different socket.
+#  * single-socket-except-one - occupy almost a full socket, leaving a core for the OS - one core for host, others for engines. Allows up-to N processes (N = number of sockets).
+#  * single-socket-except-one-dump-socket - Same as single-socket-except-one, but the threads writing to waves DB will be allocated on a different socket.
+#  * dual-socket-exclusive    - occupy one full socket for engines, and one full socket for host (only one its core will be utilized). Allows up-to N/2 processes.
+#  * dual-socket-shared       - occupy one full socket for engines, and host will share socket with hosts of ALL other mce processes. Allows up-to N-1 processes.
+#  * dual-socket-passive      - occupy one full socket for engines, and host will try to stay where it started possibly sharing socket with hosts (but NOT engines) of other mce processes. Allows between N/2 to N-1 processes.
+#  * partial-socket           - Occupy the specified number of cores, in a single socket. Several mce processes can run in this mode and share the same socket.
+#  * single-threaded          - do not open new threads, engine and host will run alternately within the same thread.
+#  * process-affinity         - Use cores specified by process affinity up to number of engines. All cores must be on the same socket
+#  * manual                   - manual configuration using [mce_sim_thread_count] and [cpu_manual_affinity].
+mce_sim_cpu_configuration = auto-performance
+
+# Location of mce logs directory
+mce_sim_logs_dir = ./mcesim.run
+
+# True - set affinity of specific cores, False - set affinity of entire socket.
+mce_sim_strict_affinity = 1
+
+# Number of parallel thread to run. This consists of the main thread and the engines threads. Used to set number of threads when -mce_sim_cpu_configuration is set to manual or to limit number of threads in other modes.
+mce_sim_thread_count = 0
+
+# Whether to use CPU hyper threading if exits.
+mce_sim_use_hyper_threading = 1
+
+# If 1, the always blocks will be compiled type-based
+mce_type_based_always_blocks = 0
+
+# MC runtime switch. Outputs a sim-time binary DB which enables creating detailed performance reports via hview - mcesim.run/signals_counters_db.bin.gz.0
+mce_vpi_analysis = 0
+
+# Enable detailed signals activity analysis
+mce_vpi_analysis_detailed = 0
+
+# For debug, use only 1 VWDB producer
+mce_vwdb_use_1_producer = 0
+
+mcl_mode = 0
+
+memory_utilization_interval = 0
+
+multi_threaded_delayed_ingress_threshold = 4
+
+multi_threaded_ext_ingress_threshold = 3
+
+multi_threaded_phase_threshold = 3
+
+# If 1, the type-based always blocks will run as native code when possible
+native_code_always_blocks = 1
+
+# Possible values:
+#  * start-of-nba  - execute update of NBA variables at start of NBA region (before SC updates any NBA variables)
+#  * middle-of-nba - execute update of NBA variables at the middle of NBA region (in the middle of SC updates to its NBA variables)
+#  * parallel      - execute update of NBA variables + UTD invocation in parallel to SC's update of NBA variables.
+#                    This is the old mode used by MC for a long time. It is more efficient since it allows MC and SC to run in parallel,
+#                    but it is not accurate and can lead to mismatches when there are races at NBA region.
+nba_invocation_mode = start-of-nba
+
+# Initialize regs with the specified value
+ncinitialize = 
+
+# Choosing mode when if-none option is missing from path delays, legal values: mode2, mode0, mode1
+no_if_none = mode0
+
+# Disable retain input sense
+nortis = 0
+
+# No Support specify blocks - master switch the enable/disable the SDF feature
+nospecify = 1
+
+# Turn timing check processing on/off
+notimingchecks = 0
+
+num_robber_engines = 0
+
+# Values: fatal, warning, ignore
+numa_allocation_errors_severity = warning
+
+# Values: affinity, mbind_bind, mbind_preferred
+numa_allocation_policy = mbind_bind
+
+parallel_ingress_optimization = 0
+
+perf_arguments = 
+
+perf_cover_file = 
+
+perf_enable = 0
+
+# Format: comma-seperated list of following values:
+#  * host         - to specify host thread
+#  * <engine_id>  - (in range [0 ... n-1]) to specify engine thread
+# For example: 0,3,host,1 
+perf_threads = 
+
+pes_activity = 0
+
+# Ratio of window size when activity is not-measured to window size when activity is measured.
+# High ratio has smaller performance impact but less accurate results
+pes_activity_sampling_ratio = 100
+
+pes_activity_sanity_check = 0
+
+# Window size in terms of number of consecutive invocations when PEs activity is measured.
+# Larger window provides more accurate results but will cause less samples during the simulation, which is problematic if simulation is short
+pes_activity_window_size = 5000
+
+pes_tracing = 0
+
+pes_tracing_cover_file = 
+
+pes_tracing_filter = 
+
+# MC runtime switch. Generates a performance report for the MC simulator once the simulation run is complete- mcesim.run/performance_report.txt
+pie = 1
+
+pie_cover_file = 
+
+# Configures the probability for enabling detailed counters for some invocation stage.
+# The probability is 1/2**<value>. For example: 7 means - 1/128 probability.
+# If <value> is 0 (i.e. probability = 1) then detailed performance counters are activated at all stages.
+# Higher probability, will provide more accurate results but will also impact overall performance (which can make results less accurate on its own).
+# Detailed stage counters don't have too much overhead and therefore are activated pretty often by default (with 1/16 chance).
+pie_detailed_counters_sampling_prob_log2 = 4
+
+pie_histogram = 0
+
+# Configures the probability for enabling PE counters for some invocation stage. See also 'pie_detailed_counters_sampling_prob_log2'.
+# PE counters have significant performance overhead and therefore are activated only with 1/128 probability by default.
+pie_pe_counters_sampling_prob_log2 = 7
+
+# Enables per-color report in the pie's output
+pie_per_color_report = 0
+
+pie_phases_limit = 20
+
+pie_sanity_check = 0
+
+# Configures the threshold for printing PEs to the PIE.
+pie_threshold_pes = 0.95
+
+# Configures the threshold for printing PEs inside phases to the PIE.
+pie_threshold_pes_inside_phases = 0.8
+
+# Configures the threshold for printing phases to the PIE.
+pie_threshold_phases = 0.8
+
+# Configures the threshold for printing splits to the PIE.
+pie_threshold_splits = 0.9
+
+# Configures the threshold for printing splits inside phases to the PIE.
+pie_threshold_splits_inside_phases = 0.8
+
+print_time_delta = 0
+
+print_trace_prefix = 0
+
+# Generate a run-time profile of the design
+profile = 1
+
+# MC runtime switch. Requires elaborating with -mce_pe_debugging_support 1. Elaborating with -mce_profiler 1 would automatically turn -mce_pe_debugging_support 1. Creates MC engine profiler reports in mcesim.run/profiler_report* .Creates MC engine profiler binary reports (allowing hview to read and create reports) in mcesim.run/profiler_report.txt.0.gz
+profiler = 0
+
+profiler_cover_file = 
+
+profiler_exec_units_log_limit = 1000
+
+profiler_instances_report = 0
+
+# Allow threaded processes to profile
+profthread = 0
+
+# Support protected module, legal values: 0, 2, 1
+protected_mode = 2
+
+# Set percentage of delay for pulse error limit
+pulse_e = 100
+
+# Set percentage of delay for pulse interconnect error limit
+pulse_int_e = 100
+
+# Set percentage of delay for pulse interconnect reject limit
+pulse_int_r = 100
+
+# Set percentage of delay for pulse reject limit
+pulse_r = 100
+
+quiet_config_overrides = 0
+
+# Generate an R&D centric profile of the design
+rdprofile = 1
+
+reg_writer_activity_type = input-vc
+
+# Possible values:
+#  * none                        - wait for an nba and nothing more before playing egress following nba invocation
+#  * always                      - wait for an nba and then an always block
+#  * assign                      - wait for an nba and then assign
+#  * always_assign               - wait for an nba and then always and then assign
+#  * always_assign_always        - wait for an nba and then always and then assign and the always
+#  * always_assign_always_assign - wait for an nba and then always and then assign and the always and then assign
+#  * hash0                       - wait for an nba and then #0
+#  * hash0x2                     - wait for an nba and then #0 twice
+#  * hash0x3                     - wait for an nba and then #0 three times
+#  * hash0x4                     - wait for an nba and then #0 four times
+#  * hash0x5                     - wait for an nba and then #0 five times
+# 
+registration_nba_mode = none
+
+# Possible values:
+#  * always                      - wait for an always block before invocing utd
+#  * assign                      - wait for an assign
+#  * always_assign               - wait for an always and then assign
+#  * always_assign_always        - wait for an always and then assign and the always
+#  * always_assign_always_assign - wait for an always and then assign and the always and then assign
+#  * hash0                       - wait for #0
+#  * hash0x2                     - wait for #0 twice
+#  * hash0x3                     - wait for #0 three times
+#  * hash0x4                     - wait for #0 four times
+#  * hash0x5                     - wait for #0 five times
+#  * dki_inactive                - direct IES call for inactive cycle
+#  * dki_ingress_list            - direct IES call on ingress value changes at inactive cycle
+registration_utd_mode = dki_ingress_list
+
+reset_profiler_on_simulation_restart = 1
+
+resource_allocation = 1
+
+robber_ingress_threshold = 0
+
+rock_read_engines_optimization = 1
+
+# Ignore SDF retain annotations
+sdf_ignore_retain = 0
+
+sensitivity_trigger_sanity_check = 0
+
+signal_egress_width_mismatch_error = 0
+
+signal_ingress_width_mismatch_error = 1
+
+# Target host simulator: one of {vcs,ncsim,mce}
+sim_compatibility = mce
+
+simdiff = 0
+
+simtime_sanity_check = 0
+
+# Values: numa_node, socket, socket_and_numa_node
+socket_configuration_policy = socket_and_numa_node
+
+# Parallelize execution between splits, while each split runs single-threaded
+split_based_parallelism = 0
+
+# What to use as a split weight for intial split to cluster allocation - Can be pes (pes count) or recipes (recipes size)
+split_weight_type = pes
+
+# Increase SST2 sequence number for every delta-cycle
+sst2_delta_cycle_sequences = 0
+
+# If true, MC actives SVA ff sensitivity anyway
+sva_ff_sensitivity_anyway = 0
+
+systf_error_on_unknown_signals = 1
+
+# For testing only. Will allocate each recipe in a separate page, and make recipes that were allocated in a certain cluster and for which their split is in another cluster, unreadable.
+# This helps testing if there is some direct recipe pointer somewhere in the data base. It will also set dynamic_splits_allocation and dynamic_splits_allocation_stress.
+test_unused_recipes_unreadable = 0
+
+time_wheel_mode = 0
+
+# tolerate_probe_optimized_out_signal_error.
+tolerate_probe_optimized_out_signal_error = 0
+
+use_per_line_ram_cb_registration = 0
+
+use_unified_probing = 1
+
+vpi_callback_registration_error = 1
+
+# Enables vpi_proxy in record or play mode. If left empty, vpi_proxy is disabled, otherwise possible values are:
+#  * record - vpi_proxy is recording all VPI calls.
+#  * play - vpi_proxy is playing all VPI calls. Note that mce is not loaded in this case.
+vpi_proxy = 
+
+vpi_proxy_db_compression = 1
+
+vpi_proxy_db_flush = 0
+
+vpi_proxy_db_preload = 1
+
+# Specifies level of sanity checks. Possible values are:
+#  * 0 - don't perform any sanity checks.
+# * 1 - perform some basic checks. Verifies that vpi handles are received as expected.
+# * 2 - perform full sanity checks. Verifies that all inputs and outputs match - it requires [vpi_proxy_use_full_db] = 1.
+vpi_proxy_sanity_checks = 1
+
+vpi_proxy_use_full_db = 0
+
+# OR of 3 values:
+# 1 - wait after start of simtime
+# 2 - wait after invocations
+# 4 - wait after engines finish
+# For example: To disable the optimization in engines use 4.
+#              To enable optimization only after start of simtime - use 6.
+wait_between_invocations = 0
+
+# Specifies how MCE treats wave dumping requests. Possible values:
+#  * exact - dump signals from the specified hierarchies
+#  * all   - dump all signals of the design, regardless the specified hierarchies
+#  * split - dump all signals from the splits contained in the specified hierarchies
+# When dumping only essential signals, you need to use 'split' or 'all' mode to be able to regenerate all signals from the specified hierarchies
+# 
+wave_dumping_mode = exact
+
+# Specifies delay that would be added to WDL simtime at the end of each delta-cycle.
+# <empty value> - delay will be 1/1000 of the simulator timescale (or 1fs - which is smallest delay possible).
+# Value must be power of 10 in the following format: "10ps", "0.1ns", ...
+wdl_delta_cycle_delay_value = 
+
+# If enabled, Rocketsim will add extra (small) delays in waves dumping for each delta cycle and NBA region
+# Current simulation time in Rocketsim is defined by (simtime, nba_cycle, delta_cycle) where:
+#  - simtime     - current simtime
+#  - nba_cycle   - number of preceding NBA regions since start of simtime
+#  - delta_cycle - number of preceding delta-cycles since last NBA region
+# New WDL simtime will be: simtime + wdl_nba_delay_value * nba_cycle + wdl_delta_cycle_delay_value * delta_cycle
+# If there are too much NBA/delta cycles in specific simtime - it can cause temporary shift in future WDL simtimes...
+wdl_delta_cycle_delays = 0
+
+# Specifies delay that would be added to WDL simtime by each NBA region.
+# <empty value> - delay will be wdl_delta_cycle_delay_value * 10.
+# Value must be power of 10 in the following format: "10ps", "0.1ns", ...
+wdl_nba_delay_value = 
+
+wdl_packed_blasting_width = 2147483647
+
+wdl_packed_limit = 0
+
+wdl_parallel_mode = 1
+
+wdl_pdwapi_flush_threshold = 0
+
+wdl_unpacked_limit = 0
+
+# If 0, simulation will abort when WDL writer error occurs. If 1, warning will be printed and simulation will continue
+wdl_writer_ignore_errors = 0
+
+# Specify directory name to store created library
+xmlibdirname = workdir/xrun_COMPRESSION_SERIAL
+
+xray = 0
+

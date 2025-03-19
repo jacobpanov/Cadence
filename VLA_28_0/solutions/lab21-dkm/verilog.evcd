@@ -1,0 +1,529 @@
+$date
+    Thu Oct 20 09:24:26 2011
+$end
+$version
+   ncsim 10.20-p008
+$end
+$timescale
+    100ps
+$end
+
+
+$scope module test.dkm_inst $end
+$var port       1 !          CLK $end
+$var port       1 "          RST $end
+$var port       1 #   LOAD_COINS $end
+$var port       1 $    LOAD_CANS $end
+$var port       8 %      NICKELS $end
+$var port       8 &        DIMES $end
+$var port       8 '         CANS $end
+$var port       1 (    NICKEL_IN $end
+$var port       1 )      DIME_IN $end
+$var port       1 *   QUARTER_IN $end
+$var port       1 +        EMPTY $end
+$var port       1 ,     DISPENSE $end
+$var port       1 -   NICKEL_OUT $end
+$var port       1 .     DIME_OUT $end
+$var port       1 /   TWO_DIME_OUT $end
+$var port       1 0    USE_EXACT $end
+$upscope $end
+
+$enddefinitions $end
+
+#0
+pU  0  6    !
+pN  6  6    "
+pN  6  6    #
+pN  6  6    $
+pNNNNNNNN  66666666  66666666    %
+pNNNNNNNN  66666666  66666666    &
+pNNNNNNNN  66666666  66666666    '
+pN  6  6    (
+pN  6  6    )
+pN  6  6    *
+pX  6  6    +
+pL  6  0    ,
+pL  6  0    -
+pL  6  0    .
+pL  6  0    /
+pX  6  6    0
+
+#5
+pD  6  0    !
+pU  0  6    "
+pD  6  0    #
+pD  6  0    $
+pD  6  0    (
+pD  6  0    )
+pD  6  0    *
+
+#10
+pU  0  6    !
+pH  0  6    +
+pH  0  6    0
+
+#15
+pD  6  0    !
+pD  6  0    "
+
+#20
+pU  0  6    !
+
+#25
+pD  6  0    !
+pU  0  6    $
+pDDDDDDDU  66666660  00000006    '
+
+#30
+pU  0  6    !
+pL  6  0    +
+
+#35
+pD  6  0    !
+pD  6  0    $
+
+#40
+pU  0  6    !
+
+#45
+pD  6  0    !
+pU  0  6    *
+
+#50
+pU  0  6    !
+
+#55
+pD  6  0    !
+pD  6  0    *
+
+#60
+pU  0  6    !
+
+#65
+pD  6  0    !
+pU  0  6    *
+
+#70
+pU  0  6    !
+pH  0  6    +
+pH  0  6    ,
+
+#75
+pD  6  0    !
+pD  6  0    *
+
+#80
+pU  0  6    !
+pL  6  0    ,
+
+#85
+pD  6  0    !
+pU  0  6    "
+
+#90
+pU  0  6    !
+
+#95
+pD  6  0    !
+pD  6  0    "
+
+#100
+pU  0  6    !
+
+#105
+pD  6  0    !
+pU  0  6    $
+
+#110
+pU  0  6    !
+pL  6  0    +
+
+#115
+pD  6  0    !
+pD  6  0    $
+
+#120
+pU  0  6    !
+
+#125
+pD  6  0    !
+pU  0  6    #
+pDDDDDDDU  66666660  00000006    %
+pDDDDDDUD  66666606  00000060    &
+
+#130
+pU  0  6    !
+pL  6  0    0
+
+#135
+pD  6  0    !
+pD  6  0    #
+
+#140
+pU  0  6    !
+
+#145
+pD  6  0    !
+pU  0  6    )
+
+#150
+pU  0  6    !
+
+#155
+pD  6  0    !
+pD  6  0    )
+
+#160
+pU  0  6    !
+
+#165
+pD  6  0    !
+pU  0  6    )
+
+#170
+pU  0  6    !
+
+#175
+pD  6  0    !
+pD  6  0    )
+
+#180
+pU  0  6    !
+
+#185
+pD  6  0    !
+pU  0  6    )
+
+#190
+pU  0  6    !
+
+#195
+pD  6  0    !
+pD  6  0    )
+
+#200
+pU  0  6    !
+
+#205
+pD  6  0    !
+pU  0  6    *
+
+#210
+pU  0  6    !
+pH  0  6    +
+pH  0  6    ,
+pH  0  6    -
+pH  0  6    0
+
+#215
+pD  6  0    !
+pD  6  0    *
+
+#220
+pU  0  6    !
+pL  6  0    ,
+pL  6  0    -
+
+#225
+pD  6  0    !
+pU  0  6    "
+
+#230
+pU  0  6    !
+
+#235
+pD  6  0    !
+pD  6  0    "
+
+#240
+pU  0  6    !
+
+#245
+pD  6  0    !
+pU  0  6    $
+
+#250
+pU  0  6    !
+pL  6  0    +
+
+#255
+pD  6  0    !
+pD  6  0    $
+
+#260
+pU  0  6    !
+
+#265
+pD  6  0    !
+pU  0  6    #
+
+#270
+pU  0  6    !
+pL  6  0    0
+
+#275
+pD  6  0    !
+pD  6  0    #
+
+#280
+pU  0  6    !
+
+#285
+pD  6  0    !
+pU  0  6    )
+
+#290
+pU  0  6    !
+
+#295
+pD  6  0    !
+pD  6  0    )
+
+#300
+pU  0  6    !
+
+#305
+pD  6  0    !
+pU  0  6    *
+
+#310
+pU  0  6    !
+
+#315
+pD  6  0    !
+pD  6  0    *
+
+#320
+pU  0  6    !
+
+#325
+pD  6  0    !
+pU  0  6    *
+
+#330
+pU  0  6    !
+pH  0  6    +
+pH  0  6    ,
+pH  0  6    .
+pH  0  6    0
+
+#335
+pD  6  0    !
+pD  6  0    *
+
+#340
+pU  0  6    !
+pL  6  0    ,
+pL  6  0    .
+
+#345
+pD  6  0    !
+pU  0  6    "
+
+#350
+pU  0  6    !
+
+#355
+pD  6  0    !
+pD  6  0    "
+
+#360
+pU  0  6    !
+
+#365
+pD  6  0    !
+pU  0  6    $
+
+#370
+pU  0  6    !
+pL  6  0    +
+
+#375
+pD  6  0    !
+pD  6  0    $
+
+#380
+pU  0  6    !
+
+#385
+pD  6  0    !
+pU  0  6    #
+pDDDDDDUD  66666606  00000060    %
+pDDDDDDUU  66666600  00000066    &
+
+#390
+pU  0  6    !
+pL  6  0    0
+
+#395
+pD  6  0    !
+pD  6  0    #
+
+#400
+pU  0  6    !
+
+#405
+pD  6  0    !
+pU  0  6    (
+
+#410
+pU  0  6    !
+
+#415
+pD  6  0    !
+pD  6  0    (
+
+#420
+pU  0  6    !
+
+#425
+pD  6  0    !
+pU  0  6    )
+
+#430
+pU  0  6    !
+
+#435
+pD  6  0    !
+pD  6  0    )
+
+#440
+pU  0  6    !
+
+#445
+pD  6  0    !
+pU  0  6    *
+
+#450
+pU  0  6    !
+
+#455
+pD  6  0    !
+pD  6  0    *
+
+#460
+pU  0  6    !
+
+#465
+pD  6  0    !
+pU  0  6    *
+
+#470
+pU  0  6    !
+pH  0  6    +
+pH  0  6    ,
+pH  0  6    -
+pH  0  6    .
+
+#475
+pD  6  0    !
+pD  6  0    *
+
+#480
+pU  0  6    !
+pL  6  0    ,
+pL  6  0    -
+pL  6  0    .
+
+#485
+pD  6  0    !
+pU  0  6    "
+
+#490
+pU  0  6    !
+pH  0  6    0
+
+#495
+pD  6  0    !
+pD  6  0    "
+
+#500
+pU  0  6    !
+
+#505
+pD  6  0    !
+pU  0  6    $
+
+#510
+pU  0  6    !
+pL  6  0    +
+
+#515
+pD  6  0    !
+pD  6  0    $
+
+#520
+pU  0  6    !
+
+#525
+pD  6  0    !
+pU  0  6    #
+pDDDDDDDU  66666660  00000006    %
+pDDDDDUDD  66666066  00000600    &
+
+#530
+pU  0  6    !
+pL  6  0    0
+
+#535
+pD  6  0    !
+pD  6  0    #
+
+#540
+pU  0  6    !
+
+#545
+pD  6  0    !
+pU  0  6    )
+
+#550
+pU  0  6    !
+
+#555
+pD  6  0    !
+pD  6  0    )
+
+#560
+pU  0  6    !
+
+#565
+pD  6  0    !
+pU  0  6    )
+
+#570
+pU  0  6    !
+
+#575
+pD  6  0    !
+pD  6  0    )
+
+#580
+pU  0  6    !
+
+#585
+pD  6  0    !
+pU  0  6    *
+
+#590
+pU  0  6    !
+
+#595
+pD  6  0    !
+pD  6  0    *
+
+#600
+pU  0  6    !
+
+#605
+pD  6  0    !
+pU  0  6    *
+
+#610
+pU  0  6    !
+pH  0  6    +
+pH  0  6    ,
+pH  0  6    /
+
+$comment
+$dumpports closed at time:  615
+$end

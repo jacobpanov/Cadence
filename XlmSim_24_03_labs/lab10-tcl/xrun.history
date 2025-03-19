@@ -1,0 +1,2 @@
+s1(04Mar2025:20:27:23):  xrun risc.v risc_test.v -access +rwc -tcl -linedebug 
+s2(04Mar2025:20:40:45):  xrun risc.v risc_test.v -access +rwc -tcl -linedebug 

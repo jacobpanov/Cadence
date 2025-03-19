@@ -1,0 +1,39 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 20:58:01 EST
+xrun
+	mux.v
+	mux_test.v
+	-access +rwc
+	-linedebug
+	-gui
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+file: mux.v
+	module worklib.mux:v
+		errors: 0, warnings: 0
+file: mux_test.v
+	module worklib.mux_test:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		mux_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.mux:v <0x40ca9476>
+			streams:   1, words:   497
+		worklib.mux_test:v <0x3db2458b>
+			streams:   5, words:  6674
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           5       5
+		Scalar wires:        4       -
+		Always blocks:       1       1
+		Initial blocks:      1       1
+		Pseudo assignments:  3       3
+	Writing initial simulation snapshot: worklib.mux_test:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *E,STRPIN: Could not initialize SimVision connection: SimVision/Indago process terminated before a connection was established.
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 20:58:04 EST  (total: 00:00:03)

@@ -1,0 +1,13 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+alarm_reg.vhd
+t_alarm_reg.vhd
+-access
++rwc
+-top
+T_ALREG
+-gui
+-64bit
+-linedebug

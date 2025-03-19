@@ -1,0 +1,90 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:48:55 EST
+xrun
+	-clean
+	-mess
+	-sv
+	-access rwc
+	top.v
+	dut.v
+	-xfile xfile_fox.txt
+	-xverbose
+	-ENABLE_XP_DEBUG_CODE
+	-l xrun_xprop_fox.log
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: top.v
+	module worklib.top:v
+		errors: 0, warnings: 0
+file: dut.v
+	module worklib.dut:v
+		errors: 0, warnings: 0
+xmelab: *W,DEAPF: FILE xp_elab.log already exists and will be appended..
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.dut:v <0x05cdce38>
+			streams:   2, words:  1473
+		worklib.top:v <0x4f6d9250>
+			streams:   7, words: 11838
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+xmelab: *W,XPARRD: Array corruption feature has not been enabled for Verilog/SV in X-Propagation. To enable this feature, set xfile flag VL_INVALID_IDX_FOX/VL_OUTOFRANGE_IDX_FOX for FOX Mode Array Corruption or xfile flag VL_INVALID_IDX_CAT/VL_OUTOFRANGE_IDX_CAT for CAT Mode Array Corruption.
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           5       5
+		Scalar wires:        5       -
+		Always blocks:       1       1
+		Initial blocks:      2       2
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.top:v
+Loading snapshot worklib.top:v .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+This snapshot is X-propagation enabled.
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+                   0 :: rst = x, clk = x, d = x, q = x
+                  10 :: rst = 0, clk = x, d = x, q = 0
+                  20 :: rst = 0, clk = 0, d = 1, q = 0
+XPROP:	'X' transition in always block event control
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab2/dut.v
+	LINE: 3
+	SCOPE: top.dut
+	TIME: 30 NS + 1
+                  30 :: rst = 1, clk = x, d = 1, q = x
+                  40 :: rst = 1, clk = 0, d = 1, q = x
+                  50 :: rst = 1, clk = 1, d = 1, q = 1
+                  60 :: rst = 1, clk = 0, d = 1, q = 1
+XPROP:	'X' transition in always block event control
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab2/dut.v
+	LINE: 3
+	SCOPE: top.dut
+	TIME: 70 NS + 1
+                  70 :: rst = 0, clk = x, d = 1, q = 0
+                  80 :: rst = 1, clk = 0, d = 1, q = 0
+                  90 :: rst = 1, clk = 1, d = 1, q = 1
+                 100 :: rst = 1, clk = 0, d = 0, q = 1
+                 110 :: rst = 1, clk = 1, d = 0, q = 0
+XPROP:	'X' detected in if block
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab2/dut.v
+	LINE: 4
+	SCOPE: top.dut
+	TIME: 120 NS + 1
+                 120 :: rst = x, clk = 1, d = 0, q = x
+                 130 :: rst = 0, clk = 1, d = 0, q = 0
+                 140 :: rst = 1, clk = 0, d = 1, q = 0
+XPROP:	'X' detected in if block
+	FILE: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab2/dut.v
+	LINE: 4
+	SCOPE: top.dut
+	TIME: 150 NS + 1
+                 150 :: rst = x, clk = 1, d = 1, q = x
+                 160 :: rst = 0, clk = 1, d = 1, q = 0
+Simulation complete via $finish(1) at time 170 NS + 0
+./top.v:24     #10 $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:48:56 EST  (total: 00:00:01)

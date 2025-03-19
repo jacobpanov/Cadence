@@ -1,0 +1,64 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 04, 2025 at 18:47:50 EST
+xrun
+	-clean
+	-mess
+	-sv
+	-access rwc
+	top.v
+	dut.v
+	-l xrun.noxprop.log
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: top.v
+	module worklib.top:v
+		errors: 0, warnings: 0
+file: dut.v
+	module worklib.dut:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.dut:v <0x2efd2352>
+			streams:   2, words:   359
+		worklib.top:v <0x4f6d9250>
+			streams:   7, words: 11838
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           5       5
+		Scalar wires:        5       -
+		Always blocks:       1       1
+		Initial blocks:      2       2
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.top:v
+Loading snapshot worklib.top:v .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+                   0 :: rst = x, clk = x, d = x, q = x
+                  10 :: rst = 0, clk = x, d = x, q = 0
+                  20 :: rst = 0, clk = 0, d = 1, q = 0
+                  30 :: rst = 1, clk = x, d = 1, q = 1
+                  40 :: rst = 1, clk = 0, d = 1, q = 1
+                  50 :: rst = 1, clk = 1, d = 1, q = 1
+                  60 :: rst = 1, clk = 0, d = 1, q = 1
+                  70 :: rst = 0, clk = x, d = 1, q = 0
+                  80 :: rst = 1, clk = 0, d = 1, q = 0
+                  90 :: rst = 1, clk = 1, d = 1, q = 1
+                 100 :: rst = 1, clk = 0, d = 0, q = 1
+                 110 :: rst = 1, clk = 1, d = 0, q = 0
+                 120 :: rst = x, clk = 1, d = 0, q = 0
+                 130 :: rst = 0, clk = 1, d = 0, q = 0
+                 140 :: rst = 1, clk = 0, d = 1, q = 0
+                 150 :: rst = x, clk = 1, d = 1, q = 1
+                 160 :: rst = 0, clk = 1, d = 1, q = 0
+Simulation complete via $finish(1) at time 170 NS + 0
+./top.v:24     #10 $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 04, 2025 at 18:47:51 EST  (total: 00:00:01)

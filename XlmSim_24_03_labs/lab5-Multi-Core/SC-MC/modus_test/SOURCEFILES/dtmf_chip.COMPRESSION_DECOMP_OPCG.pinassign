@@ -1,0 +1,401 @@
+assign pin=DFT_compression_enable 	test_function= +SE; 	# compression_enable
+assign pin=DFT_mask_enable 	test_function= -CME; 	# mask_enable
+assign pin=DFT_spreader 	test_function= +SE; 	# spread_enable
+assign pin=test_mode 	test_function= +TI; 	# test_mode
+assign pin=spi_fs 	test_function= -TI; 	# test_mode
+assign pin=reset 	test_function= -SC; 	# test_mode
+assign pin=mbist_test_mode 	test_function= -TI; 	# test_mode
+assign pin=OPCG_ON 	test_function= +TI; 	# test_mode, opcg_enable
+assign pin=scan_en 	test_function= +SE, -TC; 	# shift_enable
+assign pin=scan_clk 	test_function= -ES; 	
+assign pin=DFT_mask_clk 	test_function= -CML; 	# mask_clock
+assign pin=OPCG_LOADCLK 	test_function= -OLC,-TC; 	
+assign pin=port_pad_data_in[0] 	test_function= SI0,OLI;
+assign pin=port_pad_data_out[0] 	test_function= SO0;
+assign pin=port_pad_data_in[1] 	test_function= SI1,OLI;
+assign pin=port_pad_data_out[1] 	test_function= SO1;
+assign pin=port_pad_data_in[2] 	test_function= SI2,OLI;
+assign pin=port_pad_data_in[3] 	test_function= SO2;
+assign pin=TRIGGER 	test_function= -GO; 	
+assign pin=refclk 	test_function= -OSC; 	
+
+
+Assign Pin = "COMPACTOR.decompressor.g296.__iNsT2.01"  test_function = CHI;
+Assign Pin = "COMPACTOR.decompressor.g307.__iNsT2.01"  test_function = CHI;
+Assign Pin = "COMPACTOR.decompressor.g308.__iNsT2.01"  test_function = CHI;
+Assign Pin = "COMPACTOR.decompressor.g315.__iNsT0.01"  test_function = CHI;
+Assign Pin = "port_pad_data_in[0]"  test_function = CHI,SI;
+Assign Pin = "port_pad_data_in[1]"  test_function = CHI,SI;
+Assign Pin = "port_pad_data_in[2]"  test_function = CHI,SI;
+Assign Pin = "COMPACTOR.compressor.g_17.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_1.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_15.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_16.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_18.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_20.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_19.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_21.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_22.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_23.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_24.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_25.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_26.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_0.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_2.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_39.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_28.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_30.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_29.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_31.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_32.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_33.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_35.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_36.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_37.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_38.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_34.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_3.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_49.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_50.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_40.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_41.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_43.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_42.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_27.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_44.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_45.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_46.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_47.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_48.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_5.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_6.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_8.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_7.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_9.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_10.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_11.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_12.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_13.g44.__iNsT1.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_14.g43.__iNsT0.01" test_function = CHO;
+Assign Pin = "COMPACTOR.compressor.g_4.g44.__iNsT1.01" test_function = CHO;
+
+
+
+cutpoints  "DTMF_INST0.DFT_core0_domain2x.i_opcg_pulse_gen.pge_block.g14.Y"=+core0_domain2x.ppi;
+assign ppi=core0_domain2x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST0.DFT_core0_domain2x.int_blkdomain_reg.QN"=+core0_domain2x.block_domain.ppi;
+
+cutpoints  "DTMF_INST0.DFT_core0_domain1x.i_opcg_pulse_gen.pge_block.g14.Y"=+core0_domain1x.ppi;
+assign ppi=core0_domain1x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST0.DFT_core0_domain1x.int_blkdomain_reg.QN"=+core0_domain1x.block_domain.ppi;
+
+cutpoints  "DTMF_INST1.DFT_core1_domain2x.i_opcg_pulse_gen.pge_block.g14.Y"=+core1_domain2x.ppi;
+assign ppi=core1_domain2x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST1.DFT_core1_domain2x.int_blkdomain_reg.QN"=+core1_domain2x.block_domain.ppi;
+
+cutpoints  "DTMF_INST1.DFT_core1_domain1x.i_opcg_pulse_gen.pge_block.g14.Y"=+core1_domain1x.ppi;
+assign ppi=core1_domain1x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST1.DFT_core1_domain1x.int_blkdomain_reg.QN"=+core1_domain1x.block_domain.ppi;
+
+cutpoints  "DTMF_INST2.DFT_core2_domain2x.i_opcg_pulse_gen.pge_block.g14.Y"=+core2_domain2x.ppi;
+assign ppi=core2_domain2x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST2.DFT_core2_domain2x.int_blkdomain_reg.QN"=+core2_domain2x.block_domain.ppi;
+
+cutpoints  "DTMF_INST2.DFT_core2_domain1x.i_opcg_pulse_gen.pge_block.g14.Y"=+core2_domain1x.ppi;
+assign ppi=core2_domain1x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST2.DFT_core2_domain1x.int_blkdomain_reg.QN"=+core2_domain1x.block_domain.ppi;
+
+cutpoints  "DTMF_INST3.DFT_core3_domain2x.i_opcg_pulse_gen.pge_block.g14.Y"=+core3_domain2x.ppi;
+assign ppi=core3_domain2x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST3.DFT_core3_domain2x.int_blkdomain_reg.QN"=+core3_domain2x.block_domain.ppi;
+
+cutpoints  "DTMF_INST3.DFT_core3_domain1x.i_opcg_pulse_gen.pge_block.g14.Y"=+core3_domain1x.ppi;
+assign ppi=core3_domain1x.ppi 	test_function= -SC; 	
+
+cutpoints  "DTMF_INST3.DFT_core3_domain1x.int_blkdomain_reg.QN"=+core3_domain1x.block_domain.ppi;
+
+OPCG type=STANDARD load_type=SERIAL_SETUP
+
+   PLL_NAME = OSC_PLL_REF_core0_2x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (20.00, 80.00, 80.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST0._rc";
+      PLL_OUT_FREQ = (20.00, 20.00, 80.00) MHZ;
+   }
+   PLL_NAME = OSC_PLL_REF_core0_1x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (10.00, 40.00, 40.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST0.n_59";
+      PLL_OUT_FREQ = (10.00, 20.00, 40.00) MHZ;
+   }
+   PLL_NAME = OSC_PLL_REF_core1_2x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (20.00, 80.00, 80.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST1.n_59";
+      PLL_OUT_FREQ = (20.00, 20.00, 80.00) MHZ;
+   }
+   PLL_NAME = OSC_PLL_REF_core1_1x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (10.00, 40.00, 40.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST1.n_60";
+      PLL_OUT_FREQ = (10.00, 20.00, 40.00) MHZ;
+   }
+   PLL_NAME = OSC_PLL_REF_core2_2x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (20.00, 80.00, 80.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST2.n_61";
+      PLL_OUT_FREQ = (20.00, 20.00, 80.00) MHZ;
+   }
+   PLL_NAME = OSC_PLL_REF_core2_1x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (10.00, 40.00, 40.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST2.n_62";
+      PLL_OUT_FREQ = (10.00, 20.00, 40.00) MHZ;
+   }
+   PLL_NAME = OSC_PLL_REF_core3_2x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (20.00, 80.00, 80.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST3.n_61";
+      PLL_OUT_FREQ = (20.00, 20.00, 80.00) MHZ;
+   }
+   PLL_NAME = OSC_PLL_REF_core3_1x {
+      PLL_IN_OSC = "refclk";
+      PLL_IN_FREQ = (10.00, 40.00, 40.00) MHZ;
+      PLL_OUT_OSC = "DTMF_INST3.n_62";
+      PLL_OUT_FREQ = (10.00, 20.00, 40.00) MHZ;
+   }
+
+   DOMAIN_NAME = core0_domain2x {
+      DOMAIN_IN_CLOCK = "DTMF_INST0._rc";
+      DOMAIN_FREQ = (10.00, 20.00,40.00) MHZ;
+      DOMAIN_PPI = "core0_domain2x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core0_domain2x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_2_" ,
+                              "DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core0_domain2x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_7_" ,
+                              "DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_6_" ,
+                              "DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_4_" );
+          }
+         DOMAIN_REG = core0_domain2x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST0.DFT_core0_domain2x.i_opcg_pgm_reg_shift_reg_reg_8_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+   DOMAIN_NAME = core0_domain1x {
+      DOMAIN_IN_CLOCK = "DTMF_INST0.n_59";
+      DOMAIN_FREQ = (10.00, 20.00,20.00) MHZ;
+      DOMAIN_PPI = "core0_domain1x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core0_domain1x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST0.DFT_core0_domain1x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST0.DFT_core0_domain1x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core0_domain1x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST0.DFT_core0_domain1x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST0.DFT_core0_domain1x.i_opcg_pgm_reg_shift_reg_reg_4_" ,
+                              "DTMF_INST0.DFT_core0_domain1x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST0.DFT_core0_domain1x.i_opcg_pgm_reg_shift_reg_reg_2_" );
+          }
+         DOMAIN_REG = core0_domain1x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST0.DFT_core0_domain1x.i_opcg_pgm_reg_shift_reg_reg_6_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+   DOMAIN_NAME = core1_domain2x {
+      DOMAIN_IN_CLOCK = "DTMF_INST1.n_59";
+      DOMAIN_FREQ = (10.00, 20.00,40.00) MHZ;
+      DOMAIN_PPI = "core1_domain2x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core1_domain2x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_2_" ,
+                              "DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core1_domain2x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_7_" ,
+                              "DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_6_" ,
+                              "DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_4_" );
+          }
+         DOMAIN_REG = core1_domain2x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST1.DFT_core1_domain2x.i_opcg_pgm_reg_shift_reg_reg_8_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+   DOMAIN_NAME = core1_domain1x {
+      DOMAIN_IN_CLOCK = "DTMF_INST1.n_60";
+      DOMAIN_FREQ = (10.00, 20.00,20.00) MHZ;
+      DOMAIN_PPI = "core1_domain1x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core1_domain1x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST1.DFT_core1_domain1x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST1.DFT_core1_domain1x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core1_domain1x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST1.DFT_core1_domain1x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST1.DFT_core1_domain1x.i_opcg_pgm_reg_shift_reg_reg_4_" ,
+                              "DTMF_INST1.DFT_core1_domain1x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST1.DFT_core1_domain1x.i_opcg_pgm_reg_shift_reg_reg_2_" );
+          }
+         DOMAIN_REG = core1_domain1x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST1.DFT_core1_domain1x.i_opcg_pgm_reg_shift_reg_reg_6_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+   DOMAIN_NAME = core2_domain2x {
+      DOMAIN_IN_CLOCK = "DTMF_INST2.n_61";
+      DOMAIN_FREQ = (10.00, 20.00,40.00) MHZ;
+      DOMAIN_PPI = "core2_domain2x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core2_domain2x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_2_" ,
+                              "DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core2_domain2x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_7_" ,
+                              "DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_6_" ,
+                              "DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_4_" );
+          }
+         DOMAIN_REG = core2_domain2x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST2.DFT_core2_domain2x.i_opcg_pgm_reg_shift_reg_reg_8_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+   DOMAIN_NAME = core2_domain1x {
+      DOMAIN_IN_CLOCK = "DTMF_INST2.n_62";
+      DOMAIN_FREQ = (10.00, 20.00,20.00) MHZ;
+      DOMAIN_PPI = "core2_domain1x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core2_domain1x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core2_domain1x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_4_" ,
+                              "DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_2_" );
+          }
+         DOMAIN_REG = core2_domain1x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST2.DFT_core2_domain1x.i_opcg_pgm_reg_shift_reg_reg_6_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+   DOMAIN_NAME = core3_domain2x {
+      DOMAIN_IN_CLOCK = "DTMF_INST3.n_61";
+      DOMAIN_FREQ = (10.00, 20.00,40.00) MHZ;
+      DOMAIN_PPI = "core3_domain2x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core3_domain2x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_2_" ,
+                              "DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core3_domain2x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_7_" ,
+                              "DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_6_" ,
+                              "DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_4_" );
+          }
+         DOMAIN_REG = core3_domain2x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST3.DFT_core3_domain2x.i_opcg_pgm_reg_shift_reg_reg_8_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+   DOMAIN_NAME = core3_domain1x {
+      DOMAIN_IN_CLOCK = "DTMF_INST3.n_62";
+      DOMAIN_FREQ = (10.00, 20.00,20.00) MHZ;
+      DOMAIN_PPI = "core3_domain1x.ppi";
+      DOMAIN_GO_LATENCY = (15,16);
+      DOMAIN_GO_REF = "DTMF_INST0._rc";
+      DOMAIN_GO = "TRIGGER";
+      DOMAIN_PROGRAM {
+         DOMAIN_REG = core3_domain1x.pulse_gen {
+           DOMAIN_REG_TYPE = CLOCK_HIGH_GATE_SR
+           DOMAIN_REG_BITS = ("DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_1_" ,
+                              "DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_0_" );
+          }
+         DOMAIN_REG = core3_domain1x.delay_counter {
+           DOMAIN_REG_TYPE = DOWN_COUNTER_HALF
+           DOMAIN_REG_BITS = ("DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_5_" ,
+                              "DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_4_" ,
+                              "DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_3_" ,
+                              "DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_2_" );
+          }
+         DOMAIN_REG = core3_domain1x.block_domain {
+           DOMAIN_REG_TYPE = BLOCK_DOMAIN_INPUTS
+           DOMAIN_REG_BITS = ("DTMF_INST3.DFT_core3_domain1x.i_opcg_pgm_reg_shift_reg_reg_6_");
+           DOMAIN_REG_VALUES = (1,"BLOCK",0,"ENABLE");
+         }
+      }
+   }
+
+; // end OPCG block
+

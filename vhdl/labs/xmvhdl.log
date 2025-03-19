@@ -1,0 +1,24 @@
+xmvhdl: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xmvhdl	22.09-s010: Started on Mar 07, 2025 at 18:35:31 EST
+xmvhdl
+    -messages
+    -v200x
+    mux.vhd
+    t_mux.vhd
+
+mux.vhd:
+  end process DISP_MUX;
+            |
+xmvhdl_p: *E,EXPRIF (mux.vhd,36|12): expecting the reserved word 'IF' 87[8.6] 93[8.7].
+end RTL;
+    |
+xmvhdl_p: *E,MISPRO (mux.vhd,38|4): expecting the reserved word 'PROCESS' [9.2].
+end RTL;
+         |
+xmvhdl_p: *E,EXPEND (mux.vhd,38|9): expecting the reserved word 'END' [1.2].
+end RTL;
+xmvhdl_p: *E,UXPEOF (mux.vhd,38): unexpected end of file.
+	errors: 4, warnings: 0
+t_mux.vhd:
+	errors: 0, warnings: 0
+TOOL:	xmvhdl	22.09-s010: Exiting on Mar 07, 2025 at 18:35:31 EST  (total: 00:00:00)

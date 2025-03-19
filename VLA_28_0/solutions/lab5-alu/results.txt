@@ -1,0 +1,5 @@
+cp ../solutions/lab6-alu/alu.v . >> /dev/null 2>&1
+irun alu.v alu_test.v >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab6-alu

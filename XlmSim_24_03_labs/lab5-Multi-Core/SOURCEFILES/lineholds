@@ -1,0 +1,2 @@
+HOLD Pin.f.l.dtmf_chip.nl.scan_clk = 0;
+HOLD Pin.f.l.dtmf_chip.nl.scan_en = 0;

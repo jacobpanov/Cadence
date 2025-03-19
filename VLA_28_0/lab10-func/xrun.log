@@ -1,0 +1,46 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 12, 2025 at 20:51:26 EDT
+xrun
+	-f filelist.txt
+		counter.v
+		counter_test.v
+	-access rwc
+file: counter.v
+	module worklib.counter:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		counter_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.counter:v <0x1037d294>
+			streams:   3, words:  1666
+		worklib.counter_test:v <0x5f014916>
+			streams:   8, words: 13037
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              2       2
+		Registers:           14      14
+		Scalar wires:         4       -
+		Vectored wires:       2       -
+		Always blocks:        1       1
+		Initial blocks:       2       2
+		Pseudo assignments:   5       5
+	Writing initial simulation snapshot: worklib.counter_test:v
+Loading snapshot worklib.counter_test:v .................... Done
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+At time 20 rst=0 load=1 enab=1 cnt_in=10101 cnt_out=10101
+At time 30 rst=0 load=1 enab=1 cnt_in=01010 cnt_out=01010
+At time 40 rst=0 load=1 enab=1 cnt_in=11111 cnt_out=11111
+At time 50 rst=1 load=1 enab=1 cnt_in=11111 cnt_out=00000
+At time 60 rst=0 load=1 enab=1 cnt_in=11111 cnt_out=11111
+At time 70 rst=0 load=0 enab=1 cnt_in=11111 cnt_out=00000
+TEST PASSED
+Simulation complete via $finish(1) at time 70 NS + 0
+./counter_test.v:51     $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s010: Exiting on Mar 12, 2025 at 20:51:28 EDT  (total: 00:00:02)

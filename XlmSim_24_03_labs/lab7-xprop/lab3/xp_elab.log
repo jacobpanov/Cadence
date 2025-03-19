@@ -1,0 +1,57 @@
+
+XPROP options:
+-XFILE xfile_cat.txt -XVERBOSE -ENABLE_XP_SEMETHOD -ENABLE_XP_DEBUG_CODE 
+
+
+XFILE(xfile_cat.txt):
+SCOPE :mux_inst C
+
+
+
+Final Set of XFILE Flags:
+
+
+XPROP:	CAT Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	Line: 20
+
+XPROP METRICS FOR VHDL:
+		Total architectures in environment                             = 2
+		Total instances in environment                           = 2
+		Total architectures enabled using xfile/xprop                  = 1
+		Total instances enabled using xfile/xprop                = 1
+		Total process blocks in xprop enabled hierarchy           = 1
+		Total xprop enabled process blocks in xprop enabled hierarchy = 1
+		Architecture cover percentage(1/2)                           = 50.00%
+		Instance cover percentage(1/2)                         = 50.00%
+		Block cover percentage(1/1)                            = 100.00%
+
+
+--------------------------------------------------------------------------
+
+XPROP options:
+-XFILE xfile_fox.txt -XVERBOSE -ENABLE_XP_SEMETHOD -ENABLE_XP_DEBUG_CODE 
+
+
+XFILE(xfile_fox.txt):
+SCOPE :mux_inst F
+
+
+
+Final Set of XFILE Flags:
+
+
+XPROP:	FOX Mode Enabled for block
+	File: /home/jpanov/Cadence/XlmSim_24_03_labs/lab7-xprop/lab3/mux.vhd
+	Line: 20
+
+XPROP METRICS FOR VHDL:
+		Total architectures in environment                             = 2
+		Total instances in environment                           = 2
+		Total architectures enabled using xfile/xprop                  = 1
+		Total instances enabled using xfile/xprop                = 1
+		Total process blocks in xprop enabled hierarchy           = 1
+		Total xprop enabled process blocks in xprop enabled hierarchy = 1
+		Architecture cover percentage(1/2)                           = 50.00%
+		Instance cover percentage(1/2)                         = 50.00%
+		Block cover percentage(1/1)                            = 100.00%

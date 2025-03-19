@@ -1,0 +1,5 @@
+Release:        23.09-s001.538907
+Time:           2023-10-20 23:20:14
+Platform:       Linux dvfinperf2 3.10.0-693.el7.x86_64 #1 SMP Thu Jul 6 19:56:57 EDT 2017 x86_64
+Total memory:   117.84 GB
+

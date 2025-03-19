@@ -1,0 +1,30 @@
+System Information:
+  OS Dist. Name:         Rocky Linux release 8.8 (Green Obsidian)
+  Kernel Version:        Linux node1677.palmetto.clemson.edu 4.18.0-477.27.1.el8_8.x86_64 #1 SMP Wed Sep 20 15:55:39 UTC 2023 x86_64
+  Host Name:             node1677.palmetto.clemson.edu
+  Timestamp:             2025-03-04 17:53:37.331477
+  mce Version:           22.09-s010.493970
+  Command Line:          /software/commercial/cadence/XCELIUM2209/tools.lnx86/mce/bin/64bit/linker --xmlibdirname ../workdir/xrun_COMPRESSION_SERIAL --SEQUDP_NBA_DELAY --mce_sim_dir ../workdir/xrun_COMPRESSION_SERIAL/mcesim.d --mce_jupiter 1 --do_link_build_cosim --mce_scratch_dir ../workdir/xrun_COMPRESSION_SERIAL/run.lnx8664.22.09.d --mce_home=/software/commercial/cadence/XCELIUM2209/tools.lnx86/mce --pe_debugging_support=0 --nospecify --native_code_compilation_concurrency=4 --update_sequential_udps_in_nba=1 --pulse_int_r=100 --pulse_e=100 --pulse_int_e=100 --enable_intersplit=0 --create_nba_reg_ram_writers_during_rtl_elab=1 --allow_ram_w_from_every_always_block=1 --mce_build_dir=../workdir/xrun_COMPRESSION_SERIAL/mcebuild.d --minimum_time_before_timeout=65 --split_number=1 --user_report_file_name=UserReport_Linker
+
+Stage                                                            VM RSS    VM HWM   Mem Delta CPU Time  User Time Total (C) Total (U)
+=====                                                           ========= ========= ========= ========= ========= ========= =========
+01. Initialize RockProtect  ..................................  50.64  MB 50.78  MB 50.64  MB         0         0         0         0
+02. Create Sim Directory .....................................  50.70  MB 50.78  MB 68.00  KB         0         0         0         0
+03. Load compiler DB .........................................  50.92  MB 50.93  MB 220.00 KB         0         0         0         0
+04. Load MSIE DB .............................................  50.95  MB 50.95  MB 36.00  KB         0         0         0         0
+05. Copy files from build dir ................................  51.11  MB 51.11  MB 160.00 KB         0         0         0         0 Skipped
+06. Link SDF Databases .......................................  51.11  MB 51.11  MB 0      KB         0         0         0         0 Skipped
+07. Allocate MCE DB ..........................................  54.23  MB 54.23  MB 3.12   MB         0         0         0         0
+08. Copy UDP Files ...........................................  54.42  MB 54.47  MB 196.00 KB         0         0         0         0
+09. Build Modules ............................................  54.61  MB 54.61  MB 192.00 KB         0         0         0         0
+10. Create MCE DB ............................................  54.61  MB 54.61  MB 8.00   KB         0         0         0         0
+    10.01. Init MCE DB .......................................  54.73  MB 54.73  MB 124.00 KB         0         0         0         0
+    10.02. Load Splits Info ..................................  54.86  MB 54.86  MB 124.00 KB         0         0         0         0
+    10.03. Load Splits DB ....................................  54.92  MB 54.97  MB 64.00  KB         0         0         0         0
+    10.04. Build Signal DB ...................................  57.29  MB 57.48  MB 2.37   MB         0         0         0         0
+    10.05. Compile runtime native code .......................  61.47  MB 67.94  MB 4.18   MB         0         3         0         3
+    10.06. Load, patch and save recipes ......................  67.70  MB 67.94  MB 6.23   MB         0         0         0         3
+    10.07. Save DB ...........................................  68.43  MB 69.71  MB 744.00 KB         0         0         1         3
+11. Create access file .......................................  68.43  MB 69.71  MB 0      KB         0         0         1         3 Skipped
+12. Dump statistics database .................................  68.42  MB 69.71  MB -4.00  KB         0         0         1         3
+13. Cleanup binaries .........................................  68.42  MB 69.71  MB -4.00  KB         0         0         1         3 Skipped

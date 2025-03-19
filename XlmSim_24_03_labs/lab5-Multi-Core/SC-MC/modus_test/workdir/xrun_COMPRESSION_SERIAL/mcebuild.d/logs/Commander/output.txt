@@ -1,0 +1,28 @@
+01. Commander Init ...........................................  44.55  MB 45.35  MB 44.55  MB         0         0         0         0
+02. mcebuild Init ............................................  44.62  MB 45.35  MB 72.00  KB         0         0         0         0
+03. Commander Internal Running Engine ........................  44.62  MB 45.35  MB 0      KB         0         0         0         0
+    03.01. Debug Pack Only ...................................  44.62  MB 45.35  MB 0      KB         0         0         0         0 Skipped
+    03.02. Prepare Compilations Arguments ....................  44.62  MB 45.35  MB 0      KB         0         0         0         0
+    03.03. Create Post Build Report ..........................  44.88  MB 45.35  MB 260.00 KB         0         0         0         0 Skipped
+    03.04. Run Interpreter ...................................  45.21  MB 45.35  MB 344.00 KB         0         0         0         0 Skipped
+    03.05. Run Codegens and Codegen-asms .....................  44.82  MB 45.35  MB -396.00 KB         0         0         0         0 Skipped
+    03.06. Compile runtime native code .......................  44.82  MB 45.35  MB 0      KB         0         0         0         0 Skipped
+    03.07. Merge TemplateSplitDBs ............................  44.82  MB 45.35  MB 0      KB         0         0         0         0 Skipped
+    03.08. Run Codegen South for CDP's and CAG's .............  44.81  MB 45.35  MB -12.00 KB         0         0         0         0 Skipped
+    03.09. Run Splits ........................................ 	MC build: split processing started (total of 1 splits, using thread count of 4) at Mar 04, 2025 at 17:57:16 EST
+	MC build: split processing finished at Mar 04, 2025 at 17:57:42 EST after 26 seconds
+ 44.95  MB 45.35  MB 136.00 KB         5        26         5        26
+    03.10. Run Linker ........................................ 	MC build: splits linking started at Mar 04, 2025 at 17:57:42 EST
+	MC build: splits linking finished at Mar 04, 2025 at 17:57:45 EST after 3 seconds
+ 44.96  MB 45.35  MB 12.00  KB         0         3         6        29
+    03.11. Prepare mce Arguments .............................  45.19  MB 45.50  MB 236.00 KB         0         0         6        29
+04. mcebuild Finalize ........................................ 	Elaboration finished successfully
+xmelab: Memory Usage - Final: 45.2M, Peak: 499.2M, Peak virtual: 1141.5M
+xmelab: CPU Usage - 6.4s system + 87.6s user = 94.0s total (59.2s, 158.8% cpu) (node1677.palmetto.clemson.edu)
+xmelab: xmvlog_cg Time - 0.0s system + 0.1s user = 0.1s total (0.2s, 50.0% cpu)
+ 45.18  MB 45.50  MB -12.00 KB         0         0         6        29
+05. Dump statistics database .................................  45.18  MB 45.50  MB 0      KB         0         0         6        29
+06. Merge and save compiler stats ............................  45.41  MB 45.66  MB 236.00 KB         0         0         6        29
+07. Run stats analyzer .......................................  45.41  MB 45.66  MB 0      KB         0         0         6        29
+08. Commander Finalize .......................................  45.40  MB 45.66  MB -8.00  KB         0         0         6        30
+09. Copy Logs ................................................  45.40  MB 45.66  MB 4.00   KB         0         0         6        30 Skipped

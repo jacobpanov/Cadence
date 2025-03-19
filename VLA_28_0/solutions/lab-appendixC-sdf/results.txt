@@ -1,0 +1,11 @@
+irun rcvr.v rcvr_test.v -q >> /dev/null 2>&1
+grep Message.received:.I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1
+cp ../solutions/lab-appendixC-sdf/techlib.v . >> /dev/null 2>&1
+irun rcvr.vg rcvr_test.v -timescale 1ns/10ps -v techlib.v -vlogext vg >> /dev/null 2>&1
+grep Warning\!..Timing.violation irun.log >> /dev/null 2>&1
+grep TEST.TIMEOUT irun.log >> /dev/null 2>&1
+cp ../solutions/lab-appendixC-sdf/rcvr_test.v . >> /dev/null 2>&1
+irun rcvr.vg rcvr_test.v -maxdelays -sdf_verbose -timescale 1ns/10ps -v techlib.v -vlogext vg >> /dev/null 2>&1
+grep Message.received:.I.Love.Verilog irun.log >> /dev/null 2>&1
+grep TEST.DONE irun.log >> /dev/null 2>&1

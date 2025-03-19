@@ -1,0 +1,6 @@
+xprop -off
+probe -screen sel a b c q
+run 10 fs
+xprop -on
+run 200 ns
+exit

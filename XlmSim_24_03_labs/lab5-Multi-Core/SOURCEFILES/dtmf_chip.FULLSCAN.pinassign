@@ -1,0 +1,19 @@
+assign pin=DFT_compression_enable 	test_function= -SE; 	# compression_enable
+assign pin=DFT_mask_enable 	test_function= -SE; 	# mask_enable
+assign pin=DFT_spreader 	test_function= -SE; 	# spread_enable
+assign pin=test_mode 	test_function= +TI; 	# test_mode
+assign pin=spi_fs 	test_function= -TI; 	# test_mode
+assign pin=reset 	test_function= -SC; 	# test_mode
+assign pin=mbist_test_mode 	test_function= -TI; 	# test_mode
+assign pin=OPCG_ON 	test_function= -TI; 	# test_mode
+assign pin=scan_en 	test_function= +SE; 	# shift_enable
+assign pin=scan_clk 	test_function= -ES; 	
+assign pin=DFT_mask_clk 	test_function= -ES; 	# mask_clock
+assign pin=OPCG_LOADCLK 	test_function= -ES; 	
+assign pin=port_pad_data_in[0] 	test_function= SI0;
+assign pin=port_pad_data_out[0] 	test_function= SO0;
+assign pin=port_pad_data_in[1] 	test_function= SI1;
+assign pin=port_pad_data_out[1] 	test_function= SO1;
+assign pin=port_pad_data_in[2] 	test_function= SI2;
+assign pin=port_pad_data_in[3] 	test_function= SO2;
+assign pin=TRIGGER 	test_function= +TI; 	

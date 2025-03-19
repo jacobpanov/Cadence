@@ -1,0 +1,23 @@
+//
+// File created by:  xrun
+//
+-no_analogsolver
+
+// Turn on informative messages.
+-MESSAGES
+
+// Comment the following line to force recompilation.
+-UPDATE
+
+// Source Files
+mux.v
+mux_test.v
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-XMPREP
+./xcelium.d/run.lnx86.22.09.d
+-RUNPREP
+-REDIRECT
+./xcelium.d/run.lnx86.22.09.d/prep
+-ALLOWUNBOUND
+-RUNMODE
