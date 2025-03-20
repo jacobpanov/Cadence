@@ -1,0 +1,26 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 19, 2025 at 21:07:28 EDT
+xrun
+	-f run.f
+		-64
+		-uvmhome /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
+		/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv
+		top.sv
+	-access rwc
+file: /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv
+    `include "yapp_packet.sv"
+                            |
+xmvlog: *E,COFILX (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv,8|28): cannot open include file 'yapp_packet.sv'.
+	package worklib.yapp_pkg:sv
+		errors: 1, warnings: 0
+file: top.sv
+    import yapp_pkg::*;
+                  |
+xmvlog: *E,NOPBIND (top.sv,16|18): Package yapp_pkg could not be bound.
+	module worklib.top:sv
+		errors: 1, warnings: 0
+xmvlog: *W,NOTOPL: no top-level unit found, must have recursive instances.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 19, 2025 at 21:07:29 EDT  (total: 00:00:01)

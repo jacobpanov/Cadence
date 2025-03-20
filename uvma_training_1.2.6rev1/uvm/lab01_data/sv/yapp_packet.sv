@@ -13,7 +13,7 @@ typedef enum bit{BAD_PARITY, GOOD_PARITY} parity_t;
 class yapp_packet extends uvm_sequence_item:
 
 // Follow the lab instructions to create the packet.
-// Place packet declarations in the following order:
+// Place  declarations in the following order:
 
   // Define protocol data
 
