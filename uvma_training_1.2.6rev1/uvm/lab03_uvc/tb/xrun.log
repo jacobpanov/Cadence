@@ -1,5 +1,5 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 20, 2025 at 15:03:22 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 20, 2025 at 18:37:21 EDT
 xrun
 	-f run.f
 		-64
@@ -13,47 +13,6 @@ xrun
    User defined plus("+") options:
 	+UVM_VERBOSITY=UVM_HIGH
 
-file: top.sv
-	module worklib.top:sv
-		errors: 0, warnings: 0
-		Caching library 'worklib' ....... Done
-	Elaborating the design hierarchy:
-	Top level design units:
-		uvm_pkg
-		cdns_uvmapi
-		cdns_assert2uvm_pkg
-		cdns_uvm_pkg
-		yapp_pkg
-		top
-xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.top:sv <0x2c625c52>
-			streams:  61, words: 37231
-		worklib.yapp_pkg:sv <0x441e2598>
-			streams:  24, words: 65311
-		worklib.cdns_uvm_pkg:sv <0x5e28b663>
-			streams: 172, words: 247419
-		worklib.cdns_uvmapi:svp <0x2f2e6ce3>
-			streams:  27, words: 28542
-		worklib.cdns_assert2uvm_pkg:sv <0x0ff8faa1>
-			streams:   3, words:  1664
-		worklib.uvm_pkg:sv <0x5a0266ca>
-			streams: 4534, words: 6771830
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		                       Instances  Unique
-		Modules:                       1       1
-		Verilog packages:              5       5
-		Registers:                 12925   10099
-		Named events:                  4      12
-		Initial blocks:              261     149
-		Parallel blocks:              26      27
-		Assertions:                    2       2
-		SV Class declarations:       193     307
-		SV Class specializations:    345     345
-	Writing initial simulation snapshot: worklib.top:sv
 Loading snapshot worklib.top:sv .................... Done
 SVSEED default: 1
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
@@ -84,16 +43,43 @@ UVM_INFO @ 0: reporter [RNTST] Running test base_test...
 UVM_INFO router_test_lib.sv(18) @ 0: uvm_test_top [MSG] 
 Test build phase executed
 
-UVM_INFO router_tb.sv(15) @ 0: uvm_test_top.tb [MSG] 
-Testbench build phase executed
-
+UVM_INFO router_tb.sv(16) @ 0: uvm_test_top.tb [MSG] 
+In the build phase
 UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
-------------------------------------
-Name          Type       Size  Value
-------------------------------------
-uvm_test_top  base_test  -     @2553
-  tb          router_tb  -     @2602
-------------------------------------
+----------------------------------------------------------------------
+Name                         Type                     Size  Value     
+----------------------------------------------------------------------
+uvm_test_top                 base_test                -     @2579     
+  tb                         router_tb                -     @2628     
+    yapp                     yapp_env                 -     @2680     
+      tx_agent               yapp_tx_agent            -     @2708     
+        driver               yapp_tx_driver           -     @3413     
+          rsp_port           uvm_analysis_port        -     @3511     
+          seq_item_port      uvm_seq_item_pull_port   -     @3462     
+        monitor              yapp_tx_monitor          -     @2743     
+        sequencer            yapp_tx_sequencer        -     @2740     
+          rsp_export         uvm_analysis_export      -     @2831     
+          seq_item_export    uvm_seq_item_pull_imp    -     @3381     
+          arbitration_queue  array                    0     -         
+          lock_queue         array                    0     -         
+          num_last_reqs      integral                 32    'd1       
+          num_last_rsps      integral                 32    'd1       
+        is_active            uvm_active_passive_enum  1     UVM_ACTIVE
+----------------------------------------------------------------------
+
+UVM_INFO ../sv/yapp_tx_driver.sv(15) @ 0: uvm_test_top.tb.yapp.tx_agent.driver [yapp_tx_driver] 
+start of simulation for uvm_test_top.tb.yapp.tx_agent.driver
+UVM_INFO ../sv/yapp_tx_monitor.sv(15) @ 0: uvm_test_top.tb.yapp.tx_agent.monitor [yapp_tx_monitor] 
+start of simulation for uvm_test_top.tb.yapp.tx_agent.monitor
+UVM_INFO ../sv/yapp_tx_sequencer.sv(14) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [yapp_tx_sequencer] start of simulation for uvm_test_top.tb.yapp.tx_agent.sequencer
+UVM_INFO ../sv/yapp_tx_agent.sv(34) @ 0: uvm_test_top.tb.yapp.tx_agent [yapp_tx_agent] 
+start of simulation for uvm_test_top.tb.yapp.tx_agent
+UVM_INFO ../sv/yapp_env.sv(20) @ 0: uvm_test_top.tb.yapp [yapp_env] 
+start of simulation for uvm_test_top.tb.yapp
+UVM_INFO router_tb.sv(22) @ 0: uvm_test_top.tb [router_tb] 
+start of simulation for uvm_test_top.tb
+UVM_INFO ../sv/yapp_tx_monitor.sv(19) @ 0: uvm_test_top.tb.yapp.tx_agent.monitor [yapp_tx_monitor] 
+Inside the monitor
 
 
 --- UVM Report catcher Summary ---
@@ -109,7 +95,7 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :    4
+UVM_INFO :   11
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
@@ -117,7 +103,13 @@ UVM_FATAL :    0
 [MSG]     2
 [RNTST]     1
 [UVMTOP]     1
+[router_tb]     1
+[yapp_env]     1
+[yapp_tx_agent]     1
+[yapp_tx_driver]     1
+[yapp_tx_monitor]     2
+[yapp_tx_sequencer]     1
 Simulation complete via $finish(1) at time 0 FS + 179
 /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 20, 2025 at 15:03:28 EDT  (total: 00:00:06)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 20, 2025 at 18:37:22 EDT  (total: 00:00:01)
