@@ -1,0 +1,6 @@
+s1(15Mar2021:15:19:44):  xrun -f lab07run.f +UVM_HYPERLINKS=ON 
+s2(15Mar2021:15:21:04):  xrun -f lab07run.f +UVM_HYPERLINKS=ON -gui -access rwc 
+s3(22Apr2021:07:38:53):  xrun -f lab07run.f 
+s4(22Apr2021:08:17:28):  xrun -f lab07run.f 
+s5(22Apr2021:08:22:22):  xrun -f lab07run.f 
+s6(22Apr2021:08:24:14):  xrun -f lab07run.f 
