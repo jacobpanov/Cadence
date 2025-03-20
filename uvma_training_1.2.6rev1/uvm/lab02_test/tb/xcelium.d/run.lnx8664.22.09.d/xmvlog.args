@@ -1,0 +1,29 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.22.09.d
+-RUNMODE
+-UVMNOSINGLESTEP
+-define
+UVM_PLI
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab02_test/sv/yapp_pkg.sv
+top.sv
+-CDSLIB
+./xcelium.d/run.lnx8664.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.09.d/hdlrun.var
+-I_INCDIR
+/software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.22.09.d/xllibs
+-ALLOWUNBOUND
+-ENABLEOIGW
