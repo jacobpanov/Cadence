@@ -24,7 +24,7 @@ module top;
 
     initial begin
 // construct the packet for copy
-     copy_packet = new("copy_packet");
+    copy_packet = new("copy_packet");
 
     for (int i=0; i<5; i++) begin
         // allocate each packet
@@ -33,10 +33,10 @@ module top;
         packet.print();
     end
 // to display the results
-    $display ("\n\nCOPY");
-    copy_packet.copy(packet);
-    copy_packet.print();
+$display ("\n\nCOPY");
+copy_packet.copy(packet);
+copy_packet.print();
 
 // experiment with the copy, clone and compare UVM method
-    end
+end
 endmodule : top

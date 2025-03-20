@@ -16,6 +16,7 @@ Copyright Cadence Design Systems (c)2015
 --incdir /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv
 
 // compile files
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv
 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv
 
 //*** add compile files here

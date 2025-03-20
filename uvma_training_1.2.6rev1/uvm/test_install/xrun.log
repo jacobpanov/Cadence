@@ -1,49 +1,10 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 19, 2025 at 18:47:05 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 19, 2025 at 21:29:11 EDT
 xrun
 	-f run.f
 		-64
 		-uvmhome /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
 		test.sv
-Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
-file: test.sv
-	module worklib.top:sv
-		errors: 0, warnings: 0
-		Caching library 'worklib' ....... Done
-	Elaborating the design hierarchy:
-	Top level design units:
-		uvm_pkg
-		cdns_uvmapi
-		cdns_assert2uvm_pkg
-		cdns_uvm_pkg
-		top
-xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.top:sv <0x54f0ba82>
-			streams:  21, words: 12824
-		worklib.cdns_uvm_pkg:sv <0x5558b8d6>
-			streams: 172, words: 247419
-		worklib.cdns_uvmapi:svp <0x199c0c41>
-			streams:  27, words: 28542
-		worklib.cdns_assert2uvm_pkg:sv <0x05fbaf07>
-			streams:   3, words:  1664
-		worklib.uvm_pkg:sv <0x3f3c502e>
-			streams: 4532, words: 6769213
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		                       Instances  Unique
-		Modules:                       1       1
-		Verilog packages:              4       4
-		Registers:                 12786   10030
-		Named events:                  4      12
-		Initial blocks:              252     146
-		Parallel blocks:              26      27
-		Assertions:                    2       2
-		SV Class declarations:       190     304
-		SV Class specializations:    339     339
-	Writing initial simulation snapshot: worklib.top:sv
 Loading snapshot worklib.top:sv .................... Done
 SVSEED default: 1
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
@@ -96,4 +57,4 @@ UVM_FATAL :    0
 Simulation complete via $finish(1) at time 0 FS + 179
 /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 19, 2025 at 18:47:16 EDT  (total: 00:00:11)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 19, 2025 at 21:29:13 EDT  (total: 00:00:02)

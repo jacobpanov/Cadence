@@ -8,9 +8,9 @@ Copyright Cadence Design Systems (c)2015
 -----------------------------------------------------------------*/
 
 // Define your enumerated type(s) here
-typedef enum bit{BAD_PARITY, GOOD_PARITY} parity_t;
+typedef enum bit {BAD_PARITY, GOOD_PARITY} parity_t;
 
-class yapp_packet extends uvm_sequence_item:
+class yapp_packet extends uvm_sequence_item;
 
 // Follow the lab instructions to create the packet.
 // Place  declarations in the following order:
@@ -46,7 +46,7 @@ class yapp_packet extends uvm_sequence_item:
 
   constraint default_length {length > 0; length < 64;}
   constraint payload_size {length == payload.size();}
-  constraint default_delay {packet_delay >= 0; packey_delay <20;}
+  constraint default_delay {packet_delay >= 0; packet_delay <20;}
   constraint default_parity {parity_type dist {BAD_PARITY := 1, GOOD_PARITY := 5};}
   constraint default_addr {addr != 'b11}
 
@@ -59,8 +59,9 @@ class yapp_packet extends uvm_sequence_item:
   endfunction : calc_parity
 
   function void set_parity();
-    parity = calc_perity();
-    if (parity_type == BAD_PARITY) parity++;
+    parity = calc_parity();
+    if (parity_type == BAD_PARITY) 
+      parity++;
   endfunction : set_parity
 
   function void post_randomize();

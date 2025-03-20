@@ -1,16 +1,78 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 19, 2025 at 21:07:28 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 19, 2025 at 21:33:55 EDT
 xrun
 	-f run.f
 		-64
 		-uvmhome /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
+		/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv
 		/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv
 		top.sv
-	-access rwc
+file: /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv
+class yapp_packet extends uvm_sequence_item;
+                                          |
+xmvlog: *E,SVNOTY (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,13|42): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+  rand parity_t parity_type;
+              |
+xmvlog: *E,NOIPRT (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,27|14): Unrecognized declaration 'parity_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+  `uvm_object_utils_begin(yapp_packet)
+                        |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,32|24): `uvm_object_utils_begin: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+  `uvm_object_utils_begin(yapp_packet)
+                         |
+xmvlog: *E,EXPENC (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,32|25): Expecting the keyword 'endclass'.
+    `uvm_field_int(length, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,33|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_int(addr, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,34|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_array_int(payload, UVM_ALL_ON)
+                       |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,35|23): `uvm_field_array_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_int(parity, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,36|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_enum(parity_t, parity_type, UVM_ALL_ON)
+                  |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,37|18): `uvm_field_enum: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_int(packet_delay, UVM_ALL_ON | UVM_DEC | UVM_NOCOMPARE)
+                 |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,38|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+  `uvm_object_utils_end
+                      |
+xmvlog: *E,NOTDIR (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,39|22): `uvm_object_utils_end: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+  function new(string name = "yapp_packet");
+             |
+xmvlog: *E,NEWOIC (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,43|13): The class constructor method 'new' is only allowed within a class declaration.
+    super.new(name);
+        |
+xmvlog: *E,CLSSPX (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,44|8): 'super' can only be used within a class scope that derives from a base class.
+  constraint default_length {length > 0; length < 64;}
+                          |
+xmvlog: *E,CNSCSS (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,47|26): A constraint can only be declared within a class.
+  constraint payload_size {length == payload.size();}
+                        |
+xmvlog: *E,CNSCSS (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,48|24): A constraint can only be declared within a class.
+  constraint default_delay {packet_delay >= 0; packet_delay <20;}
+                         |
+xmvlog: *E,CNSCSS (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,49|25): A constraint can only be declared within a class.
+  constraint default_parity {parity_type dist {BAD_PARITY := 1, GOOD_PARITY := 5};}
+                          |
+xmvlog: *E,CNSCSS (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,50|26): A constraint can only be declared within a class.
+  constraint default_addr {addr != 'b11}
+                        |
+xmvlog: *E,CNSCSS (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,51|24): A constraint can only be declared within a class.
+  constraint default_addr {addr != 'b11}
+                                       |
+xmvlog: *E,EXPSMC (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,51|39): expecting a semicolon (';') [SystemVerilog constraint block item].
+endclass: yapp_packet
+       |
+xmvlog: *E,MPANDC (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,71|7): expecting the keyword 'module', 'macromodule', 'primitive', 'connectmodule','connect', 'discipline' or 'nature' [A.1].
 file: /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv
-    `include "yapp_packet.sv"
-                            |
-xmvlog: *E,COFILX (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv,8|28): cannot open include file 'yapp_packet.sv'.
+  constraint default_addr {addr != 'b11}
+                                       |
+xmvlog: *E,EXPSMC (/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv,51|39): expecting a semicolon (';') [SystemVerilog constraint block item].
+(`include file: /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_packet.sv line 51, file: /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab01_data/sv/yapp_pkg.sv line 9)
 	package worklib.yapp_pkg:sv
 		errors: 1, warnings: 0
 file: top.sv
@@ -21,6 +83,6 @@ xmvlog: *E,NOPBIND (top.sv,16|18): Package yapp_pkg could not be bound.
 		errors: 1, warnings: 0
 xmvlog: *W,NOTOPL: no top-level unit found, must have recursive instances.
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 1
+		errors: 20, warnings: 1
 xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 19, 2025 at 21:07:29 EDT  (total: 00:00:01)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 19, 2025 at 21:33:56 EDT  (total: 00:00:01)
