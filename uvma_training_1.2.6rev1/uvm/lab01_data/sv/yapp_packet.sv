@@ -10,10 +10,10 @@ Copyright Cadence Design Systems (c)2015
 // Define your enumerated type(s) here
 typedef enum bit{BAD_PARITY, GOOD_PARITY} parity_t;
 
-class yapp_packet extends uvm_sequence_item;
+class yapp_packet extends uvm_sequence_item:
 
 // Follow the lab instructions to create the packet.
-// Place the packet declarations in the following order:
+// Place packet declarations in the following order:
 
   // Define protocol data
 
