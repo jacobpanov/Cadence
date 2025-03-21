@@ -1,0 +1,151 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 20, 2025 at 14:02:26 EDT
+xrun
+	yapp_pkg.sv
+	yapp_packet.sv
+	-access +rwc
+file: yapp_pkg.sv
+`include "uvm_macros.svh"
+                        |
+xmvlog: *E,COFILX (yapp_pkg.sv,8|24): cannot open include file 'uvm_macros.svh'.
+import uvm_pkg::*;
+             |
+xmvlog: *E,NOPBIND (yapp_pkg.sv,7|13): Package uvm_pkg could not be bound.
+(`include file: yapp_packet.sv line 11, file: yapp_pkg.sv line 9)
+class yapp_packet extends uvm_sequence_item;
+                                          |
+xmvlog: *E,SVNOTY (yapp_packet.sv,13|42): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: yapp_packet.sv line 13, file: yapp_pkg.sv line 9)
+  `uvm_object_utils_begin(yapp_packet)
+                        |
+xmvlog: *E,NOTDIR (yapp_packet.sv,32|24): `uvm_object_utils_begin: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 32, file: yapp_pkg.sv line 9)
+  `uvm_object_utils_begin(yapp_packet)
+                         |
+xmvlog: *E,EXPENC (yapp_packet.sv,32|25): Expecting the keyword 'endclass'.
+(`include file: yapp_packet.sv line 32, file: yapp_pkg.sv line 9)
+    `uvm_field_int(length, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,33|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 33, file: yapp_pkg.sv line 9)
+    `uvm_field_int(addr, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,34|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 34, file: yapp_pkg.sv line 9)
+    `uvm_field_array_int(payload, UVM_ALL_ON)
+                       |
+xmvlog: *E,NOTDIR (yapp_packet.sv,35|23): `uvm_field_array_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 35, file: yapp_pkg.sv line 9)
+    `uvm_field_int(parity, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,36|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 36, file: yapp_pkg.sv line 9)
+    `uvm_field_enum(parity_t, parity_type, UVM_ALL_ON)
+                  |
+xmvlog: *E,NOTDIR (yapp_packet.sv,37|18): `uvm_field_enum: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 37, file: yapp_pkg.sv line 9)
+    `uvm_field_int(packet_delay, UVM_ALL_ON | UVM_DEC | UVM_NOCOMPARE)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,38|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 38, file: yapp_pkg.sv line 9)
+  `uvm_object_utils_end
+                      |
+xmvlog: *E,NOTDIR (yapp_packet.sv,39|22): `uvm_object_utils_end: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+(`include file: yapp_packet.sv line 39, file: yapp_pkg.sv line 9)
+  function new(string name = "yapp_packet");
+             |
+xmvlog: *E,NEWOIC (yapp_packet.sv,43|13): The class constructor method 'new' is only allowed within a class declaration.
+(`include file: yapp_packet.sv line 43, file: yapp_pkg.sv line 9)
+    super.new(name);
+        |
+xmvlog: *E,CLSSPX (yapp_packet.sv,44|8): 'super' can only be used within a class scope that derives from a base class.
+(`include file: yapp_packet.sv line 44, file: yapp_pkg.sv line 9)
+  constraint default_length {length > 0; length < 64;}
+                          |
+xmvlog: *E,CNSCSS (yapp_packet.sv,47|26): A constraint can only be declared within a class.
+(`include file: yapp_packet.sv line 47, file: yapp_pkg.sv line 9)
+  constraint payload_size {length == payload.size();}
+                        |
+xmvlog: *E,CNSCSS (yapp_packet.sv,48|24): A constraint can only be declared within a class.
+(`include file: yapp_packet.sv line 48, file: yapp_pkg.sv line 9)
+  constraint default_delay {packet_delay >= 0; packet_delay <20;}
+                         |
+xmvlog: *E,CNSCSS (yapp_packet.sv,49|25): A constraint can only be declared within a class.
+(`include file: yapp_packet.sv line 49, file: yapp_pkg.sv line 9)
+  constraint default_parity {parity_type dist {BAD_PARITY := 1, GOOD_PARITY := 5};}
+                          |
+xmvlog: *E,CNSCSS (yapp_packet.sv,50|26): A constraint can only be declared within a class.
+(`include file: yapp_packet.sv line 50, file: yapp_pkg.sv line 9)
+  constraint default_addr {addr != 'b11;}
+                        |
+xmvlog: *E,CNSCSS (yapp_packet.sv,51|24): A constraint can only be declared within a class.
+(`include file: yapp_packet.sv line 51, file: yapp_pkg.sv line 9)
+endclass : yapp_packet
+       |
+xmvlog: *E,EXPENP (yapp_packet.sv,71|7): Expecting the keyword 'endpackage' [SystemVerilog].
+(`include file: yapp_packet.sv line 71, file: yapp_pkg.sv line 9)
+	package worklib.yapp_pkg:sv
+		errors: 20, warnings: 0
+file: yapp_packet.sv
+class yapp_packet extends uvm_sequence_item;
+                                          |
+xmvlog: *E,SVNOTY (yapp_packet.sv,13|42): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+  rand parity_t parity_type;
+              |
+xmvlog: *E,NOIPRT (yapp_packet.sv,27|14): Unrecognized declaration 'parity_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+  `uvm_object_utils_begin(yapp_packet)
+                        |
+xmvlog: *E,NOTDIR (yapp_packet.sv,32|24): `uvm_object_utils_begin: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+  `uvm_object_utils_begin(yapp_packet)
+                         |
+xmvlog: *E,EXPENC (yapp_packet.sv,32|25): Expecting the keyword 'endclass'.
+    `uvm_field_int(length, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,33|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_int(addr, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,34|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_array_int(payload, UVM_ALL_ON)
+                       |
+xmvlog: *E,NOTDIR (yapp_packet.sv,35|23): `uvm_field_array_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_int(parity, UVM_ALL_ON)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,36|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_enum(parity_t, parity_type, UVM_ALL_ON)
+                  |
+xmvlog: *E,NOTDIR (yapp_packet.sv,37|18): `uvm_field_enum: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_field_int(packet_delay, UVM_ALL_ON | UVM_DEC | UVM_NOCOMPARE)
+                 |
+xmvlog: *E,NOTDIR (yapp_packet.sv,38|17): `uvm_field_int: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+  `uvm_object_utils_end
+                      |
+xmvlog: *E,NOTDIR (yapp_packet.sv,39|22): `uvm_object_utils_end: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+  function new(string name = "yapp_packet");
+             |
+xmvlog: *E,NEWOIC (yapp_packet.sv,43|13): The class constructor method 'new' is only allowed within a class declaration.
+    super.new(name);
+        |
+xmvlog: *E,CLSSPX (yapp_packet.sv,44|8): 'super' can only be used within a class scope that derives from a base class.
+  constraint default_length {length > 0; length < 64;}
+                          |
+xmvlog: *E,CNSCSS (yapp_packet.sv,47|26): A constraint can only be declared within a class.
+  constraint payload_size {length == payload.size();}
+                        |
+xmvlog: *E,CNSCSS (yapp_packet.sv,48|24): A constraint can only be declared within a class.
+  constraint default_delay {packet_delay >= 0; packet_delay <20;}
+                         |
+xmvlog: *E,CNSCSS (yapp_packet.sv,49|25): A constraint can only be declared within a class.
+  constraint default_parity {parity_type dist {BAD_PARITY := 1, GOOD_PARITY := 5};}
+                          |
+xmvlog: *E,CNSCSS (yapp_packet.sv,50|26): A constraint can only be declared within a class.
+  constraint default_addr {addr != 'b11;}
+                        |
+xmvlog: *E,CNSCSS (yapp_packet.sv,51|24): A constraint can only be declared within a class.
+endclass : yapp_packet
+       |
+xmvlog: *E,MPANDC (yapp_packet.sv,71|7): expecting the keyword 'module', 'macromodule', 'primitive', 'connectmodule','connect', 'discipline' or 'nature' [A.1].
+xmvlog: *W,NOTOPL: no top-level unit found, must have recursive instances.
+	Total errors/warnings found outside modules and primitives:
+		errors: 19, warnings: 1
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun	22.09-s010: Exiting on Mar 20, 2025 at 14:02:27 EDT  (total: 00:00:01)
