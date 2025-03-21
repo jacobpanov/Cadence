@@ -4,12 +4,12 @@
 //
 -INPUT
 "@source /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl"
-+UVM_VERBOSITY=UVM_HIGH
++UVM_VERBOSITY=UVM_FULL
 -uvmhome
 /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
 -sv_lib
 /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so
-+UVM_TESTNAME=short_packet_test
++UVM_TESTNAME=incr_payload_test
 -MESSAGES
 -RUN
 -SV_LIB
@@ -17,7 +17,7 @@
 +EMGRLOG
 xrun.log
 -XLSTIME
-1742512828
+1742523924
 -XLKEEP
 -XLMODE
 ./xcelium.d/run.lnx8664.22.09.d
@@ -31,4 +31,4 @@ xrun
 -XLVERSION
 "TOOL:	xrun(64)	22.09-s010"
 -XLNAME
-./xcelium.d/run.lnx8664.22.09.d/node1686.palmetto.clemson.edu_1477450
+./xcelium.d/run.lnx8664.22.09.d/node1678.palmetto.clemson.edu_2951812

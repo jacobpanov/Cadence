@@ -2,10 +2,10 @@
 // File created by:  xrun
 // Do not modify this file
 //
-+UVM_VERBOSITY=UVM_HIGH
++UVM_VERBOSITY=UVM_FULL
 -loadpli
 /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so:uvm_pli_boot
-+UVM_TESTNAME=short_packet_test
++UVM_TESTNAME=incr_payload_test
 -no_analogsolver
 -MESSAGES
 -XLMODE

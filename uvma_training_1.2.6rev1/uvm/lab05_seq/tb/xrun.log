@@ -1,24 +1,30 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 20, 2025 at 19:20:28 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 20, 2025 at 22:25:24 EDT
 xrun
 	-f run.f
 		-64
 		-uvmhome /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
 		-incdir ../sv
-		+UVM_VERBOSITY=UVM_HIGH
-		+UVM_TESTNAME=short_packet_test
+		+UVM_VERBOSITY=UVM_FULL
+		+UVM_TESTNAME=incr_payload_test
 		../sv/yapp_pkg.sv
 		top.sv
 
    User defined plus("+") options:
-	+UVM_VERBOSITY=UVM_HIGH
+	+UVM_VERBOSITY=UVM_FULL
 
+Recompiling... reason: checksum check failure for module worklib.top:sv (VST).
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
 file: ../sv/yapp_pkg.sv
+endclass : yapp_repreat_addr_seq
+                               |
+xmvlog: *W,LBLMAT (../sv/yapp_tx_seqs.sv,153|31): Label/name mismatch: yapp_repeat_addr_seq - yapp_repreat_addr_seq.
+(`include file: ../sv/yapp_tx_seqs.sv line 153, file: ../sv/yapp_pkg.sv line 12)
 package yapp_pkg;
                |
 xmvlog: *W,TSNSPK (../sv/yapp_pkg.sv,5|15): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
 	package worklib.yapp_pkg:sv
-		errors: 0, warnings: 1
+		errors: 0, warnings: 2
 file: top.sv
 	module worklib.top:sv
 		errors: 0, warnings: 0
@@ -34,31 +40,23 @@ file: top.sv
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.top:sv <0x630f2fb8>
-			streams: 105, words: 70045
-		worklib.yapp_pkg:sv <0x2c86b9e1>
-			streams: 474, words: 522436
-		worklib.cdns_uvm_pkg:sv <0x30752025>
-			streams: 172, words: 247419
-		worklib.cdns_uvmapi:svp <0x7adb3960>
-			streams:  27, words: 28542
-		worklib.cdns_assert2uvm_pkg:sv <0x77f23e6e>
-			streams:   3, words:  1664
-		worklib.uvm_pkg:sv <0x3dd72337>
-			streams: 4537, words: 6777639
+		worklib.top:sv <0x1ca68ee7>
+			streams: 125, words: 82048
+		worklib.yapp_pkg:sv <0x3b0ffc3c>
+			streams: 585, words: 646796
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                       Instances  Unique
 		Modules:                       1       1
 		Verilog packages:              5       5
-		Registers:                 13830   10266
+		Registers:                 14101   10388
 		Named events:                  4      12
-		Initial blocks:              295     159
+		Initial blocks:              313     165
 		Parallel blocks:              26      27
 		Assertions:                    2       2
-		SV Class declarations:       203     317
-		SV Class specializations:    386     386
+		SV Class declarations:       209     323
+		SV Class specializations:    398     398
 	Writing initial simulation snapshot: worklib.top:sv
 Loading snapshot worklib.top:sv .................... Done
 SVSEED default: 1
@@ -86,28 +84,28 @@ CDNS-UVM-1.1d (22.09-s010)
 
       (Specify +UVM_NO_RELNOTES to turn off this notice)
 
-UVM_INFO @ 0: reporter [RNTST] Running test short_packet_test...
+UVM_INFO @ 0: reporter [RNTST] Running test incr_payload_test...
 UVM_INFO router_tb.sv(16) @ 0: uvm_test_top.tb [MSG] In the build phase
 UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 -----------------------------------------------------------------------
 Name                          Type                     Size  Value     
 -----------------------------------------------------------------------
-uvm_test_top                  short_packet_test        -     @2588     
-  tb                          router_tb                -     @2666     
-    yapp                      yapp_env                 -     @2625     
-      tx_agent                yapp_tx_agent            -     @2743     
-        driver                yapp_tx_driver           -     @3399     
-          rsp_port            uvm_analysis_port        -     @3550     
+uvm_test_top                  incr_payload_test        -     @2606     
+  tb                          router_tb                -     @2696     
+    yapp                      yapp_env                 -     @2643     
+      tx_agent                yapp_tx_agent            -     @2761     
+        driver                yapp_tx_driver           -     @3417     
+          rsp_port            uvm_analysis_port        -     @3568     
             recording_detail  integral                 32    'd1       
-          seq_item_port       uvm_seq_item_pull_port   -     @3501     
+          seq_item_port       uvm_seq_item_pull_port   -     @3519     
             recording_detail  integral                 32    'd1       
           recording_detail    integral                 32    'd1       
-        monitor               yapp_tx_monitor          -     @2775     
+        monitor               yapp_tx_monitor          -     @2793     
           recording_detail    integral                 32    'd1       
-        sequencer             yapp_tx_sequencer        -     @2773     
-          rsp_export          uvm_analysis_export      -     @2870     
+        sequencer             yapp_tx_sequencer        -     @2791     
+          rsp_export          uvm_analysis_export      -     @2888     
             recording_detail  integral                 32    'd1       
-          seq_item_export     uvm_seq_item_pull_imp    -     @3420     
+          seq_item_export     uvm_seq_item_pull_imp    -     @3438     
             recording_detail  integral                 32    'd1       
           recording_detail    integral                 32    'd1       
           arbitration_queue   array                    0     -         
@@ -131,141 +129,55 @@ UVM_INFO ../sv/yapp_env.sv(20) @ 0: uvm_test_top.tb.yapp [yapp_env]
 start of simulation for uvm_test_top.tb.yapp
 UVM_INFO router_tb.sv(22) @ 0: uvm_test_top.tb [router_tb] 
 start of simulation for uvm_test_top.tb
-UVM_INFO router_test_lib.sv(30) @ 0: uvm_test_top [short_packet_test] 
+UVM_INFO router_test_lib.sv(30) @ 0: uvm_test_top [incr_payload_test] 
 start of simulation for uvm_test_top
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1391) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] Starting default sequence 'yapp_incr_payload_seq' for phase 'run'
 SDI/Verilog Transaction Recording Facility Version 22.09-s010
 UVM_INFO ../sv/yapp_tx_monitor.sv(19) @ 0: uvm_test_top.tb.yapp.tx_agent.monitor [yapp_tx_monitor] 
 Inside the monitor
 
-UVM_INFO ../sv/yapp_tx_seqs.sv(37) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer@@yapp_5_packets [yapp_5_packets] raise objection
-UVM_INFO ../sv/yapp_tx_seqs.sv(81) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer@@yapp_5_packets [yapp_5_packets] Executing yapp_5_packets sequence
+UVM_INFO ../sv/yapp_tx_seqs.sv(37) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer@@yapp_incr_payload_seq [yapp_incr_payload_seq] raise objection
+UVM_INFO ../sv/yapp_tx_seqs.sv(165) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer@@yapp_incr_payload_seq [yapp_incr_payload_seq] 
+Executing yapp_inncr_payload_seq
+
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_reset'
 UVM_INFO ../sv/yapp_tx_driver.sv(27) @ 0: uvm_test_top.tb.yapp.tx_agent.driver [yapp_tx_driver] 
 Input packet to send:
---------------------------------------------------------------------------------------------------------------
-Name                           Type               Size  Value                                                 
---------------------------------------------------------------------------------------------------------------
-req                            short_yapp_packet  -     @3652                                                 
-  length                       integral           6     'h6                                                   
-  addr                         integral           2     'h0                                                   
-  payload                      da(integral)       6     -                                                     
-    [0]                        integral           8     'h19                                                  
-    [1]                        integral           8     'hb9                                                  
-    [2]                        integral           8     'h92                                                  
-    [3]                        integral           8     'h52                                                  
-    [4]                        integral           8     'hb8                                                  
-    [5]                        integral           8     'h6                                                   
-  parity                       integral           8     'hc7                                                  
-  parity_type                  parity_t           1     BAD_PARITY                                            
-  packet_delay                 integral           32    'd18                                                  
-  begin_time                   time               64    0                                                     
-  depth                        int                32    'd2                                                   
-  parent sequence (name)       string             14    yapp_5_packets                                        
-  parent sequence (full name)  string             54    uvm_test_top.tb.yapp.tx_agent.sequencer.yapp_5_packets
-  sequencer                    string             39    uvm_test_top.tb.yapp.tx_agent.sequencer               
---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                                        
+---------------------------------------------------------------------------------------------------------------------
+req                            short_yapp_packet  -     @3664                                                        
+  length                       integral           6     'h4                                                          
+  addr                         integral           2     'h1                                                          
+  payload                      da(integral)       4     -                                                            
+    [0]                        integral           8     'h0                                                          
+    [1]                        integral           8     'h1                                                          
+    [2]                        integral           8     'h2                                                          
+    [3]                        integral           8     'h3                                                          
+  parity                       integral           8     'h12                                                         
+  parity_type                  parity_t           1     BAD_PARITY                                                   
+  packet_delay                 integral           32    'd6                                                          
+  begin_time                   time               64    0                                                            
+  depth                        int                32    'd2                                                          
+  parent sequence (name)       string             21    yapp_incr_payload_seq                                        
+  parent sequence (full name)  string             61    uvm_test_top.tb.yapp.tx_agent.sequencer.yapp_incr_payload_seq
+  sequencer                    string             39    uvm_test_top.tb.yapp.tx_agent.sequencer                      
+---------------------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../sv/yapp_tx_driver.sv(27) @ 10: uvm_test_top.tb.yapp.tx_agent.driver [yapp_tx_driver] 
-Input packet to send:
---------------------------------------------------------------------------------------------------------------
-Name                           Type               Size  Value                                                 
---------------------------------------------------------------------------------------------------------------
-req                            short_yapp_packet  -     @3772                                                 
-  length                       integral           6     'hc                                                   
-  addr                         integral           2     'h0                                                   
-  payload                      da(integral)       12    -                                                     
-    [0]                        integral           8     'h20                                                  
-    [1]                        integral           8     'h7d                                                  
-    [2]                        integral           8     'h78                                                  
-    [3]                        integral           8     'h84                                                  
-    [4]                        integral           8     'h21                                                  
-    ...                        ...                ...   ...                                                   
-    [7]                        integral           8     'hb7                                                  
-    [8]                        integral           8     'h6b                                                  
-    [9]                        integral           8     'h2d                                                  
-    [10]                       integral           8     'h83                                                  
-    [11]                       integral           8     'h53                                                  
-  parity                       integral           8     'hb0                                                  
-  parity_type                  parity_t           1     GOOD_PARITY                                           
-  packet_delay                 integral           32    'd14                                                  
-  begin_time                   time               64    10                                                    
-  depth                        int                32    'd2                                                   
-  parent sequence (name)       string             14    yapp_5_packets                                        
-  parent sequence (full name)  string             54    uvm_test_top.tb.yapp.tx_agent.sequencer.yapp_5_packets
-  sequencer                    string             39    uvm_test_top.tb.yapp.tx_agent.sequencer               
---------------------------------------------------------------------------------------------------------------
-
-UVM_INFO ../sv/yapp_tx_driver.sv(27) @ 20: uvm_test_top.tb.yapp.tx_agent.driver [yapp_tx_driver] 
-Input packet to send:
---------------------------------------------------------------------------------------------------------------
-Name                           Type               Size  Value                                                 
---------------------------------------------------------------------------------------------------------------
-req                            short_yapp_packet  -     @3819                                                 
-  length                       integral           6     'h1                                                   
-  addr                         integral           2     'h0                                                   
-  payload                      da(integral)       1     -                                                     
-    [0]                        integral           8     'h90                                                  
-  parity                       integral           8     'h94                                                  
-  parity_type                  parity_t           1     GOOD_PARITY                                           
-  packet_delay                 integral           32    'd9                                                   
-  begin_time                   time               64    20                                                    
-  depth                        int                32    'd2                                                   
-  parent sequence (name)       string             14    yapp_5_packets                                        
-  parent sequence (full name)  string             54    uvm_test_top.tb.yapp.tx_agent.sequencer.yapp_5_packets
-  sequencer                    string             39    uvm_test_top.tb.yapp.tx_agent.sequencer               
---------------------------------------------------------------------------------------------------------------
-
-UVM_INFO ../sv/yapp_tx_driver.sv(27) @ 30: uvm_test_top.tb.yapp.tx_agent.driver [yapp_tx_driver] 
-Input packet to send:
---------------------------------------------------------------------------------------------------------------
-Name                           Type               Size  Value                                                 
---------------------------------------------------------------------------------------------------------------
-req                            short_yapp_packet  -     @3725                                                 
-  length                       integral           6     'h8                                                   
-  addr                         integral           2     'h1                                                   
-  payload                      da(integral)       8     -                                                     
-    [0]                        integral           8     'he                                                   
-    [1]                        integral           8     'h71                                                  
-    [2]                        integral           8     'h6e                                                  
-    [3]                        integral           8     'h48                                                  
-    [4]                        integral           8     'h94                                                  
-    [5]                        integral           8     'h5a                                                  
-    [6]                        integral           8     'h13                                                  
-    [7]                        integral           8     'heb                                                  
-  parity                       integral           8     'h4e                                                  
-  parity_type                  parity_t           1     GOOD_PARITY                                           
-  packet_delay                 integral           32    'd8                                                   
-  begin_time                   time               64    30                                                    
-  depth                        int                32    'd2                                                   
-  parent sequence (name)       string             14    yapp_5_packets                                        
-  parent sequence (full name)  string             54    uvm_test_top.tb.yapp.tx_agent.sequencer.yapp_5_packets
-  sequencer                    string             39    uvm_test_top.tb.yapp.tx_agent.sequencer               
---------------------------------------------------------------------------------------------------------------
-
-UVM_INFO ../sv/yapp_tx_driver.sv(27) @ 40: uvm_test_top.tb.yapp.tx_agent.driver [yapp_tx_driver] 
-Input packet to send:
---------------------------------------------------------------------------------------------------------------
-Name                           Type               Size  Value                                                 
---------------------------------------------------------------------------------------------------------------
-req                            short_yapp_packet  -     @3638                                                 
-  length                       integral           6     'h4                                                   
-  addr                         integral           2     'h1                                                   
-  payload                      da(integral)       4     -                                                     
-    [0]                        integral           8     'h2b                                                  
-    [1]                        integral           8     'hb2                                                  
-    [2]                        integral           8     'hfb                                                  
-    [3]                        integral           8     'hde                                                  
-  parity                       integral           8     'had                                                  
-  parity_type                  parity_t           1     GOOD_PARITY                                           
-  packet_delay                 integral           32    'd16                                                  
-  begin_time                   time               64    40                                                    
-  depth                        int                32    'd2                                                   
-  parent sequence (name)       string             14    yapp_5_packets                                        
-  parent sequence (full name)  string             54    uvm_test_top.tb.yapp.tx_agent.sequencer.yapp_5_packets
-  sequencer                    string             39    uvm_test_top.tb.yapp.tx_agent.sequencer               
---------------------------------------------------------------------------------------------------------------
-
-UVM_INFO ../sv/yapp_tx_seqs.sv(51) @ 50: uvm_test_top.tb.yapp.tx_agent.sequencer@@yapp_5_packets [yapp_5_packets] drop objection
-UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 50: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'reset'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_reset'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_configure'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'configure'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_configure'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_main'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'main'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_main'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_shutdown'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'shutdown'
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.tb.yapp.tx_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_shutdown'
+UVM_INFO ../sv/yapp_tx_seqs.sv(51) @ 10: uvm_test_top.tb.yapp.tx_agent.sequencer@@yapp_incr_payload_seq [yapp_incr_payload_seq] drop objection
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1245) @ 10: reporter [TEST_DONE] All end-of-test objections have been dropped. Calling stop tasks
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 10: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 
 --- UVM Report catcher Summary ---
 
@@ -280,24 +192,25 @@ Number of caught UVM_WARNING reports :    0
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :   20
+UVM_INFO :   30
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
 ** Report counts by id
 [MSG]     1
+[PHASESEQ]    13
 [RNTST]     1
-[TEST_DONE]     1
+[TEST_DONE]     2
 [UVMTOP]     1
+[incr_payload_test]     1
 [router_tb]     1
-[short_packet_test]     1
-[yapp_5_packets]     3
 [yapp_env]     1
+[yapp_incr_payload_seq]     3
 [yapp_tx_agent]     1
-[yapp_tx_driver]     6
+[yapp_tx_driver]     2
 [yapp_tx_monitor]     2
 [yapp_tx_sequencer]     1
-Simulation complete via $finish(1) at time 50 NS + 49
+Simulation complete via $finish(1) at time 10 NS + 49
 /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 20, 2025 at 19:20:34 EDT  (total: 00:00:06)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 20, 2025 at 22:25:32 EDT  (total: 00:00:08)

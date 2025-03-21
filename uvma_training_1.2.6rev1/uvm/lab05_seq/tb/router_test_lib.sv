@@ -76,3 +76,21 @@ class set_config_test extends base_test;
   endfunction : build_phase
 
 endclass : set_config_test
+
+class incr_payload_test extends base_test;
+
+  `uvm_component_utils(incr_payload_test)
+
+  function new(string name, uvm_component parent);
+    super.new(name, parent);
+  endfunction : new
+
+  function void build_phase(uvm_phase phase);
+    yapp_packet::type_id::set_type_override(short_yapp_packet::get_type()); 
+      uvm_config_wrapper::set(this, "tb.yapp.tx_agent.sequencer.run_phase",
+                            "default_sequence",
+                            yapp_incr_payload_seq::get_type());
+    super.build_phase(phase);
+  endfunction : build_phase
+
+endclass : incr_payload_test

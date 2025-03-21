@@ -7,3 +7,5 @@
 1742497502 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab03_uvc/tb/top.sv
 1742511482 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab04_factory/sv/yapp_pkg.sv
 1742511483 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab04_factory/tb/top.sv
+1742516653 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab05_seq/sv/yapp_pkg.sv
+1742516654 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab05_seq/tb/top.sv

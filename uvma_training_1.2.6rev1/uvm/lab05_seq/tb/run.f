@@ -15,8 +15,8 @@ Copyright Cadence Design Systems (c)2015
 //*** add incdir include directories here
 -incdir ../sv
 
-+UVM_VERBOSITY=UVM_HIGH
-+UVM_TESTNAME=short_packet_test
++UVM_VERBOSITY=UVM_FULL
++UVM_TESTNAME=incr_payload_test
 
 // compile files
 
