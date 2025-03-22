@@ -52,7 +52,7 @@ class router_scoreboard extends uvm_scoreboard;
   virtual task write_yapp(yapp_packet pkt);
     `uvm_info(get_type_name(), $sformatf("Scoreboard Received YAPP Packet: %s", pkt.sprint()), UVM_LOW)
     yapp_packet pkt_clone;
-    pkt_clone = pkt.clone();
+    $cast(pkt_clone, pkt.clone()); // Correct syntax for cloning a packet
     queue_yapp.push_back(pkt_clone);
     num_packets_received++;
   endtask : write_yapp
