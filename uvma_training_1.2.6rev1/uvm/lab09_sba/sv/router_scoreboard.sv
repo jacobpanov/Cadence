@@ -6,6 +6,8 @@ typedef enum bit {EQUALITY, UVM} comp_t;
 
 class router_scoreboard extends uvm_scoreboard;
 
+  `uvm_component_utils(router_scoreboard)
+
   `uvm_analysis_imp_decl(_yapp)
   `uvm_analysis_imp_decl(_channel0)
   `uvm_analysis_imp_decl(_channel1)
@@ -31,9 +33,9 @@ class router_scoreboard extends uvm_scoreboard;
 
   comp_t compare_policy = UVM; 
    
-   `uvm_component_utils_begin(router_scoreboard)
-     `uvm_field_enum(comp_t, compare_policy, UVM_ALL_ON)
-   `uvm_component_utils_end
+  `uvm_component_utils_begin(router_scoreboard)
+    `uvm_field_enum(comp_t, compare_policy, UVM_ALL_ON)
+  `uvm_component_utils_end
 
   function new(string name, uvm_component parent);
     super.new(name, parent);
@@ -70,15 +72,15 @@ class router_scoreboard extends uvm_scoreboard;
   endfunction : comp_uvm
 
   // Write implementation for YAPP
-  virtual task write_yapp(yapp_packet pkt);
+  function void write_yapp(yapp_packet pkt);
     `uvm_info(get_type_name(), $sformatf("Scoreboard Received YAPP Packet: %s", pkt.sprint()), UVM_LOW)
     $cast(sb_packet, pkt.clone()); // Correct syntax for cloning a packet
     queue_yapp.push_back(sb_packet);
     num_packets_received++;
-  endtask : write_yapp
+  endfunction : write_yapp
 
   // Write implementation for Channel 0
-  virtual task write_channel0(channel_packet pkt);
+  function void write_channel0(channel_packet pkt);
     `uvm_info(get_type_name(), $sformatf("Scoreboard Received Channel Packet 0: %s", pkt.sprint()), UVM_LOW)
     if (queue_yapp.size() > 0) begin
       yapp_packet yapp_pkt = queue_yapp.pop_front();
@@ -93,10 +95,10 @@ class router_scoreboard extends uvm_scoreboard;
       `uvm_error(get_type_name(), "No YAPP packets in queue to compare")
     end
     num_packets_received++;
-  endtask : write_channel0
+  endfunction : write_channel0
 
   // Write implementation for Channel 1
-  virtual task write_channel1(channel_packet pkt);
+  function void write_channel1(channel_packet pkt);
     `uvm_info(get_type_name(), $sformatf("Scoreboard Received Channel Packet 1: %s", pkt.sprint()), UVM_LOW)
     if (queue_yapp.size() > 0) begin
       yapp_packet yapp_pkt = queue_yapp.pop_front();
@@ -111,10 +113,10 @@ class router_scoreboard extends uvm_scoreboard;
       `uvm_error(get_type_name(), "No YAPP packets in queue to compare")
     end
     num_packets_received++;
-  endtask : write_channel1
+  endfunction : write_channel1
 
   // Write implementation for Channel 2
-  virtual task write_channel2(channel_packet pkt);
+  function void write_channel2(channel_packet pkt);
     `uvm_info(get_type_name(), $sformatf("Scoreboard Received Channel Packet 2: %s", pkt.sprint()), UVM_LOW)
     if (queue_yapp.size() > 0) begin
       yapp_packet yapp_pkt = queue_yapp.pop_front();
@@ -129,7 +131,7 @@ class router_scoreboard extends uvm_scoreboard;
       `uvm_error(get_type_name(), "No YAPP packets in queue to compare")
     end
     num_packets_received++;
-  endtask : write_channel2
+  endfunction : write_channel2
 
   // Report phase
   function void report_phase(uvm_phase phase);
