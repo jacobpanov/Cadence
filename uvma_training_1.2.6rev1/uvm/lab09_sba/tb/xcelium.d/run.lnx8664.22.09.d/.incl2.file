@@ -95,10 +95,12 @@
 ../../clock_and_reset/sv/clock_and_reset_count_clocks_seq.sv
 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/clock_and_reset/sv/clock_and_reset_count_clocks_seq.sv
 router_mcsequencer.sv
-/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/router_mcsequencer.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/router_mcsequencer.sv
 router_mcseqs_lib.sv
-/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/router_mcseqs_lib.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/router_mcseqs_lib.sv
+../sv/router_scoreboard.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/sv/router_scoreboard.sv
 router_tb.sv
-/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/router_tb.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/router_tb.sv
 router_test_lib.sv
-/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/router_test_lib.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/router_test_lib.sv

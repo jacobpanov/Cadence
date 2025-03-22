@@ -6,8 +6,6 @@ typedef enum bit {EQUALITY, UVM} comp_t;
 
 class router_scoreboard extends uvm_scoreboard;
 
-  `uvm_component_utils(router_scoreboard)
-
   `uvm_analysis_imp_decl(_yapp)
   `uvm_analysis_imp_decl(_channel0)
   `uvm_analysis_imp_decl(_channel1)

@@ -6,7 +6,7 @@
 +UVM_NO_RELNOTES
 -loadpli
 /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so:uvm_pli_boot
-+UVM_TESTNAME=simple_test
++UVM_TESTNAME=test_mc
 -timescale
 1ns/100ps
 -no_analogsolver

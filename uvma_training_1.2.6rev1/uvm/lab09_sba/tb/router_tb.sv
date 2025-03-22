@@ -52,10 +52,10 @@ class router_tb extends uvm_env;
         mcsequencer.hbus_seqr = hbus.masters[0].sequencer;
         mcsequencer.yapp_seqr = yapp.tx_agent.sequencer;
 
-        yapp.rx_agent.analysis_port.connect(scoreboard.yapp_analysis_imp);
-        chan0.rx_agent.analysis_port.connect(scoreboard.channel0_analysis_imp);
-        chan1.rx_agent.analysis_port.connect(scoreboard.channel1_analysis_imp);
-        chan2.rx_agent.analysis_port.connect(scoreboard.channel2_analysis_imp);
+        yapp.tx_agent.monitor.item_collected_port.connect(scoreboard.yapp_analysis_imp);
+        chan0.rx_agent.monitor.item_collected_port.connect(scoreboard.channel0_analysis_imp);
+        chan1.rx_agent.monitor.item_collected_port.connect(scoreboard.channel1_analysis_imp);
+        chan2.rx_agent.monitor.item_collected_port.connect(scoreboard.channel2_analysis_imp);
         
     endfunction : connect_phase
 

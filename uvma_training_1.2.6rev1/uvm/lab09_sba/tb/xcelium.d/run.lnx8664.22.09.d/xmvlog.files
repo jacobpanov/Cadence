@@ -10,7 +10,7 @@
 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/hbus/sv/hbus_if.sv
 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/clock_and_reset/sv/clock_and_reset_pkg.sv
 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/clock_and_reset/sv/clock_and_reset_if.sv
-/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/clkgen.sv
-/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/tb_top.sv
-/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/hw_top.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/clkgen.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/tb_top.sv
+/home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/hw_top.sv
 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/router_rtl/yapp_router.sv
