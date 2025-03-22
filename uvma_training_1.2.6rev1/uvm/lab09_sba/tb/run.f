@@ -19,7 +19,7 @@ Copyright Cadence Design Systems (c)2015
 +UVM_NO_RELNOTES
 -timescale 1ns/100ps
 
-
+-incdir ../sv
 -incdir ../../yapp/sv 
 -incdir ../../channel/sv
 -incdir  ../../hbus/sv 

@@ -24,10 +24,10 @@ module tb_top;
     // import the clock and reset UVC package
     import clock_and_reset_pkg::*;
 
-    `include "router_scoreboard.sv"
-
     `include "router_mcsequencer.sv"
     `include "router_mcseqs_lib.sv"
+    
+    `include "router_scoreboard.sv"
 
     `include "router_tb.sv"
     `include "router_test_lib.sv"

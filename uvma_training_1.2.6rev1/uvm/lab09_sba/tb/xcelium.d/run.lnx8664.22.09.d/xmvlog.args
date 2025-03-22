@@ -9,6 +9,8 @@
 -define
 UVM_PLI
 -INCDIR
+../sv
+-INCDIR
 ../../yapp/sv
 -INCDIR
 ../../channel/sv

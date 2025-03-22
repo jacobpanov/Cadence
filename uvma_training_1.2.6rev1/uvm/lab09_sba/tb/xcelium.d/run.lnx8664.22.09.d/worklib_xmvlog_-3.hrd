@@ -3,6 +3,8 @@
 // Do not modify this file
 //
 -INCDIR
+../sv
+-INCDIR
 ../../yapp/sv
 -INCDIR
 ../../channel/sv

@@ -4,6 +4,8 @@
 //
 -RUNMODE
 -INCDIR
+../sv
+-INCDIR
 ../../yapp/sv
 -INCDIR
 ../../channel/sv

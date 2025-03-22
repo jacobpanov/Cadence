@@ -10,3 +10,6 @@
 1742605211 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/tb_top.sv
 1742603399 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab08_mcseq/tb/hw_top.sv
 1679654650 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/router_rtl/yapp_router.sv
+1742678534 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/clkgen.sv
+1742679264 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/tb_top.sv
+1742678534 /home/jpanov/Cadence/uvma_training_1.2.6rev1/uvm/lab09_sba/tb/hw_top.sv
