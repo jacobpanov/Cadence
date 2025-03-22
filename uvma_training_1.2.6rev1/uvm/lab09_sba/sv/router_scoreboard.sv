@@ -2,9 +2,9 @@
 // UVM Scoreboard for Router
 // router_scoreboard.sv
 
-class router_scoreboard extends uvm_scoreboard;
+typedef enum bit {EQUALITY, UVM} comp_t;
 
-  `uvm_component_utils(router_scoreboard)
+class router_scoreboard extends uvm_scoreboard;
 
   `uvm_analysis_imp_decl(_yapp)
   `uvm_analysis_imp_decl(_channel0)
@@ -26,6 +26,14 @@ class router_scoreboard extends uvm_scoreboard;
   int num_packets_received;
   int num_wrong_packets;
   int num_matched_packets;
+
+  yapp_packet sb_packet;
+
+  comp_t compare_policy = UVM; 
+   
+   `uvm_component_utils_begin(router_scoreboard)
+     `uvm_field_enum(comp_t, compare_policy, UVM_ALL_ON)
+   `uvm_component_utils_end
 
   function new(string name, uvm_component parent);
     super.new(name, parent);
@@ -51,9 +59,8 @@ class router_scoreboard extends uvm_scoreboard;
   // Write implementation for YAPP
   virtual task write_yapp(yapp_packet pkt);
     `uvm_info(get_type_name(), $sformatf("Scoreboard Received YAPP Packet: %s", pkt.sprint()), UVM_LOW)
-    yapp_packet pkt_clone;
-    $cast(pkt_clone, pkt.clone()); // Correct syntax for cloning a packet
-    queue_yapp.push_back(pkt_clone);
+    $cast(sb_packet, pkt.clone()); // Correct syntax for cloning a packet
+    queue_yapp.push_back(sb_packet);
     num_packets_received++;
   endtask : write_yapp
 
