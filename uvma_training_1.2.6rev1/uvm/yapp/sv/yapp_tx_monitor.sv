@@ -8,12 +8,15 @@ class yapp_tx_monitor extends uvm_monitor;
     int num_pkts;
     virtual interface yapp_if vif;
 
+    uvm_analysis_port #(yapp_packet) item_collected_port; 
+
     `uvm_component_utils_begin(yapp_tx_monitor)
         `uvm_field_int(num_pkts, UVM_ALL_ON)
     `uvm_component_utils_end
 
     function new (string name, uvm_component parent);
         super.new(name, parent);
+        item_collected_port = new("item_collected_port", this);
     endfunction : new
 
     function void connect_phase(uvm_phase phase);
@@ -40,6 +43,7 @@ class yapp_tx_monitor extends uvm_monitor;
             pkt.parity_type = (pkt.parity == pkt.calc_parity()) ? GOOD_PARITY : BAD_PARITY;
             end_tr(pkt);
             `uvm_info(get_type_name(), $sformatf("\nPacket Collected :\n%s", pkt.sprint()), UVM_LOW)
+            item_collected_port.write(pkt);
             num_pkts++;
         end
     endtask : run_phase
