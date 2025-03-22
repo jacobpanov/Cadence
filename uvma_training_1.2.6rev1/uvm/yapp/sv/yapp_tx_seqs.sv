@@ -261,3 +261,37 @@ class yapp_exhaustive_seq extends yapp_base_seq;
 
 endclass : yapp_exhaustive_seq
 
+class test_uvc_seq extends yapp_base_seq;
+
+  `uvm_object_utils(test_uvc_seq)
+
+  // Constructor
+  function new(string name="test_uvc_seq");
+    super.new(name);
+  endfunction
+
+  // Sequence body definition
+  virtual task body();
+    `uvm_info(get_type_name(), "Executing TEST_OVC_SEQ", UVM_LOW)
+    `uvm_create(req)
+    req.packet_delay = 1;
+    for (int ad=0; ad < 4; ad++) begin // address loop
+      req.addr = ad;
+      for (int lgt=1; lgt < 23; lgt++) begin // length loop
+        req.length = lgt;
+        req.payload = new[lgt];
+        for (int pld = 0; pld < lgt; pld++)
+          req.payload[pld] = pld;
+        randcase
+          20 : req.parity_type = BAD_PARITY;
+          80 : req.parity_type = GOOD_PARITY;
+        endcase
+         req.set_parity();
+        `uvm_send(req)
+      end  // length loop
+    end  // address loop
+  endtask
+
+endclass : test_uvc_seq
+
+

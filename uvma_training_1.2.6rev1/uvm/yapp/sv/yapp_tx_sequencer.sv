@@ -4,6 +4,8 @@
 
 class yapp_tx_sequencer extends uvm_sequencer #(yapp_packet);
 
+  yapp_packet packet;
+
   `uvm_component_utils(yapp_tx_sequencer)
 
   function new(string name, uvm_component parent);   

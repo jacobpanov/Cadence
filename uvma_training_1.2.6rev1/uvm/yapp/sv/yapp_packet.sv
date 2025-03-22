@@ -81,6 +81,6 @@ class short_yapp_packet extends yapp_packet;
 
   // Layered constraints
   constraint short_length { length < 15; }
-  constraint not_addr_2  { addr != 'b10; }
+  // constraint not_addr_2  { addr != 'b10; }
 
 endclass : short_yapp_packet

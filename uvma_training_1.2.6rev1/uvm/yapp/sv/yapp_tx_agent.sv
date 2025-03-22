@@ -34,4 +34,10 @@ class yapp_tx_agent extends uvm_agent;
         `uvm_info(get_type_name(), {"\nstart of simulation for ", get_full_name()}, UVM_HIGH)
     endfunction : start_of_simulation_phase
 
+    function void assign_vi(virtual interface yapp_if vif);
+    monitor.vif = vif;
+    if (is_active == UVM_ACTIVE) 
+      driver.vif = vif;
+  endfunction : assign_vi
+
 endclass : yapp_tx_agent
