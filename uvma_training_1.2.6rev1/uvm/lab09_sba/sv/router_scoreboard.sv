@@ -44,9 +44,22 @@ class router_scoreboard extends uvm_scoreboard;
 
   // Custom comparison function
   function bit packet_compare(yapp_packet pkt1, channel_packet pkt2);
-    // Implement your comparison logic here
-    return (pkt1.field1 == pkt2.field1) && (pkt1.field2 == pkt2.field2);
+    return comp_uvm(pkt1, pkt2);
   endfunction : packet_compare
+
+  // UVM comparison function
+  function bit comp_uvm(input yapp_packet yp, input channel_packet cp, uvm_comparer comparer = null);
+    string str;
+    if (comparer == null)
+      comparer = new();
+    comp_uvm = comparer.compare_field("addr", yp.addr, cp.addr, 2);
+    comp_uvm &= comparer.compare_field("length", yp.length, cp.length, 6);
+    foreach (yp.payload[i]) begin
+      str.itoa(i);
+      comp_uvm &= comparer.compare_field({"payload[", str, "]"}, yp.payload[i], cp.payload[i], 8);
+    end
+    comp_uvm &= comparer.compare_field("parity", yp.parity, cp.parity, 8);
+  endfunction : comp_uvm
 
   // Write implementation for YAPP
   virtual task write_yapp(yapp_packet pkt);
