@@ -1,5 +1,5 @@
 xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun	22.09-s010: Started on Mar 22, 2025 at 21:28:09 EDT
+TOOL:	xrun	22.09-s010: Started on Mar 22, 2025 at 21:39:11 EDT
 xrun
 	-uvmhome default
 	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
@@ -12,10 +12,19 @@ xrun
    User defined plus("+") options:
 	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
 
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
+file: ./cdns_uvmreg_utils_pkg.sv
+	package worklib.cdns_uvmreg_utils_pkg:sv
+		errors: 0, warnings: 0
+file: ./yapp_router_regs_rdb.sv
+	package worklib.yapp_router_reg_pkg:sv
+		errors: 0, warnings: 0
 file: ./quicktest.sv
 package uvc_pkg;
               |
 xmvlog: *W,TSNSPK (./quicktest.sv,5|14): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+	package worklib.uvc_pkg:sv
+		errors: 0, warnings: 1
 	package worklib.quicktest:sv
 		errors: 0, warnings: 0
 	module worklib.test:sv
@@ -76,4 +85,4 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 	Writing initial simulation snapshot: worklib.test:sv
 Loading snapshot worklib.test:sv .................... Done
 xmsim: *F,RNCNL: The required randomization library could not be opened, with this message from dl_open: 'libz.so.1: wrong ELF class: ELFCLASS64'.
-TOOL:	xrun	22.09-s010: Exiting on Mar 22, 2025 at 21:28:15 EDT  (total: 00:00:06)
+TOOL:	xrun	22.09-s010: Exiting on Mar 22, 2025 at 21:39:18 EDT  (total: 00:00:07)

@@ -12,7 +12,7 @@ clean:
 		rm -rf INCA_* xcelium.* *.history access_file xrun*.log
 
 run_test: access_file
-	xrun -uvmhome default \
+	xrun -64bit -uvmhome default \
 	$(FILES) -vclass_ext +UVM_TESTNAME=qt_test
 
 run_test_ieee: access_file_ieee
