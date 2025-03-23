@@ -1,0 +1,53 @@
+ ** -- Register/Field configuration -- **
+
+
+r add_cfgadd1 1
+addr0_cnt_fld 8 0 RO 0 0 1 1 1
+
+r add_cfgadd2 1
+addr1_cnt_fld 8 0 RO 0 0 1 1 1
+
+r add_cfgadd3 1
+addr2_cnt_fld 8 0 RO 0 0 1 1 1
+
+r add_cfgadd4 1
+addr3_cnt_fld 8 0 RO 0 0 1 1 1
+
+r ctr_cfgctr5 1
+max_pkt_size 6 0 RW 0 63 1 1 1
+
+r en__cfgen_6 7
+router_en 1 0 RW 0 1 1 1 1
+parity_err_cnt_en 1 1 RW 0 0 1 1 1
+oversized_pkt_cnt_en 1 2 RW 0 0 1 1 1
+addr0_cnt_en 1 4 RW 0 0 1 1 1
+addr1_cnt_en 1 5 RW 0 0 1 1 1
+addr2_cnt_en 1 6 RW 0 0 1 1 1
+addr3_cnt_en 1 7 RW 0 0 1 1 1
+
+r mem_cfgmem7 1
+mem_size_fld 8 0 RO 0 0 1 1 1
+
+r ove_cfgove8 1
+oversized_pkt_cnt_fld 8 0 RO 0 0 1 1 1
+
+r par_cfgpar9 1
+parity_err_cnt_fld 8 0 RO 0 0 1 1 1
+
+
+ ** --  RegFiles configuration -- **
+
+
+ ** --  Blocks configuration -- **
+
+b yapp_registers.router_yapp_regs 9 0 0 4096 1 1 1
+T_addr0_cnt_reg_23 add_cfgadd1 addr0_cnt_reg 9 1 RO 0 1 8
+T_addr1_cnt_reg_24 add_cfgadd2 addr1_cnt_reg 10 1 RO 0 1 8
+T_addr2_cnt_reg_25 add_cfgadd3 addr2_cnt_reg 11 1 RO 0 1 8
+T_addr3_cnt_reg_22 add_cfgadd4 addr3_cnt_reg 6 1 RO 0 1 8
+T_ctrl_reg_18 ctr_cfgctr5 ctrl_reg 0 1 RW 0 1 8
+T_en_reg_19 en__cfgen_6 en_reg 1 1 RW 0 1 8
+T_mem_size_reg_26 mem_cfgmem7 mem_size_reg 13 1 RO 0 1 8
+T_oversized_pkt_cnt_reg_21 ove_cfgove8 oversized_pkt_cnt_reg 5 1 RO 0 1 8
+T_parity_err_cnt_reg_20 par_cfgpar9 parity_err_cnt_reg 4 1 RO 0 1 8
+

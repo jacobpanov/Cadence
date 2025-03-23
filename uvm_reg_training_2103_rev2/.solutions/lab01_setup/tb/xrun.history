@@ -1,0 +1,3 @@
+s1(12Oct2022:13:44:34):  xrun -f lab01run.f -gui -access rwc 
+s2(12Oct2022:13:45:17):  xrun -f lab01run.f -gui -access rwc 
+s3(12Oct2022:13:58:46):  xrun -f lab01run.f -gui -access rwc 

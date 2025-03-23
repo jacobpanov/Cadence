@@ -1,0 +1,9 @@
+DEFAULT -rwc
+PATH custom_regs.reg_model.reg_five +rw
+PATH custom_regs.reg_model.reg_four +rw
+PATH custom_regs.reg_model.reg_one +rw
+PATH custom_regs.reg_model.reg_seven +rw
+PATH custom_regs.reg_model.reg_six +rw
+PATH custom_regs.reg_model.reg_three +rw
+PATH custom_regs.reg_model.reg_two +rw
+PATH custom_regs.reg_model.reg_zero +rw

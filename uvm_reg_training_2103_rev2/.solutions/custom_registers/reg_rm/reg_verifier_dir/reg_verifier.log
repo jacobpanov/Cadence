@@ -1,0 +1,63 @@
+Activation command: reg_verifier -domain uvmreg -top custom_regs_2-0.xml -dut_name custom_regs -out_file custom_regs -cov -quicktest -pkg custom_regs_pkg
+------------------
+Running Glue Version: glue64.nightlys released (KG) build-tag: jenkins-KrazyGlue-266 build-revision: 0fdc3c4890eb tip Runtime: 11.0.10+9 build-host: vlsj-vipsia-fusion system-arch: amd64
+
+Command Line Arguments:
+	--quirks
+	--jar /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools.lnx86/sia/lib/image/rdve.jar
+	--logfile ./reg_verifier_dir/reg_verifier
+	--execute /tmp/reg_verifier_28435.js
+
+Packaged as 21.03.006-s released 2021-08-13T14:47:53.390584+03:00
+
+Initializing
+
+*** Warning: Replacing function 'post_release_generate_hook' callable by script which was previously registered for package 'tti_bnr'  At tti_bnr_manager.init() 
+
+Initialize time (ms): 341
+
+Package main.init() done.
+
+(----------14 June 2022 2:42:29 PM----------)
+
+Loading script /tmp/reg_verifier_28435.js
+
+HINT /tmp/reg_verifier_28435.js:1 - The argument 'something' is unused
+
+0 errors
+0 warnings
+1 hints
+
+
+Reading XML file custom_regs_2-0.xml
+
+Parsing custom_regs_2-0.xml
+
+Importing ipxact (2014) source custom_regs_2-0.xml
+
+Parsing custom_regs_2-0.xml
+
+Parsing custom_regs_2-0.xml
+
+Checking existence of license: Xcelium_Single_Core at 14:42:33 PM
+
+License Xcelium_Single_Core exists
+
+  Generating custom_regs_rdb.sv ...
+
+  Generating custom_regs_config.dat ...
+
+  Generating custom_regs_hdlpaths.dat ...
+
+  Generating files for quicktest.sv & Makefile ...
+
+  Generating cdns_uvmreg_utils_pkg.sv ...
+
+Code generation complete.
+
+Execution time (ms): 4208
+
+Execution done - exiting.
+
+(----------14 June 2022 2:42:34 PM----------)
+

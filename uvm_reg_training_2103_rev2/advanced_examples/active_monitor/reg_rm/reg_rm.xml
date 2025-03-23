@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<spirit:component
+   xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009"
+   xmlns:cadence="http://www.cadence.com/SPIRIT/1685-2009/vendorExtensions"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.cadence.com/SPIRIT/1685-2009/vendorExtensions
+     http://www.cadence.com/SPIRIT/1685-2009/vendorExtensions/cadenceSpiritVendorExtensions.xsd
+     http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009
+     http://www.accellera.org/images/xmlschema/spirit/1685-2009/index.xsd">
+<!--http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009/index.xsd"-->
+      <spirit:vendor>Cadence_Design_Systems</spirit:vendor>
+<!-- REQUIRED HEADER INFO - DOES NOT END UP IN ANY GENERATED SV FILES -->
+
+<spirit:library>Custom_Registers</spirit:library>
+<spirit:name>custom_regs</spirit:name>
+<spirit:version>1.5</spirit:version>
+<spirit:memoryMaps>     
+  <spirit:memoryMap>
+
+  <spirit:name>custom</spirit:name>
+      
+    <spirit:addressBlock>
+      <spirit:name>registers</spirit:name>
+      <spirit:baseAddress>0x00</spirit:baseAddress>
+      <spirit:range>0x08</spirit:range> 
+      <spirit:width>8</spirit:width>
+
+      <spirit:register>
+        <spirit:name>reg_zero</spirit:name>
+        <spirit:addressOffset>0x0</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+          <spirit:field>
+            <spirit:name>field0</spirit:name>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>field1</spirit:name>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>field2</spirit:name>
+            <spirit:bitOffset>2</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>field3</spirit:name>
+            <spirit:bitOffset>3</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>field4</spirit:name>
+            <spirit:bitOffset>4</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>field5</spirit:name>
+            <spirit:bitOffset>5</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>field6</spirit:name>
+            <spirit:bitOffset>6</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>field7</spirit:name>
+            <spirit:bitOffset>7</spirit:bitOffset>
+            <spirit:bitWidth>1</spirit:bitWidth>
+          </spirit:field>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_zero"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+      <spirit:register>
+        <spirit:name>reg_one</spirit:name>
+        <spirit:addressOffset>0x1</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_one"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+      <spirit:register>
+        <spirit:name>reg_two</spirit:name>
+        <spirit:addressOffset>0x2</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_two"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+      <spirit:register>
+        <spirit:name>reg_three</spirit:name>
+        <spirit:addressOffset>0x3</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_three"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+      <spirit:register>
+        <spirit:name>reg_four</spirit:name>
+        <spirit:addressOffset>0x4</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_four"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+      <spirit:register>
+        <spirit:name>reg_five</spirit:name>
+        <spirit:addressOffset>0x5</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_five"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+      <spirit:register>
+        <spirit:name>reg_six</spirit:name>
+        <spirit:addressOffset>0x6</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_six"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+      <spirit:register>
+        <spirit:name>reg_seven</spirit:name>
+        <spirit:addressOffset>0x7</spirit:addressOffset>
+        <spirit:size>8</spirit:size>
+        <spirit:access>read-write</spirit:access>
+
+        <spirit:reset>
+          <spirit:value>0x00</spirit:value>
+          <spirit:mask>0xff</spirit:mask>
+        </spirit:reset>
+
+        <spirit:vendorExtensions>
+	  <cadence:extensions>
+             <cadence:hdlAccess cadence:path="reg_seven"/>
+	  </cadence:extensions>
+        </spirit:vendorExtensions>
+
+      </spirit:register>
+
+
+
+
+
+            </spirit:addressBlock>
+
+            </spirit:memoryMap>
+	</spirit:memoryMaps>  
+
+	<spirit:vendorExtensions>
+<!-- this is the name to instantiate the model -->
+		<vendorExtensions:type>reg_model</vendorExtensions:type>
+		<vendorExtensions:hdl_path>top.dut</vendorExtensions:hdl_path>
+	</spirit:vendorExtensions>
+</spirit:component>

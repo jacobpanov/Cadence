@@ -1,0 +1,778 @@
+xrun(64): 21.03-s015: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	21.03-s015: Started on Nov 08, 2022 at 17:04:12 GMT
+xrun
+	-f lab06run.f
+		-64
+		-uvmhome /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d
+		+UVM_VERBOSITY=UVM_NONE
+		+UVM_TESTNAME=introspection_seq_test
+		-timescale 1ns/100ps
+		-incdir ../../yapp/sv
+		-incdir ../../channel/sv
+		-incdir ../../hbus/sv
+		-incdir ../../clock_and_reset/sv
+		-incdir ../../router/sv
+		../../yapp/sv/yapp_pkg.sv
+		../../yapp/sv/yapp_if.sv
+		../../channel/sv/channel_pkg.sv
+		../../channel/sv/channel_if.sv
+		../../hbus/sv/hbus_pkg.sv
+		../../hbus/sv/hbus_if.sv
+		../../clock_and_reset/sv/clock_and_reset_pkg.sv
+		../../clock_and_reset/sv/clock_and_reset_if.sv
+		cdns_uvmreg_utils_pkg.sv
+		yapp_router_regs_rdb.sv
+		../../router/sv/router_module_pkg.sv
+		../../router_rtl/yapp_router.sv
+		clkgen.sv
+		tb_top.sv
+		hw_top.sv
+		-access rwc
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_NONE
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d
+file: ../../yapp/sv/yapp_pkg.sv
+	package worklib.yapp_pkg:sv
+		errors: 0, warnings: 0
+file: ../../yapp/sv/yapp_if.sv
+	interface worklib.yapp_if:sv
+		errors: 0, warnings: 0
+file: ../../channel/sv/channel_pkg.sv
+	package worklib.channel_pkg:sv
+		errors: 0, warnings: 0
+file: ../../channel/sv/channel_if.sv
+	interface worklib.channel_if:sv
+		errors: 0, warnings: 0
+file: ../../hbus/sv/hbus_pkg.sv
+	package worklib.hbus_pkg:sv
+		errors: 0, warnings: 0
+file: ../../hbus/sv/hbus_if.sv
+	interface worklib.hbus_if:sv
+		errors: 0, warnings: 0
+file: ../../clock_and_reset/sv/clock_and_reset_pkg.sv
+package clock_and_reset_pkg;
+                          |
+xmvlog: *W,TSNSPK (../../clock_and_reset/sv/clock_and_reset_pkg.sv,3|26): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+	package worklib.clock_and_reset_pkg:sv
+		errors: 0, warnings: 1
+file: ../../clock_and_reset/sv/clock_and_reset_if.sv
+	interface worklib.clock_and_reset_if:sv
+		errors: 0, warnings: 0
+file: cdns_uvmreg_utils_pkg.sv
+	package worklib.cdns_uvmreg_utils_pkg:sv
+		errors: 0, warnings: 0
+file: yapp_router_regs_rdb.sv
+	package worklib.yapp_router_reg_pkg:sv
+		errors: 0, warnings: 0
+file: ../../router/sv/router_module_pkg.sv
+	package worklib.router_module_pkg:sv
+		errors: 0, warnings: 0
+file: ../../router_rtl/yapp_router.sv
+	module worklib.host_ctl:sv
+		errors: 0, warnings: 0
+	module worklib.fifo:sv
+		errors: 0, warnings: 0
+	module worklib.port_fsm:sv
+		errors: 0, warnings: 0
+	module worklib.yapp_router:sv
+		errors: 0, warnings: 0
+file: clkgen.sv
+	module worklib.clkgen:sv
+		errors: 0, warnings: 0
+file: tb_top.sv
+	module worklib.tb_top:sv
+		errors: 0, warnings: 0
+file: hw_top.sv
+	module worklib.hw_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		$unit_0x45873bb3
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		hbus_pkg
+		yapp_pkg
+		cdns_uvmreg_utils_pkg
+		yapp_router_reg_pkg
+		clock_and_reset_pkg
+		channel_pkg
+		router_module_pkg
+		tb_top
+		hw_top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fifo:sv <0x59faa26e>
+			streams:  11, words:  5898
+		worklib.port_fsm:sv <0x5739c857>
+			streams:  39, words: 25402
+		worklib.host_ctl:sv <0x689f9983>
+			streams:  20, words: 20051
+		worklib.yapp_router:sv <0x3c88e0e0>
+			streams:  18, words:  4636
+		worklib.clkgen:sv <0x22ae9e09>
+			streams:   2, words:  1122
+		worklib.uvm_pkg:sv <0x178ccf2f>
+			streams:   6, words:  3460
+		worklib.uvm_pkg:sv <0x6a652a88>
+			streams:   6, words:  3120
+		worklib.uvm_pkg:sv <0x383bb41d>
+			streams:   5, words:  2530
+		worklib.uvm_pkg:sv <0x2cc118e2>
+			streams:   7, words:  1927
+		worklib.uvm_pkg:sv <0x571a25bc>
+			streams:   8, words:  2774
+		worklib.uvm_pkg:sv <0x6af276a6>
+			streams:  21, words: 50393
+		worklib.uvm_pkg:sv <0x4d8889ab>
+			streams:   7, words:  1927
+		worklib.uvm_pkg:sv <0x52fea663>
+			streams:  24, words: 20115
+		worklib.uvm_pkg:sv <0x1c24fcf5>
+			streams:  24, words: 19145
+		worklib.uvm_pkg:sv <0x1ddd5203>
+			streams:  20, words: 18614
+		worklib.uvm_pkg:sv <0x2130a815>
+			streams:  11, words:  4606
+		worklib.uvm_pkg:sv <0x0a5794f2>
+			streams:  23, words: 32927
+		worklib.uvm_pkg:sv <0x1a919488>
+			streams:   7, words:  2431
+		worklib.uvm_pkg:sv <0x4204d1d2>
+			streams:  12, words: 16356
+		worklib.uvm_pkg:sv <0x4c508592>
+			streams:  23, words: 24244
+		worklib.uvm_pkg:sv <0x65283015>
+			streams:  22, words: 51336
+		worklib.uvm_pkg:sv <0x0434eaba>
+			streams:  25, words: 32325
+		worklib.uvm_pkg:sv <0x6bcca95d>
+			streams:  24, words: 46710
+		worklib.uvm_pkg:sv <0x5389bf38>
+			streams:  25, words: 35108
+		worklib.uvm_pkg:sv <0x26457765>
+			streams:  23, words: 52220
+		worklib.uvm_pkg:sv <0x0aaf669a>
+			streams:  25, words: 37186
+		worklib.uvm_pkg:sv <0x192e7a2a>
+			streams:  23, words: 57851
+		worklib.uvm_pkg:sv <0x35cc94f9>
+			streams:  25, words: 41834
+		worklib.uvm_pkg:sv <0x687e9d4b>
+			streams:  23, words: 50808
+		worklib.uvm_pkg:sv <0x2c4eea90>
+			streams:  23, words: 53786
+		worklib.uvm_pkg:sv <0x3c9b4398>
+			streams:  25, words: 77499
+		worklib.cdns_uvm_pkg:sv <0x7f9f6721>
+			streams:  26, words: 34116
+		worklib.cdns_uvm_pkg:sv <0x6041a327>
+			streams:   8, words:  4036
+		worklib.cdns_uvm_pkg:sv <0x73920dfc>
+			streams:  10, words:  8645
+		worklib.uvm_pkg:sv <0x48be354d>
+			streams:  22, words: 23379
+		worklib.uvm_pkg:sv <0x7128b4bf>
+			streams:  22, words: 23497
+		worklib.uvm_pkg:sv <0x2a48a2b6>
+			streams:  22, words: 30117
+		worklib.uvm_pkg:sv <0x7cb7d037>
+			streams:  22, words: 32896
+		worklib.uvm_pkg:sv <0x0b601862>
+			streams:  22, words: 22839
+		worklib.uvm_pkg:sv <0x650c3cbd>
+			streams:  22, words: 22089
+		worklib.uvm_pkg:sv <0x25cb2070>
+			streams:  22, words: 44156
+		worklib.uvm_pkg:sv <0x579e01b0>
+			streams:  23, words: 22417
+		worklib.uvm_pkg:sv <0x4253a52c>
+			streams:  23, words: 22462
+		worklib.uvm_pkg:sv <0x2a4a5cf5>
+			streams:  23, words: 22628
+		worklib.cdns_uvmreg_utils_pkg:sv <0x67c9d083>
+			streams:   5, words:  2436
+		worklib.uvm_pkg:sv <0x70ea29d5>
+			streams:  21, words: 46324
+		worklib.uvm_pkg:sv <0x4b3df8c3>
+			streams:  22, words: 24984
+		worklib.uvm_pkg:sv <0x1addcc0c>
+			streams:  23, words: 28645
+		worklib.uvm_pkg:sv <0x565eab98>
+			streams:  20, words: 14723
+		worklib.uvm_pkg:sv <0x4ee9afc5>
+			streams:  20, words: 15129
+		worklib.uvm_pkg:sv <0x735db131>
+			streams:  23, words: 22955
+		worklib.uvm_pkg:sv <0x08c797ab>
+			streams:  20, words: 14438
+		worklib.uvm_pkg:sv <0x537c4422>
+			streams:  22, words: 15634
+		worklib.uvm_pkg:sv <0x1a489ead>
+			streams:  26, words: 66773
+		worklib.uvm_pkg:sv <0x280b5cc9>
+			streams:  23, words: 22381
+		worklib.uvm_pkg:sv <0x13fa98db>
+			streams:  23, words: 22764
+		worklib.uvm_pkg:sv <0x5c799cb6>
+			streams:  23, words: 22381
+		worklib.uvm_pkg:sv <0x721b17aa>
+			streams:  23, words: 23745
+		worklib.uvm_pkg:sv <0x4711cf4e>
+			streams:  23, words: 23745
+		worklib.uvm_pkg:sv <0x6db6379d>
+			streams:  23, words: 22381
+		worklib.uvm_pkg:sv <0x11527e9b>
+			streams:  23, words: 30361
+		worklib.uvm_pkg:sv <0x0b66073c>
+			streams:  30, words: 25555
+		worklib.uvm_pkg:sv <0x5c4cf478>
+			streams:  21, words: 16503
+		worklib.uvm_pkg:sv <0x321ee1c5>
+			streams:  21, words: 16503
+		worklib.uvm_pkg:sv <0x704f3474>
+			streams:  25, words: 34392
+		worklib.uvm_pkg:sv <0x1e79da29>
+			streams:  23, words: 50436
+		worklib.uvm_pkg:sv <0x265fe565>
+			streams:  21, words: 38744
+		worklib.uvm_pkg:sv <0x46a72d55>
+			streams:  21, words: 34279
+		worklib.uvm_pkg:sv <0x28b9ae9d>
+			streams:  21, words: 52520
+		worklib.uvm_pkg:sv <0x52c61bf7>
+			streams:  21, words: 43631
+		worklib.uvm_pkg:sv <0x161c0fb5>
+			streams:  24, words: 38903
+		worklib.uvm_pkg:sv <0x0274dd42>
+			streams:  30, words: 25555
+		worklib.uvm_pkg:sv <0x04e57dbe>
+			streams:  21, words: 16115
+		worklib.tb_top:sv <0x74bce64a>
+			streams:  25, words: 19596
+		worklib.uvm_pkg:sv <0x2e1a6eb7>
+			streams:   7, words:  3110
+		worklib.uvm_pkg:sv <0x52472b49>
+			streams:  23, words: 48544
+		worklib.uvm_pkg:sv <0x315c933c>
+			streams:  21, words: 18022
+		worklib.uvm_pkg:sv <0x310e0db9>
+			streams:  22, words: 19288
+		worklib.uvm_pkg:sv <0x5a4c7bb1>
+			streams:  49, words: 69854
+		worklib.uvm_pkg:sv <0x699159a5>
+			streams:  22, words: 19934
+		worklib.uvm_pkg:sv <0x7c4e9adc>
+			streams:  24, words: 32579
+		worklib.uvm_pkg:sv <0x7a1bc4ea>
+			streams:  53, words: 66418
+		worklib.uvm_pkg:sv <0x1a588057>
+			streams:  22, words: 30469
+		worklib.uvm_pkg:sv <0x65407ae3>
+			streams:  23, words: 30916
+		worklib.uvm_pkg:sv <0x2e2f2a2c>
+			streams:  51, words: 59673
+		worklib.uvm_pkg:sv <0x66206a0d>
+			streams:  23, words: 38745
+		worklib.uvm_pkg:sv <0x45de91c3>
+			streams:  24, words: 41755
+		worklib.uvm_pkg:sv <0x677ab4bf>
+			streams:  23, words: 38263
+		worklib.uvm_pkg:sv <0x43f4cb30>
+			streams:   9, words:  4572
+		worklib.uvm_pkg:sv <0x016fe652>
+			streams:  29, words: 50258
+		worklib.uvm_pkg:sv <0x65248ff5>
+			streams:  51, words: 62826
+		worklib.uvm_pkg:sv <0x7d9730e0>
+			streams:  20, words: 16923
+		worklib.uvm_pkg:sv <0x07c974ec>
+			streams:  20, words: 16923
+		worklib.uvm_pkg:sv <0x66e9975b>
+			streams:  30, words: 31001
+		worklib.uvm_pkg:sv <0x66d2e99f>
+			streams: 200, words: 225343
+		worklib.uvm_pkg:sv <0x29053483>
+			streams: 199, words: 223272
+		worklib.uvm_pkg:sv <0x6d6daa95>
+			streams:  57, words: 96066
+		worklib.uvm_pkg:sv <0x61310872>
+			streams:   7, words:  3110
+		worklib.uvm_pkg:sv <0x22ab9962>
+			streams:  90, words: 145076
+		worklib.uvm_pkg:sv <0x196d647c>
+			streams:  24, words: 75683
+		worklib.uvm_pkg:sv <0x6121e747>
+			streams:  37, words: 37227
+		worklib.uvm_pkg:sv <0x0b922662>
+			streams:  94, words: 142362
+		worklib.uvm_pkg:sv <0x3ddc6af6>
+			streams:  85, words: 133454
+		worklib.uvm_pkg:sv <0x54968cc4>
+			streams:   7, words:  3110
+		worklib.yapp_pkg:sv <0x3e90bd6b>
+			streams:  26, words: 76182
+		worklib.uvm_pkg:sv <0x61909863>
+			streams:  24, words: 27995
+		worklib.uvm_pkg:sv <0x610a3a87>
+			streams:  23, words: 38781
+		worklib.uvm_pkg:sv <0x212b81e8>
+			streams:  23, words: 21563
+		worklib.uvm_pkg:sv <0x2da0973b>
+			streams:  31, words: 31826
+		worklib.uvm_pkg:sv <0x330392fc>
+			streams: 258, words: 312720
+		worklib.uvm_pkg:sv <0x3b0039d8>
+			streams:  22, words: 36659
+		worklib.uvm_pkg:sv <0x029cb6d9>
+			streams:  31, words: 33534
+		worklib.uvm_pkg:sv <0x01f833a7>
+			streams: 259, words: 315994
+		worklib.uvm_pkg:sv <0x39a36aa9>
+			streams:  22, words: 19067
+		worklib.uvm_pkg:sv <0x503b5036>
+			streams:  23, words: 61361
+		worklib.tb_top:sv <0x37293c1e>
+			streams:  79, words: 104651
+		worklib.tb_top:sv <0x314fefb2>
+			streams:   1, words:  3914
+		worklib.yapp_router_reg_pkg:sv <0x3d53367d>
+			streams: 351, words: 304034
+		worklib.cdns_uvmreg_utils_pkg:sv <0x0b3723ec>
+			streams:  10, words: 33236
+		worklib.cdns_uvmreg_utils_pkg:sv <0x71c23ed2>
+			streams:   7, words:  3522
+		worklib.cdns_uvmreg_utils_pkg:sv <0x5fd7b1f3>
+			streams:  38, words: 92637
+		worklib.clock_and_reset_pkg:sv <0x695b3988>
+			streams:  54, words: 78548
+		worklib.router_module_pkg:sv <0x73697955>
+			streams:   0, words:     0
+		worklib.channel_pkg:sv <0x27ebfe6d>
+			streams:  54, words: 78548
+		worklib.clock_and_reset_if:sv <0x4bbdf7b5>
+			streams:   9, words:  3599
+		worklib.hw_top:sv <0x2c8f513c>
+			streams:  23, words:  6243
+		worklib.hbus_if:sv <0x299c3eca>
+			streams:  75, words: 114475
+		worklib.channel_if:sv <0x6ea443b4>
+			streams:   5, words: 10890
+		worklib.channel_if:sv <0x154d31db>
+			streams:   5, words: 10819
+		worklib.yapp_if:sv <0x57b2ecac>
+			streams:  69, words: 99164
+		worklib.cdns_uvm_pkg:sv <0x7853836e>
+			streams: 128, words: 240672
+		worklib.cdns_uvmapi:svp <0x5b2ada7c>
+			streams:  27, words: 31980
+		worklib.cdns_assert2uvm_pkg:sv <0x146ade44>
+			streams:   3, words:  2255
+		worklib.uvm_pkg:sv <0x41e28344>
+			streams: 4012, words: 6671815
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       9       7
+		Interfaces:                    6       4
+		Verilog packages:             11      11
+		Resolved nets:                 0       1
+		Registers:                 20416   12430
+		Scalar wires:                 64       -
+		Vectored wires:               34       -
+		Named events:                  5      13
+		Always blocks:                20      16
+		Initial blocks:              551     245
+		Parallel blocks:              39      40
+		Cont. assignments:            20      42
+		Pseudo assignments:           26      26
+		Assertions:                    4       4
+		Covergroup Instances:          0      20
+		Compilation units:             1       1
+		SV Class declarations:       290     404
+		SV Class specializations:    635     635
+		Simulation timescale:      100ps
+	Writing initial simulation snapshot: worklib.tb_top:sv
+Loading snapshot worklib.tb_top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/xcelium/files/xmsimrc
+xcelium> source /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (21.03-s015)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test introspection_seq_test...
+---------------------------------------------------------------------------------------------------------------------------------------
+Name                             Type                                                        Size  Value                               
+---------------------------------------------------------------------------------------------------------------------------------------
+uvm_test_top                     introspection_seq_test                                      -     @3218                               
+  tb                             router_tb                                                   -     @3313                               
+    chan0                        channel_env                                                 -     @3450                               
+      rx_agent                   channel_rx_agent                                            -     @4882                               
+        driver                   channel_rx_driver                                           -     @5585                               
+          rsp_port               uvm_analysis_port                                           -     @5736                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_port          uvm_seq_item_pull_port                                      -     @5687                               
+            recording_detail     integral                                                    32    'd1                                 
+          channel_id             integral                                                    32    'h0                                 
+          recording_detail       integral                                                    32    'd1                                 
+        monitor                  channel_rx_monitor                                          -     @4879                               
+          item_collected_port    uvm_analysis_port                                           -     @4969                               
+            recording_detail     integral                                                    32    'd1                                 
+          channel_id             integral                                                    32    'h0                                 
+          checks_enable          integral                                                    1     'h1                                 
+          coverage_enable        integral                                                    1     'h1                                 
+          recording_detail       integral                                                    32    'd1                                 
+        sequencer                channel_rx_sequencer                                        -     @4999                               
+          rsp_export             uvm_analysis_export                                         -     @5056                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_export        uvm_seq_item_pull_imp                                       -     @5606                               
+            recording_detail     integral                                                    32    'd1                                 
+          recording_detail       integral                                                    32    'd1                                 
+          arbitration_queue      array                                                       0     -                                   
+          lock_queue             array                                                       0     -                                   
+          num_last_reqs          integral                                                    32    'd1                                 
+          num_last_rsps          integral                                                    32    'd1                                 
+        is_active                uvm_active_passive_enum                                     1     UVM_ACTIVE                          
+        recording_detail         integral                                                    32    'd1                                 
+      channel_id                 integral                                                    32    'h0                                 
+      checks_enable              integral                                                    1     'h1                                 
+      coverage_enable            integral                                                    1     'h1                                 
+      recording_detail           integral                                                    32    'd1                                 
+    chan1                        channel_env                                                 -     @3427                               
+      rx_agent                   channel_rx_agent                                            -     @5790                               
+        driver                   channel_rx_driver                                           -     @6479                               
+          rsp_port               uvm_analysis_port                                           -     @6624                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_port          uvm_seq_item_pull_port                                      -     @6576                               
+            recording_detail     integral                                                    32    'd1                                 
+          channel_id             integral                                                    32    'h1                                 
+          recording_detail       integral                                                    32    'd1                                 
+        monitor                  channel_rx_monitor                                          -     @5787                               
+          item_collected_port    uvm_analysis_port                                           -     @5874                               
+            recording_detail     integral                                                    32    'd1                                 
+          channel_id             integral                                                    32    'h1                                 
+          checks_enable          integral                                                    1     'h1                                 
+          coverage_enable        integral                                                    1     'h1                                 
+          recording_detail       integral                                                    32    'd1                                 
+        sequencer                channel_rx_sequencer                                        -     @5854                               
+          rsp_export             uvm_analysis_export                                         -     @5959                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_export        uvm_seq_item_pull_imp                                       -     @6499                               
+            recording_detail     integral                                                    32    'd1                                 
+          recording_detail       integral                                                    32    'd1                                 
+          arbitration_queue      array                                                       0     -                                   
+          lock_queue             array                                                       0     -                                   
+          num_last_reqs          integral                                                    32    'd1                                 
+          num_last_rsps          integral                                                    32    'd1                                 
+        is_active                uvm_active_passive_enum                                     1     UVM_ACTIVE                          
+        recording_detail         integral                                                    32    'd1                                 
+      channel_id                 integral                                                    32    'h1                                 
+      checks_enable              integral                                                    1     'h1                                 
+      coverage_enable            integral                                                    1     'h1                                 
+      recording_detail           integral                                                    32    'd1                                 
+    chan2                        channel_env                                                 -     @3479                               
+      rx_agent                   channel_rx_agent                                            -     @6676                               
+        driver                   channel_rx_driver                                           -     @7365                               
+          rsp_port               uvm_analysis_port                                           -     @7510                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_port          uvm_seq_item_pull_port                                      -     @7462                               
+            recording_detail     integral                                                    32    'd1                                 
+          channel_id             integral                                                    32    'h2                                 
+          recording_detail       integral                                                    32    'd1                                 
+        monitor                  channel_rx_monitor                                          -     @6673                               
+          item_collected_port    uvm_analysis_port                                           -     @6760                               
+            recording_detail     integral                                                    32    'd1                                 
+          channel_id             integral                                                    32    'h2                                 
+          checks_enable          integral                                                    1     'h1                                 
+          coverage_enable        integral                                                    1     'h1                                 
+          recording_detail       integral                                                    32    'd1                                 
+        sequencer                channel_rx_sequencer                                        -     @6740                               
+          rsp_export             uvm_analysis_export                                         -     @6845                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_export        uvm_seq_item_pull_imp                                       -     @7385                               
+            recording_detail     integral                                                    32    'd1                                 
+          recording_detail       integral                                                    32    'd1                                 
+          arbitration_queue      array                                                       0     -                                   
+          lock_queue             array                                                       0     -                                   
+          num_last_reqs          integral                                                    32    'd1                                 
+          num_last_rsps          integral                                                    32    'd1                                 
+        is_active                uvm_active_passive_enum                                     1     UVM_ACTIVE                          
+        recording_detail         integral                                                    32    'd1                                 
+      channel_id                 integral                                                    32    'h2                                 
+      checks_enable              integral                                                    1     'h1                                 
+      coverage_enable            integral                                                    1     'h1                                 
+      recording_detail           integral                                                    32    'd1                                 
+    clock_and_reset              clock_and_reset_env                                         -     @3367                               
+      agent                      clock_and_reset_agent                                       -     @7561                               
+        driver                   clock_and_reset_driver                                      -     @7592                               
+          rsp_port               uvm_analysis_port                                           -     @7693                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_port          uvm_seq_item_pull_port                                      -     @7642                               
+            recording_detail     integral                                                    32    'd1                                 
+          recording_detail       integral                                                    32    'd1                                 
+        sequencer                clock_and_reset_sequencer                                   -     @7672                               
+          rsp_export             uvm_analysis_export                                         -     @7782                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_export        uvm_seq_item_pull_imp                                       -     @8330                               
+            recording_detail     integral                                                    32    'd1                                 
+          recording_detail       integral                                                    32    'd1                                 
+          arbitration_queue      array                                                       0     -                                   
+          lock_queue             array                                                       0     -                                   
+          num_last_reqs          integral                                                    32    'd1                                 
+          num_last_rsps          integral                                                    32    'd1                                 
+        recording_detail         integral                                                    32    'd1                                 
+      recording_detail           integral                                                    32    'd1                                 
+    hbus                         hbus_env                                                    -     @3556                               
+      masters[0]                 hbus_master_agent                                           -     @8464                               
+        driver                   hbus_master_driver                                          -     @9083                               
+          rsp_port               uvm_analysis_port                                           -     @9234                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_port          uvm_seq_item_pull_port                                      -     @9185                               
+            recording_detail     integral                                                    32    'd1                                 
+          random_delay           integral                                                    1     'h0                                 
+          master_id              integral                                                    32    'h0                                 
+          recording_detail       integral                                                    32    'd1                                 
+        sequencer                hbus_master_sequencer                                       -     @8496                               
+          rsp_export             uvm_analysis_export                                         -     @8556                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_export        uvm_seq_item_pull_imp                                       -     @9104                               
+            recording_detail     integral                                                    32    'd1                                 
+          recording_detail       integral                                                    32    'd1                                 
+          arbitration_queue      array                                                       0     -                                   
+          lock_queue             array                                                       0     -                                   
+          num_last_reqs          integral                                                    32    'd1                                 
+          num_last_rsps          integral                                                    32    'd1                                 
+        monitor                  hbus_monitor                                                -     @8382                               
+        is_active                uvm_active_passive_enum                                     1     UVM_ACTIVE                          
+        master_id                integral                                                    32    'h0                                 
+        recording_detail         integral                                                    32    'd1                                 
+      monitor                    hbus_monitor                                                -     @8382                               
+        item_collected_port      uvm_analysis_port                                           -     @8432                               
+          recording_detail       integral                                                    32    'd1                                 
+        checks_enable            integral                                                    1     'h1                                 
+        coverage_enable          integral                                                    1     'h1                                 
+        recording_detail         integral                                                    32    'd1                                 
+      num_masters                integral                                                    32    'h1                                 
+      num_slaves                 integral                                                    32    'h0                                 
+      checks_enable              integral                                                    1     'h1                                 
+      coverage_enable            integral                                                    1     'h1                                 
+      recording_detail           integral                                                    32    'd1                                 
+    mcsequencer                  router_mcsequencer                                          -     @3539                               
+      rsp_export                 uvm_analysis_export                                         -     @3646                               
+        recording_detail         integral                                                    32    'd1                                 
+      seq_item_export            uvm_seq_item_pull_imp                                       -     @4196                               
+        recording_detail         integral                                                    32    'd1                                 
+      recording_detail           integral                                                    32    'd1                                 
+      arbitration_queue          array                                                       0     -                                   
+      lock_queue                 array                                                       0     -                                   
+      num_last_reqs              integral                                                    32    'd1                                 
+      num_last_rsps              integral                                                    32    'd1                                 
+    router_mod                   router_env                                                  -     @4175                               
+      reference                  router_reference                                            -     @9529                               
+        hbus_in                  uvm_analysis_imp_hbus                                       -     @9578                               
+          recording_detail       integral                                                    32    'd1                                 
+        sb_add_out               uvm_analysis_port                                           -     @9676                               
+          recording_detail       integral                                                    32    'd1                                 
+        yapp_in                  uvm_analysis_imp_yapp                                       -     @9627                               
+          recording_detail       integral                                                    32    'd1                                 
+        recording_detail         integral                                                    32    'd1                                 
+      router_chan0               uvm_analysis_export                                         -     @4379                               
+        recording_detail         integral                                                    32    'd1                                 
+      router_chan1               uvm_analysis_export                                         -     @4430                               
+        recording_detail         integral                                                    32    'd1                                 
+      router_chan2               uvm_analysis_export                                         -     @4479                               
+        recording_detail         integral                                                    32    'd1                                 
+      router_hbus                uvm_analysis_export                                         -     @4328                               
+        recording_detail         integral                                                    32    'd1                                 
+      router_yapp                uvm_analysis_export                                         -     @4277                               
+        recording_detail         integral                                                    32    'd1                                 
+      scoreboard                 router_scoreboard                                           -     @9300                               
+        sb_chan0                 uvm_analysis_imp_chan0                                      -     @9401                               
+          recording_detail       integral                                                    32    'd1                                 
+        sb_chan1                 uvm_analysis_imp_chan1                                      -     @9450                               
+          recording_detail       integral                                                    32    'd1                                 
+        sb_chan2                 uvm_analysis_imp_chan2                                      -     @9499                               
+          recording_detail       integral                                                    32    'd1                                 
+        sb_yapp_in               uvm_analysis_imp_yapp                                       -     @9352                               
+          recording_detail       integral                                                    32    'd1                                 
+        compare_policy           comp_t                                                      1     UVM                                 
+        recording_detail         integral                                                    32    'd1                                 
+      recording_detail           integral                                                    32    'd1                                 
+    yapp                         yapp_env                                                    -     @3356                               
+      tx_agent                   yapp_tx_agent                                               -     @9723                               
+        driver                   yapp_tx_driver                                              -     @10419                              
+          rsp_port               uvm_analysis_port                                           -     @10570                              
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_port          uvm_seq_item_pull_port                                      -     @10521                              
+            recording_detail     integral                                                    32    'd1                                 
+          num_sent               integral                                                    32    'h0                                 
+          recording_detail       integral                                                    32    'd1                                 
+        monitor                  yapp_tx_monitor                                             -     @9758                               
+          item_collected_port    uvm_analysis_port                                           -     @9805                               
+            recording_detail     integral                                                    32    'd1                                 
+          num_pkt_col            integral                                                    32    'h0                                 
+          recording_detail       integral                                                    32    'd1                                 
+        sequencer                yapp_tx_sequencer                                           -     @9835                               
+          rsp_export             uvm_analysis_export                                         -     @9892                               
+            recording_detail     integral                                                    32    'd1                                 
+          seq_item_export        uvm_seq_item_pull_imp                                       -     @10440                              
+            recording_detail     integral                                                    32    'd1                                 
+          recording_detail       integral                                                    32    'd1                                 
+          arbitration_queue      array                                                       0     -                                   
+          lock_queue             array                                                       0     -                                   
+          num_last_reqs          integral                                                    32    'd1                                 
+          num_last_rsps          integral                                                    32    'd1                                 
+        is_active                uvm_active_passive_enum                                     1     UVM_ACTIVE                          
+        recording_detail         integral                                                    32    'd1                                 
+      recording_detail           integral                                                    32    'd1                                 
+    yapp_rm                      yapp_registers_vendor_cadence_com_library_flat_version_2_0  -     @4509                               
+      router_yapp_regs           yapp_regs_block                                             -     @4575                               
+        addr0_cnt_reg            T_addr0_cnt_reg_23                                          -     @4610                               
+          addr0_cnt_fld          uvm_reg_field                                               ...    RO addr0_cnt_reg[7:0]=8'h00        
+        addr1_cnt_reg            T_addr1_cnt_reg_24                                          -     @4620                               
+          addr1_cnt_fld          uvm_reg_field                                               ...    RO addr1_cnt_reg[7:0]=8'h00        
+        addr2_cnt_reg            T_addr2_cnt_reg_25                                          -     @4636                               
+          addr2_cnt_fld          uvm_reg_field                                               ...    RO addr2_cnt_reg[7:0]=8'h00        
+        addr3_cnt_reg            T_addr3_cnt_reg_22                                          -     @4651                               
+          addr3_cnt_fld          uvm_reg_field                                               ...    RO addr3_cnt_reg[7:0]=8'h00        
+        ctrl_reg                 T_ctrl_reg_18                                               -     @4666                               
+          max_pkt_size           uvm_reg_field                                               ...    RW ctrl_reg[5:0]=6'h00             
+        en_reg                   T_en_reg_19                                                 -     @4681                               
+          router_en              uvm_reg_field                                               ...    RW en_reg[0:0]=1'h0                
+          parity_err_cnt_en      uvm_reg_field                                               ...    RW en_reg[1:1]=1'h0                
+          oversized_pkt_cnt_en   uvm_reg_field                                               ...    RW en_reg[2:2]=1'h0                
+          addr0_cnt_en           uvm_reg_field                                               ...    RW en_reg[4:4]=1'h0                
+          addr1_cnt_en           uvm_reg_field                                               ...    RW en_reg[5:5]=1'h0                
+          addr2_cnt_en           uvm_reg_field                                               ...    RW en_reg[6:6]=1'h0                
+          addr3_cnt_en           uvm_reg_field                                               ...    RW en_reg[7:7]=1'h0                
+        mem_size_reg             T_mem_size_reg_26                                           -     @4696                               
+          mem_size_fld           uvm_reg_field                                               ...    RO mem_size_reg[7:0]=8'h00         
+        oversized_pkt_cnt_reg    T_oversized_pkt_cnt_reg_21                                  -     @4729                               
+          oversized_pkt_cnt_fld  uvm_reg_field                                               ...    RO oversized_pkt_cnt_reg[7:0]=8'h00
+        parity_err_cnt_reg       T_parity_err_cnt_reg_20                                     -     @4744                               
+          parity_err_cnt_fld     uvm_reg_field                                               ...    RO parity_err_cnt_reg[7:0]=8'h00   
+      router_yapp_mem            T_yapp_mem_27                                               -     @4532                               
+        n_bits                   integral                                                    32    'd8                                 
+        size                     integral                                                    32    'd256                               
+      router_yapp_pkt_mem        T_yapp_pkt_mem_28                                           -     @4554                               
+        n_bits                   integral                                                    32    'd8                                 
+        size                     integral                                                    32    'd64                                
+    recording_detail             integral                                                    32    'd1                                 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+SDI/Verilog Transaction Recording Facility Version 21.03-s015
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register addr0_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register addr1_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register addr2_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register addr3_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register ctrl_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register en_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register mem_size_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register oversized_pkt_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(97) @ 0: reporter@@reg_access [INTROSPECTION] Router register parity_err_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(117) @ 0: reporter@@reg_access [INTROSPECTION] RW test FDwr/peek/poke/FDrd ctrl_reg
+UVM_INFO router_reg_seqs_lib.sv(121) @ 700: reporter@@reg_access [INTROSPECTION] WROTE FD f0
+UVM_INFO router_reg_seqs_lib.sv(124) @ 900: reporter@@reg_access [INTROSPECTION] PEEK 30
+UVM_INFO router_reg_seqs_lib.sv(127) @ 900: reporter@@reg_access [INTROSPECTION] POKE 0f
+UVM_INFO router_reg_seqs_lib.sv(129) @ 1200: reporter@@reg_access [INTROSPECTION] READ FD 0f
+UVM_INFO router_reg_seqs_lib.sv(117) @ 1500: reporter@@reg_access [INTROSPECTION] RW test FDwr/peek/poke/FDrd en_reg
+UVM_INFO router_reg_seqs_lib.sv(121) @ 1700: reporter@@reg_access [INTROSPECTION] WROTE FD f0
+UVM_INFO router_reg_seqs_lib.sv(124) @ 1900: reporter@@reg_access [INTROSPECTION] PEEK f0
+UVM_INFO router_reg_seqs_lib.sv(127) @ 1900: reporter@@reg_access [INTROSPECTION] POKE 0f
+UVM_INFO router_reg_seqs_lib.sv(129) @ 2200: reporter@@reg_access [INTROSPECTION] READ FD 07
+UVM_INFO router_reg_seqs_lib.sv(136) @ 2500: reporter@@reg_access [INTROSPECTION] RO test poke/FDrd/FDwr/peek addr0_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(138) @ 2500: reporter@@reg_access [INTROSPECTION] POKE 0f
+UVM_INFO router_reg_seqs_lib.sv(140) @ 2800: reporter@@reg_access [INTROSPECTION] READ FD 0f
+UVM_INFO router_reg_seqs_lib.sv(143) @ 3000: reporter@@reg_access [INTROSPECTION] WROTE FD f0 (should be ignored)
+UVM_INFO router_reg_seqs_lib.sv(146) @ 3200: reporter@@reg_access [INTROSPECTION] PEEK 0f
+UVM_INFO router_reg_seqs_lib.sv(136) @ 3200: reporter@@reg_access [INTROSPECTION] RO test poke/FDrd/FDwr/peek addr1_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(138) @ 3200: reporter@@reg_access [INTROSPECTION] POKE f0
+UVM_INFO router_reg_seqs_lib.sv(140) @ 3500: reporter@@reg_access [INTROSPECTION] READ FD f0
+UVM_INFO router_reg_seqs_lib.sv(143) @ 3700: reporter@@reg_access [INTROSPECTION] WROTE FD f0 (should be ignored)
+UVM_INFO router_reg_seqs_lib.sv(146) @ 3900: reporter@@reg_access [INTROSPECTION] PEEK f0
+UVM_INFO router_reg_seqs_lib.sv(136) @ 3900: reporter@@reg_access [INTROSPECTION] RO test poke/FDrd/FDwr/peek addr2_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(138) @ 3900: reporter@@reg_access [INTROSPECTION] POKE f0
+UVM_INFO router_reg_seqs_lib.sv(140) @ 4200: reporter@@reg_access [INTROSPECTION] READ FD f0
+UVM_INFO router_reg_seqs_lib.sv(143) @ 4400: reporter@@reg_access [INTROSPECTION] WROTE FD f0 (should be ignored)
+UVM_INFO router_reg_seqs_lib.sv(146) @ 4600: reporter@@reg_access [INTROSPECTION] PEEK f0
+UVM_INFO router_reg_seqs_lib.sv(136) @ 4600: reporter@@reg_access [INTROSPECTION] RO test poke/FDrd/FDwr/peek addr3_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(138) @ 4600: reporter@@reg_access [INTROSPECTION] POKE f0
+UVM_INFO router_reg_seqs_lib.sv(140) @ 4900: reporter@@reg_access [INTROSPECTION] READ FD f0
+UVM_INFO router_reg_seqs_lib.sv(143) @ 5100: reporter@@reg_access [INTROSPECTION] WROTE FD f0 (should be ignored)
+UVM_INFO router_reg_seqs_lib.sv(146) @ 5300: reporter@@reg_access [INTROSPECTION] PEEK f0
+UVM_INFO router_reg_seqs_lib.sv(136) @ 5300: reporter@@reg_access [INTROSPECTION] RO test poke/FDrd/FDwr/peek mem_size_reg
+UVM_INFO router_reg_seqs_lib.sv(138) @ 5300: reporter@@reg_access [INTROSPECTION] POKE f0
+UVM_INFO router_reg_seqs_lib.sv(140) @ 5600: reporter@@reg_access [INTROSPECTION] READ FD 00
+UVM_INFO router_reg_seqs_lib.sv(143) @ 5800: reporter@@reg_access [INTROSPECTION] WROTE FD f0 (should be ignored)
+UVM_INFO router_reg_seqs_lib.sv(146) @ 6000: reporter@@reg_access [INTROSPECTION] PEEK 00
+UVM_INFO router_reg_seqs_lib.sv(136) @ 6000: reporter@@reg_access [INTROSPECTION] RO test poke/FDrd/FDwr/peek oversized_pkt_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(138) @ 6000: reporter@@reg_access [INTROSPECTION] POKE f0
+UVM_INFO router_reg_seqs_lib.sv(140) @ 6300: reporter@@reg_access [INTROSPECTION] READ FD f0
+UVM_INFO router_reg_seqs_lib.sv(143) @ 6500: reporter@@reg_access [INTROSPECTION] WROTE FD f0 (should be ignored)
+UVM_INFO router_reg_seqs_lib.sv(146) @ 6700: reporter@@reg_access [INTROSPECTION] PEEK f0
+UVM_INFO router_reg_seqs_lib.sv(136) @ 6700: reporter@@reg_access [INTROSPECTION] RO test poke/FDrd/FDwr/peek parity_err_cnt_reg
+UVM_INFO router_reg_seqs_lib.sv(138) @ 6700: reporter@@reg_access [INTROSPECTION] POKE f0
+UVM_INFO router_reg_seqs_lib.sv(140) @ 7000: reporter@@reg_access [INTROSPECTION] READ FD f0
+UVM_INFO router_reg_seqs_lib.sv(143) @ 7200: reporter@@reg_access [INTROSPECTION] WROTE FD f0 (should be ignored)
+UVM_INFO router_reg_seqs_lib.sv(146) @ 7400: reporter@@reg_access [INTROSPECTION] PEEK f0
+UVM_INFO router_reg_seqs_lib.sv(150) @ 7400: reporter@@reg_access [INTROSPECTION] Count register addr0_cnt_reg has address offset 9
+UVM_INFO router_reg_seqs_lib.sv(150) @ 7400: reporter@@reg_access [INTROSPECTION] Count register addr1_cnt_reg has address offset a
+UVM_INFO router_reg_seqs_lib.sv(150) @ 7400: reporter@@reg_access [INTROSPECTION] Count register addr2_cnt_reg has address offset b
+UVM_INFO router_reg_seqs_lib.sv(150) @ 7400: reporter@@reg_access [INTROSPECTION] Count register addr3_cnt_reg has address offset 6
+UVM_INFO router_reg_seqs_lib.sv(150) @ 7400: reporter@@reg_access [INTROSPECTION] Count register oversized_pkt_cnt_reg has address offset 5
+UVM_INFO router_reg_seqs_lib.sv(150) @ 7400: reporter@@reg_access [INTROSPECTION] Count register parity_err_cnt_reg has address offset 4
+UVM_INFO ../../router/sv/router_scoreboard.sv(231) @ 27400: uvm_test_top.tb.router_mod.scoreboard [router_scoreboard] Status:
+
+Simulation PASSED
+
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   62
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[INTROSPECTION]    60
+[RNTST]     1
+[router_scoreboard]     1
+Simulation complete via $finish(1) at time 2740 NS + 46
+/mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+TOOL:	xrun(64)	21.03-s015: Exiting on Nov 08, 2022 at 17:04:20 GMT  (total: 00:00:08)

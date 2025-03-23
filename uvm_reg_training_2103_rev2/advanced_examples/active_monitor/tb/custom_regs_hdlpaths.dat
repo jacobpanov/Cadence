@@ -1,0 +1,11 @@
+ 
+r custom_registers.reg_five reg_five 0 RTL 0 8
+r custom_registers.reg_four reg_four 0 RTL 0 8
+r custom_registers.reg_one reg_one 0 RTL 0 8
+r custom_registers.reg_seven reg_seven 0 RTL 0 8
+r custom_registers.reg_six reg_six 0 RTL 0 8
+r custom_registers.reg_three reg_three 0 RTL 0 8
+r custom_registers.reg_two reg_two 0 RTL 0 8
+r custom_registers.reg_zero reg_zero 0 RTL 0 8
+
+

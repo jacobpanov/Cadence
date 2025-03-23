@@ -1,0 +1,5 @@
+s1(17Oct2022:16:32:13):  xrun -f lab07run.f 
+s2(17Oct2022:16:32:29):  xrun -f lab07run.f -gui 
+s3(17Oct2022:16:38:29):  xrun -f lab07run.f -gui "-s " 
+s4(17Oct2022:16:43:36):  xrun -f lab07run.f -gui 
+s5(17Oct2022:16:47:53):  xrun -f lab07run.f -gui "-s " 

@@ -1,0 +1,50 @@
+ ** -- Register/Field configuration -- **
+
+
+r reg_cfgreg1 1
+reg_five_fld 8 0 RW 0 0 1 1 1
+
+r reg_cfgreg2 1
+reg_four_fld 8 0 RW 0 0 1 1 1
+
+r reg_cfgreg3 1
+reg_one_fld 8 0 RW 0 0 1 1 1
+
+r reg_cfgreg4 1
+reg_seven_fld 8 0 RW 0 0 1 1 1
+
+r reg_cfgreg5 1
+reg_six_fld 8 0 RW 0 0 1 1 1
+
+r reg_cfgreg6 1
+reg_three_fld 8 0 RW 0 0 1 1 1
+
+r reg_cfgreg7 1
+reg_two_fld 8 0 RW 0 0 1 1 1
+
+r reg_cfgreg8 8
+field0 1 0 RW 0 0 1 1 1
+field1 1 1 RW 0 0 1 1 1
+field2 1 2 RW 0 0 1 1 1
+field3 1 3 RW 0 0 1 1 1
+field4 1 4 RW 0 0 1 1 1
+field5 1 5 RW 0 0 1 1 1
+field6 1 6 RW 0 0 1 1 1
+field7 1 7 RW 0 0 1 1 1
+
+
+ ** --  RegFiles configuration -- **
+
+
+ ** --  Blocks configuration -- **
+
+b custom_regs.custom_registers 8 0 0 0 1 1 1
+T_reg_five_22 reg_cfgreg1 reg_five 5 1 RW 0 1 8
+T_reg_four_21 reg_cfgreg2 reg_four 4 1 RW 0 1 8
+T_reg_one_18 reg_cfgreg3 reg_one 1 1 RW 0 1 8
+T_reg_seven_24 reg_cfgreg4 reg_seven 7 1 RW 0 1 8
+T_reg_six_23 reg_cfgreg5 reg_six 6 1 RW 0 1 8
+T_reg_three_20 reg_cfgreg6 reg_three 3 1 RW 0 1 8
+T_reg_two_19 reg_cfgreg7 reg_two 2 1 RW 0 1 8
+T_reg_zero_17 reg_cfgreg8 reg_zero 0 1 RW 0 1 8
+

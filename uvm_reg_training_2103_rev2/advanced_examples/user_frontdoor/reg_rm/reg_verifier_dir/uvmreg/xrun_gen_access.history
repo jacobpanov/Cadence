@@ -1,0 +1,7 @@
+s1(23Mar2021:14:26:33):  xrun -uvmhome default +uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file ./cdns_uvmreg_utils_pkg.sv ./custom_regs_rdb.sv ./quicktest.sv -log xrun_gen_access.log +UVM_TESTNAME=access_test 
+s2(23Mar2021:14:26:41):  xrun -uvmhome default ./cdns_uvmreg_utils_pkg.sv ./custom_regs_rdb.sv ./quicktest.sv -vclass_ext +UVM_TESTNAME=qt_test 
+s3(23Mar2021:14:28:45):  xrun -uvmhome default +uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file ./cdns_uvmreg_utils_pkg.sv ./custom_regs_rdb.sv ./quicktest.sv -log xrun_gen_access.log +UVM_TESTNAME=access_test 
+s4(23Mar2021:14:28:47):  xrun -uvmhome default ./cdns_uvmreg_utils_pkg.sv ./custom_regs_rdb.sv ./quicktest.sv -vclass_ext +UVM_TESTNAME=qt_test 
+s5(23Mar2021:14:29:50):  xrun -uvmhome default +uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file ./cdns_uvmreg_utils_pkg.sv ./custom_regs_rdb.sv ./quicktest.sv -log xrun_gen_access.log +UVM_TESTNAME=access_test 
+s6(23Mar2021:14:29:52):  xrun -uvmhome default ./cdns_uvmreg_utils_pkg.sv ./custom_regs_rdb.sv ./quicktest.sv -vclass_ext +UVM_TESTNAME=qt_test 
+s7(23Mar2021:14:52:57):  xrun -uvmhome default +uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file ./cdns_uvmreg_utils_pkg.sv ./custom_regs_rdb.sv ./quicktest.sv -log xrun_gen_access.log +UVM_TESTNAME=access_test 

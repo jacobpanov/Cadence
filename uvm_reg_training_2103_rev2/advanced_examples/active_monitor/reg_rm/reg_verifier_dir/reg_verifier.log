@@ -1,0 +1,57 @@
+Activation command: reg_verifier -domain uvmreg -top reg_rm.xml -dut_name custom_regs -out_file custom_regs -quicktest -pkg custom_regs_pkg
+------------------
+Runnning glue64.130s released 2019-02-07T18:02:37.775465+00:00 build-tag: jenkins-11_manual_build_glue_64_release-18 hostname: epoxy
+
+Packaged as 19.02.001-a released 2019-02-17T17:53:38.584398+00:00
+
+Command Line Arguments:
+    -headless
+    -logfile ./reg_verifier_dir/reg_verifier
+    -execute /tmp/reg_verifier_53513.js
+Environment:
+
+
+Initializing
+
+Initialize time (ms): 758
+
+Package main.init() done.
+
+(----------7 October 2020 4:14:30 pm----------)
+
+Loading script /tmp/reg_verifier_53513.js
+
+*** Warning: An existing application process is being replaced
+
+Reading XML file reg_rm.xml
+
+Parsing reg_rm.xml
+
+Adding ipxact source library location ./
+
+Importing ipxact source reg_rm.xml
+
+Checking existence of license: Xcelium_Single_Core at 4:14:52.92166 pm
+
+License Xcelium_Single_Core exists
+
+Generating code for domain 'uvmreg' in dir '/export/home/bdickins/codetest/uvm_reg_verifier/custom_reg/custom_access_reg/reg_rm/reg_verifier_dir/uvmreg'
+
+  Generating custom_regs_rdb.sv ...
+
+  Generating custom_regs_config.dat ...
+
+  Generating custom_regs_hdlpaths.dat ...
+
+  Generating files for quicktest.sv & Makefile ...
+
+  Generating cdns_uvmreg_utils_pkg.sv ...
+
+Code generation complete.
+
+Execution time (ms): 22486
+
+Execution done - exiting.
+
+(----------7 October 2020 4:14:53 pm----------)
+

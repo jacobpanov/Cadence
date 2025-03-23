@@ -1,0 +1,8 @@
+s1(14Oct2022:12:18:00):  xrun -f lab03run.f 
+s2(14Oct2022:12:18:21):  xrun -f lab03run.f 
+s3(14Oct2022:12:22:56):  xrun -f lab03run.f 
+s4(14Oct2022:12:23:51):  xrun -f lab03run.f -define INJECT_ERROR 
+s5(14Oct2022:14:09:20):  xrun -f lab03run.f 
+s6(14Oct2022:14:10:11):  xrun -f lab03run.f 
+s7(14Oct2022:14:15:46):  xrun -f lab03run.f 
+s8(14Oct2022:14:17:03):  xrun -f lab03run.f -define INJECT_ERROR 

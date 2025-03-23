@@ -1,0 +1,134 @@
+/*-----------------------------------------------------------------
+File name     : router_tb.sv
+Developers    : Kathleen Meade, Brian Dickinson
+Created       : 01/04/11
+Description   : lab09_sbc router testbench
+Notes         : From the Cadence "SystemVerilog Accelerated Verification with UVM" training
+-------------------------------------------------------------------
+Copyright Cadence Design Systems (c)2015
+-----------------------------------------------------------------*/
+
+//------------------------------------------------------------------------------
+//
+// CLASS: router_tb
+//
+//------------------------------------------------------------------------------
+
+class router_tb extends uvm_env;
+
+  // clock and reset UVC
+  clock_and_reset_env clock_and_reset;
+
+  // yapp environment
+  yapp_env yapp;
+
+  //Channel environmnent UVCs
+  channel_env chan0;
+  channel_env chan1;
+  channel_env chan2;
+
+  // HBUS UVC
+  hbus_env hbus;
+
+  // Virtual Sequencer
+  router_mcsequencer mcsequencer;
+
+  // Router module UVC
+  router_env router_mod;
+
+  // register model handle
+  yapp_router_regs_t  yapp_rm;
+  // HBUS adapter handle
+  hbus_reg_adapter    reg2hbus;
+
+  // Explicit predictor
+  uvm_reg_predictor#(hbus_transaction) hbus2reg_predictor;
+
+  // component macro
+  `uvm_component_utils_begin(router_tb)
+    `uvm_field_object(yapp_rm, UVM_ALL_ON)
+  `uvm_component_utils_end
+
+  // Constructor - required syntax for UVM automation and utilities
+  function new (string name, uvm_component parent=null);
+    super.new(name, parent);
+  endfunction : new
+
+  // UVM build_phase
+  function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+
+    // clock and reset UVC
+    clock_and_reset = clock_and_reset_env::type_id::create("clock_and_reset", this);
+
+    // YAPP UVC
+    yapp = yapp_env::type_id::create("yapp", this);
+
+    // Channel UVC - RX ONLY
+    uvm_config_int::set(this, "chan0", "channel_id", 0);
+    uvm_config_int::set(this, "chan1", "channel_id", 1);
+    uvm_config_int::set(this, "chan2", "channel_id", 2);
+    chan0 = channel_env::type_id::create("chan0", this);
+    chan1 = channel_env::type_id::create("chan1", this);
+    chan2 = channel_env::type_id::create("chan2", this);
+
+    // HBUS UVC - 1 Master and 1 Slave
+    uvm_config_int::set(this, "hbus", "num_masters", 1);
+    uvm_config_int::set(this, "hbus", "num_slaves", 0);
+    hbus = hbus_env::type_id::create("hbus", this);
+
+    // virtual sequencer
+    mcsequencer = router_mcsequencer::type_id::create("mcsequencer", this);
+
+    // router module UVC
+    router_mod = router_env::type_id::create("router_mod", this);
+
+    // Create, build and lock register model
+    yapp_rm = yapp_router_regs_t::type_id::create("yapp_rm", this);
+    yapp_rm.build();
+    yapp_rm.lock_model();
+
+    // set HDL path root
+    yapp_rm.set_hdl_path_root("hw_top.dut");
+
+    // auto (implicit) prediction
+    //yapp_rm.default_map.set_auto_predict(1);
+
+    // set model into config database with global visibility
+    //uvm_config_db#(yapp_router_regs_t)::set( null, "*", "yapp_rm", yapp_rm);
+    uvm_config_db#(yapp_router_regs_t)::set( this, "tb.hbus.*", "yapp_rm", yapp_rm);
+
+    // HBUS adapter instance
+    reg2hbus = hbus_reg_adapter::type_id::create("reg2hbus",this);
+
+    // Create the explicit predictor
+    hbus2reg_predictor = new("hbus2reg_predictor", this);
+    // set predictor properties
+    hbus2reg_predictor.adapter = reg2hbus;
+    hbus2reg_predictor.map = yapp_rm.default_map;
+
+  endfunction : build_phase
+
+  // UVM connect_phase
+  function void connect_phase(uvm_phase phase);
+
+    // Virtual Sequencer Connections
+    mcsequencer.hbus_seqr = hbus.masters[0].sequencer;
+    mcsequencer.yapp_seqr = yapp.tx_agent.sequencer;
+
+    // Connect the TLM ports from the YAPP and Channel UVCs to the scoreboard
+    yapp.tx_agent.monitor.item_collected_port.connect(router_mod.router_yapp);
+    hbus.masters[0].monitor.item_collected_port.connect(router_mod.router_hbus);
+    chan0.rx_agent.monitor.item_collected_port.connect(router_mod.router_chan0);
+    chan1.rx_agent.monitor.item_collected_port.connect(router_mod.router_chan1);
+    chan2.rx_agent.monitor.item_collected_port.connect(router_mod.router_chan2);
+
+    // set sequencer and adapter for register model map
+    yapp_rm.default_map.set_sequencer( hbus.masters[0].sequencer, reg2hbus);
+
+   // Connect predictor to analysis port of UVC
+    hbus.masters[0].monitor.item_collected_port.connect(hbus2reg_predictor.bus_in);
+   
+  endfunction : connect_phase
+
+endclass : router_tb

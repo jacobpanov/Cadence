@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component
+xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014"
+xmlns:cadence="http://www.cadence.com/SPIRIT/1685-2014/vendorExtensions"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:vendor>Cadence_Design_Systems</ipxact:vendor>
+<ipxact:library>flat</ipxact:library>
+<ipxact:name>custom_regs</ipxact:name>
+<ipxact:version>2.0</ipxact:version>
+<ipxact:memoryMaps>     
+  <ipxact:memoryMap>
+    <ipxact:name>custom</ipxact:name>
+    <ipxact:description>Custom register specification for experimentation</ipxact:description>
+    <ipxact:addressBlock>
+      <ipxact:name>registers</ipxact:name>
+      <ipxact:baseAddress>'h00</ipxact:baseAddress>
+      <ipxact:range>'h08</ipxact:range> 
+      <ipxact:width>8</ipxact:width>
+      <ipxact:usage>register</ipxact:usage>
+      <ipxact:register>
+        <ipxact:name>reg_zero</ipxact:name>
+        <ipxact:addressOffset>'h0</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>field0</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:field>
+          <ipxact:name>field1</ipxact:name>
+          <ipxact:bitOffset>1</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:field>
+          <ipxact:name>field2</ipxact:name>
+          <ipxact:bitOffset>2</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:field>
+          <ipxact:name>field3</ipxact:name>
+          <ipxact:bitOffset>3</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:field>
+          <ipxact:name>field4</ipxact:name>
+          <ipxact:bitOffset>4</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:field>
+          <ipxact:name>field5</ipxact:name>
+          <ipxact:bitOffset>5</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:field>
+          <ipxact:name>field6</ipxact:name>
+          <ipxact:bitOffset>6</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:field>
+          <ipxact:name>field7</ipxact:name>
+          <ipxact:bitOffset>7</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>0</ipxact:value>
+              <ipxact:mask>1</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>1</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_zero"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+
+      <ipxact:register>
+        <ipxact:name>reg_one</ipxact:name>
+        <ipxact:addressOffset>'h1</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>reg_one_fld</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>8'h00</ipxact:value>
+              <ipxact:mask>8'hff</ipxact:mask> 
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>8</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_one"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+
+      <ipxact:register>
+        <ipxact:name>reg_two</ipxact:name>
+        <ipxact:addressOffset>'h2</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>reg_two_fld</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>8'h00</ipxact:value>
+              <ipxact:mask>8'hff</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>8</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_two"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+
+      <ipxact:register>
+        <ipxact:name>reg_three</ipxact:name>
+        <ipxact:addressOffset>'h3</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>reg_three_fld</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>8'h00</ipxact:value>
+              <ipxact:mask>8'hff</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>8</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_three"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+
+      <ipxact:register>
+        <ipxact:name>reg_four</ipxact:name>
+        <ipxact:addressOffset>'h4</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>reg_four_fld</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>8'h00</ipxact:value>
+              <ipxact:mask>8'hff</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>8</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_four"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+
+      <ipxact:register>
+        <ipxact:name>reg_five</ipxact:name>
+        <ipxact:addressOffset>'h5</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>reg_five_fld</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>8'h00</ipxact:value>
+              <ipxact:mask>8'hff</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>8</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_five"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+
+      <ipxact:register>
+        <ipxact:name>reg_six</ipxact:name>
+        <ipxact:addressOffset>'h6</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>reg_six_fld</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>8'h00</ipxact:value>
+              <ipxact:mask>8'hff</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>8</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_six"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+
+      <ipxact:register>
+        <ipxact:name>reg_seven</ipxact:name>
+        <ipxact:addressOffset>'h7</ipxact:addressOffset>
+        <ipxact:size>8</ipxact:size>
+        <ipxact:access>read-write</ipxact:access>
+        <ipxact:field>
+          <ipxact:name>reg_seven_fld</ipxact:name>
+          <ipxact:bitOffset>0</ipxact:bitOffset>
+          <ipxact:resets>
+            <ipxact:reset>
+              <ipxact:value>8'h00</ipxact:value>
+              <ipxact:mask>8'hff</ipxact:mask>
+            </ipxact:reset>
+          </ipxact:resets>
+          <ipxact:bitWidth>8</ipxact:bitWidth>
+        </ipxact:field>
+        <ipxact:vendorExtensions>
+          <cadence:extensions>
+            <cadence:hdlAccess cadence:path="reg_seven"/>
+          </cadence:extensions>
+        </ipxact:vendorExtensions>
+      </ipxact:register>
+      <ipxact:vendorExtensions>
+        <cadence:extensions>
+          <cadence:hdlAccess cadence:path="reg_model"/>
+        </cadence:extensions>
+      </ipxact:vendorExtensions>
+    </ipxact:addressBlock>
+    <ipxact:addressUnitBits>8</ipxact:addressUnitBits>
+  </ipxact:memoryMap>
+</ipxact:memoryMaps>  
+</ipxact:component>

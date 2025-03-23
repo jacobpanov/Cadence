@@ -1,0 +1,20 @@
+DEFAULT -rwc
+PATH yapp_registers.reg_file.addr0_cnt_en_fld +rw
+PATH yapp_registers.reg_file.addr0_cnt_reg +rw
+PATH yapp_registers.reg_file.addr1_cnt_en_fld +rw
+PATH yapp_registers.reg_file.addr1_cnt_reg +rw
+PATH yapp_registers.reg_file.addr2_cnt_en_fld +rw
+PATH yapp_registers.reg_file.addr2_cnt_reg +rw
+PATH yapp_registers.reg_file.ctrl_reg +rw
+PATH yapp_registers.reg_file.en_reg +rw
+PATH yapp_registers.reg_file.illegal_addr_cnt_en_fld +rw
+PATH yapp_registers.reg_file.illegal_addr_cnt_reg +rw
+PATH yapp_registers.reg_file.last_pkt_mem +rw
+PATH yapp_registers.reg_file.last_pkt_size_reg +rw
+PATH yapp_registers.reg_file.len_err_cnt_en_fld +rw
+PATH yapp_registers.reg_file.max_pkt_len +rw
+PATH yapp_registers.reg_file.max_pkt_len_err_cnt_reg +rw
+PATH yapp_registers.reg_file.memory +rw
+PATH yapp_registers.reg_file.parity_err_cnt_en_fld +rw
+PATH yapp_registers.reg_file.parity_err_cnt_reg +rw
+PATH yapp_registers.reg_file.router_en_fld +rw

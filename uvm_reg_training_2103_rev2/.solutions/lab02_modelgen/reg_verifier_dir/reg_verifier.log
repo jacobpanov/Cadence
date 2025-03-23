@@ -1,0 +1,66 @@
+Activation command: reg_verifier -domain uvmreg -top yapp_registers_2-0.xml -dut_name yapp_registers -top_level_class_name yapp_router_regs_t -out_file yapp_router_regs -cov -quicktest -pkg yapp_router_reg_pkg
+------------------
+Running Glue Version: glue64.nightlys released (KG) build-tag: jenkins-KrazyGlue-266 build-revision: 0fdc3c4890eb tip Runtime: 11.0.10+9 build-host: vlsj-vipsia-fusion system-arch: amd64
+
+Command Line Arguments:
+	--quirks
+	--jar /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools.lnx86/sia/lib/image/rdve.jar
+	--logfile ./reg_verifier_dir/reg_verifier
+	--execute /tmp/reg_verifier_12310.js
+
+Packaged as 21.03.006-s released 2021-08-13T14:47:53.390584+03:00
+
+Initializing
+
+*** Warning: Replacing function 'post_release_generate_hook' callable by script which was previously registered for package 'tti_bnr'  At tti_bnr_manager.init() 
+
+Initialize time (ms): 489
+
+Package main.init() done.
+
+(----------13 June 2022 6:57:55 PM----------)
+
+Loading script /tmp/reg_verifier_12310.js
+
+HINT /tmp/reg_verifier_12310.js:1 - The argument 'something' is unused
+
+0 errors
+0 warnings
+1 hints
+
+
+Reading XML file yapp_registers_2-0.xml
+
+Parsing yapp_registers_2-0.xml
+
+Importing ipxact (2014) source yapp_registers_2-0.xml
+
+Parsing yapp_registers_2-0.xml
+
+Parsing yapp_registers_2-0.xml
+
+Checking existence of license: Xcelium_Single_Core at 18:57:58 PM
+
+License Xcelium_Single_Core exists
+
+  Generating yapp_router_regs_rdb.sv ...
+
+reg_verifier : WARNING - yapp_router_regs_t is used as user-defined class name which is defined from -top_level_class_name option from command-line. There is no SCR check or name collision check for this option value. This option is for backward compatibility. Its usage should be limited.
+
+
+  Generating yapp_router_regs_config.dat ...
+
+  Generating yapp_router_regs_hdlpaths.dat ...
+
+  Generating files for quicktest.sv & Makefile ...
+
+  Generating cdns_uvmreg_utils_pkg.sv ...
+
+Code generation complete.
+
+Execution time (ms): 3489
+
+Execution done - exiting.
+
+(----------13 June 2022 6:57:59 PM----------)
+

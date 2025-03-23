@@ -1,0 +1,225 @@
+xrun: 21.03-s015: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	21.03-s015: Started on Oct 20, 2022 at 14:30:39 BST
+xrun
+	-f run.f
+		-uvmhome /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d
+		+UVM_VERBOSITY=UVM_LOW
+		+UVM_TESTNAME=custom_access_test
+		-timescale 1ns/100ps
+		-incdir ../reg_uvc/sv
+		../reg_uvc/sv/reg_pkg.sv
+		../reg_uvc/sv/reg_if.sv
+		cdns_uvmreg_utils_pkg.sv
+		custom_regs_rdb.sv
+		register_dut.sv
+		top.sv
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_LOW
+
+Recompiling... reason: file './reg_rm_tb.sv' is newer than expected.
+	expected: Thu Oct 20 14:26:15 2022
+	actual:   Thu Oct 20 14:30:30 2022
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d
+file: top.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		reg_pkg
+		cdns_uvmreg_utils_pkg
+		custom_regs_pkg
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.uvm_pkg:sv <0x54495b60>
+			streams:  21, words: 30483
+		worklib.top:sv <0x56fbe759>
+			streams:  23, words: 11663
+		worklib.uvm_pkg:sv <0x22ebacf5>
+			streams:  53, words: 68703
+		worklib.uvm_pkg:sv <0x49fdaa6e>
+			streams:  22, words: 13556
+		worklib.top:sv <0x6c3a3c27>
+			streams:   6, words:  4370
+		worklib.top:sv <0x3eda089f>
+			streams:   6, words:  4366
+		worklib.top:sv <0x46d7dd8f>
+			streams:   8, words:  2165
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    1       1
+		Verilog packages:              7       7
+		Registers:                 14777   10786
+		Scalar wires:                  4       -
+		Vectored wires:                4       -
+		Named events:                  4      12
+		Always blocks:                 3       3
+		Initial blocks:              332     173
+		Parallel blocks:              26      27
+		Pseudo assignments:            6       6
+		Assertions:                    2       2
+		Covergroup Instances:          0      16
+		SV Class declarations:       222     335
+		SV Class specializations:    420     420
+		Simulation timescale:      100ps
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/xcelium/files/xmsimrc
+xcelium> source /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (21.03-s015)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0 ns: reporter [RNTST] Running test custom_access_test...
+include_coverage not located
+  did you mean recording_detail?
+include_coverage not located
+  did you mean recording_detail?
+include_coverage not located
+  did you mean recording_detail?
+include_coverage not located
+  did you mean recording_detail?
+include_coverage not located
+  did you mean recording_detail?
+include_coverage not located
+  did you mean recording_detail?
+include_coverage not located
+  did you mean recording_detail?
+include_coverage not located
+  did you mean recording_detail?
+UVM_INFO @ 0 ns: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------------------------------------------------------------------------
+Name                          Type                                                                Size  Value                   
+--------------------------------------------------------------------------------------------------------------------------------
+uvm_test_top                  custom_access_test                                                  -     @2789                   
+  tb                          reg_rm_tb                                                           -     @2860                   
+    reg_predictor             uvm_reg_predictor #(reg_item)                                       -     @3090                   
+      bus_in                  uvm_analysis_imp                                                    -     @3248                   
+        recording_detail      integral                                                            32    'd1                     
+      reg_ap                  uvm_analysis_port                                                   -     @3299                   
+        recording_detail      integral                                                            32    'd1                     
+      recording_detail        integral                                                            32    'd1                     
+    reg_uvc                   reg_env                                                             -     @2896                   
+      agent                   reg_agent                                                           -     @3350                   
+        driver                reg_driver                                                          -     @4049                   
+          rsp_port            uvm_analysis_port                                                   -     @4200                   
+            recording_detail  integral                                                            32    'd1                     
+          seq_item_port       uvm_seq_item_pull_port                                              -     @4151                   
+            recording_detail  integral                                                            32    'd1                     
+          recording_detail    integral                                                            32    'd1                     
+        monitor               reg_monitor                                                         -     @98                     
+          monitor_reg_port    uvm_analysis_port                                                   -     @3434                   
+            recording_detail  integral                                                            32    'd1                     
+          recording_detail    integral                                                            32    'd1                     
+        sequencer             reg_sequencer                                                       -     @3464                   
+          rsp_export          uvm_analysis_export                                                 -     @3522                   
+            recording_detail  integral                                                            32    'd1                     
+          seq_item_export     uvm_seq_item_pull_imp                                               -     @4070                   
+            recording_detail  integral                                                            32    'd1                     
+          recording_detail    integral                                                            32    'd1                     
+          arbitration_queue   array                                                               0     -                       
+          lock_queue          array                                                               0     -                       
+          num_last_reqs       integral                                                            32    'd1                     
+          num_last_rsps       integral                                                            32    'd1                     
+        is_active             uvm_active_passive_enum                                             1     UVM_ACTIVE              
+        recording_detail      integral                                                            32    'd1                     
+      recording_detail        integral                                                            32    'd1                     
+    reg_rm                    custom_regs_vendor_Cadence_Design_Systems_library_flat_version_2_0  -     @2891                   
+      custom_registers        T_registers_25                                                      -     @2951                   
+        reg_five              T_reg_five_22                                                       -     @2987                   
+          reg_five_fld        uvm_reg_field                                                       ...    RW reg_five[7:0]=8'h00 
+        reg_four              T_reg_four_21                                                       -     @2997                   
+          reg_four_fld        uvm_reg_field                                                       ...    RW reg_four[7:0]=8'h00 
+        reg_one               T_reg_one_18                                                        -     @3013                   
+          reg_one_fld         uvm_reg_field                                                       ...    RW reg_one[7:0]=8'h00  
+        reg_seven             T_reg_seven_24                                                      -     @3028                   
+          reg_seven_fld       uvm_reg_field                                                       ...    RW reg_seven[7:0]=8'h00
+        reg_six               T_reg_six_23                                                        -     @3043                   
+          reg_six_fld         uvm_reg_field                                                       ...    RW reg_six[7:0]=8'h00  
+        reg_three             T_reg_three_20                                                      -     @3058                   
+          reg_three_fld       uvm_reg_field                                                       ...    RW reg_three[7:0]=8'h00
+        reg_two               T_reg_two_19                                                        -     @3073                   
+          reg_two_fld         uvm_reg_field                                                       ...    RW reg_two[7:0]=8'h00  
+        reg_zero              T_reg_zero_17                                                       -     @3088                   
+          field0              uvm_reg_field                                                       ...    RW reg_zero[0:0]=1'h0  
+          field1              uvm_reg_field                                                       ...    RW reg_zero[1:1]=1'h0  
+          field2              uvm_reg_field                                                       ...    RW reg_zero[2:2]=1'h0  
+          field3              uvm_reg_field                                                       ...    RW reg_zero[3:3]=1'h0  
+          field4              uvm_reg_field                                                       ...    RW reg_zero[4:4]=1'h0  
+          field5              uvm_reg_field                                                       ...    RW reg_zero[5:5]=1'h0  
+          field6              uvm_reg_field                                                       ...    RW reg_zero[6:6]=1'h0  
+          field7              uvm_reg_field                                                       ...    RW reg_zero[7:7]=1'h0  
+    recording_detail          integral                                                            32    'd1                     
+--------------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO reg_test_lib.sv(78) @ 5 ns: uvm_test_top [custom_access_test] Executing custom_access_test
+UVM_INFO reg_test_lib.sv(84) @ 5 ns: uvm_test_top [custom_access_test] Write to write-set-8'h5A reg_three
+SDI/Verilog Transaction Recording Facility Version 21.03-s015
+UVM_INFO reg_test_lib.sv(86) @ 50 ns: uvm_test_top [uvm_test_top] First read from reg_three: expect 8'h5a
+UVM_INFO reg_test_lib.sv(88) @ 90 ns: uvm_test_top [uvm_test_top] Second read from reg_three: expect 8'hFF
+UVM_INFO reg_test_lib.sv(96) @ 170 ns: uvm_test_top [custom_access_test] Write to unenabled reg_one
+DUT: write to disabled reg_one @    191 ns ignored
+UVM_INFO reg_test_lib.sv(100) @ 290 ns: uvm_test_top [custom_access_test] Write to enabled reg_one
+UVM_INFO reg_test_lib.sv(107) @ 370 ns: uvm_test_top [custom_access_test] testing aliased registers
+UVM_INFO reg_test_lib.sv(118) @ 570 ns: uvm_test_top [custom_access_test] Write to reg_five hff
+UVM_ERROR /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg.svh(2892) @ 650 ns: reporter [RegModel] Register "reg_rm.custom_registers.reg_four" value read from DUT (0x00000000000000ff) does not match mirrored value (0x00000000000000a5)
+UVM_INFO /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg.svh(2911) @ 650 ns: reporter [RegModel] Field reg_four_fld (reg_rm.custom_registers.reg_four[7:0]) mismatch read=8'hff mirrored=8'ha5 
+UVM_INFO /mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 890 ns: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   12
+UVM_WARNING :    0
+UVM_ERROR :    1
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[RegModel]     2
+[TEST_DONE]     1
+[UVMTOP]     1
+[custom_access_test]     6
+[uvm_test_top]     2
+Simulation complete via $finish(1) at time 890 NS + 45
+/mnt/hd2/cadmgr/cadence/installs/XCELIUM2103/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+TOOL:	xrun	21.03-s015: Exiting on Oct 20, 2022 at 14:30:41 BST  (total: 00:00:02)
