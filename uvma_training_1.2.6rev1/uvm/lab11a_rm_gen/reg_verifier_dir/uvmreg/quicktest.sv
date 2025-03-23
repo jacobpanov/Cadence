@@ -131,7 +131,6 @@ package quicktest;
 			uvm_reg_sequence seq;
 			int x;
 			phase.raise_objection(this);
-			// model.print();
 			seq = cdns_test_seq::type_id::create("test_seq",,get_full_name());
 			seq.model = model;
 			seq.start(null,null);
@@ -183,4 +182,5 @@ module test();
 		run_test();
 	end
 endmodule
+
 

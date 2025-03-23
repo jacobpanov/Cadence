@@ -6,7 +6,7 @@ Command Line Arguments:
 	--quirks
 	--jar /software/commercial/cadence/XCELIUM2209/tools.lnx86/sia/lib/image/rdve.jar
 	--logfile ./reg_verifier_dir/reg_verifier
-	--execute /tmp/reg_verifier_3365338.js
+	--execute /tmp/reg_verifier_3377451.js
 
 Packaged as 21.10.001-a released 2021-10-11T12:05:12.993203+03:00
 
@@ -14,15 +14,15 @@ Initializing
 
 *** Warning: Replacing function 'post_release_generate_hook' callable by script which was previously registered for package 'tti_bnr'  At tti_bnr_manager.init() 
 
-Initialize time (ms): 298
+Initialize time (ms): 258
 
 Package main.init() done.
 
-(----------22 March 2025 8:59:33 PM----------)
+(----------22 March 2025 9:26:46 PM----------)
 
-Loading script /tmp/reg_verifier_3365338.js
+Loading script /tmp/reg_verifier_3377451.js
 
-HINT /tmp/reg_verifier_3365338.js:1 - The argument 'something' is unused
+HINT /tmp/reg_verifier_3377451.js:1 - The argument 'something' is unused
 
 0 errors
 0 warnings
@@ -35,7 +35,7 @@ Parsing yapp_router_regs.xml
 
 Importing ipxact source yapp_router_regs.xml
 
-Checking existence of license: Xcelium_Single_Core at 20:59:35 PM
+Checking existence of license: Xcelium_Single_Core at 21:26:49 PM
 
 License Xcelium_Single_Core exists
 
@@ -46,6 +46,30 @@ License Xcelium_Single_Core exists
   Generating yapp_router_regs_hdlpaths.dat ...
 
   Generating files for quicktest.sv & Makefile ...
+
+  Generating cdns_uvmreg_utils_pkg.sv ...
+
+Code generation complete.
+
+Execution time (ms): 2886
+
+Execution done - exiting.
+
+(----------22 March 2025 9:26:49 PM----------)
+
+& Makefile ...
+
+  Generating cdns_uvmreg_utils_pkg.sv ...
+
+Code generation complete.
+
+Execution time (ms): 2919
+
+Execution done - exiting.
+
+(----------22 March 2025 9:18:47 PM----------)
+
+& Makefile ...
 
   Generating cdns_uvmreg_utils_pkg.sv ...
 

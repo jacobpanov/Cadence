@@ -1,5 +1,5 @@
 xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun	22.09-s010: Started on Mar 22, 2025 at 21:02:49 EDT
+TOOL:	xrun	22.09-s010: Started on Mar 22, 2025 at 21:28:09 EDT
 xrun
 	-uvmhome default
 	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
@@ -12,19 +12,10 @@ xrun
    User defined plus("+") options:
 	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
 
-Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
-file: ./cdns_uvmreg_utils_pkg.sv
-	package worklib.cdns_uvmreg_utils_pkg:sv
-		errors: 0, warnings: 0
-file: ./yapp_router_regs_rdb.sv
-	package worklib.yapp_router_reg_pkg:sv
-		errors: 0, warnings: 0
 file: ./quicktest.sv
 package uvc_pkg;
               |
 xmvlog: *W,TSNSPK (./quicktest.sv,5|14): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
-	package worklib.uvc_pkg:sv
-		errors: 0, warnings: 1
 	package worklib.quicktest:sv
 		errors: 0, warnings: 0
 	module worklib.test:sv
@@ -46,9 +37,9 @@ xmvlog: *W,TSNSPK (./quicktest.sv,5|14): `timescale is not specified for the pac
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.test:sv <0x3ab8b37e>
+		worklib.test:sv <0x3fc9905a>
 			streams:   1, words:   590
-		worklib.quicktest:sv <0x1045ddfe>
+		worklib.quicktest:sv <0x05d6d381>
 			streams: 406, words: 328177
 		worklib.uvc_pkg:sv <0x409b1c2d>
 			streams:   0, words:     0
@@ -84,5 +75,5 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 		SV Class specializations:    442     442
 	Writing initial simulation snapshot: worklib.test:sv
 Loading snapshot worklib.test:sv .................... Done
-xmsim: *F,RNCNL: The required randomization library could not be opened, with this message from dl_open: 'libz.so.1: cannot open shared object file: No such file or directory or file is not valid ELFCLASS32 library.'.
-TOOL:	xrun	22.09-s010: Exiting on Mar 22, 2025 at 21:02:59 EDT  (total: 00:00:10)
+xmsim: *F,RNCNL: The required randomization library could not be opened, with this message from dl_open: 'libz.so.1: wrong ELF class: ELFCLASS64'.
+TOOL:	xrun	22.09-s010: Exiting on Mar 22, 2025 at 21:28:15 EDT  (total: 00:00:06)
