@@ -1,0 +1,4 @@
+cd tb
+xrun -clean
+rm -rf *.raw *.log .simvision waves.shm *.diag xrun.* *.shm xcelium.d
+cd ..

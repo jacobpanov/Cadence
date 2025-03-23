@@ -1,0 +1,3 @@
+xrun -clean
+rm -rf *.log waves.shm .simvision xcelium.d xrun.* simvision*.diag
+

@@ -1,0 +1,535 @@
+# SimVision Command Script (Wed Jun 26 12:37:54 PM PDT 2019)
+#
+# Version 19.03.s004
+#
+# You can restore this configuration with:
+#
+#     simvision -input /vols/fast_ms/danielcr/Machine_Learning/msNeuron_test/simvision.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set display-signal-value-fullprecision 1
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-navigate-search-locate 0
+preferences set txe-view-hold 0
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set waveform-print-paper {Tabloid (11 x 17)}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set key-bindings {Edit>Undo Ctrl+z PageUp PageUp View>Zoom>Next {Alt+Right arrow} View>Zoom>In Alt+i PageDown PageDown Edit>Copy Ctrl+c ScrollDown {Down arrow} Edit>Create>Group Ctrl+g View>Zoom>FullY_widget y Simulation>NextInScope F7 Edit>Select>All Ctrl+a Format>Radix>Decimal Ctrl+Shift+D Edit>Ungroup Ctrl+Shift+G TopOfPage Home Edit>Create>Condition Ctrl+e {command -console SimVision {%w sidebar access designbrowser selectall}} Alt+a ScrollLeft {Left arrow} Edit>SelectAllText Alt+a Edit>TextSearchConsole Alt+s View>Zoom>FullX_widget = Windows>SendTo>Waveform Ctrl+w Simulation>Return Shift+F5 View>CallstackDown {Ctrl+Down arrow} Select>All Ctrl+a Edit>Delete Del Format>Radix>Octal Ctrl+Shift+O Edit>Cut Ctrl+x Simulation>Run F2 Edit>Create>Marker Ctrl+m View>Center Alt+c View>CallstackInWindow Ctrl+k Edit>SelectAll Ctrl+a File>OpenDatabase Ctrl+o Edit>Redo Ctrl+y Format>Radix>Binary Ctrl+Shift+B View>ExpandSequenceTime>AtCursor Alt+x ScrollUp {Up arrow} File>CloseWindow Ctrl+Shift+w ScrollRight {Right arrow} View>Zoom>FullX Alt+= Edit>Create>Bus Ctrl+b Explore>NextEdge Ctrl+\] View>Zoom>Cursor-Baseline Alt+z View>Zoom>OutX Alt+o Edit>GoToLine Ctrl+g View>Zoom>Fit Alt+= View>Zoom>OutX_widget o View>CallstackUp {Ctrl+Up arrow} View>Bookmarks>Add Ctrl+b View>ShowValues Ctrl+s Simulation>Next F6 Edit>Search Ctrl+f Format>Radix>Hexadecimal Ctrl+Shift+H Edit>Create>MarkerAtCursor Ctrl+Shift+M View>Zoom>InX Alt+i View>Zoom>Out Alt+o Edit>TextSearch Ctrl+f View>Zoom>Previous {Alt+Left arrow} Edit>Paste Ctrl+v Format>Signed Ctrl+Shift+S View>CollapseSequenceTime>AtCursor Alt+s View>Zoom>InX_widget i Format>Radix>ASCII Ctrl+Shift+A Simulation>Step F5 Explore>PreviousEdge {Ctrl+[} BottomOfPage End}
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set waveform-print-colors {Color on white}
+preferences set txe-navigate-waveform-next-child 1
+preferences set signal-trace-sidebar-mode full
+preferences set vhdl-colors {H #00ffff L #00ffff 0 {} X #ff0000 - {} 1 {} U #9900ff Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set txe-locate-pop-waveform 1
+preferences set analog-sampling 1
+
+#
+# Conditions
+#
+set expression {(tb.u_msNeuron.net8.V - tb.u_msNeuron.net7.V)}
+if {[catch {condition new -name  compInDiff -expr $expression}] != ""} {
+    condition set -using compInDiff -expr $expression
+}
+#
+# Groups
+#
+catch {group new -name {Group 1} -overlay 0}
+catch {group new -name {Group 2} -overlay 0}
+catch {group new -name {Group 3} -overlay 1}
+catch {group new -name {Group 4} -overlay 0}
+catch {group new -name {Group 5} -overlay 1}
+catch {group new -name {Group 6} -overlay 1}
+catch {group new -name {Group 7} -overlay 1}
+group using {Group 1}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 2}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 3}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 4}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {unsigned(tb.weightNum)}]} ] \
+    [subst  {[format {tb.inputNum}]} ]
+group using {Group 5}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {tb.weightNum}]} ] \
+    [subst  {[format {tb.inputNum}]} ]
+group using {Group 6}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {tb.product}]} ] \
+    [subst  {[format {tb.u_msNeuron.I5.vdd.R}]} ]
+group using {Group 7}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {tb.prodXOR}]} ] \
+    [subst  {[format {tb.u_msNeuron.I5.vdd.R}]} ]
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {[format {tb}]} ]
+browser set \
+    -signalsort name
+browser yview see [subst  {[format {tb}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1661x726+10+51}] != ""} {
+    window geometry "Waveform 1" 1661x726+10+51
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 192
+waveform baseline set -time 2,905,010,000fs
+
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.clkn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.clkp}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net7}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net7.V}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.45845981000506464 -max 0.5347389801867678 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net8.V}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.46039826804521933 -max 0.5366880408300696 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {compInDiff}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.073863688692117346 -max 0.077751110010853275 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.vdd.I}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -3.352799999999956e-09 -max -2.7431999999999638e-09 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.iuAvg}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 27.287486700511366 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.lastSample}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.051200003048001784 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.thisSample}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.iSamples[15:0]}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 3]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 4]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 5]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 6]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 7]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 8]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 9]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 10]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 11]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 12]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 13]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 14]
+waveform format $id2 -trace analogLinear
+set id2 [lindex [waveform hierarchy content $id] 15]
+waveform format $id2 -trace analogLinear
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net8}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net19[1023:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net20[1023:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.out}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.clkp}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.vdd}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.vss}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.w[1023:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.x[1023:0]}]}
+	} ]]
+
+set groupId0 [waveform add -groups {{Group 3}}]
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.clkp}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.weightNum}]}
+	} ]]
+waveform format $id -radix %d -trace analogSampleAndHold
+waveform axis range $id -for default -min -6.6000000000000005 -max -5.4000000000000004 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.inputNum}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -42 -max 39 -scale linear
+
+set groupId0 [waveform add -groups {{Group 5}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {tb.weightNum}]} {-radix %d -trace analogSampleAndHold}
+    {[format {tb.inputNum}]} {-trace analogSampleAndHold}
+}] childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -42 -max 39 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.out}]}
+	} ]]
+
+set groupId0 [waveform add -groups {{Group 6}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {tb.product}]} {-trace analogSampleAndHold}
+    {[format {tb.u_msNeuron.I5.vdd.R}]} {-trace analogSampleAndHold}
+}] childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -0.00089263916015625 -max 0.0009613037109375 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals [subst  {
+	{[format {compInDiff}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.064145523790786418 -max 0.083582006422327493 -scale linear
+
+set groupId0 [waveform add -groups {{Group 7}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {tb.prodXOR}]} {-trace analogSampleAndHold}
+    {[format {tb.u_msNeuron.I5.vdd.R}]} {-trace analogSampleAndHold}
+}] childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -38 -max 43 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.out}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.clkn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.x[1023:0]}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 2.0633925794553161e+306 -max 1.7951766537204754e+308 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net8.V}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.46039826804521933 -max 0.5366880408300696 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.net7.V}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.45845981000506464 -max 0.5347389801867678 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.clkn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.clkp}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.compOn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.enInt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.iActive}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 4.5000000000000003e-05 -max 5.5000000000000009e-05 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.iStandby}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 9.000000000000001e-10 -max 1.1000000000000001e-09 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.iSupply}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1.0000000000000001e-09 -max 5.0001000000000005e-05 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.inm}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.inp}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.out}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.outReg}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.supplyOK}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.updateDelay}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 2.2500000000000002e-10 -max 2.7500000000000003e-10 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.updating}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vdd}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vddGood}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vddGoodFilt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vddMax}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1.0800000000000001 -max 1.3200000000000001 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vddMin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.63 -max 0.77000000000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vss}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vssGood}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vssGoodFilt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.u_msNeuron.I5.vssMax}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.090000000000000011 -max 0.11000000000000001 -scale linear
+
+waveform xview limits 1425ns 16075.01ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x479+261+335
+
+#
+# Layout selection
+#
+

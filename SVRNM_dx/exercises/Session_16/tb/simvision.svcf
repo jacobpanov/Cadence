@@ -1,0 +1,422 @@
+# SimVision Command Script (Wed Jun 17 10:52:29 AM PDT 2020)
+#
+# Version 19.09.s012
+#
+# You can restore this configuration with:
+#
+#     simvision -input simv-P1.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set waveform-dont-show-assert-debug-info 1
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set seq-time-width 20
+preferences set txe-view-hold 0
+preferences set txe-navigate-search-locate 0
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1
+  name SvDataBrowser
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 2
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set waveform-height 20
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set waveform-auto-analog-y-fit 1
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0
+}
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 3
+}
+preferences set plugin-enable-groupscope 0
+preferences set key-bindings {PageUp PageUp Edit>Undo Ctrl+z View>Zoom>Next {Alt+Right arrow} View>Zoom>In Alt+i PageDown PageDown ScrollDown {Down arrow} Edit>Copy Ctrl+c View>Zoom>FullY_widget y Edit>Create>Group Ctrl+g Simulation>NextInScope F7 Edit>Select>All Ctrl+a Format>Radix>Decimal Ctrl+Shift+D Edit>Ungroup Ctrl+Shift+G TopOfPage Home Edit>Create>Condition Ctrl+e {command -console SimVision {%w sidebar access designbrowser selectall}} Alt+a View>Zoom>FullX_widget = ScrollLeft {Left arrow} Edit>SelectAllText Alt+a Edit>TextSearchConsole Alt+s Windows>SendTo>Waveform Ctrl+w Simulation>Return Shift+F5 View>CallstackDown {Ctrl+Down arrow} Select>All Ctrl+a Edit>Delete Del Format>Radix>Octal Ctrl+Shift+O Edit>Cut Ctrl+x Simulation>Run F2 Edit>Create>Marker Ctrl+m View>Center Alt+c View>CallstackInWindow Ctrl+k Edit>SelectAll Ctrl+a File>OpenDatabase Ctrl+o Edit>Redo Ctrl+y Format>Radix>Binary Ctrl+Shift+B View>ExpandSequenceTime>AtCursor Alt+x ScrollUp {Up arrow} File>CloseWindow Ctrl+Shift+w ScrollRight {Right arrow} View>Zoom>FullX Alt+= Edit>Create>Bus Ctrl+b Explore>NextEdge Ctrl+\] View>Zoom>Cursor-Baseline Alt+z View>Zoom>OutX Alt+o Edit>GoToLine Ctrl+g View>Zoom>Fit Alt+= View>Zoom>OutX_widget o View>CallstackUp {Ctrl+Up arrow} View>Bookmarks>Add Ctrl+b Format>Radix>Hexadecimal Ctrl+Shift+H Edit>Search Ctrl+f Simulation>Next F6 View>ShowValues Ctrl+s View>Zoom>InX Alt+i Edit>Create>MarkerAtCursor Ctrl+Shift+M View>Zoom>Out Alt+o Edit>TextSearch Ctrl+f Format>Signed Ctrl+Shift+S Edit>Paste Ctrl+v View>Zoom>Previous {Alt+Left arrow} View>CollapseSequenceTime>AtCursor Alt+s Format>Radix>ASCII Ctrl+Shift+A View>Zoom>InX_widget i Explore>PreviousEdge {Ctrl+[} Simulation>Step F5 BottomOfPage End}
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set watchwindow-always-probe-added 1
+preferences set toolbar-Windows-WaveWindow {
+  usual
+  position -row 1 -pos 2 -anchor w
+}
+preferences set txe-navigate-waveform-next-child 1
+preferences set waveform-space 3
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set db-group-librarycells 0
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 1 -anchor w
+}
+preferences set vhdl-colors {H #00ffff L #00ffff 0 {} X #ff0000 - {} 1 {} U #9900ff Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set waveform-assertion-debug 1
+preferences set txe-locate-pop-waveform 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# PPE data
+#
+array set dbNames ""
+set dbNames(realName1) [database require waves -search {
+	./waves.shm/waves.trn
+	/vols/fast_ms/ronv/FastDeluxe/SVRNM_dx/exercises/Session_16/tb/waves.shm/waves.trn
+}]
+#
+# Groups
+#
+catch {group new -name {MIddle node} -overlay 1}
+catch {group new -name {Inductor current} -overlay 0}
+catch {group new -name {Output Voltage} -overlay 0}
+catch {group new -name {Group 4} -overlay 1}
+catch {group new -name {Diode current} -overlay 1}
+catch {group new -name {Group 1} -overlay 1}
+catch {group new -name {Group 2} -overlay 1}
+catch {group new -name {Group 3} -overlay 1}
+catch {group new -name {Group 5} -overlay 1}
+catch {group new -name {Switch Resistance} -overlay 1}
+catch {group new -name Output-Voltage -overlay 1}
+catch {group new -name Inductor-Current -overlay 1}
+catch {group new -name Midnode-Voltage -overlay 1}
+group using {MIddle node}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Ebuck.M  \
+     waves::buck_tb.Buck.M.V 
+group using {Inductor current}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Ebuck.Ind.Iana  \
+     waves::buck_tb.Buck.Ind.Iind  \
+     waves::buck_tb.Freq  \
+     waves::buck_tb.Duty  \
+     waves::buck_tb.RL 
+group using {Output Voltage}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.VS  \
+     waves::buck_tb.EOUT  \
+     waves::buck_tb.OUT.V  \
+    {MIddle node}
+group using {Group 4}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Ebuck.Swt.Iana  \
+     waves::buck_tb.Ebuck.Dio.Iana 
+group using {Diode current}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Ebuck.Dio.Iana  \
+     waves::buck_tb.Buck.Dio.Idio 
+group using {Group 1}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Buck.Ind.DP.Nupdt  \
+     waves::buck_tb.Buck.Ind.DP.Npts 
+group using {Group 2}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.VOHee  \
+     waves::buck_tb.VOLee  \
+     waves::buck_tb.VO_AN  \
+     waves::buck_tb.VO_EE 
+group using {Group 3}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Buck.Swt.Rdrv  \
+     waves::buck_tb.Ebuck.Swt.Rramp 
+group using {Group 5}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Buck.Swt.Rdrv  \
+     waves::buck_tb.Ebuck.Swt.Rramp 
+group using {Switch Resistance}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Ebuck.Swt.Rramp  \
+     waves::buck_tb.Buck.Swt.Rdrv 
+group using Output-Voltage
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.EOUT  \
+     waves::buck_tb.OUT.V 
+group using Inductor-Current
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Ebuck.Ind.Iana  \
+     waves::buck_tb.Buck.Ind.Iind 
+group using Midnode-Voltage
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::buck_tb.Ebuck.M  \
+     waves::buck_tb.Buck.M.V 
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x691+232+26}] != ""} {
+    window geometry "Design Browser 1" 730x691+232+26
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  waves::buck_tb 
+browser set \
+    -signalsort name
+browser yview see  waves::buck_tb 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 2" -geometry 1473x849+439+130}] != ""} {
+    window geometry "Waveform 2" 1473x849+439+130
+}
+window target "Waveform 2" on
+waveform using {Waveform 2}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 205 \
+    -units us \
+    -valuewidth 156
+waveform baseline set -time 0
+
+
+set groupId0 [waveform add -groups Output-Voltage]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::buck_tb.EOUT {-height 58 -trace analogLinear}
+    waves::buck_tb.OUT.V {-height 58 -trace analogLinear}
+} childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -1.9895183154268138e-08 -max 3.8996134595945668 -scale linear
+waveform axis range $groupId0 -for V -min 0 -max 3.8373437232275562 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups Inductor-Current]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::buck_tb.Ebuck.Ind.Iana {-height 58 -trace analogLinear}
+    waves::buck_tb.Buck.Ind.Iind {-height 58 -trace analogLinear}
+} childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -0.0014439241498837134 -max 0.14177456642429501 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups Midnode-Voltage]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::buck_tb.Ebuck.M {-height 40 -trace analogLinear}
+    waves::buck_tb.Buck.M.V {-height 40 -trace analogLinear}
+} childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -0.21417744740004327 -max 147.6444291521467 -scale linear
+waveform axis range $groupId0 -for V -min -0.22013590747776399 -max 303.424105161287 -scale linear
+waveform axis activate $groupId0 -for V
+set id [waveform add -signals  {
+	waves::buck_tb.Freq
+	} ]
+waveform format $id -trace digital
+waveform axis range $id -for default -min 0 -max 100000 -scale linear
+set id [waveform add -signals  {
+	waves::buck_tb.Duty
+	} ]
+waveform format $id -trace digital
+waveform axis range $id -for default -min 0 -max 0.5 -scale linear
+set id [waveform add -signals  {
+	waves::buck_tb.RL
+	} ]
+waveform format $id -trace digital
+waveform axis range $id -for default -min 10 -max 100 -scale linear
+set id [waveform add -signals  {
+	waves::buck_tb.CK
+	} ]
+set id [waveform add -signals  {
+	waves::buck_tb.VO_PCTERR
+	} ]
+waveform format $id -trace digital
+waveform axis range $id -for default -min -1.0293564383315856 -max 1.0222736323764137 -scale linear
+set id [waveform add -signals  {
+	waves::buck_tb.RIP_PCTERR
+	} ]
+waveform format $id -trace digital
+waveform axis range $id -for default -min -10.794593371202421 -max 3.6304819006962363 -scale linear
+
+waveform xview limits 0 8357.1us
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x646+1+435
+
+#
+# Layout selection
+#

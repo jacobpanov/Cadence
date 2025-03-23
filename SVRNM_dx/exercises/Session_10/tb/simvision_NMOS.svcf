@@ -1,0 +1,334 @@
+# SimVision Command Script (Thu Jul 06 09:20:47 AM PDT 2017)
+#
+# Version 17.04.s007
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision_NMOS.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set waveform-dont-show-assert-debug-info 1
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1
+  name SvDataBrowser
+}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 4
+}
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0
+}
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 5
+}
+preferences set plugin-enable-groupscope 0
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set watchwindow-always-probe-added 1
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 1 -anchor w
+}
+preferences set waveform-assertion-debug 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+#
+# Groups
+#
+catch {group new -name {Group 1} -overlay 1}
+catch {group new -name {Group 2} -overlay 1}
+catch {group new -name {Group 3} -overlay 1}
+catch {group new -name {Group 4} -overlay 0}
+catch {group new -name {Group 5} -overlay 0}
+catch {group new -name {Group 6} -overlay 1}
+catch {group new -name {Group 7} -overlay 1}
+catch {group new -name {Group 8} -overlay 1}
+catch {group new -name {Group 9} -overlay 1}
+catch {group new -name {Group 10} -overlay 1}
+catch {group new -name CURRENTS -overlay 1}
+catch {group new -name VOLTAGES -overlay 1}
+group using {Group 1}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 2}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 3}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.IG}]} ]
+group using {Group 4}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 5}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 6}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 7}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 8}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 9}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 10}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using CURRENTS
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.dioG.Id}]} ] \
+    [subst  {[format {top.dioI.Id}]} ]
+group using VOLTAGES
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.DG.V}]} ] \
+    [subst  {[format {top.DI.V}]} ]
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x689+262+32}] != ""} {
+    window geometry "Design Browser 1" 730x689+262+32
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {[format {top.dioG}]} ]
+browser set \
+    -signalsort name
+browser yview see [subst  {[format {top.dioG}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1386x947+404+49}] != ""} {
+    window geometry "Waveform 1" 1386x947+404+49
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 113 \
+    -units ns \
+    -valuewidth 102
+waveform baseline set -time 0
+
+set id [waveform add -signals [subst  {
+	{[format {top.Vd}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 4.4999999999999982 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {top.Id}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.001024 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {top.Rd}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 10 -max 1000000 -scale log
+set id [waveform add -signals [subst  {
+	{[format {top.TestType}]}
+	} ]]
+
+set groupId0 [waveform add -groups VOLTAGES]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.DG.V}]} {-height 44 -trace analogSampleAndHold}
+    {[format {top.DI.V}]} {-trace analogSampleAndHold}
+}] childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 9.900101400089758 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals [subst  {
+	{[format {top.DV.V}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1 -max 5 -scale linear
+
+set groupId0 [waveform add -groups CURRENTS]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.dioG.Id}]} {-height 38 -trace analogSampleAndHold}
+    {[format {top.dioI.Id}]} {-height 38 -trace analogSampleAndHold}
+}] childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 0.00101848981556153 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals [subst  {
+	{[format {top.dioV.Id}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.39000000000000018 -max 0.34999999999999987 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {top.NG}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 7 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {top.NI}]}
+	} ]]
+waveform format $id -radix %d -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 12 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {top.NV}]}
+	} ]]
+waveform format $id -radix %d -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 11 -scale linear
+
+waveform xview limits 0 760ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x400+0+444
+
+#
+# Layout selection
+#
+

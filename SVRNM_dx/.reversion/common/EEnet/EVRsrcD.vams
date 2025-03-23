@@ -1,0 +1,73 @@
+// --- Begin Copyright Block -----[ do not move or remove ]------
+// Copyright (c) 2018, Cadence Design Systems, Inc. All rights reserved.
+
+// The model contained herein is the proprietary and confidential information 
+// of Cadence, and is supplied subject to, and may be used only by Cadences 
+// customer in accordance with a previously executed license and maintenance 
+// agreement between Cadence and that customer. This model is intended for use 
+// with products only from Cadence Design Systems, Inc.  The use or sharing of 
+// any models from this library or any of its modified/extended form is 
+// strictly prohibited with any non-Cadence products.
+
+// ALL MATERIALS FURNISHED BY CADENCE HEREUNDER ARE PROVIDED "AS IS" WITHOUT 
+// WARRANTY OF ANY KIND, AND CADENCE SPECIFICALLY DISCLAIMS ANY WARRANTY OF 
+// NONINFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY. 
+// CADENCE SHALL NOT BE LIABLE FOR ANY COSTS OF PROCUREMENT OF SUBSTITUTES, 
+// LOSS OF PROFITS, INTERRUPTION OF BUSINESS, OR FOR ANY OTHER SPECIAL, 
+// CONSEQUENTIAL OR INCIDENTAL DAMAGES, HOWEVER CAUSED, WHETHER FOR BREACH OF 
+// WARRANTY, CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE.
+// --------------------------------------------------------------
+
+// EVRsrcD.vams - driver for differential V+R drive for electrical signals
+
+// Usually driven as V+R or I+R.  Allows R>=0 as well as `wrealZState.
+// Voltage input of `wrealXState will use parameter vx for voltage value.
+// This format can smoothly transition between short and open circuit.
+// Uses symmetric function: R=Rc*K^4 for K=0to1 and R=Rc/(2-K)^4 for K=1 to 2.
+// Conversion from R to K:    K = (R<Rc)? (R/Rc)^0.25 : 2-(Rc/R)^0.25.
+// Returns measured P-to-N current as wreal output imeas.
+
+// Updated:  2019-05-21 (ronv) Cadence Design Systems
+
+`include "disciplines.vams"
+`timescale 1ns/1ps
+
+module EVRsrcD (P,N, vval,rval, imeas);
+inout P,N; electrical P,N;
+input wreal vval,rval;
+output wreal imeas;
+
+parameter real tr=1n;     // risetime for all analog drive changes
+parameter real vx=0.6;    // X equivalent voltage for analog output drive
+parameter real rc=1e4;    // center point for resistive transition function
+parameter real rz=1e15;   // Z state resistance (1e15 indicates infinite)
+
+real Vin,Kin;             // specified voltage and converted resistance
+real Vout,K,Rout;         // ramped V,K values and computed R
+real Imeas;               // measured current at analog timesteps
+
+always begin
+  if (vval<1e20 && rval<1e20) begin  // normal operation
+    Vin = vval;                      // pass V and convert R to K
+    Kin = (rval<rc)? $pow(rval/rc,0.25) : 2-$pow(rc/rval,0.25);
+  end
+  else if (vval===`wrealXState || 
+           rval===`wrealXState)    Vin = vx;  // X only changes V value
+  else                             Kin = 2;   // Z only changes R value
+  @(vval,rval);
+end
+
+// measured analog current
+always @(absdelta(I(P,N),0)) Imeas = I(P,N)+1e-14*(Imeas==I(P,N));
+assign imeas = Imeas;
+
+analog begin
+  Vout = transition( Vin, 0,tr,tr,tr/10);
+  K = transition( Kin, 0,tr,tr,tr/10);
+  Rout = (K<=1)? rc*$pow(K,4) : (K<2)? rc/$pow(2-K,4) : rz;
+  if      (Rout<1e-2)  V(P,N) <+ Vout+I(P,N)*Rout;    // near-ideal V source
+  else if (Rout<1e15)  I(P,N) <+ (V(P,N)-Vout)/Rout;  // normal V+R
+  else                 I(P,N) <+ 0;                   // open circuit
+end
+
+endmodule

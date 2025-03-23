@@ -1,0 +1,2 @@
+xrun -clean -rnm_tech -input probes.tcl -status -gui -access rw \
+  -nowarn NSVCER -nowarn SAWSTP *.sv  $* &

@@ -1,0 +1,4 @@
+*
+simulator lang=spectre
+
+tran tran stop=1ms

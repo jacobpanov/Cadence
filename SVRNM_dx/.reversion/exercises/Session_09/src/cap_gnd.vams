@@ -1,0 +1,13 @@
+// cap_gnd.vams - electrical netlist for grounded capacitor with initial condition
+
+module cap_gnd (P);
+inout P;
+electrical P,GND;
+ground GND;              // define ground net
+
+parameter real c=1e-12;  // capacitance value (Farads)
+parameter real ic=0;     // initial condition (Volts)
+
+capacitor #(.c(c),.ic(ic)) cap(P,GND);  // instanciate spectre capacitor
+
+endmodule

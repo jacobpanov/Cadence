@@ -1,0 +1,71 @@
+// --- Begin Copyright Block -----[ do not move or remove ]------
+// Copyright (c) 2020, Cadence Design Systems, Inc. All rights reserved.
+
+// The model contained herein is the proprietary and confidential information 
+// of Cadence, and is supplied subject to, and may be used only by Cadences 
+// customer in accordance with a previously executed license and maintenance 
+// agreement between Cadence and that customer. This model is intended for use 
+// with products only from Cadence Design Systems, Inc.  The use or sharing of 
+// any models from this library or any of its modified/extended form is 
+// strictly prohibited with any non-Cadence products.
+
+// ALL MATERIALS FURNISHED BY CADENCE HEREUNDER ARE PROVIDED "AS IS" WITHOUT 
+// WARRANTY OF ANY KIND, AND CADENCE SPECIFICALLY DISCLAIMS ANY WARRANTY OF 
+// NONINFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY. 
+// CADENCE SHALL NOT BE LIABLE FOR ANY COSTS OF PROCUREMENT OF SUBSTITUTES, 
+// LOSS OF PROFITS, INTERRUPTION OF BUSINESS, OR FOR ANY OTHER SPECIAL, 
+// CONSEQUENTIAL OR INCIDENTAL DAMAGES, HOWEVER CAUSED, WHETHER FOR BREACH OF 
+// WARRANTY, CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE.
+// --------------------------------------------------------------
+
+// Detailed model of voltage doubler charge pump operation.
+// Uses Electrical nets for input & output pins to model current handling,
+// logic for clock input.  Assumes ground is at zero volts.
+//
+// DOUBLER TOPOLOGY:
+//   [IN]*------+----------+
+//              S1         S0
+//         [VCK]*-----||---*[MID]---S1---+------*[OUT]
+//              S0    CP                _|_ +  
+//              |   -Vcp+             CL--- Vcl
+//             _|_                      _|_ -  
+//              -                        -     
+//
+// This is a direct electrical implementation of the above topology in AMS
+// behavioral code. 
+
+`timescale 1ns/1ps
+`include "disciplines.vams"
+
+module doubler_full(OUT,IN,CK);
+
+inout OUT,IN;               // Electrical format input and output
+input CK;                   // clock control input 
+electrical OUT,IN,VCK,MID;  // analog electrical nodes
+
+parameter real CL=100e-9;   // output capacitance
+parameter real Cp=10e-9;    // Internal capacitor of charge pump
+parameter real Ron=3;       // on resistance of switches
+parameter real Roff=1e6;    // off resistance of switches
+parameter real Tsw=5e-9;    // non-overlap interval for switching
+
+real Rs0,Rs1; // resistances for S0 and S1 switches (log ramped between levels)
+real Is1o;    // measured current flowing thru S1 (for plotting)
+
+assign #(Tsw/1n,0) Phi1 = (CK===1'b1);  // generate non-overlapping phases
+assign #(Tsw/1n,0) Phi0 = (CK===1'b0);
+
+analog begin       // log variation of resistance through transition
+  Rs0 = exp(transition(Phi0===1? ln(Ron):ln(Roff), 0, Tsw));
+  Rs1 = exp(transition(Phi1===1? ln(Ron):ln(Roff), 0, Tsw));
+  // current-vs-voltage definition for each of the 6 element in topology:
+  I(IN,VCK)  <+ V(IN,VCK)/Rs1;
+  I(VCK)     <+ V(VCK)/Rs0;
+  I(MID,VCK) <+ ddt(Cp*V(MID,VCK));
+  I(IN,MID)  <+ V(IN,MID)/Rs0;
+  I(MID,OUT) <+ V(MID,OUT)/Rs1;
+  V(OUT)     <+ idt(I(OUT))/CL;  // capacitor with no initial condition
+  Is1o = V(MID,OUT)/Rs1;   // measure current from pump into CL & load
+end
+
+endmodule

@@ -1,0 +1,332 @@
+# SimVision Command Script (Fri Jan 24 12:45:33 PM PST 2020)
+#
+# Version 19.12.a001
+#
+# You can restore this configuration with:
+#
+#     simvision -input simv_VR.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set waveform-dont-show-assert-debug-info 1
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-view-hold 0
+preferences set txe-navigate-search-locate 0
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1
+  name SvDataBrowser
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 4
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set waveform-auto-analog-y-fit 1
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0 -pos 1
+}
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 6
+}
+preferences set plugin-enable-groupscope 0
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set watchwindow-always-probe-added 1
+preferences set txe-navigate-waveform-next-child 1
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set db-group-librarycells 0
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 1 -anchor w
+}
+preferences set vhdl-colors {H #00ffff L #00ffff 0 {} X #ff0000 - {} 1 {} U #9900ff Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set waveform-assertion-debug 1
+preferences set txe-locate-pop-waveform 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 5
+}
+
+#
+# PPE data
+#
+array set dbNames ""
+set dbNames(realName1) [database require waves -search {
+	./waves.shm/waves.trn
+	/vols/fast_ms/ronv/FastDeluxe/SVRNM_dx/exercises/Session_08/tb/waves.shm/waves.trn
+}]
+#
+# Groups
+#
+catch {group new -name Voltages -overlay 1}
+catch {group new -name {Input Voltages} -overlay 1}
+catch {group new -name {Resistor Values} -overlay 1}
+catch {group new -name {Net Resistances} -overlay 1}
+group using Voltages
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::VRdiff_tb.VA  \
+     waves::VRdiff_tb.A.V  \
+     waves::VRdiff_tb.B.V  \
+     waves::VRdiff_tb.C.V  \
+     waves::VRdiff_tb.D.V  \
+     waves::VRdiff_tb.VBC 
+group using {Input Voltages}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::VRdiff_tb.VD 
+group using {Resistor Values}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::VRdiff_tb.RA  \
+     waves::VRdiff_tb.RAB  \
+     waves::VRdiff_tb.RBC  \
+     waves::VRdiff_tb.RCD  \
+     waves::VRdiff_tb.RDA  \
+     waves::VRdiff_tb.RD 
+group using {Net Resistances}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::VRdiff_tb.A.R  \
+     waves::VRdiff_tb.B.R  \
+     waves::VRdiff_tb.C.R  \
+     waves::VRdiff_tb.D.R 
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x665+266+25}] != ""} {
+    window geometry "Design Browser 1" 730x665+266+25
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  waves::VRdiff_tb 
+browser set \
+    -signalsort name
+browser yview see  waves::VRdiff_tb 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1338x776+533+93}] != ""} {
+    window geometry "Waveform 1" 1338x776+533+93
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 147 \
+    -units ns \
+    -valuewidth 88
+waveform baseline set -time 0
+
+
+set groupId0 [waveform add -groups {{Resistor Values}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::VRdiff_tb.RA {-trace analogSampleAndHold}
+    waves::VRdiff_tb.RAB {-trace analogSampleAndHold}
+    waves::VRdiff_tb.RBC {-trace analogSampleAndHold}
+    waves::VRdiff_tb.RCD {-trace analogSampleAndHold}
+    waves::VRdiff_tb.RDA {-trace analogSampleAndHold}
+    waves::VRdiff_tb.RD {-trace analogSampleAndHold}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 10 -max 100000 -scale log
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups Voltages]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::VRdiff_tb.VA {-trace analogSampleAndHold}
+    waves::VRdiff_tb.A.V {-height 52 -trace analogSampleAndHold}
+    waves::VRdiff_tb.B.V {-height 52 -trace analogSampleAndHold}
+    waves::VRdiff_tb.C.V {-height 52 -trace analogSampleAndHold}
+    waves::VRdiff_tb.D.V {-height 52 -trace analogSampleAndHold}
+    waves::VRdiff_tb.VBC {-trace analogSampleAndHold}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -0.18744067307175713 -max 3.0000000000000009 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals  {
+	waves::VRdiff_tb.NiterA
+	} ]
+
+set groupId0 [waveform add -groups {{Net Resistances}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::VRdiff_tb.A.R {-height 22 -trace analogSampleAndHold}
+    waves::VRdiff_tb.B.R {-height 22 -trace analogSampleAndHold}
+    waves::VRdiff_tb.C.R {-height 22 -trace analogSampleAndHold}
+    waves::VRdiff_tb.D.R {-height 22 -trace analogSampleAndHold}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 10 -max 3996749.9573540036 -scale log
+waveform axis activate $groupId0 -for default
+
+waveform xview limits 0 445ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+0+727
+
+#
+# Layout selection
+#

@@ -1,0 +1,243 @@
+# SimVision Command Script (Tue Dec 03 08:03:44 AM PST 2019)
+#
+# Version 19.09.b002-20190829
+#
+# You can restore this configuration with:
+#
+#     simvision -input simv_EE.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set waveform-dont-show-assert-debug-info 1
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-view-hold 0
+preferences set txe-navigate-search-locate 0
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1
+  name SvDataBrowser
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 4
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set waveform-auto-analog-y-fit 1
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0 -pos 1
+}
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 6
+}
+preferences set plugin-enable-groupscope 0
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set watchwindow-always-probe-added 1
+preferences set txe-navigate-waveform-next-child 1
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set db-group-librarycells 0
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 1 -anchor w
+}
+preferences set vhdl-colors {H #00ffff L #00ffff 0 {} X #ff0000 - {} 1 {} U #9900ff Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set waveform-assertion-debug 1
+preferences set txe-locate-pop-waveform 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# PPE data
+#
+array set dbNames ""
+set dbNames(realName1) [database require waves -search {
+	./waves.shm/waves.trn
+	/vols/fast_ms/ronv/FastDeluxe/SVRNM_dx/exercises/Session_07/tb/waves.shm/waves.trn
+}]
+#
+# Groups
+#
+catch {group new -name {Group 1} -overlay 1}
+group using {Group 1}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::myEEcheck.R1  \
+     waves::myEEcheck.R2 
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  waves::myEEcheck 
+browser set \
+    -signalsort name
+browser yview see  waves::myEEcheck 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1255x846+651+71}] != ""} {
+    window geometry "Waveform 1" 1255x846+651+71
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 147 \
+    -units ps \
+    -valuewidth 81
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	waves::myEEcheck.V1
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1.3877787807814457e-16 -max 3 -scale linear
+
+set groupId0 [waveform add -groups {{Group 1}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::myEEcheck.R1 {-trace analogSampleAndHold}
+    waves::myEEcheck.R2 {-trace analogSampleAndHold}
+} childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 4000 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals  {
+	waves::myEEcheck.I3
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.002 -max 0.002 -scale linear
+set id [waveform add -signals  {
+	waves::myEEcheck.A
+	} ]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -height 128 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -height 84 -trace analogSampleAndHold
+set id [waveform add -signals  {
+	waves::myEEcheck.Vmeas
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.5 -max 3 -scale linear
+set id [waveform add -signals  {
+	waves::myEEcheck.Imeas
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.0030000000000000001 -max 0.001 -scale linear
+
+waveform xview limits 0 890000ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+261+564
+
+#
+# Layout selection
+#

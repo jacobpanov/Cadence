@@ -1,0 +1,4 @@
+xrun -clean -access r -input probes.tcl -rnm_tech -gui \
+ -nowarn NSVCER -nowarn SAWSTP -status \
+ -y ../src -y $COMMON/EEnet +libext+.sv sinesrc_tb.sv  $* &
+

@@ -1,0 +1,2 @@
+xrun -clean -gui -access r -input probes.tcl -rnm_tech -timescale 1ns/1ps \
+ -nowarn NSVCER -nowarn SAWSTP  ../src/*.sv  myEEcheck.sv  &

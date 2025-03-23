@@ -1,0 +1,1 @@
+xrun -clean -ieinfo top.sv ie.scs -rnm_info -rnm_coerce "off net-top.tmp_inst.b-"

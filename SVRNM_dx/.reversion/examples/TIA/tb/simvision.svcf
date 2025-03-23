@@ -1,0 +1,471 @@
+# SimVision Command Script (Wed Nov 27 09:55:58 AM PST 2019)
+#
+# Version 19.09.b002-20190829
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-print-variables selected
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-navigate-search-locate 0
+preferences set txe-view-hold 0
+preferences set expand-attributes trans_id
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set show-trace-highlights 1
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set standard-methodology-filtering 1
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-print-colors {Color on white}
+preferences set txe-navigate-waveform-next-child 1
+preferences set signal-trace-sidebar-mode full
+preferences set vhdl-colors {X #ff0000 0 {} L #00ffff H #00ffff U #9900ff 1 {} - {} Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set txe-locate-pop-waveform 1
+preferences set signal-trace-move-cursor 0
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {[format {tb.TIA}]} ]
+browser set \
+    -signalsort name
+browser yview see [subst  {[format {tb.TIA}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1546x830+2+51}] != ""} {
+    window geometry "Waveform 1" 1546x830+2+51
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 145
+waveform baseline set -time 68,524,000ps
+
+set id [waveform add -signals [subst  {
+	{[format {tb.Vvdd}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.8999999999999999 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.Vvss}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.01 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.vcoFreq}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.75 -max 1.7500000000000007 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.ampl}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 5 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.Zmeas}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 21.832397494427209 -max 31.683284773878697 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.drive}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id [waveform add -signals [subst  {
+	{[format {tb.enable}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.gain[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.dcOut}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.3125 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.out}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id [waveform add -signals [subst  {
+	{[format {tb.vBias1}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.52499999999999991 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.vBias2}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.2749999999999999 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.vbias1}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.52499999999999991 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.vbias2}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.2749999999999999 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.vdd}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id [waveform add -signals [subst  {
+	{[format {tb.vss}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.AzNom}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 45 -max 55.000000000000007 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.Az_calc}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1 -max 50 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.Zin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1000000 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.ZinOff}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 900000 -max 1100000 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.enInt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.gain[3:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.iSupply}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.00060099999999999997 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.i_in}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.00050000000000000001 -max 0.00050000000000000001 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.v_in}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -499.99999999999341 -max 499.99999999999341 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.in}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.onCurrent}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.00054000000000000001 -max 0.00066 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.out}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vout_int}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.00049999998148148126 -max 1.0590023972023377 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.dV}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.032709720688571982 -max 0.021996016879723367 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.dT}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.5e-05 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.V0}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.00034369743322163712 -max 1.0580195595766915 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.Ts}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 2.2500000000000002e-10 -max 2.7500000000000003e-10 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.Tau}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 7.1619724473190367e-09 -max 8.753521880056601e-09 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.T0}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.00069999975000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.IN0}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.00049999998148148126 -max 1.0590023972023377 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.Dtime}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.rOut}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1 -max 1000000 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.rOutHi}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 900000 -max 1100000 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.rOutNom}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 900 -max 1100 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.rOutOff}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.90000000000000002 -max 1.1000000000000001 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.stdbyCurrent}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 8.9999999999999996e-07 -max 1.1000000000000001e-06 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.tiaOn}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vbias1}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.52499999999999991 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vbias2}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.2749999999999999 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vbiasFilt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vbias2Good}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vbias1Good}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vdd}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vddGood}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vddGoodFilt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vddMax}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1.6200000000000001 -max 1.9800000000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vddMin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.90000000000000002 -max 1.1000000000000001 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vout}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.00034241342329162746 -max 1.0580195595766915 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vss}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vssGood}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vssGoodFilt}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {tb.TIA.vssMax}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.090000000000000011 -max 0.11000000000000001 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.ampl}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 5 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.center_freq}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 9000000 -max 11000000 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.freq}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 21250000 -max 36250000.000000015 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.iMag}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 9.0000000000000006e-05 -max 0.00011000000000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.iOut}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.00050000000000000001 -max 0.00050000000000000001 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.iPeak}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.00050000000000000001 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.out}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.phase}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 17199.927499934816 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.tinc}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1.8 -max 2.2000000000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.vco_gain}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 13500000 -max 16500000.000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {tb.sine_iSource.vin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.75 -max 1.7500000000000007 -scale linear
+
+waveform xview limits 0 700000ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+261+564
+
+#
+# Layout selection
+#

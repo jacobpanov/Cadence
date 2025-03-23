@@ -1,0 +1,7 @@
+*
+
+amsd {
+  //IE definitions default
+  ie vsup=1.0
+  ie vsup=1.2 inst="tb.l_drv tb.e_load"
+}

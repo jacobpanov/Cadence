@@ -1,0 +1,1 @@
+xrun -clean -f run_ana_con.f -run -exit

@@ -1,0 +1,505 @@
+# SimVision Command Script (Mon Dec 02 12:53:51 PM PST 2019)
+#
+# Version 19.09.b002-20190829
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-print-variables selected
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-navigate-search-locate 0
+preferences set txe-view-hold 0
+preferences set expand-attributes trans_id
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set show-trace-highlights 1
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set standard-methodology-filtering 1
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-print-colors {Color on white}
+preferences set txe-navigate-waveform-next-child 1
+preferences set signal-trace-sidebar-mode full
+preferences set vhdl-colors {X #ff0000 0 {} L #00ffff H #00ffff U #9900ff 1 {} - {} Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set txe-locate-pop-waveform 1
+preferences set signal-trace-move-cursor 0
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+#
+# Groups
+#
+catch {group new -name {gainCheck contributors} -overlay 0}
+catch {group new -name {maxGainCheck contributors} -overlay 0}
+catch {group new -name {invalidGainCheck contributors} -overlay 0}
+catch {group new -name {maxGainCheck contributors (1)} -overlay 0}
+catch {group new -name {gainCheck contributors (1)} -overlay 0}
+group using {gainCheck contributors}
+group set -overlay 0
+group set -comment {simulator::pga_TB.gainCheck.gainCheck contributors}
+group clear 0 end
+
+group insert \
+    [subst  {[format {pga_TB.measGAIN}]} ] \
+    [subst  {[format {pga_TB.targGain}]} ]
+group using {maxGainCheck contributors}
+group set -overlay 0
+group set -comment {simulator::pga_TB.maxGainCheck contributors}
+group clear 0 end
+
+group insert \
+    [subst  {[format {pga_TB.OUTdiff}]} ] \
+    [subst  {[format {pga_TB.Vsup}]} ] \
+    [subst  {[format {pga_TB.PD}]} ] \
+    [subst  {[format {pga_TB.VCVGA[2:0]}]} ]
+group using {invalidGainCheck contributors}
+group set -overlay 0
+group set -comment {simulator::pga_TB.invalidGainCheck contributors}
+group clear 0 end
+
+group insert \
+    [subst  {[format {pga_TB.OUTdiff}]} ] \
+    [subst  {[format {pga_TB.Vsup}]} ] \
+    [subst  {[format {pga_TB.PD}]} ] \
+    [subst  {[format {pga_TB.VCVGA[2:0]}]} ]
+group using {maxGainCheck contributors (1)}
+group set -overlay 0
+group set -comment {simulator::pga_TB.maxGainCheck contributors}
+group clear 0 end
+
+group insert \
+    [subst  {[format {pga_TB.OUTdiff}]} ] \
+    [subst  {[format {pga_TB.Vsup}]} ] \
+    [subst  {[format {pga_TB.PD}]} ] \
+    [subst  {[format {pga_TB.VCVGA[2:0]}]} ]
+group using {gainCheck contributors (1)}
+group set -overlay 0
+group set -comment {simulator::pga_TB.gainCheck.gainCheck contributors}
+group clear 0 end
+
+group insert \
+    [subst  {[format {pga_TB.measGAIN}]} ] \
+    [subst  {[format {pga_TB.targGain}]} ]
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {[format {pga_TB.pga}]} ]
+browser set \
+    -signalsort name
+browser yview see [subst  {[format {pga_TB.pga}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1124x852+2+51}] != ""} {
+    window geometry "Waveform 1" 1124x852+2+51
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 175 \
+    -units ps \
+    -valuewidth 75
+waveform baseline set -time 2,819,309ps
+
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.invalidGainCheck}]}
+	} ]]
+waveform hierarchy expand $id
+
+set groupId0 [waveform add -groups {{invalidGainCheck contributors}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {pga_TB.OUTdiff}]} {-trace analogSampleAndHold}
+    {[format {pga_TB.Vsup}]} {-trace analogSampleAndHold}
+    {[format {pga_TB.PD}]} {}
+    {[format {pga_TB.VCVGA[2:0]}]} {}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.tr_invalidGainCheck}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.maxGainCheck}]}
+	} ]]
+
+set groupId0 [waveform add -groups {{maxGainCheck contributors (1)}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {pga_TB.OUTdiff}]} {-trace analogSampleAndHold}
+    {[format {pga_TB.Vsup}]} {-trace analogSampleAndHold}
+    {[format {pga_TB.PD}]} {}
+    {[format {pga_TB.VCVGA[2:0]}]} {}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.tr_maxGainCheck}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.gainCheck.gainCheck}]}
+	} ]]
+
+set groupId0 [waveform add -groups {{gainCheck contributors (1)}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {pga_TB.measGAIN}]} {-trace analogSampleAndHold}
+    {[format {pga_TB.targGain}]} {-trace analogSampleAndHold}
+}] childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.gainCheck.tr_gainCheck}]}
+	} ]]
+waveform hierarchy set -expandtype attrtype $id
+waveform hierarchy expand $id
+waveform hierarchy expand $id
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.Fin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 9270000 -max 11330000 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.VDD}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 1.5 -max 3 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.VSS}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.Vbval}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 0.69999999999999996 -max 1.0499999999999998 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.VB}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 0.69999999999999996 -max 1.0499999999999998 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.PD}]}
+	} ]]
+waveform hierarchy set -expandtype attrtype $id
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.IBB}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 1.0000000000000001e-05 -max 5.0000000000000002e-05 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.Vin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 0.10000000000000001 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.VINcm}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 1.8 -max 2.2000000000000002 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.INP}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 1.5000003947841456 -max 2.4999984208640811 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.INN}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 1.5000015791359189 -max 2.4999996052158542 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.OUTP}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min -1.496185968857611e-06 -max 2.9961797082408177 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.OUTN}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min -1.4961866304687753e-06 -max 2.996186931165131 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.VINmeas}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 0 -max 0.99982551250561791 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.peak}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min 0 -max 5.9847300708641882 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.measGAIN}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -expandtype attrtype $id
+waveform axis range $id -for default -min -116.47510303819375 -max 19.700170324431564 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.VCVGA[2:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.VINdif}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -0.99999921043170881 -max 0.99999684172816217 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.rmax}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -scrollable 1 -expandtype dynarray $id
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+waveform hierarchy collapse $id
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.rmin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform hierarchy set -scrollable 1 -expandtype dynarray $id
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+waveform hierarchy collapse $id
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.samples[0:15]}]}
+	} ]]
+waveform hierarchy expand $id
+set id2 [lindex [waveform hierarchy content $id] 0]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 1]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 2]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 3]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 4]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 5]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 6]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 7]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 8]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 9]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 10]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 11]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 12]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 13]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 14]
+waveform format $id2 -trace analogSampleAndHold
+set id2 [lindex [waveform hierarchy content $id] 15]
+waveform format $id2 -trace analogSampleAndHold
+waveform hierarchy collapse $id
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.Vin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.10000000000000001 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.Vref}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.Vsup}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 1.5 -max 3 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.fin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 9270000 -max 11330000 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.i}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.ts}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 5.4000000000000004 -max 6.6000000000000005 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.tt}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 450 -max 550 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.pga.Active}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.pga.Adb}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -60 -max 20 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.pga.Av}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.001 -max 10 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.pga.Voctr}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.5 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {pga_TB.pga.Vodif}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -2.992373862330262 -max 2.9923594164816358 -scale linear
+
+waveform xview limits 0 12501000ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Assertion Browser windows
+#
+if {[catch {window new AssertionBrowser -name "Assertion Browser 1" -geometry 790x570+4+77}] != ""} {
+    window geometry "Assertion Browser 1" 790x570+4+77
+}
+window target "Assertion Browser 1" on
+assertbrowser using {Assertion Browser 1}
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x531+261+283
+
+#
+# Layout selection
+#

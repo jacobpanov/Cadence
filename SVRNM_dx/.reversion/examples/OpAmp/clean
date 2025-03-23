@@ -1,0 +1,2 @@
+rm -rf amsctrl.raw ams_ieinfo.log .simvision waves.shm simvision*.diag xrun.* \
+       xcelium.d INCA_libs irun.*

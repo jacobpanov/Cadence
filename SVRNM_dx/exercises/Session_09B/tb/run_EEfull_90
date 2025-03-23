@@ -1,0 +1,1 @@
+xrun -clean -f run_EEfull_90.f -run -exit

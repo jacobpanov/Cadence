@@ -1,0 +1,566 @@
+# SimVision Command Script (Mon Mar 30 03:09:28 PM PDT 2020)
+#
+# Version 19.09.s010
+#
+# You can restore this configuration with:
+#
+#     simvision -input simv-ramp1.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set waveform-dont-show-assert-debug-info 1
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-view-hold 0
+preferences set txe-navigate-search-locate 0
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1
+  name SvDataBrowser
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 4
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set waveform-auto-analog-y-fit 1
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0 -pos 1
+}
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 6
+}
+preferences set plugin-enable-groupscope 0
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set watchwindow-always-probe-added 1
+preferences set txe-navigate-waveform-next-child 1
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set db-group-librarycells 0
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 1 -anchor w
+}
+preferences set vhdl-colors {H #00ffff L #00ffff 0 {} X #ff0000 - {} 1 {} U #9900ff Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set waveform-assertion-debug 1
+preferences set txe-locate-pop-waveform 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+
+#
+# PPE data
+#
+array set dbNames ""
+set dbNames(realName1) [database require waves -search {
+	./waves.shm/waves.trn
+	/vols/fast_ms/ronv/FastDeluxe/SVRNM_dx/examples/VIRramp/waves.shm/waves.trn
+}]
+#
+# Groups
+#
+catch {group new -name {Group 1} -overlay 1}
+catch {group new -name {Group 2} -overlay 1}
+catch {group new -name {Group 3} -overlay 1}
+catch {group new -name {Group 4} -overlay 1}
+catch {group new -name {Group 5} -overlay 1}
+catch {group new -name {Group 6} -overlay 1}
+catch {group new -name {Group 7} -overlay 1}
+catch {group new -name {Group 8} -overlay 1}
+catch {group new -name {Group 9} -overlay 1}
+catch {group new -name {Group 10} -overlay 1}
+catch {group new -name {Group 11} -overlay 1}
+catch {group new -name {Group 12} -overlay 1}
+catch {group new -name {Group 13} -overlay 1}
+catch {group new -name {Group 14} -overlay 1}
+catch {group new -name {Group 15} -overlay 1}
+catch {group new -name {Group 16} -overlay 1}
+catch {group new -name {Group 17} -overlay 1}
+catch {group new -name {Group 18} -overlay 1}
+catch {group new -name {Group 19} -overlay 1}
+catch {group new -name {Group 20} -overlay 1}
+catch {group new -name {Group 21} -overlay 1}
+catch {group new -name {Group 22} -overlay 1}
+catch {group new -name {Group 23} -overlay 1}
+catch {group new -name {Group 24} -overlay 1}
+group using {Group 1}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.A.V  \
+     waves::Ramp_TB.As.V  \
+     waves::Ramp_TB.Aa 
+group using {Group 2}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.A.R  \
+     waves::Ramp_TB.As.R 
+group using {Group 3}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampAs.Kdr  \
+     waves::Ramp_TB.RampA.Kdr 
+group using {Group 4}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.vval  \
+     waves::Ramp_TB.RampA.Vdr  \
+     waves::Ramp_TB.RampAs.Vdr 
+group using {Group 5}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.ival  \
+     waves::Ramp_TB.RampA.Idr  \
+     waves::Ramp_TB.RampAs.Idr  \
+     waves::Ramp_TB.RampAs.Inow 
+group using {Group 6}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Kdr  \
+     waves::Ramp_TB.RampAs.Kdr 
+group using {Group 7}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Rdr  \
+     waves::Ramp_TB.RampAs.Rdr 
+group using {Group 8}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Vnew  \
+     waves::Ramp_TB.RampAs.Vnew  \
+     waves::Ramp_TB.RampAs.Vnow 
+group using {Group 9}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Rnew  \
+     waves::Ramp_TB.RampAs.Rnew 
+group using {Group 10}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Knew  \
+     waves::Ramp_TB.RampAs.Knew  \
+     waves::Ramp_TB.RampAs.Know 
+group using {Group 11}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Tstart 
+group using {Group 12}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.srK  \
+     waves::Ramp_TB.RampAs.srK 
+group using {Group 13}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Tdone  \
+     waves::Ramp_TB.RampAs.Tdone 
+group using {Group 14}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Tr  \
+     waves::Ramp_TB.RampA.ts 
+group using {Group 15}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.srV  \
+     waves::Ramp_TB.RampAs.srV 
+group using {Group 16}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.srK  \
+     waves::Ramp_TB.RampAs.srK 
+group using {Group 17}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.Rdr  \
+     waves::Ramp_TB.RampAs.Rdr 
+group using {Group 18}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampA.srI  \
+     waves::Ramp_TB.RampAs.srI 
+group using {Group 19}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampAs.Tstart  \
+     waves::Ramp_TB.RampAs.Tsamp  \
+     waves::Ramp_TB.RampAs.Tdr 
+group using {Group 20}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.Aa  \
+     waves::Ramp_TB.A.V  \
+     waves::Ramp_TB.As.V 
+group using {Group 21}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampAa.Vdr  \
+     waves::Ramp_TB.RampA.Vdr  \
+     waves::Ramp_TB.RampAs.Vdr 
+group using {Group 22}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampAa.Idr  \
+     waves::Ramp_TB.RampA.Idr  \
+     waves::Ramp_TB.RampAs.Idr 
+group using {Group 23}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampAa.Rdr  \
+     waves::Ramp_TB.RampA.Rdr  \
+     waves::Ramp_TB.RampAs.Rdr 
+group using {Group 24}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+     waves::Ramp_TB.RampAa.Kdr  \
+     waves::Ramp_TB.RampA.Kdr  \
+     waves::Ramp_TB.RampAs.Kdr 
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x802+290+70}] != ""} {
+    window geometry "Design Browser 1" 730x802+290+70
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  waves::Ramp_TB.RampAa 
+browser set \
+    -signalsort name
+browser yview see  waves::Ramp_TB.RampAa 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 2" -geometry 1285x1080+598+25}] != ""} {
+    window geometry "Waveform 2" 1285x1080+598+25
+}
+window target "Waveform 2" on
+waveform using {Waveform 2}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 151 \
+    -units ps \
+    -valuewidth 118
+waveform baseline set -time 155,022ps
+
+set id [waveform add -signals  {
+	waves::Ramp_TB.vval
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 3 -scale linear
+set id [waveform add -signals  {
+	waves::Ramp_TB.ival
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.0050000000000000001 -scale linear
+set id [waveform add -signals  {
+	waves::Ramp_TB.rval
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 10 -max 10000 -scale log
+set id [waveform add -signals  {
+	waves::Ramp_TB.tr
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 80 -scale linear
+
+set groupId0 [waveform add -groups {{Group 20}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::Ramp_TB.Aa {-trace analogLinear}
+    waves::Ramp_TB.A.V {-trace analogLinear}
+    waves::Ramp_TB.As.V {-trace analogLinear}
+} childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 3.5000000000010099 -scale linear
+waveform axis range $groupId0 -for V -min 0.5 -max 3.1249999999999996 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Group 21}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::Ramp_TB.RampAa.Vdr {-trace analogLinear}
+    waves::Ramp_TB.RampA.Vdr {-trace analogLinear}
+    waves::Ramp_TB.RampAs.Vdr {-trace analogLinear}
+} childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 3.0000000000010001 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Group 22}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::Ramp_TB.RampAa.Idr {-trace analogLinear}
+    waves::Ramp_TB.RampA.Idr {-trace analogSampleAndHold}
+    waves::Ramp_TB.RampAs.Idr {-trace analogLinear}
+} childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 0.0050000000000000999 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Group 24}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::Ramp_TB.RampAa.Kdr {-trace analogLinear}
+    waves::Ramp_TB.RampA.Kdr {-trace analogLinear}
+    waves::Ramp_TB.RampAs.Kdr {-trace analogLinear}
+} childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 7.9999989999999999 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Group 23}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    waves::Ramp_TB.RampAa.Rdr {-trace analogLinear}
+    waves::Ramp_TB.RampA.Rdr {-trace analogLinear}
+    waves::Ramp_TB.RampAs.Rdr {-trace analogLinear -color #ff9900}
+} childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 10 -max 10000000000000 -scale log
+waveform axis activate $groupId0 -for default
+
+waveform xview limits 0 1157000ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x595+0+297
+
+#
+# Layout selection
+#

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<setupdb version="7">history
+	<active>Active Setup</active>
+	<history>History
+		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
+			<timestamp>Nov 15 09:39:59 2024</timestamp>
+			<uuid>{7c780d5b-747c-4a40-af8f-f8769ad2a1d9}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/servers/esd_noida/sree/AdvancedRNM/SVRNM_dx/exercises/Session_24/rxbb_virtuoso/rxBB_sim/maestro_simple/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/servers/esd_noida/sree/AdvancedRNM/SVRNM_dx/exercises/Session_24/rxbb_virtuoso/rxBB_sim/maestro_simple/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/servers/esd_noida/sree/AdvancedRNM/SVRNM_dx/exercises/Session_24/simulation/rxbb_virtuoso/rxBB_sim/maestro_simple/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/rxbb_virtuoso/rxBB_sim/maestro_simple/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+	</history>
+</setupdb>

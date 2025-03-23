@@ -1,0 +1,31 @@
+-access +rw
+-gui
+-clean
+-input input_lps.tcl
+-nowarn NSVCER
+-nowarn SAWSTP
+-lps_1801 ../solution/rxBB_sim.upf
+-lps_ams_connect_supply
+-lps_ams_supply_vct
+-lps_ams_sim
+-lps_logfile upf.log
+-lps_verbose 5
+-lps_psn_verbose 2
+-v $COMMON/EEnet/EEIO.sv
+-v $COMMON/EEnet/CapGeq.sv
+-v $COMMON/EEnet/VRsrcD.sv
+-v $COMMON/EEnet/Isrc_ideal_gaussian.sv
+-v $COMMON/EEnet/Isrc_ideal.sv
+-v ../src/dualBBA.sv
+-v ../src/dcocDAC.sv 
+-v ../src/ADC_refGen.sv
+-v ../src/sarDAC.sv
+-v ../src/sarSamplingMux.sv
+-v ../src/sarLogic.sv
+-v ../src/sarComparator.sv
+-v ../src/ADC_8bit.sv
+-v ../src/rxbb.sv
+-v ../src/LDO.sv
+-v ./rxBB_stimulus.sv
+
+rxBB_sim.sv

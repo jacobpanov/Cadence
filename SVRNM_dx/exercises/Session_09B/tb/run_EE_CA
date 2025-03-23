@@ -1,0 +1,1 @@
+xrun -clean -f run_EE_CA.f -run -exit

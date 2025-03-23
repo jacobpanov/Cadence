@@ -1,0 +1,84 @@
+// --- Begin Copyright Block -----[ do not move or remove ]------
+// Copyright (c) 2018, Cadence Design Systems, Inc. All rights reserved.
+
+// The model contained herein is the proprietary and confidential information 
+// of Cadence, and is supplied subject to, and may be used only by Cadences 
+// customer in accordance with a previously executed license and maintenance 
+// agreement between Cadence and that customer. This model is intended for use 
+// with products only from Cadence Design Systems, Inc.  The use or sharing of 
+// any models from this library or any of its modified/extended form is 
+// strictly prohibited with any non-Cadence products.
+
+// ALL MATERIALS FURNISHED BY CADENCE HEREUNDER ARE PROVIDED "AS IS" WITHOUT 
+// WARRANTY OF ANY KIND, AND CADENCE SPECIFICALLY DISCLAIMS ANY WARRANTY OF 
+// NONINFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY. 
+// CADENCE SHALL NOT BE LIABLE FOR ANY COSTS OF PROCUREMENT OF SUBSTITUTES, 
+// LOSS OF PROFITS, INTERRUPTION OF BUSINESS, OR FOR ANY OTHER SPECIAL, 
+// CONSEQUENTIAL OR INCIDENTAL DAMAGES, HOWEVER CAUSED, WHETHER FOR BREACH OF 
+// WARRANTY, CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE.
+// --------------------------------------------------------------
+
+// EVIRsrcG.vams - driver for VIR format electrical signals
+
+// Usually driven as V+R or I+R.  Allows R>=0 or `wrealZState.
+// This format can smoothly transition between short and open circuit.
+// Uses symmetric function: R=Rc*K for K=0to1 and R=Rc/(2-K) for K=1to2.
+// So ramping K from 0 to 2 ramps resistance from zero to inifinite:
+// ramping is linear with resistance from 0 to Rc, and linear with 
+// conductance from Rc to Z.  So for any resistive changes that stay
+// above Rc, change will be using linear conductance sweep throughout -
+// this form just smooths sweeps that start or end at very low resistance.
+// The Rc value can be set much higher to use linear resistive sweeps for
+// most resistance changes (less than that Rc value).
+// Back conversion from R to K:    K = (R<Rc)? (R/Rc) : 2-(Rc/R).
+// If either vval or rval is X, result is voltage=vx at same resistance.
+// If either vval or rval is Z, result is open circuit or ideal current,
+// or specify rz parameter value less than 1e15 ohms for finite Z resistance
+// (useful to keep away from analog convergence issues).
+// This module does not support "ival" values of X or Z.
+
+// Updated:  2020-01-22 (ronv) Cadence Design Systems
+
+`include "disciplines.vams"
+`timescale 1ns/1ps
+
+module EVIRsrcG (P,vval,ival,rval);
+inout P; electrical P;
+input wreal vval,ival,rval;
+
+parameter real tr=1e-9;   // (sec) risetime for all drive changes
+parameter real ts=0;      // optional sample rate for output current
+parameter real vx=0.6;    // X equivalent voltage for analog output drive
+parameter real rc=100;    // center point for resistive transition function
+parameter real rz=1e15;   // Z state resistance (1e15 indicates infinite)
+
+real Vin,Kin;             // specified voltage and converted resistance
+real Vout,Iout,K,Rout;    // ramped V,I,K values and computed R
+real Imeas;               // measured current
+
+always begin
+  if (vval<1e20 && rval<1e20) begin  // normal operation
+    Vin = vval;                      // pass V and convert R to K
+    Kin = (rval<rc)? rval/rc : 2-rc/rval;
+  end
+  else if (vval===`wrealXState || 
+           rval===`wrealXState)    Vin = vx;  // X only changes V value
+  else                             Kin = 2;   // Z only changes R value
+  @(vval,rval);
+end
+analog begin
+  Vout = transition( Vin, 0,tr,tr,tr/10);
+  Iout = transition( ival,0,tr,tr,tr/10);
+  K = transition( Kin, 0,tr,tr,tr/10);
+  Rout = (K<=1)? rc*K : (K<2)? rc/(2-K) : rz;
+  if      (Rout<1e-2)  V(P) <+ Vout+(I(P)+Iout)*Rout;   // near-ideal V source
+  else if (Rout<1e15)  I(P) <+ (V(P)-Vout)/Rout - Iout; // normal V+R
+  else                 I(P) <+ -Iout;                   // ideal I source
+end
+
+// Measure current at all timepoints and optionally every ts seconds:
+reg ck=0;
+initial if (ts>0) forever #(ts/1n) ck = !ck;
+always @(ck or absdelta(I(P),0)) Imeas = I(P) + 1e-12*(Imeas==I(P));
+
+endmodule

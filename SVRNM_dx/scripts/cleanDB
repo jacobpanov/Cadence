@@ -1,0 +1,99 @@
+#! /bin/csh -f
+#
+#Clean course database
+#
+echo " "
+echo " *** Course Database Cleaning Tool ***"
+echo " "
+echo " Removes all *.cd-, *.cd%, *.cdslck *.log files and simulation directory\!"
+echo " "
+echo -n "    Begin cleaning `pwd` course database? [y]/n >"
+set ans = $<
+#
+if ( "$ans" == "" || "$ans" == "y" ) then
+	echo " "
+	echo " Size in Kbytes before cleaning is: `du -sk`"
+	echo " "
+	echo -n " Cleaning ..."
+else
+	echo " "
+	echo "Exiting."
+	echo " "
+	exit
+endif
+#
+foreach file ( `find . | grep \\.cd-$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\.cd%$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\.cdslck$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\.log$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\INCA_libs$` )
+rm -rf $file
+end
+#
+foreach file ( `find . | grep \\xcelium.d$` )
+rm -rf $file
+end
+#
+foreach file ( `find . | grep \\simulation$` )
+rm -rf $file
+
+end
+#
+foreach file ( `find . | grep \\.pak$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\.key$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\.raw$` )
+rm -rf $file
+end
+#
+foreach file ( `find . | grep \\.shm$` )
+rm -rf $file
+end
+#
+foreach file ( `find . | grep \\.ahdlSimDB$` )
+rm -rf $file
+end
+#
+foreach file ( `find . | grep \\.simvision$` )
+rm -rf $file
+end
+#
+foreach file ( `find . | grep \\.cadence$` )
+rm -rf $file
+end
+#
+foreach file ( `find . | grep \\.err$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\.diag$` )
+rm -f $file
+end
+#
+foreach file ( `find . | grep \\.history$` )
+rm -f $file
+end
+#
+
+echo " Done."
+echo " "
+echo " Size in Kbytes after cleaning is: `du -sk`"
+echo " "
+#

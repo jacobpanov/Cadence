@@ -1,0 +1,4 @@
+cd tb
+xrun -clean
+rm -rf .simvision *.shm *.log *.key *.diag *.err xcelium.d xrun.* *.raw
+cd ..

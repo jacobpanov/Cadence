@@ -1,0 +1,1 @@
+xrun -clean -f run_ana_mod.f -run -exit

@@ -1,0 +1,5 @@
+#!/bin/tcsh
+setenv RNMTOP `readlink -m .`
+setenv COMMON $RNMTOP/common
+
+

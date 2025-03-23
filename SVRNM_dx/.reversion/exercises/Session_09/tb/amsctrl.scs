@@ -1,0 +1,3 @@
+*AMS simulation control file
+simOpt options save=all saveahdlvars=all
+doit  tran method=trap stop=10us errpreset=conservative

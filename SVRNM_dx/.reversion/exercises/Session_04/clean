@@ -1,0 +1,3 @@
+xrun -clean
+rm -rf *.shm *.raw *.ahdlSimDB .cadence .simvision *.log *.key *.diag *.err xcelium.d xrun.*
+

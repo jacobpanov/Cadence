@@ -1,0 +1,6 @@
+rm -rf .cadence .tmp_* logs_*  *.log *.out  ./simulation
+cd tb
+xrun -clean
+rm -rf *.log *.shm .simvision xcelium.d xrun.* *.key *.diag *.err *.raw logs_*  *.log *.out
+cd ..
+

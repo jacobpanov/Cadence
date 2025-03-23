@@ -1,0 +1,3 @@
+artistResMgrCalcExprSetup("true" "plot" "Freq" "clip(getData("lpf2_TB.Fin" ?result "digitalDom-tran") 10u 26u )")
+artistResMgrCalcExprSetup("true" "plot" "Vmag" "clip(getData("lpf2_TB.Vpk_out" ?result "digitalDom-tran") 10u 26u )")
+artistResMgrCalcExprSetup("true" "plot" "Vnom" "1/sqrt((Freq/5e6)**4+1)")

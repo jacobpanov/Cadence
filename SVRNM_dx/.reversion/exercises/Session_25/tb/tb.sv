@@ -1,0 +1,83 @@
+//--------------------------------------------------------------------------------------
+// --- Begin Copyright Block -----[ do not move or remove ]------
+// Copyright (c) 2019, Cadence Design Systems, Inc. All rights reserved.
+
+// The model contained herein is the proprietary and confidential information 
+// of Cadence, and is supplied subject to, and may be used only by Cadences 
+// customer in accordance with a previously executed license and maintenance 
+// agreement between Cadence and that customer. This model is intended for use 
+// with products only from Cadence Design Systems, Inc.  The use or sharing of 
+// any models from this library or any of its modified/extended form is 
+// strictly prohibited with any non-Cadence products.
+
+// ALL MATERIALS FURNISHED BY CADENCE HEREUNDER ARE PROVIDED "AS IS" WITHOUT 
+// WARRANTY OF ANY KIND, AND CADENCE SPECIFICALLY DISCLAIMS ANY WARRANTY OF 
+// NONINFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY. 
+// CADENCE SHALL NOT BE LIABLE FOR ANY COSTS OF PROCUREMENT OF SUBSTITUTES, 
+// LOSS OF PROFITS, INTERRUPTION OF BUSINESS, OR FOR ANY OTHER SPECIAL, 
+// CONSEQUENTIAL OR INCIDENTAL DAMAGES, HOWEVER CAUSED, WHETHER FOR BREACH OF 
+// WARRANTY, CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE.
+//--------------------------------------------------------------------------------------
+//
+// Bias Reference generator testbench
+//
+//--------------------------------------------------------------------------------------
+
+`timescale 1s/1ps
+import cds_rnm_pkg::*;
+import EE_pkg::*;
+
+module tb ();
+
+parameter loadRes = 1e5;
+
+EEnet VDD, VSS;
+EEnet iref1u[5:0];
+EEnet iref5u[3:0];
+wreal4state VREF;
+genvar i,j;
+
+logic [4:0] vtrim, itrim1, itrim5;
+
+BIAS2 u_BIAS2 (
+  .VDD (VDD), 
+  .VSS (VSS), 
+  .EN (en), 
+  .VTRIM (vtrim), 
+  .ITRIM1 (itrim1), 
+  .ITRIM5 (itrim5), 
+  .VREF (VREF), 
+  .IBIAS1u (iref1u), 
+  .IBIAS5u (iref5u)
+);
+
+BIAS_stimulus u_BIAS_stimulus (
+  .vtrim (vtrim),
+  .itrim1 (itrim1),
+  .itrim5 (itrim5), 
+  .en (en)
+);
+
+for (i=0;i<6;i=i+1) begin
+   VRsrcG rLoad1u (
+     .P (iref1u[i]),
+     .vval ( ),
+     .rval (loadRes),
+     .imeas ( )
+   );
+end
+
+for (j=0;j<4;j=j+1) begin
+   VRsrcG rLoad5u (
+     .P (iref5u[j]),
+     .vval ( ),
+     .rval (loadRes/5),
+     .imeas ( )
+   );
+end
+
+assign VDD = '{4.2, 0, 0};
+assign VSS = '{0, 0, 0};
+
+
+endmodule

@@ -1,0 +1,1 @@
+xrun -clean top.vams ../../src/real_leaf.sv -rnm_info -rnm_tech

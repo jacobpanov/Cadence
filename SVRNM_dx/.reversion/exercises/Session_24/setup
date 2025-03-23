@@ -1,0 +1,6 @@
+#!/bin/tcsh
+setenv RXBBTOP `readlink -m .`
+echo "> AMSHOME:" $AMSHOME
+echo "> CDSHOME:" $CDSHOME
+dir -d $AMSHOME
+xrun -version

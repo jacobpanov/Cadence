@@ -1,0 +1,3 @@
+xrun -clean -rnm_tech -input probes.tcl -status -gui -access rwc -linedebug \
+  -timescale 1ns/1ps -nowarn NSVCER -nowarn SAWSTP \
+  -y $COMMON/EEnet +libext+.sv+.vams  amsctrl.scs  Ramp_TB.sv  &

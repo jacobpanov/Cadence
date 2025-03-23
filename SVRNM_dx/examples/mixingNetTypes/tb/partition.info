@@ -1,0 +1,56 @@
+( global ( resolution_type basic ) )
+
+( net amsTB.VIN amsTB.VIN analog electrical )
+( net amsTB.u_resDemo.PLUS amsTB.VIN analog electrical )
+( net amsTB.u_resDemo.resVAMS.P amsTB.VIN analog electrical )
+
+( net amsTB.u_resDemo.MINUS amsTB.u_resDemo.MINUS analog electrical )
+( net amsTB.u_resDemo.resVAMS.N amsTB.u_resDemo.MINUS analog electrical )
+( net cds_globals.\gnd!  amsTB.u_resDemo.MINUS analog electrical )
+
+( net amsTB.u_resDemo.resVAMS.Pint Expression digital None (type rnm) )
+
+( net amsTB.u_resDemo.resVAMS.Nint Expression digital None (type rnm) )
+
+( net amsTB.iRes amsTB.iRes digital None (type rnm) )
+( net amsTB.u_resDemo.iRes amsTB.iRes digital None (type rnm) )
+( net amsTB.u_resDemo.resVAMS.ires amsTB.iRes digital None (type rnm) )
+
+( net amsTB.u_resDemo.resVAMS.rVal Expression digital None (type rnm) )
+
+( net amsTB.u_resDemo.resVAMS.Pnow amsTB.u_resDemo.resVAMS.Pnow analog None )
+
+( net amsTB.u_resDemo.resVAMS.Nnow amsTB.u_resDemo.resVAMS.Nnow analog None )
+
+( net amsTB.u_resDemo.resVAMS.Preg amsTB.u_resDemo.resVAMS.Preg digital None (type rnm) )
+
+( net amsTB.u_resDemo.resVAMS.Nreg amsTB.u_resDemo.resVAMS.Nreg digital None (type rnm) )
+
+( net amsTB.u_resDemo.resVAMS.iVal amsTB.u_resDemo.resVAMS.iVal digital None (type rnm) )
+
+( net amsTB.u_resDemo.resVAMS.inow amsTB.u_resDemo.resVAMS.inow analog None )
+
+( net amsTB.u_resDemo.rVal amsTB.u_resDemo.rVal digital None (type rnm) )
+
+( net amsTB.u_resDemo.Pres amsTB.u_resDemo.Pres digital None (type rnm) )
+
+( net amsTB.u_resDemo.Nres amsTB.u_resDemo.Nres digital None (type rnm) )
+
+( net amsTB.resMeas.Vval amsTB.resMeas.Vval digital None (type rnm) )
+
+( net amsTB.resMeas.Ival amsTB.resMeas.Ival digital None (type rnm) )
+
+( net amsTB.resMeas.Rval amsTB.resMeas.Rval digital None (type rnm) )
+
+( net amsTB.VOUT amsTB.VOUT digital None )
+( net amsTB.resMeas.IN amsTB.VOUT digital None )
+( net amsTB.u_resDemo.VOUT amsTB.VOUT digital None )
+
+(instance EE_pkg digital)
+(instance cds_rnm_pkg digital)
+(instance amsTB.V0 analog)
+(instance amsTB.u_resDemo.resVAMS mixed (type rnm))
+(instance amsTB.u_resDemo mixed/dmixed (type rnm))
+(instance amsTB.resMeas dmixed (type rnm))
+(instance amsTB mixed/dmixed (type rnm))
+(instance cds_globals analog)

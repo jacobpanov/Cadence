@@ -1,0 +1,58 @@
+#!/bin/csh -f
+
+###############################################
+#RNM Tutorial Session (11) Runscript 1
+###############################################
+
+set simtype = $1
+
+select:
+
+set nonomatch
+set shmFile1 = "waves_overDamped.shm"
+set shmFile2 = "waves_underDamped.shm"
+set shmFile3 = "waves_criticallyDamped.shm"
+set logFile = "xrun.log"
+set historyFile = "xrun.history"
+set xceliumDir = "xcelium.d"
+
+if ($simtype == "UD") then
+   echo "Simulating Under Damped Case"
+   xrun -define UD -f run.f
+   rm -rf waves_underDamped.shm 
+   mv waves.shm waves_underDamped.shm 
+else if ($simtype == "CD") then
+   echo "Simulating Critical Damped Case"
+   xrun -define CD -f run.f 
+   rm -rf waves_criticallyDamped.shm
+   mv waves.shm waves_criticallyDamped.shm 
+else if ($simtype == "OD") then
+   echo "Simulating Over Damped Case"
+   xrun -define OD -f run.f
+   rm -rf  waves_overDamped.shm
+   mv waves.shm waves_overDamped.shm
+else if ($simtype == "CLR") then
+   echo "Clearing simulation area..."
+   rm -rf $shmFile1
+   rm -rf $shmFile2
+   rm -rf $shmFile3
+   rm -rf $xceliumDir
+   rm -rf $logFile 
+   rm -rf $historyFile
+else
+   echo "########################################"
+   echo "Usage %runme <condition>"
+   echo "where <condition> can be" 
+   echo "UD (under damped)"
+   echo "CD (critically damped)"
+   echo "OD (over damped)"
+   echo "CLR (clear the environment)"
+   echo "########################################"
+   echo "Specify a simulation type or clean up..."
+   set simtype = $<
+   goto select
+endif
+
+#############################################
+#End of Script
+#############################################

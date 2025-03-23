@@ -1,0 +1,42 @@
+#!/bin/csh -f
+
+###############################################
+#RNM Tutorial Session (11) Runscript 1
+###############################################
+
+set simtype = $1
+
+select:
+
+set nonomatch
+set shmFile = "waves_charge_pump.shm"
+set logFile = "xrun.log"
+set historyFile = "xrun.history"
+set xceliumDir = "xcelium.d"
+
+if ($simtype == "CP") then
+   echo "Simulating Charge Pump"
+   xrun -f run.f
+   rm -rf waves_charge_pump.shm 
+   mv waves.shm waves_charge_pump.shm 
+else if ($simtype == "CLR") then
+   echo "Clearing simulation area..."
+   rm -rf $shmFile
+   rm -rf $xceliumDir
+   rm -rf $logFile 
+   rm -rf $historyFile
+else
+   echo "########################################"
+   echo "Usage %runme <option>"
+   echo "where <option> can be" 
+   echo "CP (charge pump)"
+   echo "CLR (clear the environment)"
+   echo "########################################"
+   echo "Specify simulation or clean up..."
+   set simtype = $<
+   goto select
+endif
+
+#############################################
+#End of Script
+#############################################

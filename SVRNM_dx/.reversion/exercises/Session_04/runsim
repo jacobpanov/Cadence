@@ -1,0 +1,3 @@
+xrun *.sv -clean -access +rw -input probes.tcl -gui & 
+
+

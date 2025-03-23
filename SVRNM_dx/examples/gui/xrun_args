@@ -1,0 +1,6 @@
+-gui
+-clean
+-debug
+-input probes.tcl
+-rnm_info
+./test.sv

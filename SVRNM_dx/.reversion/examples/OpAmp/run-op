@@ -1,0 +1,4 @@
+xrun -clean -rnm_tech -input probes.tcl -status -gui -access rw \
+  -timescale 1ns/1ps -nowarn NSVCER -nowarn SAWSTP \
+  -top opamp_tb  opamp_tb.sv  opamp1.sv \
+  -y ../../common/EEnet  +libext+.sv   $* &

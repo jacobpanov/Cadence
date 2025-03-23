@@ -1,0 +1,306 @@
+# SimVision Command Script (Fri Jan 31 11:18:27 AM PST 2020)
+#
+# Version 19.09.s008
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-print-variables selected
+preferences set txe-locate-add-fibers 1
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set txe-view-hold 0
+preferences set txe-navigate-search-locate 0
+preferences set expand-attributes trans_id
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set show-trace-highlights 1
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set standard-methodology-filtering 1
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-Windows-PsnWindow {
+  usual
+  position -pos 2
+}
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-print-colors {Color on white}
+preferences set txe-navigate-waveform-next-child 1
+preferences set signal-trace-sidebar-mode full
+preferences set vhdl-colors {X #ff0000 0 {} L #00ffff H #00ffff U #9900ff 1 {} - {} Z #ff9900 W #ff0000}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set txe-locate-pop-waveform 1
+preferences set signal-trace-move-cursor 0
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+preferences set waveform-auto-analog-y-fit 1
+preferences set db-group-librarycells 0
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 1 -anchor w
+}
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set waveform-assertion-debug 1
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Windows-WaveWindow {
+  usual
+  position -pos 2
+}
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1
+  name SvDataBrowser
+}
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set waveform-dont-show-assert-debug-info 1
+preferences set vhdl-colors {H #00ffff L #00ffff 0 {} X #ff0000 - {} 1 {} U #9900ff Z #ff9900 W #ff0000}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0 -pos 1
+}
+preferences set watchwindow-always-probe-added 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 6
+}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 4
+}
+#
+# Groups
+#
+catch {group new -name {Group 1} -overlay 1}
+catch {group new -name {Group 2} -overlay 1}
+group using {Group 1}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {integ_filt_tb.IN}]} ] \
+    [subst  {[format {integ_filt_tb.OUT}]} ] \
+    [subst  {[format {integ_filt_tb.ERR}]} ]
+group using {Group 2}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {integ_filt_tb.IN}]} ] \
+    [subst  {[format {integ_filt_tb.OUT}]} ] \
+    [subst  {[format {integ_filt_tb.ERR}]} ]
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {[format {integ_filt_tb}]} ]
+browser set \
+    -signalsort name
+browser yview see [subst  {[format {integ_filt_tb}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 3" -geometry 1472x690+2+51}] != ""} {
+    window geometry "Waveform 3" 1472x690+2+51
+}
+window target "Waveform 3" on
+waveform using {Waveform 3}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 205 \
+    -units ps \
+    -valuewidth 114
+waveform baseline set -time 0
+
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.ERR}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1.717619470290249 -max 1.7284964237826435 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.IN}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 3.0000000000000013 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.OUT}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 2.7273979012327092 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.Ts}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 4.5 -max 5.5 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.VIN}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 3.0000000000000013 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.VSAMP}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 3.0000000000000013 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.Wc}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.056547 -max 0.069113000000000008 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.IC}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.IN}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1.717619470290249 -max 1.7284964237826435 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.IN0}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1.717619470290249 -max 1.7284964237826435 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.INn}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1.717619470290249 -max 1.7284964237826435 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.K}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.056547 -max 0.069113000000000008 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.Niter}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.OUT}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 2.7273979012327092 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.T0}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 440 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.Tn}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 445 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.V0}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 2.7273979012327092 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.Vout}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 2.7273979012327092 -scale linear
+set id [waveform add -signals [subst  {
+	{[format {integ_filt_tb.integ.maxiter}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 9 -max 11 -scale linear
+
+waveform xview limits 0 450000ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+261+564
+
+#
+# Layout selection
+#

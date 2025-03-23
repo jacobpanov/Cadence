@@ -1,0 +1,740 @@
+# SimVision Command Script (Fri Jul 07 01:11:21 PM PDT 2017)
+#
+# Version 17.04.s007
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision_all.svcf
+#
+
+
+#
+# Preferences
+#
+preferences set waveform-dont-show-assert-debug-info 1
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-CursorControl-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1
+  name SvDataBrowser
+}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 4
+}
+preferences set toolbar-TimeSearch-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-NavSignalList-WaveWindow {
+  usual
+  position -row 0
+}
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 5
+}
+preferences set plugin-enable-groupscope 0
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set watchwindow-always-probe-added 1
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -pos 1 -anchor w
+}
+preferences set waveform-assertion-debug 1
+preferences set whats-new-dont-show-at-startup 1
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -row 1 -anchor w
+}
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 0
+}
+preferences set toolbar-Windows-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 3
+}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 2
+}
+#
+# Groups
+#
+catch {group new -name {Group 1} -overlay 0}
+catch {group new -name {Group 2} -overlay 0}
+catch {group new -name {Group 3} -overlay 0}
+catch {group new -name {Group 4} -overlay 0}
+catch {group new -name {Group 5} -overlay 1}
+catch {group new -name {Group 6} -overlay 0}
+catch {group new -name {Group 7} -overlay 0}
+catch {group new -name {Group 8} -overlay 1}
+catch {group new -name {Group 9} -overlay 1}
+catch {group new -name {Group 10} -overlay 1}
+catch {group new -name {Group 11} -overlay 1}
+catch {group new -name {Group 12} -overlay 0}
+catch {group new -name {Group 13} -overlay 0}
+catch {group new -name {Group 14} -overlay 1}
+catch {group new -name {Group 15} -overlay 1}
+catch {group new -name {Group 16} -overlay 1}
+catch {group new -name {Group 17} -overlay 1}
+catch {group new -name {Group 18} -overlay 1}
+catch {group new -name {Group 19} -overlay 1}
+catch {group new -name {Group 20} -overlay 1}
+catch {group new -name {Group 21} -overlay 1}
+catch {group new -name {Group 22} -overlay 1}
+catch {group new -name {Group 23} -overlay 1}
+catch {group new -name {Group 24} -overlay 1}
+catch {group new -name {Current to CL&Load} -overlay 1}
+catch {group new -name {Output Voltage} -overlay 1}
+catch {group new -name {Input Current} -overlay 1}
+catch {group new -name {Output Voltages} -overlay 1}
+catch {group new -name {Currents to CL & Load} -overlay 1}
+catch {group new -name {Input Currents} -overlay 1}
+group using {Group 1}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 2}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 3}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 4}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 5}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AIout}]} ]
+group using {Group 6}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 7}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group using {Group 8}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 9}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 10}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 11}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.FDUTa.Is1o}]} ] \
+    [subst  {[format {top.FDUTb.Is1o}]} ] \
+    [subst  {[format {top.FDUTc.Is1o}]} ]
+group using {Group 12}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.FOUTa}]} ] \
+    [subst  {[format {top.FOUTb}]} ] \
+    [subst  {[format {top.FOUTc}]} ]
+group using {Group 13}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AIin}]} ] \
+    [subst  {[format {top.FIina}]} ] \
+    [subst  {[format {top.FIinb}]} ]
+group using {Group 14}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.CDUT.Qfrac}]} ]
+group using {Group 15}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AOUT}]} ] \
+    [subst  {[format {top.FOUTa.V}]} ] \
+    [subst  {[format {top.FOUTb.V}]} ] \
+    [subst  {[format {top.FOUTc.V}]} ]
+group using {Group 16}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group using {Group 17}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.FIina}]} ] \
+    [subst  {[format {top.FIinb}]} ] \
+    [subst  {[format {top.FIinc}]} ]
+group using {Group 18}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.PDUT.Req}]} ] \
+    [subst  {[format {top.CDUT.Req}]} ]
+group using {Group 19}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AOUT}]} ] \
+    [subst  {[format {top.POUT.V}]} ] \
+    [subst  {[format {top.COUT.V}]} ]
+group using {Group 20}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.ADUT.Is1o}]} ] \
+    [subst  {[format {top.PDUT.Is1}]} ] \
+    [subst  {[format {top.CDUT.Is1}]} ]
+group using {Group 21}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AIin}]} ] \
+    [subst  {[format {top.PIin}]} ] \
+    [subst  {[format {top.CIin}]} ]
+group using {Group 22}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.ADUT.IN}]} ] \
+    [subst  {[format {top.ADUT.VCK}]} ] \
+    [subst  {[format {top.ADUT.MID}]} ] \
+    [subst  {[format {top.ADUT.OUT}]} ]
+group using {Group 23}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.FDUTa.IN.V}]} ] \
+    [subst  {[format {top.FDUTa.VCK.V}]} ] \
+    [subst  {[format {top.FDUTa.MID.V}]} ] \
+    [subst  {[format {top.FDUTa.OUT.V}]} ]
+group using {Group 24}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AIN}]} ] \
+    [subst  {[format {top.FINa.V}]} ] \
+    [subst  {[format {top.FINb.V}]} ] \
+    [subst  {[format {top.FINc.V}]} ] \
+    [subst  {[format {top.CIN.V}]} ] \
+    [subst  {[format {top.PIN.V}]} ]
+group using {Current to CL&Load}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.FDUTc.Is1o}]} ] \
+    [subst  {[format {top.FDUTb.Is1o}]} ] \
+    [subst  {[format {top.FDUTa.Is1o}]} ] \
+    [subst  {[format {top.ADUT.Is1o}]} ]
+group using {Output Voltage}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.FOUTc.V}]} ] \
+    [subst  {[format {top.FOUTb.V}]} ] \
+    [subst  {[format {top.FOUTa.V}]} ] \
+    [subst  {[format {top.AOUT}]} ]
+group using {Input Current}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.FIinc}]} ] \
+    [subst  {[format {top.FIinb}]} ] \
+    [subst  {[format {top.FIina}]} ] \
+    [subst  {[format {top.AIin}]} ]
+group using {Output Voltages}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AOUT}]} ] \
+    [subst  {[format {top.POUT.V}]} ] \
+    [subst  {[format {top.COUT.V}]} ]
+group using {Currents to CL & Load}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.ADUT.Is1o}]} ] \
+    [subst  {[format {top.PDUT.Is1}]} ] \
+    [subst  {[format {top.CDUT.Is1}]} ]
+group using {Input Currents}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    [subst  {[format {top.AIin}]} ] \
+    [subst  {[format {top.PIin}]} ] \
+    [subst  {[format {top.CIin}]} ]
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Time Ranges
+#
+timerange new -name {610us : 724us} -start 610us -end 724us
+timerange new -name {648us : 654.5us} -start 648us -end 654.5us
+timerange new -name {668.4us : 672.3us} -start 668.4us -end 672.3us
+timerange new -name {616.3us : 623.7us} -start 616.3us -end 623.7us
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+449+58}] != ""} {
+    window geometry "Design Browser 1" 730x500+449+58
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {[format {top}]} ]
+browser set \
+    -signalsort name
+browser yview see [subst  {[format {top}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1465x848+264+109}] != ""} {
+    window geometry "Waveform 1" 1465x848+264+109
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 162 \
+    -units us \
+    -valuewidth 93
+waveform baseline set -time 0
+
+set id [waveform add -signals [subst  {
+	{[format {top.STIM.Per}]}
+	} ]]
+waveform format $id -trace digital
+waveform axis range $id -for default -min 62.5 -max 2000.0000000000002 -scale log
+set id [waveform add -signals [subst  {
+	{[format {top.CK}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{[format {top.Rload}]}
+	} ]]
+waveform format $id -trace digital
+waveform axis range $id -for default -min 100 -max 1000000 -scale log
+set id [waveform add -signals [subst  {
+	{[format {top.Rin}]}
+	} ]]
+waveform format $id -trace digital
+waveform axis range $id -for default -min 0 -max 4 -scale linear
+
+set groupId0 [waveform add -groups {{Output Voltages}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.AOUT}]} {-height 52 -trace analogLinear}
+    {[format {top.POUT.V}]} {-height 52 -trace analogLinear}
+    {[format {top.COUT.V}]} {-height 52 -trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0 -max 2.9993145223652298 -scale linear
+waveform axis range $groupId0 -for V -min 0 -max 2.9989934402537877 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Currents to CL & Load}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.ADUT.Is1o}]} {-trace analogLinear}
+    {[format {top.PDUT.Is1}]} {-trace analogLinear}
+    {[format {top.CDUT.Is1}]} {-trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -3.5561655729784048e-06 -max 0.49733919318834025 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Input Currents}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.AIin}]} {-trace analogLinear}
+    {[format {top.PIin}]} {-trace analogLinear}
+    {[format {top.CIin}]} {-trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -0.49733920112102203 -max 2.0648204680397261e-06 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Output Voltage}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.FOUTc.V}]} {-height 40 -trace analogLinear}
+    {[format {top.FOUTb.V}]} {-height 40 -trace analogLinear}
+    {[format {top.FOUTa.V}]} {-height 40 -trace analogLinear}
+    {[format {top.AOUT}]} {-height 40 -trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 1.8749999852010697e-08 -max 2.9989965006858772 -scale linear
+waveform axis range $groupId0 -for V -min 0 -max 2.9989934402537877 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Current to CL&Load}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.FDUTc.Is1o}]} {-trace analogLinear}
+    {[format {top.FDUTb.Is1o}]} {-trace analogLinear}
+    {[format {top.FDUTa.Is1o}]} {-trace analogLinear}
+    {[format {top.ADUT.Is1o}]} {-trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -3.5561655729784048e-06 -max 0.49733919318834025 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Input Current}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.FIinc}]} {-trace analogLinear}
+    {[format {top.FIinb}]} {-trace analogLinear}
+    {[format {top.FIina}]} {-trace analogLinear}
+    {[format {top.AIin}]} {-trace analogLinear -color #ffff00}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -0.49733920112102203 -max 2.0648204680397261e-06 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Group 22}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.ADUT.IN}]} {-trace analogLinear}
+    {[format {top.ADUT.VCK}]} {-trace analogLinear}
+    {[format {top.ADUT.MID}]} {-trace analogLinear}
+    {[format {top.ADUT.OUT}]} {-trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for V -min -0.1432669100610931 -max 2.9994441629421966 -scale linear
+waveform axis activate $groupId0 -for V
+
+set groupId0 [waveform add -groups {{Group 23}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.FDUTa.IN.V}]} {-trace analogLinear}
+    {[format {top.FDUTa.VCK.V}]} {-trace analogLinear}
+    {[format {top.FDUTa.MID.V}]} {-trace analogLinear}
+    {[format {top.FDUTa.OUT.V}]} {-trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -0.085251622907524 -max 2.9994276313384192 -scale linear
+waveform axis activate $groupId0 -for default
+
+set groupId0 [waveform add -groups {{Group 24}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs} [subst  {
+    {[format {top.AIN}]} {-trace analogLinear}
+    {[format {top.FINa.V}]} {-trace analogLinear}
+    {[format {top.FINb.V}]} {-trace analogLinear}
+    {[format {top.FINc.V}]} {-trace analogLinear}
+    {[format {top.CIN.V}]} {-trace analogLinear}
+    {[format {top.PIN.V}]} {-trace analogLinear}
+}] childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format path $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min 0.76553889260177443 -max 1.5 -scale linear
+waveform axis range $groupId0 -for V -min 0.74728438745174508 -max 1.5000020026008514 -scale linear
+waveform axis activate $groupId0 -for default
+
+waveform xview limits 0 891.01us
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x539+15+287
+
+#
+# Layout selection
+#
+

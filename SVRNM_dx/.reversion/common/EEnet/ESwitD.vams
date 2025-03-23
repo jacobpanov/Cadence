@@ -1,0 +1,98 @@
+// --- Begin Copyright Block -----[ do not move or remove ]------
+// Copyright (c) 2018, Cadence Design Systems, Inc. All rights reserved.
+
+// The model contained herein is the proprietary and confidential information 
+// of Cadence, and is supplied subject to, and may be used only by Cadences 
+// customer in accordance with a previously executed license and maintenance 
+// agreement between Cadence and that customer. This model is intended for use 
+// with products only from Cadence Design Systems, Inc.  The use or sharing of 
+// any models from this library or any of its modified/extended form is 
+// strictly prohibited with any non-Cadence products.
+
+// ALL MATERIALS FURNISHED BY CADENCE HEREUNDER ARE PROVIDED "AS IS" WITHOUT 
+// WARRANTY OF ANY KIND, AND CADENCE SPECIFICALLY DISCLAIMS ANY WARRANTY OF 
+// NONINFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY. 
+// CADENCE SHALL NOT BE LIABLE FOR ANY COSTS OF PROCUREMENT OF SUBSTITUTES, 
+// LOSS OF PROFITS, INTERRUPTION OF BUSINESS, OR FOR ANY OTHER SPECIAL, 
+// CONSEQUENTIAL OR INCIDENTAL DAMAGES, HOWEVER CAUSED, WHETHER FOR BREACH OF 
+// WARRANTY, CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE.
+// --------------------------------------------------------------
+
+// Updated: 2020-06-01 (ronv)  Added choice of resistor ramping formats
+
+// ESwitD (P,N,en) - Electrical switch model.
+// Parameter ron defines resistance when enabled, else uses roff.
+// Parameter vos defines offset voltage from P to N.
+
+// By default, this format uses simple linear-conductance-based ramping for the
+// resistor on/off transition.  This maps well with how the EEnet SwitD module's
+// single-step ramping assumption between on and off case would be interpreted 
+// by an attached capacitor model for integration evaluation.
+// An alternative format is available which uses dual-power-law-based ramping
+// to smoothly cover the range from zero to high impedance inclusive, weighted 
+// toward medium impedances halfway through the transition.  This format will
+// also be used by default if the value of "ron" is set to rauto=2 or below.
+// 
+// In the optional format here, the model defines that R varies with T**4 at  
+// low resistance, and G varies with T**4 at high resistance.
+// Here's the format, mapping K between 0 and 2 to R between 0 and infinity:
+`define K2R(K) ((K<1)? 2.0e4*(K)**4 : 2.0e4/(2-(K))**4)
+`define R2K(R) ((R<2.0e4)? (5.0e-5*(R))**0.25 : 2-(2.0e4/(R))**0.25)
+// The model computes the K value for the on and off resistances, then linearly
+// ramps between the two K values over the risetime interval, and computes the 
+// resistance value at each point from the K value.
+// Approximate mapping:
+//     K:   0.0  0.05  0.2   0.6   1.0   1.4   1.8   1.95   2.0
+//     R:    0   0.12   32   2.6K  20K   150K  12M   3.2G   inf
+// Note that the EEnet equivalent for this model uses the rform flag to add in
+// extra timepoints at 10%, 50%, and 90% through the risetime interval.  It  
+// chooses resistance points that are reasonably similar to what is defined
+// by this function.
+
+`include "disciplines.vams"
+
+module ESwitD (P,N,en);
+  inout P,N; electrical P,N;   // analog switch pins
+  input en;                    // digital enable input
+
+parameter real ron=10;         // on resistance of switch
+parameter real roff=1e13;      // off resistance of switch
+parameter real vos=0;          // offset voltage when conducting
+parameter real tr=0;           // (sec) risetime for enable input change
+parameter integer rform=0;     // flag: set to 1 to use dual-power-law format
+parameter real rauto=2;        // on-resistance threshold to default to power-law
+
+real Kon = `R2K(ron);          // K coef for specified resistor values     
+real Koff = `R2K(roff);
+real Kdrv,Kramp,Rramp;         // K coef now, plus ramping, converted to resistor
+real Iana,Imeas;               // measured current (analog & discrete variable)
+real Tr;                       // risetime with default
+
+analog initial Tr = (tr>0)? tr : 1p;       // use 1ps if no risetime specified
+
+analog begin                               // analog drive:
+  if (rform || ron<=rauto) begin           // if using dual-power-law format
+    Kdrv = (en===1'b1)? Kon:Koff;          // switch between two K values
+    Kramp = transition(Kdrv,0,Tr,Tr,Tr/5); // ramp between the K values
+    Rramp = `K2R(Kramp);                   // compute resistance from K
+  end
+  else begin                                 // otherwise use conductance ramp 
+    Kdrv = (en===1'b1)? 1/ron:1/roff;        // switch between two G values
+    Rramp = 1/transition(Kdrv,0,Tr,Tr,Tr/5); // ramp conductance value
+  end
+  if (Rramp>0.1) I(P,N) <+ (V(P,N)-vos)/Rramp; // normally in conductance format
+  else           V(P,N) <+ vos+I(P,N)*Rramp;   // resistance format if tiny R
+  Iana = I(P,N);                               // measure current through switch
+
+// Force interim transition points within risetime interval if using rform:
+// By adding a point 10% into the risetime, it must take at least two more 
+// interim points before getting to the end of the risetime interval.
+// Without this, it can step directly from ON to OFF points in some situations.
+  @(en) if (rform || ron<=rauto) $bound_step(Tr/10);
+end
+
+// Move current value to discrete domain:
+always @(absdelta(Iana,0)) Imeas = Iana;
+
+endmodule
+

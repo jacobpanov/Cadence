@@ -1,0 +1,79 @@
+## --- Begin Copyright Block -----[ do not move or remove ]------
+## Copyright (c) 2020, Cadence Design Systems, Inc. All rights reserved.
+
+## The model contained herein is the proprietary and confidential information 
+## of Cadence, and is supplied subject to, and may be used only by Cadences 
+## customer in accordance with a previously executed license and maintenance 
+## agreement between Cadence and that customer. This model is intended for use 
+## with products only from Cadence Design Systems, Inc.  The use or sharing of 
+## any models from this library or any of its modified/extended form is 
+## strictly prohibited with any non-Cadence products.
+
+## ALL MATERIALS FURNISHED BY CADENCE HEREUNDER ARE PROVIDED "AS IS" WITHOUT 
+## WARRANTY OF ANY KIND, AND CADENCE SPECIFICALLY DISCLAIMS ANY WARRANTY OF 
+## NONINFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY. 
+## CADENCE SHALL NOT BE LIABLE FOR ANY COSTS OF PROCUREMENT OF SUBSTITUTES, 
+## LOSS OF PROFITS, INTERRUPTION OF BUSINESS, OR FOR ANY OTHER SPECIAL, 
+## CONSEQUENTIAL OR INCIDENTAL DAMAGES, HOWEVER CAUSED, WHETHER FOR BREACH OF 
+## WARRANTY, CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE.
+##--------------------------------------------------------------------------------------
+
+set_design_top rxBB_sim -testbench
+
+# Define Power Supply Network
+
+# Create Supply Nets
+create_supply_net vddrx 
+create_supply_net vss
+create_supply_net vdd
+
+create_supply_set SS_1p4   -function {power  vddrx} \
+                           -function {ground vss}
+
+create_supply_set SS_4p2   -function {power  vdd} \
+                           -function {ground vss}
+
+# Create Power Domains.
+create_power_domain  PD_vddrx -supply {primary SS_1p4} \
+                              -elements { IrxBB/IADC/ILOGIC }
+
+create_power_domain  PD_vdd   -supply { primary SS_4p2 } \
+                              -elements { ILDO }
+
+
+# HDL real to UPF voltage conversion for vddrx
+create_hdl2upf_vct VCTwr2upf_vddrx -hdl_type {sv EEnet.V} \
+   -table { {===`wrealXState -100.0} {===`wrealZState -100.0} }
+
+
+# HDL real to UPF state conversion for vddrx
+create_hdl2upf_vct VCTwr2sta_vddrx -hdl_type {sv EEnet.V} \
+   -table { {>=1.1 FULL_ON} {>0.9 PARTIAL_ON} {<=0.9 OFF} {>1.8 OFF} {==-100.0 UNDETERMINED} }
+
+# HDL real to UPF voltage conversion for vss
+create_hdl2upf_vct VCTwr2upf_vss -hdl_type {sv EEnet.V} \
+   -table { {===`wrealXState -10.0} {===`wrealZState -10.0} }
+
+
+# HDL real to UPF state conversion for vss
+create_hdl2upf_vct VCTwr2sta_vss -hdl_type {sv EEnet.V} \
+   -table { {<=-0.1 OFF} {>=0.1 OFF} {>-0.1 FULL_ON} {==-10.0 UNDETERMINED} }
+
+# HDL real to UPF voltage conversion for vdd
+create_hdl2upf_vct VCTwr2upf_vdd -hdl_type {sv EEnet.V} \
+   -table { {===`wrealXState -100.0} {===`wrealZState -100.0} }
+
+# HDL real to UPF state conversion for vdd
+create_hdl2upf_vct VCTwr2sta_vdd -hdl_type {sv EEnet.V} \
+   -table { {>=3.3 FULL_ON} {>2.5 PARTIAL_ON} {<=2.5 OFF} {>4.5 OFF} {==-100.0 UNDETERMINED} }
+
+
+connect_supply_net vddrx  -ports { ILDO/VOUT IrxBB/IADC/ILOGIC/vdd } -vct VCTwr2upf_vddrx
+connect_supply_net vddrx  -ports { ILDO/VOUT IrxBB/IADC/ILOGIC/vdd } -vct VCTwr2sta_vddrx
+
+connect_supply_net vss     -ports { ISTIMULUS/vss  IrxBB/vss ILDO/VSS } -vct VCTwr2upf_vss
+connect_supply_net vss     -ports { ISTIMULUS/vss  IrxBB/vss ILDO/VSS } -vct VCTwr2sta_vss
+
+connect_supply_net vdd    -ports { ISTIMULUS/vdd ILDO/VDD } -vct VCTwr2upf_vdd
+connect_supply_net vdd    -ports { ISTIMULUS/vdd ILDO/VDD } -vct VCTwr2sta_vdd
+

@@ -1,0 +1,7 @@
+-gui                    // launch interactive session
+-clean                  // clear runarea of simulation files
+-debug                  // allow instrumentation for line debug
+-input probes.tcl       // process TCL commands in the named file
+-rnm_info               // print a table of RNM nets in the log
+temp.sv                 // SV input file
+

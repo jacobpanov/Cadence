@@ -1,0 +1,123 @@
+# SimVision Command Script (Fri May 08 12:42:36 PM EDT 2020)
+#
+# Version 20.03.a001
+#
+# You can restore this configuration with:
+#
+#     simvision -input simvision.svcf
+#  or simvision -input simvision.svcf database1 database2 ...
+#
+
+
+#
+# Preferences
+#
+preferences set toolbar-txe_waveform_navigate-WaveWindow {
+  usual
+  shown 1
+  position -row 3 -anchor w
+}
+preferences set toolbar-UserTB0-WatchList {
+  usual
+  add Vdd
+  add dutu3Vdd
+  shown 1
+  position -row 3 -pos 0 -anchor w
+  name {User Toolbar}
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set user-toolbar-list {WatchList UserTB0}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set toolbar-txe_waveform_view-WaveWindow {
+  usual
+  shown 1
+  position -row 3
+}
+preferences set sb-display-values 1
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-Windows-WaveWindow {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Windows-WatchList {
+  usual
+  position -pos 2 -anchor w
+}
+preferences set toolbar-WaveZoom-WaveWindow {
+  usual
+  position -anchor w
+}
+preferences set toolbars-style both
+
+#
+# Databases
+#
+array set dbNames ""
+set dbNames(realName1) [ database require waves_overDamped -hints {
+	file ./waves_overDamped.shm/waves.trn
+	file /home/mitra/rnmTraining/lpf_2nd_order_2/waves_overDamped.shm/waves.trn
+}]
+if {$dbNames(realName1) == ""} {
+    set dbNames(realName1) waves_overDamped
+}
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 3496x675+128+74}] != ""} {
+    window geometry "Waveform 1" 3496x675+128+74
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar select designbrowser
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals [subst  {
+	{$dbNames(realName1)::[format {tb.lcrLp.Vin}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1 -scale linear
+set id [waveform add -signals [subst  {
+	{$dbNames(realName1)::[format {tb.lcrLp.Vout}]}
+	} ]]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.0000050000249538 -scale linear
+
+waveform xview limits 0 1050000ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Layout selection
+#

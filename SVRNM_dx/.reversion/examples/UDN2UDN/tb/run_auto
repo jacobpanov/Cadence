@@ -1,0 +1,1 @@
+xrun -f run_auto.f -clean -gui $*

@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      danielcr
+HostName                       sj-danielcr1
+ProcessIdentifier              8030
+ProcessCreationTime_UTC        1554742151
+ProcessCreationTime_Readable   Mon Apr  8 09:49:11 2019 PDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /vols/fast_ms/danielcr/Txcvr_model/git/verilog/exercises/rxBB_exercise/rxbb_virtuoso/rxBB/schematic/sch.oa.cdslck
+TimeEditLocked                 Mon Jun  3 08:15:08 2019 PDT

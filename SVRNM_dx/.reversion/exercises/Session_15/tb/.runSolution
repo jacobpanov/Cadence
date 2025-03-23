@@ -1,0 +1,7 @@
+xrun -clean -access r -input probes.tcl -rnm_tech -gui \
+ -nowarn NSVCER -nowarn SAWSTP -status \
+ -v ../src/CapGeq0.sv \
+ -v ../solution/sinesrc_3.sv \
+ -y $COMMON/EEnet +libext+.sv \
+ ../solution/sinesrc_tb.sv  $* &
+

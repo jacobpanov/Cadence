@@ -1,0 +1,3 @@
+*AMS simulation control file
+simOpt options save=all saveahdlvars=all
+doit  tran  stop=20ms errpreset=moderate method=gear2
