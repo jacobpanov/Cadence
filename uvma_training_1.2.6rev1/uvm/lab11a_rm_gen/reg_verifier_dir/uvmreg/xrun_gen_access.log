@@ -1,0 +1,88 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 22, 2025 at 21:02:49 EDT
+xrun
+	-uvmhome default
+	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
+	./cdns_uvmreg_utils_pkg.sv
+	./yapp_router_regs_rdb.sv
+	./quicktest.sv
+	-log xrun_gen_access.log
+	+UVM_TESTNAME=access_test
+
+   User defined plus("+") options:
+	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d
+file: ./cdns_uvmreg_utils_pkg.sv
+	package worklib.cdns_uvmreg_utils_pkg:sv
+		errors: 0, warnings: 0
+file: ./yapp_router_regs_rdb.sv
+	package worklib.yapp_router_reg_pkg:sv
+		errors: 0, warnings: 0
+file: ./quicktest.sv
+package uvc_pkg;
+              |
+xmvlog: *W,TSNSPK (./quicktest.sv,5|14): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+	package worklib.uvc_pkg:sv
+		errors: 0, warnings: 1
+	package worklib.quicktest:sv
+		errors: 0, warnings: 0
+	module worklib.test:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		uvc_pkg
+		cdns_uvmreg_utils_pkg
+		yapp_router_reg_pkg
+		uvm_nowarn_from_cmdline
+		cdns_uvm_addons
+		quicktest
+		test
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.test:sv <0x3ab8b37e>
+			streams:   1, words:   590
+		worklib.quicktest:sv <0x1045ddfe>
+			streams: 406, words: 328177
+		worklib.uvc_pkg:sv <0x409b1c2d>
+			streams:   0, words:     0
+		worklib.yapp_router_reg_pkg:sv <0x23287fdd>
+			streams: 351, words: 221262
+		worklib.cdns_uvmreg_utils_pkg:sv <0x05643486>
+			streams:  60, words: 100085
+		worklib.cdns_uvm_addons:sv <0x716e2103>
+			streams: 477, words: 554244
+		worklib.cdns_uvm_pkg:sv <0x67b49dd3>
+			streams: 172, words: 203182
+		worklib.cdns_uvmapi:svp <0x1eb54350>
+			streams:  27, words: 23463
+		worklib.cdns_assert2uvm_pkg:sv <0x75718cba>
+			streams:   3, words:  1245
+		worklib.uvm_nowarn_from_cmdline:sv <0x78595762>
+			streams:   9, words:  6400
+		worklib.uvm_pkg:sv <0x5b3ac82f>
+			streams: 4552, words: 5470346
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Verilog packages:             10      10
+		Registers:                 15810   10950
+		Named events:                  4      12
+		Initial blocks:              346     174
+		Parallel blocks:              26      27
+		Assertions:                    3       4
+		Covergroup Instances:          0      18
+		SV Class declarations:       224     339
+		SV Class specializations:    442     442
+	Writing initial simulation snapshot: worklib.test:sv
+Loading snapshot worklib.test:sv .................... Done
+xmsim: *F,RNCNL: The required randomization library could not be opened, with this message from dl_open: 'libz.so.1: cannot open shared object file: No such file or directory or file is not valid ELFCLASS32 library.'.
+TOOL:	xrun	22.09-s010: Exiting on Mar 22, 2025 at 21:02:59 EDT  (total: 00:00:10)
