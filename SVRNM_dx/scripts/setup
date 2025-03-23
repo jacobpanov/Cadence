@@ -1,5 +1,6 @@
 #!/bin/tcsh
-setenv RNMTOP `readlink -m .`
-setenv COMMON $RNMTOP/common
+export RNMTOP=$(readlink -m .)
+export COMMON="$RNMTOP/common"
+
 
 
