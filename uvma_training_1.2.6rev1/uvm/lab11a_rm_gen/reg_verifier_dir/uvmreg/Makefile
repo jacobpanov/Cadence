@@ -30,7 +30,7 @@ access_file_ieee: $(FILES)
 	-log xrun_gen_access.log +UVM_TESTNAME=access_test
 
 access_file: $(FILES)
-	xrun -uvmhome default \
+	xrun -64bit -uvmhome default \
 	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file \
 	$(FILES) \
 	-log xrun_gen_access.log +UVM_TESTNAME=access_test

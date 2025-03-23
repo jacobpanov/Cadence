@@ -1,0 +1,12 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-64bit
+-uvmhome
+default
+./cdns_uvmreg_utils_pkg.sv
+./yapp_router_regs_rdb.sv
+./quicktest.sv
+-vclass_ext
++UVM_TESTNAME=qt_test

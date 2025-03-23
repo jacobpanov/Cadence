@@ -1,6 +1,7 @@
-xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun	22.09-s010: Started on Mar 22, 2025 at 21:39:11 EDT
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 22, 2025 at 21:41:13 EDT
 xrun
+	-64bit
 	-uvmhome default
 	+uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
 	./cdns_uvmreg_utils_pkg.sv
@@ -46,28 +47,28 @@ xmvlog: *W,TSNSPK (./quicktest.sv,5|14): `timescale is not specified for the pac
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.test:sv <0x3fc9905a>
-			streams:   1, words:   590
-		worklib.quicktest:sv <0x05d6d381>
-			streams: 406, words: 328177
-		worklib.uvc_pkg:sv <0x409b1c2d>
+		worklib.test:sv <0x66abad58>
+			streams:   1, words:   652
+		worklib.quicktest:sv <0x2662f0af>
+			streams: 406, words: 414938
+		worklib.uvc_pkg:sv <0x492330a2>
 			streams:   0, words:     0
-		worklib.yapp_router_reg_pkg:sv <0x23287fdd>
-			streams: 351, words: 221262
-		worklib.cdns_uvmreg_utils_pkg:sv <0x05643486>
-			streams:  60, words: 100085
-		worklib.cdns_uvm_addons:sv <0x716e2103>
-			streams: 477, words: 554244
-		worklib.cdns_uvm_pkg:sv <0x67b49dd3>
-			streams: 172, words: 203182
-		worklib.cdns_uvmapi:svp <0x1eb54350>
-			streams:  27, words: 23463
-		worklib.cdns_assert2uvm_pkg:sv <0x75718cba>
-			streams:   3, words:  1245
-		worklib.uvm_nowarn_from_cmdline:sv <0x78595762>
-			streams:   9, words:  6400
-		worklib.uvm_pkg:sv <0x5b3ac82f>
-			streams: 4552, words: 5470346
+		worklib.yapp_router_reg_pkg:sv <0x53f288d9>
+			streams: 351, words: 277471
+		worklib.cdns_uvmreg_utils_pkg:sv <0x4e0fffab>
+			streams:  60, words: 122953
+		worklib.cdns_uvm_addons:sv <0x6493bd5a>
+			streams: 477, words: 692175
+		worklib.cdns_uvm_pkg:sv <0x7c1daf74>
+			streams: 172, words: 247419
+		worklib.cdns_uvmapi:svp <0x49224f80>
+			streams:  27, words: 28542
+		worklib.cdns_assert2uvm_pkg:sv <0x53bbc99b>
+			streams:   3, words:  1664
+		worklib.uvm_nowarn_from_cmdline:sv <0x3f125919>
+			streams:   9, words:  7470
+		worklib.uvm_pkg:sv <0x20cf7251>
+			streams: 4552, words: 6810124
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -84,5 +85,83 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 		SV Class specializations:    442     442
 	Writing initial simulation snapshot: worklib.test:sv
 Loading snapshot worklib.test:sv .................... Done
-xmsim: *F,RNCNL: The required randomization library could not be opened, with this message from dl_open: 'libz.so.1: wrong ELF class: ELFCLASS64'.
-TOOL:	xrun	22.09-s010: Exiting on Mar 22, 2025 at 21:39:18 EDT  (total: 00:00:07)
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (22.09-s010)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test access_test...
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying config setting from the command line: +uvm_set_config_string=*,uvm_reg_generate_access_file_seq::file_name,access_file
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+include_coverage not located
+  did you mean model.router_yapp_regs?
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/./reg/uvm_reg_generate_access_file_seq.sv(33) @ 0: reporter@@access_seq [RegMem] generating IUS access file "access_file"
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh(72) @ 0: reporter@@access_seq [uvm_reg_mem_hdl_paths_seq] checking HDL paths for all registers/memories in model
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh(100) @ 0: reporter@@access_seq [uvm_reg_mem_hdl_paths_seq] Validating HDL paths in model for default design abstraction
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh(100) @ 0: reporter@@access_seq [uvm_reg_mem_hdl_paths_seq] Validating HDL paths in model.router_yapp_regs for default design abstraction
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh(81) @ 0: reporter@@access_seq [uvm_reg_mem_hdl_paths_seq] HDL path validation completed 
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/additions/sv/./reg/uvm_reg_generate_access_file_seq.sv(42) @ 0: reporter@@access_seq [RegMem] pass the generated file to irun via "-afile access_file"
+UVM_INFO /software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 0: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    9
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[RegMem]     2
+[TEST_DONE]     1
+[UVM_CMDLINE_PROC]     1
+[uvm_reg_mem_hdl_paths_seq]     4
+Simulation complete via $finish(1) at time 0 FS + 179
+/software/commercial/cadence/XCELIUM2209/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 22, 2025 at 21:41:19 EDT  (total: 00:00:06)
