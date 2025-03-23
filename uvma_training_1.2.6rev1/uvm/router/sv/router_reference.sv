@@ -74,3 +74,5 @@ class router_reference extends uvm_component;
   function void report_phase(uvm_phase phase);
     `uvm_info(get_type_name(), $sformatf("Report:\n   Router Reference: Packet Statistics \n     Packets Dropped:   %0d\n     Packets Forwarded: %0d\n     Oversized Packets: %0d\n", packets_dropped, packets_forwarded, jumbo_packets ), UVM_LOW)
   endfunction : report_phase
+
+endclass : router_reference
