@@ -4,8 +4,8 @@
 
 class router_tb extends uvm_env;
 
-    yapp_router_regs_t yapp_rm;
-    hbus_reg_adapter reg2hbus
+    yapp_router_regs_vendor_Cadence_Design_Systems_library_Yapp_Registers_version_1_5 yapp_rm;
+    hbus_reg_adapter reg2hbus;
 
     `uvm_component_utils_begin(router_tb)
         `uvm_field_object(yapp_rm, UVM_ALL_ON)
@@ -23,7 +23,7 @@ class router_tb extends uvm_env;
 
     router_mcsequencer mcsequencer;
 
-    router_scoreboard scoreboard;
+    router_env router_mod;
 
     function new (string name, uvm_component parent=null);
         super.new(name,parent);
@@ -49,13 +49,11 @@ class router_tb extends uvm_env;
 
         mcsequencer = router_mcsequencer::type_id::create("mcsequencer", this);
 
-        scoreboard = router_scoreboard::type_id::create("scoreboard", this);
-
          // router module UVC
         router_mod = router_env::type_id::create("router_mod", this);
 
         // register model
-        yapp_rm = yapp_router_regs_t::type_id::create("yapp_rm",this);
+        yapp_rm = yapp_router_regs_vendor_Cadence_Design_Systems_library_Yapp_Registers_version_1_5::type_id::create("yapp_rm",this);
         yapp_rm.build();
         yapp_rm.lock_model();
         yapp_rm.set_hdl_path_root("hw_top.dut");
@@ -74,13 +72,13 @@ class router_tb extends uvm_env;
         mcsequencer.hbus_seqr = hbus.masters[0].sequencer;
         mcsequencer.yapp_seqr = yapp.tx_agent.sequencer;
 
-        yapp.tx_agent.monitor.item_collected_port.connect(scoreboard.yapp_analysis_imp);
+        yapp.tx_agent.monitor.item_collected_port.connect(router_mod.reference.yapp_in);
         hbus.masters[0].monitor.item_collected_port.connect(router_mod.reference.hbus_in);
-        chan0.rx_agent.monitor.item_collected_port.connect(scoreboard.channel0_analysis_imp);
-        chan1.rx_agent.monitor.item_collected_port.connect(scoreboard.channel1_analysis_imp);
-        chan2.rx_agent.monitor.item_collected_port.connect(scoreboard.channel2_analysis_imp);
+        chan0.rx_agent.monitor.item_collected_port.connect(router_mod.scoreboard.sb_chan0);
+        chan1.rx_agent.monitor.item_collected_port.connect(router_mod.scoreboard.sb_chan1);
+        chan2.rx_agent.monitor.item_collected_port.connect(router_mod.scoreboard.sb_chan2);
 
-        yapp_rm.defailt_map.set_sequencer(hbus.masters[0].sequencer, reg2hbus);
+        yapp_rm.default_map.set_sequencer(hbus.masters[0].sequencer, reg2hbus);
         
     endfunction : connect_phase
 

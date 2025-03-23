@@ -9,17 +9,20 @@ Copyright Cadence Design Systems (c)2015
 // 64 bit option for AWS labs
 -64
 
+-access rwc
+
 -uvmhome $UVMHOME
 
 // include directories
 //*** add incdir include directories here
 
 +UVM_VERBOSITY=UVM_FULL
-+UVM_TESTNAME=uvm_reset_test
++UVM_TESTNAME=check_on_read_test
 +UVM_NO_RELNOTES
 -timescale 1ns/100ps
 
 -incdir ../sv
+
 -incdir ../../yapp/sv 
 -incdir ../../channel/sv
 -incdir  ../../hbus/sv 
@@ -32,6 +35,8 @@ Copyright Cadence Design Systems (c)2015
 
 cdns_uvmreg_utils_pkg.sv
 yapp_router_regs_rdb.sv
+
+../sv/router_module_pkg.sv
 
 // Channel UVC package and interface
 ../../channel/sv/channel_pkg.sv 

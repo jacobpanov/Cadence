@@ -22,7 +22,6 @@ module tb_top;
     import channel_pkg::*;
 
     import yapp_router_reg_pkg::*;
-
     // import the clock and reset UVC package
     import clock_and_reset_pkg::*;
 
@@ -31,7 +30,7 @@ module tb_top;
     `include "router_mcsequencer.sv"
     `include "router_mcseqs_lib.sv"
     
-    `include "router_scoreboard.sv"
+    //`include "router_scoreboard.sv"
 
     `include "router_tb.sv"
     `include "router_test_lib.sv"
