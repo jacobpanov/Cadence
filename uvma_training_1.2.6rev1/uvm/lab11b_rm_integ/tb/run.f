@@ -15,7 +15,7 @@ Copyright Cadence Design Systems (c)2015
 //*** add incdir include directories here
 
 +UVM_VERBOSITY=UVM_FULL
-+UVM_TESTNAME=test_mc
++UVM_TESTNAME=uvm_reset_test
 +UVM_NO_RELNOTES
 -timescale 1ns/100ps
 
@@ -29,6 +29,9 @@ Copyright Cadence Design Systems (c)2015
 
 ../../yapp/sv/yapp_pkg.sv
 ../../yapp/sv/yapp_if.sv 
+
+cdns_uvmreg_utils_pkg.sv
+yapp_router_regs_rdb.sv
 
 // Channel UVC package and interface
 ../../channel/sv/channel_pkg.sv 

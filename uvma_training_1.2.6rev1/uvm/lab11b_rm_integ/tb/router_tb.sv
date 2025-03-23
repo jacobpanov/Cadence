@@ -4,7 +4,12 @@
 
 class router_tb extends uvm_env;
 
-    `uvm_component_utils(router_tb)
+    yapp_router_regs_t yapp_rm;
+    hbus_reg_adapter reg2hbus
+
+    `uvm_component_utils_begin(router_tb)
+        `uvm_field_object(yapp_rm, UVM_ALL_ON)
+    `uvm_component_utils_end
 
     yapp_env yapp;
 
@@ -46,16 +51,36 @@ class router_tb extends uvm_env;
 
         scoreboard = router_scoreboard::type_id::create("scoreboard", this);
 
+         // router module UVC
+        router_mod = router_env::type_id::create("router_mod", this);
+
+        // register model
+        yapp_rm = yapp_router_regs_t::type_id::create("yapp_rm",this);
+        yapp_rm.build();
+        yapp_rm.lock_model();
+        yapp_rm.set_hdl_path_root("hw_top.dut");
+
+        // This is implicit prediction, so make sure auto_predict is turned on.
+        //  Default is to have an explicit predictor and auto_predict disabled
+        yapp_rm.default_map.set_auto_predict(1);
+
+        // Create the adapter 
+        reg2hbus= hbus_reg_adapter::type_id::create("reg2bus",this);
+
     endfunction : build_phase
 
     function void connect_phase(uvm_phase phase);
+        
         mcsequencer.hbus_seqr = hbus.masters[0].sequencer;
         mcsequencer.yapp_seqr = yapp.tx_agent.sequencer;
 
         yapp.tx_agent.monitor.item_collected_port.connect(scoreboard.yapp_analysis_imp);
+        hbus.masters[0].monitor.item_collected_port.connect(router_mod.reference.hbus_in);
         chan0.rx_agent.monitor.item_collected_port.connect(scoreboard.channel0_analysis_imp);
         chan1.rx_agent.monitor.item_collected_port.connect(scoreboard.channel1_analysis_imp);
         chan2.rx_agent.monitor.item_collected_port.connect(scoreboard.channel2_analysis_imp);
+
+        yapp_rm.defailt_map.set_sequencer(hbus.masters[0].sequencer, reg2hbus);
         
     endfunction : connect_phase
 

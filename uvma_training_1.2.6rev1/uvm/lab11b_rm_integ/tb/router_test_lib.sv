@@ -124,3 +124,38 @@ class test_mc extends base_test;
   endfunction : build_phase
 
 endclass : test_mc
+
+class  uvm_reset_test extends base_test;
+
+    uvm_reg_hw_reset_seq reset_seq;
+
+  // component macro
+  `uvm_component_utils(uvm_reset_test)
+
+  // component constructor
+  function new(string name, uvm_component parent);
+    super.new(name, parent);
+  endfunction : new
+
+  function void build_phase(uvm_phase phase);
+      uvm_config_wrapper::set(this, "tb.clock_and_reset.agent.sequencer.run_phase",
+                            "default_sequence",
+                            clk10_rst5_seq::get_type());
+      uvm_reg::include_coverage("*", UVM_NO_COVERAGE);
+      reset_seq = uvm_reg_hw_reset_seq::type_id::create("uvm_reset_seq");
+      super.build_phase(phase);
+  endfunction : build_phase
+
+  virtual task run_phase (uvm_phase phase);
+     phase.raise_objection(this, {"Raising Objection ",get_type_name()});
+     // Set the model property of the sequence to our Register Model instance
+     // Update the RHS of this assignment to match your instance names. Syntax is:
+     //  <testbench instance>.<register model instance>
+     reset_seq.model = tb.yapp_rm;
+     // Execute the sequence (sequencer is already set in the testbench)
+     reset_seq.start(null);
+     phase.drop_objection(this,{"Dropping Objection ",get_type_name()});
+     
+  endtask
+
+endclass : uvm_reset_test

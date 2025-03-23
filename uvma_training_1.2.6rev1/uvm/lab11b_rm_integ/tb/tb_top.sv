@@ -21,8 +21,12 @@ module tb_top;
     // import the Channel UVC package
     import channel_pkg::*;
 
+    import yapp_router_reg_pkg::*;
+
     // import the clock and reset UVC package
     import clock_and_reset_pkg::*;
+
+    import router_module_pkg::*;
 
     `include "router_mcsequencer.sv"
     `include "router_mcseqs_lib.sv"
