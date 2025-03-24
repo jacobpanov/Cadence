@@ -100,4 +100,6 @@ xcelium>
 xcelium> simvision -input simvision.svcf
 xcelium> run
 Simulation stopped via $stop(1) at time 166979703 PS + 0
-xcelium> 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 17:59:11 EDT  (total: 01:36:03)

@@ -1,5 +1,5 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 17:51:31 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 17:57:58 EDT
 xrun
 	-f files.f
 		-clean
@@ -33,11 +33,11 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
 		worklib.dac:sv <0x64b0c904>
-			streams:   3, words:   986
+			streams:   3, words:   972
 		worklib.adc:sv <0x36c4037f>
-			streams:   4, words:  1796
+			streams:   4, words:  1772
 		worklib.adc:sv <0x138483ef>
-			streams:   4, words:  1805
+			streams:   4, words:  1781
 		worklib.adc_dac_TB:sv <0x5cb1f1a5>
 			streams:  16, words:  9220
 	Building instance specific data structures.
@@ -71,8 +71,4 @@ xcelium> probe -create -shm adc_dac_TB.AIN adc_dac_TB.AOUT8 adc_dac_TB.CK adc_da
 Created probe 2
 xcelium> run
 Simulation stopped via $stop(1) at time 7700 NS + 0
-xcelium> run
-xmsim: *W,RNQUIE: Simulation is complete.
-xcelium> run
-xmsim: *W,RNQUIE: Simulation is complete.
 xcelium> 
