@@ -1,5 +1,5 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 17:09:15 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 17:12:16 EDT
 xrun
 	-f files.f
 		-clean
@@ -35,8 +35,8 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 	Generating native compiled code:
 		worklib.vco_dig:sv <0x0e98ced5>
 			streams:   3, words:  1475
-		worklib.vco_ds_TB:sv <0x76eb64c5>
-			streams:   8, words:  5701
+		worklib.vco_ds_TB:sv <0x23e87b03>
+			streams:   8, words:  5521
 		worklib.\$unit_0x1135de6f :compilation_unit <0x6b96c98f>
 			streams:   0, words:     0
 	Building instance specific data structures.
@@ -69,8 +69,6 @@ xcelium> simvision -input ./simvision.svcf
 xcelium> run
 Simulation complete via $finish(1) at time 5700 NS + 0
 ./vco_ds_TB.sv:50   #100 $finish;    		// test complete
-xcelium> scope -set vco_ds_TB.digvco
-xcelium> scope -set vco_ds_TB
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 17:11:54 EDT  (total: 00:02:39)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 17:14:03 EDT  (total: 00:01:47)

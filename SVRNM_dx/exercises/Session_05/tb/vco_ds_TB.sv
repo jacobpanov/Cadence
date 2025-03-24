@@ -53,7 +53,7 @@ end
 // MEASURE ACTUAL DIGITAL FREQUENCY:
 real fdig,tupd=0;  		// measure actual digital frequency:
 always @(Vclk) begin		// on leading clock edge
-  if (tupd>0) fdig=1s/($realtime-tupd);	//  compute F=1/period (Hz)
+  if (tupd>0) fdig=0.5*1s/($realtime-tupd);	//  compute F=1/period (Hz)
   tupd = $realtime;                     //   and save edge time
 end
 
