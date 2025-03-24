@@ -58,9 +58,14 @@ initial begin         // test procedure
   Vdc=1;    #4000      // DC shift of input signal
   Trim = 4'hF; #2000   // Trim to Max
   Vdc=0;    #1200      // back to zero DC level
+  
   // Sweep the value of Trim from max (15) to min (0)
   // hold at each value for 600ns
-  //  <<<  Add Code Here >>>
+
+  for (int i = 15; i >= 0; i = i - 1) begin
+    Trim = i;
+    #600;
+  end
 
   #600;
   Trim = 4'h7;        // back to middle
