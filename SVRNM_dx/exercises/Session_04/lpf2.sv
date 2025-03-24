@@ -56,22 +56,14 @@ module lpf2 import cds_rnm_pkg::*; (OUT, IN, trim, Av);
  
   always @ (trim) begin
      // calculate new pole locations w0 and w1 when trim changes:
-     if (trim !== 4'hx && trim !== 4'hz) 
-         // Center value is 4'h7
-         int trim_offset = trim - 4'h7;
-         
-         // Calculate w0 and w1 in radians/s
-         w0 = `M_TWO_PI * (fpole0 + (trim_offset * trimStep / 4));
-         w1 = `M_TWO_PI * (fpole1 + (trim_offset * trimStep));
-         normConst = 1/( (w0*(period**2)+(2*period))* w1 + (2*period*w0) + 4 );
+     if ( (^trim !== 1'bx) ) begin
+         w0 = (fpole0 + ($signed(trim-7) * trimStep / 4)) * `M_TWO_PI ;
+         w1 = (fpole1 + ($signed(trim-7) * trimStep)) * `M_TWO_PI ;
+         normConst = 1/( (w0*(period**2)+(2*period))* w1 + (2*period*w0) + 4 ); // could use $pow(a,b);
          numConst = w0*w1*(period**2);
-        else // if trim is x or z, set to nominal values
-         w0 = `M_TWO_PI * fpole0;
-         w1 = `M_TWO_PI * fpole1;
-         normConst = 1/( (w0*(period**2)+(2*period))* w1 + (2*period*w0) + 4 );
-         numConst = w0*w1*(period**2);
-      end
- 
+     end
+  end
+  
   always #(period/2) clk = ~clk;
   	
   // MAIN CALCULATION LOOP AND DATA PIPELINE

@@ -1,4 +1,6 @@
--clean                    // Deletes previous INCA_lins direcory, if it exists 
+-clean                    // Deletes previous INCA_lins direcory, if it exists
+-64bit 
+../../../common/packages/cds_rnm_pkg.sv
 ../src/*.sv               // design modules in SV 
 ./vco_ds_TB.sv            // Testbench
 -input probes.tcl         // probe TCL file to save and plot signals 

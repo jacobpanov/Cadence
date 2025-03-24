@@ -1,0 +1,577 @@
+
+#
+# Preferences
+#
+preferences set toolbar-Standard-WatchWindow {
+  usual
+  shown 0
+}
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Windows-WatchWindow {
+  usual
+  shown 0
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+preferences set toolbar-SimControl-WatchWindow {
+  usual
+  shown 0
+}
+preferences set toolbar-TimeSearch-WatchWindow {
+  usual
+  shown 0
+}
+preferences set show-signal-tooltip 1
+preferences set toolbar-SimControl-SrcBrowser {
+  usual
+  position -pos 0
+}
+preferences set expand-attributes trans_id
+preferences set db-group-librarycells 0
+preferences set analog-sampling 1
+preferences set txe-navigate-waveform-locate 1
+preferences set toolbar-Windows-SrcBrowser {
+  usual
+  position -pos 2
+}
+preferences set signal-trace-move-cursor 0
+preferences set toolbar-Windows-PsnWindow {
+  usual
+  position -pos 2
+}
+preferences set txe-locate-add-fibers 1
+preferences set waveform-print-paper {Tabloid (11 x 17)}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set display-signal-value-fullprecision 1
+preferences set toolbar-SvDataBrowser-SrcBrowser {
+  usual
+  position -pos 1 -anchor e
+  name SvDataBrowser
+}
+preferences set toolbar-SignalTrace-SrcBrowser {
+  usual
+  position -pos 1
+}
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set signal-trace-sidebar-mode full
+preferences set waveform-print-variables selected
+preferences set sb-display-values 1
+preferences set watchwindow-dont-show-probe-warning 1
+preferences set txe-view-hidden 0
+preferences set standard-methodology-filtering 1
+preferences set vhdl-colors {X #ff0000 0 {} L #00ffff H #00ffff U #9900ff 1 {} - {} Z #ff9900 W #ff0000}
+preferences set txe-view-hold 0
+preferences set watchwindow-always-probe-added 1
+preferences set show-trace-highlights 1
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set verilog-colors {Su #ff0099 0 {} 1 {} HiZ #ff9900 We #00ffff Pu #9900ff Sm #00ff99 X #ff0000 StrX #ff0000 other #ffff00 Z #ff9900 Me #0000ff La #ff00ff St {}}
+preferences set txe-navigate-search-locate 0
+preferences set txe-search-show-linenumbers 1
+preferences set txe-locate-pop-waveform 1
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set txe-navigate-waveform-next-child 1
+preferences set key-bindings {PageUp PageUp Edit>Undo Ctrl+z View>Zoom>Next {Alt+Right arrow} View>Zoom>In Alt+i PageDown PageDown ScrollDown {Down arrow} Edit>Copy Ctrl+c View>Zoom>FullY_widget y Edit>Create>Group Ctrl+g Simulation>NextInScope F7 Edit>Select>All Ctrl+a Format>Radix>Decimal Ctrl+Shift+D Edit>Ungroup Ctrl+Shift+G TopOfPage Home Edit>Create>Condition Ctrl+e {command -console SimVision {%w sidebar access designbrowser selectall}} Alt+a View>Zoom>FullX_widget = ScrollLeft {Left arrow} Edit>SelectAllText Alt+a Edit>TextSearchConsole Alt+s Windows>SendTo>Waveform Ctrl+w Simulation>Return Shift+F5 View>CallstackDown {Ctrl+Down arrow} Select>All Ctrl+a Edit>Delete Del Format>Radix>Octal Ctrl+Shift+O Edit>Cut Ctrl+x Simulation>Run F2 Edit>Create>Marker Ctrl+m View>Center Alt+c View>CallstackInWindow Ctrl+k Edit>SelectAll Ctrl+a File>OpenDatabase Ctrl+o Edit>Redo Ctrl+y Format>Radix>Binary Ctrl+Shift+B View>ExpandSequenceTime>AtCursor Alt+x ScrollUp {Up arrow} File>CloseWindow Ctrl+Shift+w ScrollRight {Right arrow} View>Zoom>FullX Alt+= Edit>Create>Bus Ctrl+b Explore>NextEdge Ctrl+\] View>Zoom>Cursor-Baseline Alt+z View>Zoom>OutX Alt+o Edit>GoToLine Ctrl+g View>Zoom>Fit Alt+= View>Zoom>OutX_widget o View>CallstackUp {Ctrl+Up arrow} View>Bookmarks>Add Ctrl+b Format>Radix>Hexadecimal Ctrl+Shift+H Edit>Search Ctrl+f Simulation>Next F6 View>ShowValues Ctrl+s View>Zoom>InX Alt+i Edit>Create>MarkerAtCursor Ctrl+Shift+M View>Zoom>Out Alt+o Edit>TextSearch Ctrl+f Format>Signed Ctrl+Shift+S Edit>Paste Ctrl+v View>Zoom>Previous {Alt+Left arrow} View>CollapseSequenceTime>AtCursor Alt+s Format>Radix>ASCII Ctrl+Shift+A View>Zoom>InX_widget i Explore>PreviousEdge {Ctrl+[} Simulation>Step F5 BottomOfPage End}
+preferences set waveform-print-colors {Color on white}
+preferences set signal-type-colors {assertion #FF0000 output #FFA500 group #0099FF inout #00FFFF input #FFFF00 fiber #00EEEE errorsignal #FF0000 unknown #FFFFFF overlay #0099FF internal #00FF00 reference #FFFFFF}
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 1
+}
+#
+# Groups
+#
+catch {group new -name {Group 1} -overlay 0}
+catch {group new -name {Group 2} -overlay 0}
+catch {group new -name {Group 3} -overlay 1}
+catch {group new -name {Group 4} -overlay 1}
+group using {Group 1}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+    simulator::lpf2_TB.Fin \
+    simulator::lpf2_TB.Trim[3:0] \
+    simulator::lpf2_TB.Vpk \
+    simulator::lpf2_TB.Av \
+    simulator::lpf2_TB.IN
+group using {Group 2}
+group set -overlay 0
+group set -comment {}
+group clear 0 end
+
+group insert \
+    simulator::lpf2_TB.OUT \
+    simulator::lpf2_TB.Vpk_out
+group using {Group 3}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    simulator::lpf2_TB.lpf2.IN \
+    simulator::lpf2_TB.lpf2.OUT
+group using {Group 4}
+group set -overlay 1
+group set -comment {}
+group clear 0 end
+
+group insert \
+    simulator::lpf2_TB.OUT \
+    simulator::lpf2_TB.Vpk_out
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+261+33}] != ""} {
+    window geometry "Design Browser 1" 730x500+261+33
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  simulator::lpf2_TB 
+browser set \
+    -signalsort name
+browser yview see  simulator::lpf2_TB 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1536x650+0+59}] != ""} {
+    window geometry "Waveform 1" 1536x650+0+59
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames path \
+    -signalwidth 175 \
+    -units ps \
+    -valuewidth 75
+waveform baseline set -time 0
+
+
+set groupId0 [waveform add -groups {{Group 1}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    simulator::lpf2_TB.Fin {-trace analogSampleAndHold}
+    {simulator::lpf2_TB.Trim[3:0]} {-trace analogSampleAndHold}
+    simulator::lpf2_TB.Vpk {-trace analogSampleAndHold}
+    simulator::lpf2_TB.Av {-trace analogSampleAndHold}
+    simulator::lpf2_TB.IN {-trace analogSampleAndHold}
+} childcmds {
+    {}
+    {}
+    {}
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+
+set groupId0 [waveform add -groups {{Group 4}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    simulator::lpf2_TB.OUT {-height 20 -trace analogSampleAndHold}
+    simulator::lpf2_TB.Vpk_out {-height 20 -trace analogSampleAndHold}
+} childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -1 -max 1 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Av
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.20000000000000001 -max 3 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Fin
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 100000 -max 32120452.995955478 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.IN
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1 -max 2 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.OUT
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1.1287625318755954 -max 1.4753162783737539 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Phs
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.99986800000008125 -scale linear
+set id [waveform add -signals  {
+	{simulator::lpf2_TB.Trim[3:0]}
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 15 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Ts
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 6.2999999999999998 -max 7.7000000000000011 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Vdc
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Vpk
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.90000000000000002 -max 1.1000000000000001 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Vpk_out
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.1285978984017353 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.measGain
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -41.06802150985169 -max 1.0507847444224432 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.up
+	} ]
+set id [waveform add -signals  {
+	simulator::lpf2_TB.vhi
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.4753162783737539 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.vlo
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1.1287625318755954 -max 0.9982528971528587 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.lpf2.Av
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.20000000000000001 -max 3 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.lpf2.Avnom
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.90000000000000002 -max 1.1000000000000001 -scale linear
+
+set groupId0 [waveform add -groups {{Group 3}}]
+set gpGlist0 [waveform hierarchy contents $groupId0]
+set gpID0 [lindex $gpGlist0 0]
+foreach {name attrs}  {
+    simulator::lpf2_TB.lpf2.IN {-trace analogSampleAndHold}
+    simulator::lpf2_TB.lpf2.OUT {-trace analogSampleAndHold}
+} childcmds {
+    {}
+    {}
+} {
+    set expected [ join [waveform signals -format fullpath $gpID0] ]
+    if {[string equal $name $expected] || $name == "cdivider"} {
+        if {$attrs != ""} {
+            eval waveform format $gpID0 $attrs
+        }
+        if { $childcmds != ""} {
+            eval $childcmds
+        }
+    }
+    set gpGlist0 [lrange $gpGlist0 1 end]
+    set gpID0 [lindex $gpGlist0 0]
+}
+
+waveform axis range $groupId0 -for default -min -1 -max 1 -scale linear
+waveform axis activate $groupId0 -for default
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Av
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.20000000000000001 -max 3 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Fin
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 100000 -max 32120452.995955478 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.IN
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1 -max 2 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.OUT
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min -1.1287625318755954 -max 1.4753162783737539 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Phs
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 0.99986800000008125 -scale linear
+set id [waveform add -signals  {
+	{simulator::lpf2_TB.Trim[3:0]}
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 15 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Ts
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 6.2999999999999998 -max 7.7000000000000011 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Vdc
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Vpk
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0.90000000000000002 -max 1.1000000000000001 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.Vpk_out
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.1285978984017353 -scale linear
+set id [waveform add -signals  {
+	simulator::lpf2_TB.idealH_f
+	} ]
+waveform format $id -trace analogSampleAndHold
+waveform axis range $id -for default -min 0 -max 1.0914103126634984 -scale linear
+
+waveform xview limits 0 166379703ps
+
+#
+# Waveform Window Links
+#
+
+#
+# Schematic Tracer windows
+#
+if {[catch {window new SchematicWindow -name "Schematic Tracer 1" -geometry 900x600+626+27}] != ""} {
+    window geometry "Schematic Tracer 1" 900x600+626+27
+}
+window target "Schematic Tracer 1" on
+schematic using "Schematic Tracer 1"
+schematic sidebar visibility partial
+schematic set \
+    -radix default \
+    -fullsignalname 0 \
+    -showvalue 1 \
+    -showstrength 0 \
+    -showgrey 0 \
+    -tracemode Single \
+    -showrtl 1 \
+    -showcells 1 \
+    -showcellpins 0
+schematic timecontrol set -lock 0
+schematic restore -state {# String saved with Nlview 6.7r2  2017-11-02 bk=1.4313 VDI=40 GEI=35 GUI=TK:8.6 non-TLS,tclcompat
+#  -string
+# non-default properties - (restore without -noprops)
+property attrcolor #40e0d0
+property attrfontsize 10
+property boxmaxwidth 400
+property boxmingap 40
+property boxminheight 40
+property boxminwidth 100
+property buscolor #00ff00
+property createnetattrdsp 2
+property fillcolor1 #000000
+property fillcolor2 #000000
+property gatecellname 1
+property netcolor #00ff00
+property objecthighlight0 #ff00aa
+property objecthighlight1 #ff00aa
+property objecthighlight2 #00ff00
+property objecthighlight3 #ffff00
+property objecthighlight9 #ffffaf
+property pinattrmax 200
+property selectionappearance 2
+property selectioncolor #ffffaf
+property sheetheight 0
+property sheetwidth 0
+property showhierpinname 1
+property showinvisibles 1
+property showmarks 1
+property showpgtype 1
+#
+module new module {}
+load symbol DAI_SOURCE_IN {} DEF port 0 input -loc -14 0 0 0 pinattrdsp @name -cr -2 -5 8i attrdsp @cell -ll -10 16 10 path 0 -6 9 -6 12 -3 12 6 0 6 0 -6 path 12 -3 9 -3 9 -6 path 2 -3 6 -3 path 2 0 10 0 path 2 3 10 3
+load symbol DAI_SOURCE_OUT {} DEF port 0 output -loc 26 0 12 0 pinattrdsp @name -cl 30 -5 8i attrdsp @cell -ll -10 16 10 path 0 -6 9 -6 12 -3 12 6 0 6 0 -6 path 12 -3 9 -3 9 -6 path 2 -3 6 -3 path 2 0 10 0 path 2 3 10 3
+#
+module new root {} -nosplit -symlib /software/commercial/cadence/XCELIUM2209/tools/dvgui/ams/symlib/analogLib.sym
+load symbol {lpf2_TB worklib(sv)} {} HIERBOX fillcolor 2
+load symbol rtl_Always_0 {} GEN pin 0 input.left pin 1 input.left pin 2 output.right pin 3 output.right pin 4 input.left pin 5 input.left pin 6 input.left pin 7 output.right fillcolor 1
+load symbol rtl_Always_2 {} GEN pin 0 output.right pin 1 output.right pin 2 output.right pin 3 input.left pin 4 output.right pin 5 input.left fillcolor 1
+load symbol rtl_Always_3 {} GEN pin 0 input.left pin 1 input.left pin 2 output.right fillcolor 1
+load symbol rtl_Initial_1 {} GEN pin 4 output.right pin 5 output.right pin 6 output.right pin 7 output.right pinBus 0 output.right 4 0 1 2 3 fillcolor 1
+load symbol {lpf2 worklib(sv)} {} HIERBOX pin 0 output.right pin 1 input.left pin 6 input.left pinBus 0 input.left 4 2 3 4 5 fillcolor 2
+load symbol rtl_Always_6 {} GEN pin 0 input.left pin 5 input.left pin 6 output.right pin 7 input.left pin 8 output.right pin 9 input.left pin 10 output.right pin 11 output.right pinBus 0 input.left 4 1 2 3 4 fillcolor 1
+load symbol rtl_Always_8 {} GEN pin 0 input.left pin 1 output.right pin 8 input.left pin 9 input.left pin 10 output.right pin 11 input.left pin 12 input.left pin 13 input.left pin 14 output.right pin 15 output.right pin 16 input.left pinBus 0 output.right 3 2 3 4 pinBus 1 output.right 3 5 6 7 fillcolor 1
+load symbol rtl_Initial_5 {} GEN pin 0 input.left pin 7 output.right pin 8 input.left pin 9 output.right pinBus 0 output.right 3 1 2 3 pinBus 1 output.right 3 4 5 6 fillcolor 1
+load symbol invif0_0 {} INVIF0 pin 0 input pin 1 output fillcolor 1
+load symbol rtl_Unknown_4 {} GEN pin 0 output.right pin 1 input.left pin 2 input.left fillcolor 1
+load inst simulator::lpf2_TB {lpf2_TB worklib(sv)} {} -attr @color #00ffff -pg 1 -lvl 1 -y 50
+load inst simulator::lpf2_TB,lpf2 {lpf2 worklib(sv)} {} -hier simulator::lpf2_TB -attr @name lpf2 -attr @color #00ffff -pinAttr 0 @name OUT=-0.910044 -pinAttr 1 @name IN=-0.888136 -pinAttr 6 @name Av=1 -pinBusAttr 0 @name {Trim[3:0]=8} -hierPinAttr 0 @name OUT -hierPinAttr 1 @name IN -hierPinAttr 6 @name Av -hierPinBusAttr 0 @name {trim[3:0]} -pg 1 -lvl 3 -y 140
+load inst simulator::lpf2_TB,lpf2,Initial_0 rtl_Initial_5 {} -hier simulator::lpf2_TB,lpf2 -attr @name Initial_0 -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name Avnom=1 -pinAttr 7 @name clk=1 -pinAttr 8 @name Ts=7e-09 -pinAttr 9 @name period=7e-09 -pinBusAttr 0 @name {data[0:2]=} -pinBusAttr 0 @color #ffffff -pinBusAttr 1 @name {y_data[0:2]=} -pinBusAttr 1 @color #ffffff -pg 1 -lvl 1 -y 400
+load inst simulator::lpf2_TB,lpf2,NOT_0 invif0_0 {} -hier simulator::lpf2_TB,lpf2 -attr @name {} -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name clk=1 -pinAttr 1 @name clk=1 -pg 1 -lvl 2 -y 360
+load inst simulator::lpf2_TB,lpf2,Always_0 rtl_Always_6 {} -hier simulator::lpf2_TB,lpf2 -attr @name Always_0 -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name fpole0=3e+06 -pinAttr 5 @name trimStep=250000 -pinAttr 6 @name w0=1.92423e+07 -pinAttr 7 @name fpole1=5e+06 -pinAttr 8 @name w1=3.29867e+07 -pinAttr 9 @name period=7e-09 -pinAttr 10 @name normConst=0.209982 -pinAttr 11 @name numConst=0.0311022 -pinBusAttr 0 @name {trim[3:0]=8} -pg 1 -lvl 2 -y 240
+load inst simulator::lpf2_TB,lpf2,Always_1 rtl_Always_8 {} -hier simulator::lpf2_TB,lpf2 -attr @name Always_1 -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name IN=-0.888136 -pinAttr 1 @name sampIn=-0.888136 -pinAttr 8 @name numConst=0.0311022 -pinAttr 9 @name normConst=0.209982 -pinAttr 10 @name num_0=-0.0232538 -pinAttr 11 @name period=7e-09 -pinAttr 12 @name w0=1.92423e+07 -pinAttr 13 @name w1=3.29867e+07 -pinAttr 14 @name denom_0=0.88679 -pinAttr 15 @name outInt=-0.910044 -pinAttr 16 @name clk=1 -pinBusAttr 0 @name {data[0:2]=} -pinBusAttr 0 @color #ffffff -pinBusAttr 1 @name {y_data[0:2]=} -pinBusAttr 1 @color #ffffff -pg 1 -lvl 3 -y 240
+load inst simulator::lpf2_TB,Always_0 rtl_Always_0 {} -hier simulator::lpf2_TB -attr @name Always_0 -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name Vdc=0 -pinAttr 1 @name Vpk=1 -pinAttr 2 @name Phs=0.826 -pinAttr 3 @name IN=-0.888136 -pinAttr 4 @name Ts=7 -pinAttr 5 @name Fin=100000 -pinAttr 6 @name Av=1 -pinAttr 7 @name idealH_f=0.999245 -pg 1 -lvl 2 -y 150
+load inst simulator::lpf2_TB,Always_1 rtl_Always_2 {} -hier simulator::lpf2_TB -attr @name Always_1 -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name vhi=0.999286 -pinAttr 1 @name vlo=-0.999286 -pinAttr 2 @name Vpk_out=0.73418 -pinAttr 3 @name OUT=-0.910044 -pinAttr 4 @name up=0 -pinAttr 5 @name Vdc=0 -pg 1 -lvl 4 -y 90
+load inst simulator::lpf2_TB,Always_2 rtl_Always_3 {} -hier simulator::lpf2_TB -attr @name Always_2 -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name Vpk_out=0.73418 -pinAttr 1 @name Vpk=1 -pinAttr 2 @name measGain=-2.68395 -pg 1 -lvl 5 -y 480
+load inst simulator::lpf2_TB,Initial_0 rtl_Initial_1 {} -hier simulator::lpf2_TB -attr @name Initial_0 -attr @cell {} -attr @color #00ff00 -pinAttr 4 @name Av=1 -pinAttr 5 @name Fin=100000 -pinAttr 6 @name Vdc=0 -pinAttr 7 @name Vpk=1 -pinBusAttr 0 @name {Trim[3:0]=8} -pg 1 -lvl 1 -y 220
+load inst simulator::lpf2_TB,lpf2,Unknown_0 rtl_Unknown_4 {} -hier simulator::lpf2_TB,lpf2 -attr @name Unknown_0 -attr @cell {} -attr @color #00ff00 -pinAttr 0 @name OUT=-0.910044 -pinAttr 1 @name outInt=-0.910044 -pinAttr 2 @name Av=1 -pg 1 -lvl 4 -y 320
+load net simulator::lpf2_TB,lpf2,trimStep -attr @name trimStep -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 5
+netloc simulator::lpf2_TB,lpf2,trimStep 1 1 1 N
+load net simulator::lpf2_TB,lpf2,w1 -attr @name w1 -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 8 -pin simulator::lpf2_TB,lpf2,Always_1 13
+netloc simulator::lpf2_TB,lpf2,w1 1 2 1 1240
+load net simulator::lpf2_TB,lpf2,clk -attr @name clk -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 16 -pin simulator::lpf2_TB,lpf2,Initial_0 7 -pin simulator::lpf2_TB,lpf2,NOT_0 0 -pin simulator::lpf2_TB,lpf2,NOT_0 1
+netloc simulator::lpf2_TB,lpf2,clk 1 1 2 880 390 1300
+load net {simulator::lpf2_TB,lpf2,y_data[0]} -attr @name {y_data[0]} -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 5 -pin simulator::lpf2_TB,lpf2,Initial_0 4
+load net simulator::lpf2_TB,Vdc -attr @name Vdc -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 0 -pin simulator::lpf2_TB,Always_1 5 -pin simulator::lpf2_TB,Initial_0 6
+netloc simulator::lpf2_TB,Vdc 1 1 3 150 220 470J 100 NJ
+load net simulator::lpf2_TB,Phs -attr @name Phs -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 2
+netloc simulator::lpf2_TB,Phs 1 2 1 N
+load net simulator::lpf2_TB,up -attr @name up -attr @color #666666.1 -pin simulator::lpf2_TB,Always_1 4
+netloc simulator::lpf2_TB,up 1 4 1 N
+load net {simulator::lpf2_TB,lpf2,trim[1]} -attr @name {trim[1]} -attr @color #666666.1 -hierPin simulator::lpf2_TB,lpf2 4 -pin simulator::lpf2_TB,lpf2,Always_0 3
+load net simulator::lpf2_TB,Av -attr @name Av -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 6 -pin simulator::lpf2_TB,Initial_0 4 -pin simulator::lpf2_TB,lpf2 6
+netloc simulator::lpf2_TB,Av 1 1 2 170 320 NJ
+load net simulator::lpf2_TB,IN -attr @name IN -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 3 -pin simulator::lpf2_TB,lpf2 1
+netloc simulator::lpf2_TB,IN 1 2 1 N
+load net simulator::lpf2_TB,vlo -attr @name vlo -attr @color #666666.1 -pin simulator::lpf2_TB,Always_1 1
+netloc simulator::lpf2_TB,vlo 1 4 1 N
+load net {simulator::lpf2_TB,Trim[2]} -attr @name {Trim[2]} -attr @color #666666.1 -pin simulator::lpf2_TB,Initial_0 1 -pin simulator::lpf2_TB,lpf2 3
+load net {simulator::lpf2_TB,lpf2,trim[0]} -attr @name {trim[0]} -attr @color #666666.1 -hierPin simulator::lpf2_TB,lpf2 5 -pin simulator::lpf2_TB,lpf2,Always_0 4
+load net simulator::lpf2_TB,lpf2,normConst -attr @name normConst -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 10 -pin simulator::lpf2_TB,lpf2,Always_1 9
+netloc simulator::lpf2_TB,lpf2,normConst 1 2 1 1260
+load net simulator::lpf2_TB,lpf2,numConst -attr @name numConst -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 11 -pin simulator::lpf2_TB,lpf2,Always_1 8
+netloc simulator::lpf2_TB,lpf2,numConst 1 2 1 1220
+load net {simulator::lpf2_TB,lpf2,data[1]} -attr @name {data[1]} -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 3 -pin simulator::lpf2_TB,lpf2,Initial_0 2
+load net {simulator::lpf2_TB,lpf2,y_data[1]} -attr @name {y_data[1]} -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 6 -pin simulator::lpf2_TB,lpf2,Initial_0 5
+load net simulator::lpf2_TB,Ts -attr @name Ts -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 4
+netloc simulator::lpf2_TB,Ts 1 1 1 N
+load net {simulator::lpf2_TB,lpf2,data[0]} -attr @name {data[0]} -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 2 -pin simulator::lpf2_TB,lpf2,Initial_0 1
+load net simulator::lpf2_TB,idealH_f -attr @name idealH_f -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 7
+netloc simulator::lpf2_TB,idealH_f 1 2 1 N
+load net simulator::lpf2_TB,lpf2,IN -attr @name IN -attr @color #666666.1 -hierPin simulator::lpf2_TB,lpf2 1 -pin simulator::lpf2_TB,lpf2,Always_1 0
+netloc simulator::lpf2_TB,lpf2,IN 1 0 3 NJ 150 NJ 150 1200J
+load net simulator::lpf2_TB,Vpk -attr @name Vpk -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 1 -pin simulator::lpf2_TB,Always_2 1 -pin simulator::lpf2_TB,Initial_0 7
+netloc simulator::lpf2_TB,Vpk 1 1 4 210 490 NJ 490 NJ 490 NJ
+load net simulator::lpf2_TB,measGain -attr @name measGain -attr @color #666666.1 -pin simulator::lpf2_TB,Always_2 2
+netloc simulator::lpf2_TB,measGain 1 5 1 N
+load net {simulator::lpf2_TB,Trim[3]} -attr @name {Trim[3]} -attr @color #666666.1 -pin simulator::lpf2_TB,Initial_0 0 -pin simulator::lpf2_TB,lpf2 2
+load net {simulator::lpf2_TB,Trim[0]} -attr @name {Trim[0]} -attr @color #666666.1 -pin simulator::lpf2_TB,Initial_0 3 -pin simulator::lpf2_TB,lpf2 5
+load net simulator::lpf2_TB,lpf2,Av -attr @name Av -attr @color #666666.1 -hierPin simulator::lpf2_TB,lpf2 6 -pin simulator::lpf2_TB,lpf2,Unknown_0 2
+netloc simulator::lpf2_TB,lpf2,Av 1 0 4 NJ 320 840J 330 NJ 330 NJ
+load net simulator::lpf2_TB,lpf2,OUT -attr @name OUT -attr @color #666666.1 -hierPin simulator::lpf2_TB,lpf2 0 -pin simulator::lpf2_TB,lpf2,Unknown_0 0
+netloc simulator::lpf2_TB,lpf2,OUT 1 4 1 N
+load net simulator::lpf2_TB,lpf2,fpole0 -attr @name fpole0 -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 0
+netloc simulator::lpf2_TB,lpf2,fpole0 1 1 1 N
+load net simulator::lpf2_TB,lpf2,num_0 -attr @name num_0 -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 10
+netloc simulator::lpf2_TB,lpf2,num_0 1 3 1 N
+load net simulator::lpf2_TB,lpf2,outInt -attr @name outInt -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 15 -pin simulator::lpf2_TB,lpf2,Unknown_0 1
+netloc simulator::lpf2_TB,lpf2,outInt 1 3 1 1660
+load net simulator::lpf2_TB,vhi -attr @name vhi -attr @color #666666.1 -pin simulator::lpf2_TB,Always_1 0
+netloc simulator::lpf2_TB,vhi 1 4 1 N
+load net simulator::lpf2_TB,lpf2,fpole1 -attr @name fpole1 -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 7
+netloc simulator::lpf2_TB,lpf2,fpole1 1 1 1 N
+load net simulator::lpf2_TB,lpf2,Ts -attr @name Ts -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Initial_0 8
+netloc simulator::lpf2_TB,lpf2,Ts 1 0 1 N
+load net simulator::lpf2_TB,Fin -attr @name Fin -attr @color #666666.1 -pin simulator::lpf2_TB,Always_0 5 -pin simulator::lpf2_TB,Initial_0 5
+netloc simulator::lpf2_TB,Fin 1 1 1 190
+load net simulator::lpf2_TB,Vpk_out -attr @name Vpk_out -attr @color #666666.1 -pin simulator::lpf2_TB,Always_1 2 -pin simulator::lpf2_TB,Always_2 0
+netloc simulator::lpf2_TB,Vpk_out 1 4 1 2350
+load net simulator::lpf2_TB,OUT -attr @name OUT -attr @color #666666.1 -pin simulator::lpf2_TB,Always_1 3 -pin simulator::lpf2_TB,lpf2 0
+netloc simulator::lpf2_TB,OUT 1 3 1 2070
+load net {simulator::lpf2_TB,lpf2,trim[3]} -attr @name {trim[3]} -attr @color #666666.1 -hierPin simulator::lpf2_TB,lpf2 2 -pin simulator::lpf2_TB,lpf2,Always_0 1
+load net simulator::lpf2_TB,lpf2,period -attr @name period -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 9 -pin simulator::lpf2_TB,lpf2,Always_1 11 -pin simulator::lpf2_TB,lpf2,Initial_0 9
+netloc simulator::lpf2_TB,lpf2,period 1 1 2 860 310 1280
+load net simulator::lpf2_TB,lpf2,sampIn -attr @name sampIn -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 1
+netloc simulator::lpf2_TB,lpf2,sampIn 1 3 1 N
+load net simulator::lpf2_TB,lpf2,Avnom -attr @name Avnom -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Initial_0 0
+netloc simulator::lpf2_TB,lpf2,Avnom 1 0 1 N
+load net {simulator::lpf2_TB,Trim[1]} -attr @name {Trim[1]} -attr @color #666666.1 -pin simulator::lpf2_TB,Initial_0 2 -pin simulator::lpf2_TB,lpf2 4
+load net {simulator::lpf2_TB,lpf2,y_data[2]} -attr @name {y_data[2]} -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 7 -pin simulator::lpf2_TB,lpf2,Initial_0 6
+load net {simulator::lpf2_TB,lpf2,trim[2]} -attr @name {trim[2]} -attr @color #666666.1 -hierPin simulator::lpf2_TB,lpf2 3 -pin simulator::lpf2_TB,lpf2,Always_0 2
+load net simulator::lpf2_TB,lpf2,w0 -attr @name w0 -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_0 6 -pin simulator::lpf2_TB,lpf2,Always_1 12
+netloc simulator::lpf2_TB,lpf2,w0 1 2 1 1200
+load net simulator::lpf2_TB,lpf2,denom_0 -attr @name denom_0 -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 14
+netloc simulator::lpf2_TB,lpf2,denom_0 1 3 1 N
+load net {simulator::lpf2_TB,lpf2,data[2]} -attr @name {data[2]} -attr @color #666666.1 -pin simulator::lpf2_TB,lpf2,Always_1 4 -pin simulator::lpf2_TB,lpf2,Initial_0 3
+load netBundle {simulator::lpf2_TB,lpf2,trim[3:0]} g4 -attr @name {trim[3:0]} -attr @color #666666.1
+netbloc {simulator::lpf2_TB,lpf2,trim[3:0]} 1 0 2 NJ 280 NJ
+load netBundle {simulator::lpf2_TB,lpf2,data[0:2]} g3 -attr @name {data[0:2]} -attr @color #666666.1
+netbloc {simulator::lpf2_TB,lpf2,data[0:2]} 1 1 3 NJ 410 NJ 410 1640
+load netBundle {simulator::lpf2_TB,lpf2,y_data[0:2]} g3 -attr @name {y_data[0:2]} -attr @color #666666.1
+netbloc {simulator::lpf2_TB,lpf2,y_data[0:2]} 1 1 3 NJ 430 NJ 430 1620
+load netBundle {simulator::lpf2_TB,Trim[3:0]} g4 -attr @name {Trim[3:0]} -attr @color #666666.1
+netbloc {simulator::lpf2_TB,Trim[3:0]} 1 1 2 150 280 NJ
+levelinfo -pg 1 0 10 2660 -top 0 -bot 540
+levelinfo -hier simulator::lpf2_TB * 20 240 560 2100 2380 *
+levelinfo -hier simulator::lpf2_TB,lpf2 * 650 930 1330 1690 *
+highlight -append -subl 0 -itemized {inst simulator::lpf2_TB,Always_2} {net simulator::lpf2_TB,up} {net simulator::lpf2_TB,vlo} {net simulator::lpf2_TB,vhi} {net simulator::lpf2_TB,Vpk_out}
+show
+zoom 0.416104
+scrollpos 539 -176
+#
+# initialize ictrl to current module root {}
+ictrl init -bulk {} ,
+}
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+261+564
+
+#
+# Layout selection
+#

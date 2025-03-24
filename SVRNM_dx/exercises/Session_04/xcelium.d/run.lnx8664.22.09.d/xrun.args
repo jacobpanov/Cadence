@@ -1,0 +1,15 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+../../common/packages/cds_rnm_pkg.sv
+lpf2.sv
+lpf2_TB.sv
+-clean
+-access
++rwc
+-64bit
+-rnm_package
+-input
+probes.tcl
+-gui

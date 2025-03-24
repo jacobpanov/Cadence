@@ -1,0 +1,103 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 16:23:08 EDT
+xrun
+	../../common/packages/cds_rnm_pkg.sv
+	lpf2.sv
+	lpf2_TB.sv
+	-clean
+	-access +rwc
+	-64bit
+	-rnm_package
+	-input probes.tcl
+	-gui
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ../../common/packages/cds_rnm_pkg.sv
+	package worklib.cds_rnm_pkg:sv
+		errors: 0, warnings: 0
+file: lpf2.sv
+        data[2] = (data[1] !== 1'bz) ? data[1] : 0.0 ; // catch any z states that got in ...
+                             |
+xmvlog: *W,NSVCER (lpf2.sv,74|29): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        data[1] = (data[0] !== 1'bz) ? data[0] : 0.0 ;
+                             |
+xmvlog: *W,NSVCER (lpf2.sv,75|29): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        y_data[2] = (y_data[1] !== 1'bz) ? y_data[1] : 0.0;
+                                 |
+xmvlog: *W,NSVCER (lpf2.sv,79|33): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        y_data[1] = (y_data[0] !== 1'bz) ? y_data[0] : 0.0;
+                                 |
+xmvlog: *W,NSVCER (lpf2.sv,80|33): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        outInt = (((y_data[0] !== 1'bx) && (y_data[0] !== 1'bz)) ? y_data[0] : outInt);
+                                |
+xmvlog: *W,NSVCER (lpf2.sv,85|32): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        outInt = (((y_data[0] !== 1'bx) && (y_data[0] !== 1'bz)) ? y_data[0] : outInt);
+                                                        |
+xmvlog: *W,NSVCER (lpf2.sv,85|56): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+	module worklib.lpf2:sv
+		errors: 0, warnings: 6
+file: lpf2_TB.sv
+	module worklib.lpf2_TB:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: RNM module.
+	Top level design units:
+		cds_rnm_pkg
+		lpf2_TB
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: ....................
+        data[2] = (data[1] !== 1'bz) ? data[1] : 0.0 ; // catch any z states that got in ...
+                             |
+xmelab: *W,NSVCER (./lpf2.sv,74|29): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        data[1] = (data[0] !== 1'bz) ? data[0] : 0.0 ;
+                             |
+xmelab: *W,NSVCER (./lpf2.sv,75|29): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        y_data[2] = (y_data[1] !== 1'bz) ? y_data[1] : 0.0;
+                                 |
+xmelab: *W,NSVCER (./lpf2.sv,79|33): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        y_data[1] = (y_data[0] !== 1'bz) ? y_data[0] : 0.0;
+                                 |
+xmelab: *W,NSVCER (./lpf2.sv,80|33): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        outInt = (((y_data[0] !== 1'bx) && (y_data[0] !== 1'bz)) ? y_data[0] : outInt);
+                                |
+xmelab: *W,NSVCER (./lpf2.sv,85|32): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+        outInt = (((y_data[0] !== 1'bx) && (y_data[0] !== 1'bz)) ? y_data[0] : outInt);
+                                                        |
+xmelab: *W,NSVCER (./lpf2.sv,85|56): Real valued operands to !== (case inequality) operator is non-standard Verilog [4.1(IEEE)].
+ Done
+	Generating native compiled code:
+		worklib.lpf2:sv <0x6640923e>
+			streams:   5, words:  6247
+		worklib.lpf2_TB:sv <0x76a4c67c>
+			streams:  10, words: 11485
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Verilog packages:        1       1
+		Registers:              27      27
+		Scalar wires:            4       -
+		Vectored wires:          1       -
+		Always blocks:           6       6
+		Initial blocks:          4       4
+		Cont. assignments:       1       1
+		Pseudo assignments:      4       4
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.lpf2_TB:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open -shm -into waves.shm waves -default
+Created default SHM database waves
+xcelium> probe -create -database waves -all -depth all 
+Created probe 1
+xcelium> 
+xcelium> simvision -input simvision.svcf
+xcelium> run
+Simulation stopped via $stop(1) at time 166979703 PS + 0
+xcelium> 
