@@ -39,14 +39,14 @@ module adc import cds_rnm_pkg::*;
   bit CKint;
 
   always_comb                  		// get dV per bit wrt supply
-    PerBit = (REFH-REFL)/((1<<Nbits)-1);
+    PerBit = (REFH-REFL)/((1<<(Nbits-1))-1);
 
   always @(CK) 				// 1,0 passed, X,Z ignored
     if (CK|!CK) CKint=CK;
 
   always @(posedge CKint)  		// update output on valid posedge
     DOUT <= #(Td) (AIN<REFL)? -((1<<(Nbits-1))) : 
-            (AIN>REFH)? ((1<<(Nbits-1))-1) : ((AIN-REFL)/PerBit) - (1<<(Nbits-1));
+            (AIN>REFH)? ((1<<(Nbits-1))-1) : ((AIN-REFL)/PerBit);
 
 endmodule 
 

@@ -38,11 +38,11 @@ module dac import cds_rnm_pkg::*;
   real Vout ;
 
   always_comb				// get dV per bit wrt supply
-    PerBit = (REFH-REFL)/((1<<Nbits)-1);
+    PerBit = (REFH-REFL)/((1<<(Nbits-1))-1); 
 
   always @(DIN) #Td 			// update output after input chg
-    if (^DIN === 1'bx) Vout  = 0;  	// zero output when input invalid
-    else Vout = REFL + (DIN + (1<<(Nbits-1)))*PerBit;	// compute using defined coefs
+   if (^DIN === 1'bx) Vout  = 0;  	// zero output when input invalid
+    else Vout = REFL + DIN*PerBit;	// compute using defined coefs
 
   assign AOUT = Vout;
 endmodule
