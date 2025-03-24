@@ -1,5 +1,5 @@
 #!/bin/tcsh
-setenv RNMTOP `readlink -m .`
-setenv COMMON $RNMTOP/common
+export RNMTOP="/home/jpanov/Cadence/SVRNM_dx"
+export COMMON="$RNMTOP/common"
 
 
