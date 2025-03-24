@@ -30,7 +30,7 @@
 module adc import cds_rnm_pkg::*; 
   #( int Nbits=8 )                    // output bus width inline declaration
  (		
-  output logic [Nbits-1:0] DOUT,  
+  output logic signed [Nbits-1:0] DOUT,  
   input wreal1driver AIN,REFH,REFL,
   input logic CK
  );
@@ -45,8 +45,8 @@ module adc import cds_rnm_pkg::*;
     if (CK|!CK) CKint=CK;
 
   always @(posedge CKint)  		// update output on valid posedge
-    DOUT <= #(Td) (AIN<REFL)? 0 : 
-            (AIN>REFH)? {Nbits{1'b1}} : (AIN-REFL)/PerBit;
+    DOUT <= #(Td) (AIN<REFL)? -((1<<(Nbits-1))) : 
+            (AIN>REFH)? ((1<<(Nbits-1))-1) : ((AIN-REFL)/PerBit) - (1<<(Nbits-1));
 
 endmodule 
 

@@ -30,7 +30,7 @@ module dac import cds_rnm_pkg::*;
   #(int Nbits=8)  // input bus width 
  (
   output wreal1driver AOUT,
-  input var logic [Nbits-1:0] DIN, 
+  input var logic signed [Nbits-1:0] DIN, 
   input wreal1driver REFH, REFL
  ); 
   parameter real Td=1;		        // delay from input to output (ns)
@@ -42,7 +42,7 @@ module dac import cds_rnm_pkg::*;
 
   always @(DIN) #Td 			// update output after input chg
     if (^DIN === 1'bx) Vout  = 0;  	// zero output when input invalid
-    else Vout = REFL + DIN*PerBit;	// compute using defined coefs
+    else Vout = REFL + (DIN + (1<<(Nbits-1)))*PerBit;	// compute using defined coefs
 
   assign AOUT = Vout;
 endmodule
