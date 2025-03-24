@@ -1,0 +1,86 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 23, 2025 at 21:08:54 EDT
+xrun
+	-f xrun_args
+		-clean
+		-64bit
+		-access +rwc
+		cds_rnm_pkg.sv
+		-rnm_package
+		-debug
+		-input probes.tcl
+		-rnm_info
+		temp.sv
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: cds_rnm_pkg.sv
+	package worklib.cds_rnm_pkg:sv
+		errors: 0, warnings: 0
+file: temp.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+	module worklib.receiver1:sv
+		errors: 0, warnings: 0
+	module worklib.driver1:sv
+		errors: 0, warnings: 0
+	module worklib.driver2:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: RNM module.
+	Top level design units:
+		cds_rnm_pkg
+		$unit_0x3c915cca
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	 RNM_INFO: top.w is declared nettype 'wrealsum' with resolution 'CDS_res_wrealsum'
+	 RNM_INFO: top.d1.dr_1 is declared nettype 'wrealsum' with resolution 'CDS_res_wrealsum'
+	 RNM_INFO: top.d1.r is declared real
+	 RNM_INFO: top.d2.dr_2 is declared nettype 'wrealsum' with resolution 'CDS_res_wrealsum'
+	 RNM_INFO: top.d2.r is declared real
+	 RNM_INFO: top.r1.rec_1 is declared nettype 'wrealsum' with resolution 'CDS_res_wrealsum'
+
+
+RNM Report Summary:
+	REAL declared total: 2
+	WREAL declared total: 4
+--------------------------------------------------------------------
+	Total number of declared: 6
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.receiver1:sv <0x488ab16c>
+			streams:   1, words:   957
+		worklib.driver2:sv <0x14477c8e>
+			streams:   2, words:   636
+		worklib.driver1:sv <0x3d801649>
+			streams:   2, words:   636
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		            Instances  Unique
+		Modules:            4       4
+		Verilog packages:   1       1
+		Resolved nets:      0       1
+		Registers:          2       2
+		Scalar wires:       2       -
+		Vectored wires:     1       -
+		Always blocks:      1       1
+		Initial blocks:     2       2
+		Cont. assignments:  2       2
+		Compilation units:  1       1
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -database waves -all -depth all
+Created probe 1
+xcelium> 
+xcelium> 
+xcelium> run 35ns
+                   0  sum = 2.200000
+                  10  sum = 3.300000
+                  20  sum = 1.100000
+Ran until 35 NS + 0
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 23, 2025 at 21:22:50 EDT  (total: 00:13:56)

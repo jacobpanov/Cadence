@@ -1,5 +1,9 @@
--gui                    // launch interactive session
+// -gui                    // launch interactive session
 -clean                  // clear runarea of simulation files
+-64bit
+-access +rwc
+cds_rnm_pkg.sv
+-rnm_package
 -debug                  // allow instrumentation for line debug
 -input probes.tcl       // process TCL commands in the named file
 -rnm_info               // print a table of RNM nets in the log
