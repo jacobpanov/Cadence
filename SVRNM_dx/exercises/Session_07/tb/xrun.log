@@ -1,0 +1,63 @@
+xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s010: Started on Mar 24, 2025 at 19:08:00 EDT
+xrun
+	-clean
+	-gui
+	-access r
+	-input probes.tcl
+	-rnm_tech
+	-timescale 1ns/1ps
+	-nowarn NSVCER
+	-nowarn SAWSTP
+	../src/myIsrc.sv
+	../src/myRes.sv
+	../src/myVRdrvG.sv
+	myEEcheck.sv
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ../src/myIsrc.sv
+import EE_pkg::*;           // access the definitions in EE_pkg
+            |
+xmvlog: *E,NOPBIND (../src/myIsrc.sv,23|12): Package EE_pkg could not be bound.
+  inout EEnet P,            // EEnet pin is inout to read & write
+            |
+xmvlog: *E,SVNOTY (../src/myIsrc.sv,25|12): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+  inout EEnet P,            // EEnet pin is inout to read & write
+              |
+xmvlog: *E,EXPCOM (../src/myIsrc.sv,25|14): expecting a comma [3.2.1][6.1(IEEE)].
+	module worklib.myIsrc:sv
+		errors: 2, warnings: 0
+file: ../src/myRes.sv
+import EE_pkg::*;         // access the definitions in EE_pkg
+            |
+xmvlog: *E,NOPBIND (../src/myRes.sv,24|12): Package EE_pkg could not be bound.
+  inout EEnet P,          // EEnet pin is inout to read & write
+            |
+xmvlog: *E,SVNOTY (../src/myRes.sv,26|12): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+  inout EEnet P,          // EEnet pin is inout to read & write
+              |
+xmvlog: *E,EXPCOM (../src/myRes.sv,26|14): expecting a comma [3.2.1][6.1(IEEE)].
+	module worklib.myRes:sv
+		errors: 2, warnings: 0
+file: ../src/myVRdrvG.sv
+ ( inout EE_pkg::EEnet P,  // EEnet pin is inout format
+              |
+xmvlog: *E,SVNOTY (../src/myVRdrvG.sv,25|14): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+ ( inout EE_pkg::EEnet P,  // EEnet pin is inout format
+                |
+xmvlog: *E,ILLHIN (../src/myVRdrvG.sv,25|16): illegal location for a hierarchical name (EE_pkg).
+ ( inout EE_pkg::EEnet P,  // EEnet pin is inout format
+                       |
+xmvlog: *E,EXPCOM (../src/myVRdrvG.sv,25|23): expecting a comma [3.2.1][6.1(IEEE)].
+	module worklib.myVRdrvG:sv
+		errors: 3, warnings: 0
+file: myEEcheck.sv
+EE_pkg::EEnet A;    // net to be driven
+     |
+xmvlog: *E,SVNOTY (myEEcheck.sv,27|5): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+	module worklib.myEEcheck:sv
+		errors: 1, warnings: 0
+xmvlog: *W,NOTOPL: no top-level unit found, must have recursive instances.
+	Total errors/warnings found outside modules and primitives:
+		errors: 2, warnings: 1
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun	22.09-s010: Exiting on Mar 24, 2025 at 19:08:01 EDT  (total: 00:00:01)

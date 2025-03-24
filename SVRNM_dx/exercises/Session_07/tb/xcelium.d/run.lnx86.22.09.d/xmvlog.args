@@ -1,0 +1,25 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+-NOWARN
+NSVCER
+-NOWARN
+SAWSTP
+../src/myIsrc.sv
+../src/myRes.sv
+../src/myVRdrvG.sv
+myEEcheck.sv
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx86.22.09.d/xllibs
+-ALLOWUNBOUND

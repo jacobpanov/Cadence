@@ -1,0 +1,1 @@
+s1(24Mar2025:19:08:00):  xrun -clean -gui -access r -input probes.tcl -rnm_tech -timescale 1ns/1ps -nowarn NSVCER -nowarn SAWSTP ../src/myIsrc.sv ../src/myRes.sv ../src/myVRdrvG.sv myEEcheck.sv 

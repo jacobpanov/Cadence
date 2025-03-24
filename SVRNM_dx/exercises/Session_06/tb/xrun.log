@@ -71,4 +71,8 @@ xcelium> probe -create -shm adc_dac_TB.AIN adc_dac_TB.AOUT8 adc_dac_TB.CK adc_da
 Created probe 2
 xcelium> run
 Simulation stopped via $stop(1) at time 7700 NS + 0
-xcelium> 
+xcelium> ^C
+xcelium> ^C
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 19:01:16 EDT  (total: 01:03:18)
