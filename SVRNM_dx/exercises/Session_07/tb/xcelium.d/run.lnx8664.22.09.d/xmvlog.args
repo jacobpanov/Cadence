@@ -12,6 +12,7 @@ SAWSTP
 ../../../common/packages/EE_pkg.sv
 ../src/myIsrc.sv
 ../src/myRes.sv
+../src/myVIR.sv
 ../src/myVRdrvG.sv
 myEEcheck.sv
 -CDSLIB

@@ -25,10 +25,14 @@ module myEEcheck;   // test for simple EEnet element models
 real V1,R1,R2,I3;   // terms to drive elements with
 real Vmeas,Imeas;   // measured voltage & current (node A to ground)
 EE_pkg::EEnet A;    // net to be driven
+EE_pkg::EEnet B;
 
 myVRdrvG  Vsrc(A, V1,R1, Imeas);  // V+R source
 myRes     Res (A, R2, Vmeas);     // resistor
 myIsrc    Isrc(A, I3);            // current source
+
+myVIR  VR(B, V1, 0.0 ,R1, Imeas1);
+myVIR  IR(B, 0.0, I3, R2, Imeas2);
 
 initial begin
   V1=2; R1=1e3; R2=4e3; I3=1e-3;  // Drivers: 2V+1Kohms, 4Kohms, 1mA

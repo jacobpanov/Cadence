@@ -1,5 +1,5 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 19:13:02 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 19:21:54 EDT
 xrun
 	-clean
 	-gui
@@ -13,6 +13,7 @@ xrun
 	../../../common/packages/EE_pkg.sv
 	../src/myIsrc.sv
 	../src/myRes.sv
+	../src/myVIR.sv
 	../src/myVRdrvG.sv
 	myEEcheck.sv
 xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
@@ -25,6 +26,9 @@ file: ../src/myIsrc.sv
 file: ../src/myRes.sv
 	module worklib.myRes:sv
 		errors: 0, warnings: 0
+file: ../src/myVIR.sv
+	module worklib.myVIR:sv
+		errors: 0, warnings: 0
 file: ../src/myVRdrvG.sv
 	module worklib.myVRdrvG:sv
 		errors: 0, warnings: 0
@@ -36,37 +40,40 @@ xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: optio
 	Elaborating the design hierarchy:
 	Top level design units:
 		EE_pkg
-		$unit_0x4820ceda
+		$unit_0x6a477b1c
+		myVIR
 		myEEcheck
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.myIsrc:sv <0x4d99e9d0>
+		worklib.myIsrc:sv <0x1011f570>
 			streams:   1, words:   464
-		worklib.myRes:sv <0x78e8eabb>
+		worklib.myRes:sv <0x20eb7a3f>
 			streams:   2, words:   657
-		worklib.myVRdrvG:sv <0x6667bed5>
+		worklib.myVRdrvG:sv <0x5ffb7f85>
 			streams:   2, words:   868
-		worklib.myEEcheck:sv <0x598e29cb>
+		worklib.myEEcheck:sv <0x3d6bd1c1>
 			streams:   7, words:  8453
+		worklib.myVIR:sv <0x69c35b1b>
+			streams:   2, words:  1502
 		worklib.EE_pkg:sv <0x271c0867>
 			streams:   2, words:  7713
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
-		Modules:                 4       4
+		Modules:                 5       5
 		Verilog packages:        1       1
-		Resolved nets:           0       1
-		Registers:              31      31
-		Scalar wires:            8       -
-		Vectored wires:          4       -
+		Resolved nets:           1       1
+		Registers:              35      35
+		Scalar wires:            9       -
+		Vectored wires:          6       -
 		Initial blocks:          1       1
-		Cont. assignments:       5       5
+		Cont. assignments:       7       7
 		Pseudo assignments:      6       6
 		Compilation units:       1       1
 		Simulation timescale:  1ps
-	Writing initial simulation snapshot: worklib.myEEcheck:sv
+	Writing initial simulation snapshot: worklib.myVIR:sv
 xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
 xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 
@@ -82,6 +89,6 @@ Created probe 1
 xcelium> # run 20ms
 xcelium> run
 Simulation stopped via $stop(1) at time 890 NS + 0
-xcelium> ^C
-xcelium> exit
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 19:17:54 EDT  (total: 00:04:52)
+xcelium> run
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> 
