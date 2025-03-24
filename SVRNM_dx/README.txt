@@ -1,6 +1,6 @@
 This archive contains files to be used in association with the 
 SystemVerilog Real Number Modeling Deluxe Training.
-All material is copyright 2019 -2024 Cadence Design Systems unless noted.
+All material is copyright 2019, 2020 Cadence Design Systems unless noted.
 Cadence Design Systems retains full ownership of all material herein.
 Limited license is granted to the user for purposes of training in 
 conjunction with the Advanced Real Number Modeling with SystemVerilog

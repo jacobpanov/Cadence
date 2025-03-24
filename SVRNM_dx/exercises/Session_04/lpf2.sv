@@ -56,12 +56,12 @@ module lpf2 import cds_rnm_pkg::*; (OUT, IN, trim, Av);
  
   always @ (trim) begin
      // calculate new pole locations w0 and w1 when trim changes:
-     if ( (^trim !== 1'bx) ) begin
-         w0 = (fpole0 + ($signed(trim-7) * trimStep / 4)) * `M_TWO_PI ;
-         w1 = (fpole1 + ($signed(trim-7) * trimStep)) * `M_TWO_PI ;
-         normConst = 1/( (w0*(period**2)+(2*period))* w1 + (2*period*w0) + 4 ); // could use $pow(a,b);
+     // <<< Add code here >>>
+     //  w0 = ...
+     //  w1 = ...
+         normConst = 1/( (w0*(period**2)+(2*period))* w1 + (2*period*w0) + 4 );
          numConst = w0*w1*(period**2);
-     end
+ 
   end
  
   always #(period/2) clk = ~clk;

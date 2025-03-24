@@ -60,8 +60,8 @@ initial begin         // test procedure
   Vdc=0;    #1200      // back to zero DC level
   // Sweep the value of Trim from max (15) to min (0)
   // hold at each value for 600ns
-  while (Trim > 4'h0)
-     #600 Trim = Trim - 1;
+  //  <<<  Add Code Here >>>
+
   #600;
   Trim = 4'h7;        // back to middle
   Fin=3e6; #1500      // now at fpole1

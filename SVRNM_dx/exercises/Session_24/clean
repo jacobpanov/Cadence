@@ -1,6 +1,6 @@
-rm -rf .cadence .tmp_* logs_*  *.log *.out  ./simulation
+rm -rf .cadence .tmp_*
 cd tb
 xrun -clean
-rm -rf *.log *.shm .simvision xcelium.d xrun.* *.key *.diag *.err *.raw logs_*  *.log *.out
+rm -rf *.log *.shm .simvision xcelium.d xrun.* *.key *.diag *.err *.raw
 cd ..
 

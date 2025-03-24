@@ -42,12 +42,12 @@ module LDO import cds_rnm_pkg::*; import EE_pkg::*; ( VDD, VSS, EN, VIN, VOUT );
    parameter real iMax = 2e-3;         // max load
    parameter real iStandby = 1e-9;     // Standby leakage when power is applied
    parameter real iActive = 25e-6;     // Core current when active (models sense amp current)
-   parameter real rOutInit = 1e3;      // rOut initialization
+   parameter real rOutInit = 2e3;      // rOut initialization
    parameter real rOutOff  = 1e9;      // Output conductance when off
-   parameter real activePeriod = 0.5; // Loop update period -- Reduced from 1ns
+   parameter real activePeriod = 1;   // Loop update period
    parameter real KsNom = 300;         // Sense Amp Gain constant
    parameter real KsMid =1000;        // High gain for faster turn-on 
-   parameter real startDelay = 1e-6;
+   parameter real startDelay = 500e-9; // Startup Time Constant
    parameter real vTol = 1e-3;
 
 
@@ -63,9 +63,6 @@ module LDO import cds_rnm_pkg::*; import EE_pkg::*; ( VDD, VSS, EN, VIN, VOUT );
    logic clk = 0;
    wire Supply;
    real vOffset = 0.0; //input offset
-
-//  ADD events
-   event startClk, stopClk;
 
    initial begin
      VSS_MIN=-100e-3;
@@ -127,21 +124,17 @@ module LDO import cds_rnm_pkg::*; import EE_pkg::*; ( VDD, VSS, EN, VIN, VOUT );
      begin
         if ((EN === 1'b1) && (Supply == 1'b1)) begin
             ldoOnTemp = 1'b1;
-            -> startClk;
         end
         else begin
             ldoOnTemp = 1'b0;
-            -> stopClk;
         end
      end
 
    always @ (ldoOnTemp) begin
       if (ldoOnTemp === 1'b1)
          #(startDelay*1s) ldoOn = (ldoOnTemp === 1'b1) ? 1'b1 : 1'b0;
-      else begin
+      else
          ldoOn = 1'b0;
-         -> stopClk;
-      end
    end
 
    always @ (ldoOn)
@@ -165,30 +158,9 @@ module LDO import cds_rnm_pkg::*; import EE_pkg::*; ( VDD, VSS, EN, VIN, VOUT );
        rLeak=0;
    end
 
-/* // Replace always-on clock with switched block below
+
    always
       #(samplePeriod / 2)  clk <= ~clk;      
-*/
-
-   always
-   fork
-   begin : clkGen
-      clk = 1'b0;
-      @startClk forever
-          #(samplePeriod / 2)  clk <= ~clk;      
-   end
-   @stopClk disable clkGen;
-   join
-
-//  Compare actual VOUT with target voltage
-//  and enable or disable clock accordingly
-   always @ (VOUT_int or VOUT.V) begin
-       if ((myAbs(VOUT.V - VOUT_int) > vTol) && (ldoOn == 1'b1))
-            -> startClk;     
-       else
-            -> stopClk;
-   end
-
 
    always @ ( posedge clk or ldoOn or VIN or R1 or R2)
       begin

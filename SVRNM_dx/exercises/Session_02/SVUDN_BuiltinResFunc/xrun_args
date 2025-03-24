@@ -1,8 +1,4 @@
-//-gui \
--64bit \
--access +rwc \
-../../../common/packages/cds_rnm_pkg.sv \
--rnm_package \
+-gui \
 -clean \
 -debug \
 -input probes.tcl \

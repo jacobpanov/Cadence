@@ -4,10 +4,9 @@
 -profile
 -v $COMMON/EEnet/EEIO.sv
 -v $COMMON/EEnet/Isrc_ideal.sv
--v $COMMON/EEnet/Isrc_ideal_gaussian.sv
 -v $COMMON/EEnet/CapGeq.sv
 -v $COMMON/EEnet/VRsrcD.sv
--v ../solution/LDO.sv
--v ../solution/anaLoad.sv
+-v ../src/LDO.sv
+-v ./anaLoad.sv
 
 ./tb.sv

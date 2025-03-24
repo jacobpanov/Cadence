@@ -1,0 +1,2 @@
+DEFINE XMVLOGPRESOURCE   $AMSHOME/tools/affirma_ams/etc/dms/EE_pkg.sv
+DEFINE XMVLOGPRESOURCE   $AMSHOME/tools/affirma_ams/etc/dms/cds_rnm_pkg.sv
