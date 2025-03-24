@@ -1,5 +1,5 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 17:12:16 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 17:26:11 EDT
 xrun
 	-f files.f
 		-clean
@@ -33,10 +33,12 @@ xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: RNM m
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
+		worklib.vco_sine:sv <0x4faca065>
+			streams:   4, words:  1578
 		worklib.vco_dig:sv <0x0e98ced5>
 			streams:   3, words:  1475
-		worklib.vco_ds_TB:sv <0x23e87b03>
-			streams:   8, words:  5521
+		worklib.vco_ds_TB:sv <0x68ea3d04>
+			streams:  11, words:  6811
 		worklib.\$unit_0x1135de6f :compilation_unit <0x6b96c98f>
 			streams:   0, words:     0
 	Building instance specific data structures.
@@ -45,11 +47,12 @@ xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-
 		                 Instances  Unique
 		Modules:                 3       3
 		Verilog packages:        1       1
-		Registers:              12      10
-		Scalar wires:            5       -
-		Vectored wires:          3       -
-		Always blocks:           3       3
-		Initial blocks:          3       3
+		Registers:              18      16
+		Scalar wires:            6       -
+		Vectored wires:          2       -
+		Always blocks:           7       7
+		Initial blocks:          5       5
+		Cont. assignments:       1       1
 		Pseudo assignments:      5       5
 		Compilation units:       1       1
 		Simulation timescale:  1ps
@@ -71,4 +74,4 @@ Simulation complete via $finish(1) at time 5700 NS + 0
 ./vco_ds_TB.sv:50   #100 $finish;    		// test complete
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 17:14:03 EDT  (total: 00:01:47)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 17:35:17 EDT  (total: 00:09:06)
