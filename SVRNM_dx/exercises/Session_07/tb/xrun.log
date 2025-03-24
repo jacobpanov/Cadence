@@ -1,5 +1,5 @@
-xrun: 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun	22.09-s010: Started on Mar 24, 2025 at 19:08:00 EDT
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 19:13:02 EDT
 xrun
 	-clean
 	-gui
@@ -9,55 +9,79 @@ xrun
 	-timescale 1ns/1ps
 	-nowarn NSVCER
 	-nowarn SAWSTP
+	-64bit
+	../../../common/packages/EE_pkg.sv
 	../src/myIsrc.sv
 	../src/myRes.sv
 	../src/myVRdrvG.sv
 	myEEcheck.sv
 xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ../../../common/packages/EE_pkg.sv
+	package worklib.EE_pkg:sv
+		errors: 0, warnings: 0
 file: ../src/myIsrc.sv
-import EE_pkg::*;           // access the definitions in EE_pkg
-            |
-xmvlog: *E,NOPBIND (../src/myIsrc.sv,23|12): Package EE_pkg could not be bound.
-  inout EEnet P,            // EEnet pin is inout to read & write
-            |
-xmvlog: *E,SVNOTY (../src/myIsrc.sv,25|12): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-  inout EEnet P,            // EEnet pin is inout to read & write
-              |
-xmvlog: *E,EXPCOM (../src/myIsrc.sv,25|14): expecting a comma [3.2.1][6.1(IEEE)].
 	module worklib.myIsrc:sv
-		errors: 2, warnings: 0
+		errors: 0, warnings: 0
 file: ../src/myRes.sv
-import EE_pkg::*;         // access the definitions in EE_pkg
-            |
-xmvlog: *E,NOPBIND (../src/myRes.sv,24|12): Package EE_pkg could not be bound.
-  inout EEnet P,          // EEnet pin is inout to read & write
-            |
-xmvlog: *E,SVNOTY (../src/myRes.sv,26|12): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-  inout EEnet P,          // EEnet pin is inout to read & write
-              |
-xmvlog: *E,EXPCOM (../src/myRes.sv,26|14): expecting a comma [3.2.1][6.1(IEEE)].
 	module worklib.myRes:sv
-		errors: 2, warnings: 0
+		errors: 0, warnings: 0
 file: ../src/myVRdrvG.sv
- ( inout EE_pkg::EEnet P,  // EEnet pin is inout format
-              |
-xmvlog: *E,SVNOTY (../src/myVRdrvG.sv,25|14): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
- ( inout EE_pkg::EEnet P,  // EEnet pin is inout format
-                |
-xmvlog: *E,ILLHIN (../src/myVRdrvG.sv,25|16): illegal location for a hierarchical name (EE_pkg).
- ( inout EE_pkg::EEnet P,  // EEnet pin is inout format
-                       |
-xmvlog: *E,EXPCOM (../src/myVRdrvG.sv,25|23): expecting a comma [3.2.1][6.1(IEEE)].
 	module worklib.myVRdrvG:sv
-		errors: 3, warnings: 0
+		errors: 0, warnings: 0
 file: myEEcheck.sv
-EE_pkg::EEnet A;    // net to be driven
-     |
-xmvlog: *E,SVNOTY (myEEcheck.sv,27|5): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
 	module worklib.myEEcheck:sv
-		errors: 1, warnings: 0
-xmvlog: *W,NOTOPL: no top-level unit found, must have recursive instances.
-	Total errors/warnings found outside modules and primitives:
-		errors: 2, warnings: 1
-xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-TOOL:	xrun	22.09-s010: Exiting on Mar 24, 2025 at 19:08:01 EDT  (total: 00:00:01)
+		errors: 0, warnings: 0
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: option -RNM_TECH.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		EE_pkg
+		$unit_0x4820ceda
+		myEEcheck
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.myIsrc:sv <0x4d99e9d0>
+			streams:   1, words:   464
+		worklib.myRes:sv <0x78e8eabb>
+			streams:   2, words:   657
+		worklib.myVRdrvG:sv <0x6667bed5>
+			streams:   2, words:   868
+		worklib.myEEcheck:sv <0x598e29cb>
+			streams:   7, words:  8453
+		worklib.EE_pkg:sv <0x271c0867>
+			streams:   2, words:  7713
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       4
+		Verilog packages:        1       1
+		Resolved nets:           0       1
+		Registers:              31      31
+		Scalar wires:            8       -
+		Vectored wires:          4       -
+		Initial blocks:          1       1
+		Cont. assignments:       5       5
+		Pseudo assignments:      6       6
+		Compilation units:       1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.myEEcheck:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open -shm -into waves.shm waves -default
+Created default SHM database waves
+xcelium> # Use following line to save all signals
+xcelium> probe -create -database waves -all -depth all
+Created probe 1
+xcelium> # run 20ms
+xcelium> run
+Simulation stopped via $stop(1) at time 890 NS + 0
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 19:17:54 EDT  (total: 00:04:52)
