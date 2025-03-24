@@ -1,0 +1,76 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 17:09:15 EDT
+xrun
+	-f files.f
+		-clean
+		-64bit
+		../../../common/packages/cds_rnm_pkg.sv
+		../src/*.sv
+		./vco_ds_TB.sv
+		-input probes.tcl
+		-access +rw
+		-gui
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ../../../common/packages/cds_rnm_pkg.sv
+	package worklib.cds_rnm_pkg:sv
+		errors: 0, warnings: 0
+file: ../src/vco_dig.sv
+	module worklib.vco_dig:sv
+		errors: 0, warnings: 0
+file: ../src/vco_sine.sv
+	module worklib.vco_sine:sv
+		errors: 0, warnings: 0
+file: ./vco_ds_TB.sv
+	module worklib.vco_ds_TB:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: RNM module.
+	Top level design units:
+		$unit_0x1135de6f
+		cds_rnm_pkg
+		vco_ds_TB
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.vco_dig:sv <0x0e98ced5>
+			streams:   3, words:  1475
+		worklib.vco_ds_TB:sv <0x76eb64c5>
+			streams:   8, words:  5701
+		worklib.\$unit_0x1135de6f :compilation_unit <0x6b96c98f>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Verilog packages:        1       1
+		Registers:              12      10
+		Scalar wires:            5       -
+		Vectored wires:          3       -
+		Always blocks:           3       3
+		Initial blocks:          3       3
+		Pseudo assignments:      5       5
+		Compilation units:       1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.vco_ds_TB:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create vco_ds_TB -depth all -all -database waves
+Created probe 1
+xcelium> simvision -input ./simvision.svcf
+xcelium> run
+Simulation complete via $finish(1) at time 5700 NS + 0
+./vco_ds_TB.sv:50   #100 $finish;    		// test complete
+xcelium> scope -set vco_ds_TB.digvco
+xcelium> scope -set vco_ds_TB
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 17:11:54 EDT  (total: 00:02:39)
