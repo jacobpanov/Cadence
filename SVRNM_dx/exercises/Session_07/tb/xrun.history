@@ -1,1 +1,1 @@
-s1(24Mar2025:19:21:54):  xrun -clean -gui -access r -input probes.tcl -rnm_tech -timescale 1ns/1ps -nowarn NSVCER -nowarn SAWSTP -64bit ../../../common/packages/EE_pkg.sv ../src/myIsrc.sv ../src/myRes.sv ../src/myVIR.sv ../src/myVRdrvG.sv myEEcheck.sv 
+s1(24Mar2025:19:24:36):  xrun -clean -gui -access r -input probes.tcl -rnm_tech -timescale 1ns/1ps -nowarn NSVCER -nowarn SAWSTP -64bit ../../../common/packages/EE_pkg.sv ../src/myIsrc.sv ../src/myRes.sv ../src/myVIR.sv ../src/myVRdrvG.sv myEEcheck.sv 
