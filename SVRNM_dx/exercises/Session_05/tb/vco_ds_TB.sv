@@ -59,10 +59,16 @@ end
 
 // MEASURE ACTUAL SINUSOID FREQUENCY:
 
+logic Dsin;  // digital signal for sine VCO output
+real fsin, tsin = 0;  // measure actual sinusoidal frequency
 
-//ADD YOUR CODE HERE
+always_comb begin
+  Dsin = (Vsin > 0) ? 1 : 0;  // assign Dsin high when Vsin > 0
+end
 
-
-
+always @(posedge Dsin or negedge Dsin) begin  // on leading or trailing edge of Dsin
+  if (tsin > 0) fsin = 1s / (2 * ($realtime - tsin));  // compute F=1/(2*period) (Hz)
+  tsin = $realtime;  // and save edge time
+end
 
 endmodule

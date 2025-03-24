@@ -41,5 +41,23 @@ module vco_sine import cds_rnm_pkg::*; (vin, vout, tune);
 
 //ADD YOUR CODE HERE
 
+  real freq, phase, vout_temp;    // freq value, phase, and temporary output
+
+  always_comb begin 			// when any input changes
+    freq = center_freq + vco_gain*vin + tune_step*tune;	//  compute frequency
+  end
+
+  initial begin
+    phase = 0;                    // initialize phase
+    vout_temp = 0;                // initialize temporary output
+  end
+
+  always #(tinc) begin
+    phase = phase + tinc * freq * 1e-9;  // update phase
+    if (phase >= 1) phase = phase - 1;   // keep phase within [0, 1)
+    vout_temp = vmag * $sin(2 * 3.141592653589793 * phase);  // compute sinusoidal output
+  end
+
+  assign vout = vout_temp;        // assign temporary output to actual output
 
 endmodule
