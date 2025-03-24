@@ -192,7 +192,7 @@ set id [waveform add -signals  {
 	} ]
 waveform hierarchy expand $id
 set id2 [lindex [waveform hierarchy content $id] 0]
-waveform format $id2 -height 128 -trace analogSampleAndHold
+waveform format $id2 -height 80 -trace analogSampleAndHold
 set id2 [lindex [waveform hierarchy content $id] 1]
 waveform format $id2 -trace analogSampleAndHold
 set id2 [lindex [waveform hierarchy content $id] 2]
