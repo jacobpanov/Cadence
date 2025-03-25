@@ -1,3 +1,4 @@
 define LIB_MAP ( $LIB_MAP \
+, ../../../../../../common/EEnet => EEnet \
 , ../../../../src => src \
 )
