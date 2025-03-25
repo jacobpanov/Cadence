@@ -32,6 +32,20 @@ real VPx, RPx, VNx, RNx;
 initial $cged(P, Pext);	  // copy P drivers to Pext
 initial $cged(N, Next);   // copy N drivers to Next
 
+always @(Pext.V or Pext.R) begin
+    if (abs(Pext.V - VPx) > vtol || abs(Pext.R - RPx) > rtol) begin
+        VPx = Pext.V;
+        RPx = Pext.R;
+    end
+end
+
+always @(Next.V or Next.R) begin
+    if (abs(Next.V - VNx) > vtol || abs(Next.R - RNx) > rtol) begin
+        VNx = Next.V;
+        RNx = Next.R;
+    end
+end
+
 assign N = '{Pext.V-vval, 0, Pext.R+rval};
 assign P = '{Next.V+vval, 0, Next.R+rval};
 
