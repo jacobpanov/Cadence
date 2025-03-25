@@ -45,7 +45,7 @@ real VA,RA, RAB, VBC,RBC, RCD, VD,RD, RDA;  // values to drive nets
 assign A = '{VA, 0.0, RA};       // V+R drive to nets A and D
 assign D = '{VD, 0.0, RD};
 
-VRdiffGD0  // netlist four instances of one of the diffl element models
+VRdiffGDU  // netlist four instances of one of the diffl element models
   AB(A,B,0.0,RAB), BC(B,C,VBC,RBC), CD(C,D,0.0,RCD), DA(D,A,0.0,RDA);
 
 initial begin
