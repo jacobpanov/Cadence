@@ -3,7 +3,7 @@
 // Do not modify this file
 //
 -YDIR
-/EEnet
+../../../common/EEnet
 -YDIR
 ../src
 -LINEDEBUG

@@ -13,7 +13,7 @@ SAWSTP
 -STATUS
 ../../../common/packages/EE_pkg.sv
 -YDIR
-/EEnet
+../../../common/EEnet
 -YDIR
 ../src
 -LIBEXT
