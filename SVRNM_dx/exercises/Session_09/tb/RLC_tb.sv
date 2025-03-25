@@ -23,7 +23,7 @@ import EE_pkg::*;
 
 module RLC_tb;
 
-parameter real C=10e-12, L=10e-6, Tr=1e-9;
+parameter real C=10e-12, L=10e-6, Tr=1e-9 Ts=2.5e-9;
 EEnet A,B;         // EEnet circuit nets
 real Vin,Rs;       // V and R variables driving RLC circuit
 real Ian,Iee;      // currents in analog & EEnet circuits

@@ -1,0 +1,30 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-clean
+-rnm_tech
+-input
+probes.tcl
+-nowarn
+NSVCER
+-nowarn
+SAWSTP
+-64bit
+-linedebug
+-status
+-gui
+-timescale
+1ns/1ps
+-access
+rw
+../../../common/packages/EE_pkg.sv
+-top
+RLC_tb
+RLC_tb.sv
+amsctrl.scs
+-y
+../../../common/EEnet
+-y
+../src
++libext+.sv+.vams

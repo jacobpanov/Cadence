@@ -1,0 +1,39 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 25, 2025 at 16:20:02 EDT
+xrun
+	-clean
+	-rnm_tech
+	-input probes.tcl
+	-nowarn NSVCER
+	-nowarn SAWSTP
+	-64bit
+	-linedebug
+	-status
+	-gui
+	-timescale 1ns/1ps
+	-access rw
+	../../../common/packages/EE_pkg.sv
+	-top RLC_tb
+	RLC_tb.sv
+	amsctrl.scs
+	-y ../../../common/EEnet
+	-y ../src
+	+libext+.sv+.vams
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ../../../common/packages/EE_pkg.sv
+	package worklib.EE_pkg:sv
+		errors: 0, warnings: 0
+file: RLC_tb.sv
+IndDeq0 #(.l(L), .ic(0), .tinc(Ts))  L1 (A,B);   // EEnet inductor model
+                                |
+xmvlog: *E,UNDIDN (RLC_tb.sv,42|32): 'Ts': undeclared identifier [12.5(IEEE)].
+CapGeq0 #(.c(C), .ic(0), .tinc(Ts))  C1 (B);     // EEnet capacitor model
+                                |
+xmvlog: *E,UNDIDN (RLC_tb.sv,43|32): 'Ts': undeclared identifier [12.5(IEEE)].
+	module worklib.RLC_tb:sv
+		errors: 2, warnings: 0
+xmvlog: Memory Usage - Current physical: 27.2M, Current virtual: 62.1M
+xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.7s, 6.2% cpu)
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 25, 2025 at 16:20:10 EDT  (total: 00:00:08)
