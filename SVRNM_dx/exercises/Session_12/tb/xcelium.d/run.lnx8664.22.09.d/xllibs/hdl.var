@@ -1,0 +1,12 @@
+define LIB_MAP ( $LIB_MAP \
+, ../../../tbPwrRamp.sv => tbPwrRamp \
+, ../../../PLL_stimulus.sv => PLL_stimulus \
+, ../../../../src/vco_rf.sv => vco_rf \
+, ../../../../src/refClkGen.sv => refClkGen \
+, ../../../../src/PLL_top.sv => PLL_top \
+, ../../../../src/loopFilter2.sv => loopFilter2 \
+, ../../../../src/divider2.sv => divider2 \
+, ../../../../src/chgPumpPhDet.sv => chgPumpPhDet \
+, ../../../../../../common/EEnet/Isrc_ideal_gaussian.sv => Isrc_ideal_gaussian \
+, ../../../../../../common/EEnet/Vvar_ideal.sv => Vvar_ideal \
+)

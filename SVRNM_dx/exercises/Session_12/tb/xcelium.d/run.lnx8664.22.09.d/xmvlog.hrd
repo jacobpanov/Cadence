@@ -1,0 +1,25 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-VFILE
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/Vvar_ideal.sv
+-VFILE
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/Isrc_ideal_gaussian.sv
+-VFILE
+../src/chgPumpPhDet.sv
+-VFILE
+../src/divider2.sv
+-VFILE
+../src/loopFilter2.sv
+-VFILE
+../src/PLL_top.sv
+-VFILE
+../src/refClkGen.sv
+-VFILE
+../src/vco_rf.sv
+-VFILE
+./PLL_stimulus.sv
+-VFILE
+./tbPwrRamp.sv
+-LINEDEBUG

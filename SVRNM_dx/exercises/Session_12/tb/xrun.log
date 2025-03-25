@@ -1,0 +1,56 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 25, 2025 at 19:03:55 EDT
+xrun
+	-f files.f
+		-access +rw
+		-64bit
+		../../../common/packages/EE_pkg.sv
+		../../../common/packages/cds_rnm_pkg.sv
+		-gui
+		-linedebug
+		-rnm_coerce detailed
+		-input input.tcl
+		-v /home/jpanov/Cadence/SVRNM_dx/common//EEnet/Vvar_ideal.sv
+		-v /home/jpanov/Cadence/SVRNM_dx/common//EEnet/Isrc_ideal_gaussian.sv
+		-v ../src/chgPumpPhDet.sv
+		-v ../src/divider2.sv
+		-v ../src/loopFilter2.sv
+		-v ../src/PLL_top.sv
+		-v ../src/refClkGen.sv
+		-v ../src/vco_rf.sv
+		-v ./PLL_stimulus.sv
+		-v ./tbPwrRamp.sv
+		./tb.sv
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: option -RNM_COERCE.
+		Caching library 'Isrc_ideal_gaussian' ....... Done
+		Caching library 'PLL_stimulus' ....... Done
+		Caching library 'PLL_top' ....... Done
+		Caching library 'Vvar_ideal' ....... Done
+		Caching library 'chgPumpPhDet' ....... Done
+		Caching library 'divider2' ....... Done
+		Caching library 'loopFilter2' ....... Done
+		Caching library 'refClkGen' ....... Done
+		Caching library 'tbPwrRamp' ....... Done
+		Caching library 'vco_rf' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+		Caching library 'tbPwrRamp' ....... Done
+		Caching library 'PLL_stimulus' ....... Done
+		Caching library 'vco_rf' ....... Done
+		Caching library 'refClkGen' ....... Done
+		Caching library 'PLL_top' ....... Done
+		Caching library 'loopFilter2' ....... Done
+		Caching library 'divider2' ....... Done
+		Caching library 'chgPumpPhDet' ....... Done
+		Caching library 'Isrc_ideal_gaussian' ....... Done
+		Caching library 'Vvar_ideal' ....... Done
+pllLockTimeMeas #(.lockTimeSpec (55e-6)) u_LockTimeMeas (
+                                                      |
+xmelab: *E,CUVMUR (./tb.sv,78|54): instance 'tb.u_LockTimeMeas' of design unit 'pllLockTimeMeas' is unresolved in 'worklib.tb:sv'.
+coverages u_coverages();
+                    |
+xmelab: *E,CUVMUR (./tb.sv,92|20): instance 'tb.u_coverages' of design unit 'coverages' is unresolved in 'worklib.tb:sv'.
+xrun: *E,ELBERR: Error (*E) or soft error (*SE) occurred during elaboration (status 1), exiting.
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 25, 2025 at 19:03:58 EDT  (total: 00:00:03)

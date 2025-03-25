@@ -74,9 +74,22 @@ PLL_top u_PLLtop (
 
 // Place an instance of the measurement block here 
 
+// Place an instance of the measurement block here 
+pllLockTimeMeas #(.lockTimeSpec (55e-6)) u_LockTimeMeas (
+  .targFreq (4928e6), 
+  .lockSpec (100e3), 
+  .window (10e-6), 
+  .holdOff (9e-6),
+  .enableSig (en), 
+  .vcoIn (vco_outp & ~vco_outn),
+  .lockTime (),
+  .done ()
+);
+
 assign VSS = '{0, `wrealZState, 0};
 
 // Instantiate your coverage module here
+coverages u_coverages();
 
 endmodule
 

@@ -48,6 +48,7 @@ module loopFilter2 import cds_rnm_pkg::*; import EE_pkg::*; ( out, vdd, vss, en,
   parameter real trimStep = 50e3;
   parameter real trimZStep = 5000;
   parameter real inputR = 10e9;
+  parameter real risetime = 400e-15;
 
   input EEnet in;
   output wreal4state out;
@@ -87,6 +88,7 @@ module loopFilter2 import cds_rnm_pkg::*; import EE_pkg::*; ( out, vdd, vss, en,
   logic clk;
   real fPoleError = 0.0; // pole 0 make error
   event startFiltClk, stopFiltClk;
+  bit isPulseinProgress = 1'b0;
 
 //  Current source to model active core (background) current
 // The value of iSupply changes with the operating state of the module
@@ -204,6 +206,23 @@ module loopFilter2 import cds_rnm_pkg::*; import EE_pkg::*; ( out, vdd, vss, en,
   // The input of the filter accumulates "charge"
   always @ (in.I)
      begin
+         // impute a rise/fall time to input pump currents and perform trapezoidal/triangular integration
+         if ( ($realtime - lastEdge) >= 2*risetime ) begin // wider pulses
+             if (isPulseinProgress == 1'b1) begin // pulse in progress since last sample, use half-pulse calc
+                 accum = accum + inputR * lastInputI * (2*$realtime - 2*lastEdge - risetime);
+                 isPulseinProgress = 1'b0;  //clear flag
+             end
+             else
+                accum = accum + inputR * ($realtime - lastEdge - risetime) * lastInputI;
+         end
+         else begin // very narrow pulse
+             if (isPulseinProgress == 1'b1) begin
+                accum = accum +  inputR * (lastInputI * (($realtime - lastEdge)**2) / (2*risetime));
+                 isPulseinProgress = 1'b0;  //clear flag
+             end
+             else
+                accum = accum + inputR * (lastInputI/(4*risetime)) * (($realtime - lastEdge)**2);
+         end
          // assume rectangular pulses and integrate since last change
          accum = inputR * ($realtime - lastEdge) * lastInputI + accum;
          
@@ -224,8 +243,16 @@ module loopFilter2 import cds_rnm_pkg::*; import EE_pkg::*; ( out, vdd, vss, en,
            sampIn = accum + sampIn; // sample all pulses accumulated since last clock
            accum = 0.0;   // reset accumulator
            // check to see if there is unaccumulated charge at the input
-           if (in.I == lastInputI) begin // a pulse is still in progress
-              sampIn = sampIn + (($realtime - lastEdge) * lastInputI * inputR); //add the part of the pulse so far to the accumulated charge
+            if (in.I == lastInputI) begin // a pulse is still in progress
+              if (($realtime - lastEdge) > risetime) begin // Wider pulse is in progress
+                 sampIn = sampIn + inputR * (lastInputI * (2*$realtime - 2*lastEdge - risetime));
+                 isPulseinProgress = 1'b1;  // set a flag for next accumulation
+              end
+              else begin // very narrow pulse in progress
+                 sampIn = sampIn + inputR * (lastInputI * (($realtime - lastEdge)**2) / (2*risetime));
+                 isPulseinProgress = 1'b1;
+              end
+              // sampIn = sampIn + (($realtime - lastEdge) * lastInputI * inputR); //add the part of the pulse so far to the accumulated charge
               lastInputI = in.I;  //should not change anything
               lastEdge = $realtime;
            end
