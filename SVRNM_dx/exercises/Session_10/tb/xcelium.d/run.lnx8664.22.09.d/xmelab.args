@@ -1,0 +1,25 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
++libext+.sv
+-ACCESS
+r
+-RNM_TECH
+-NOWARN
+NSVCER
+-NOWARN
+SAWSTP
+-STATUS
+-no_analogsolver
+-MESSAGES
+-XLMODE
+./xcelium.d/run.lnx8664.22.09.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.22.09.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.09.d/hdl.var
+-WORK
+worklib
+-HASXLMODE

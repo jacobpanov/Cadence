@@ -1,0 +1,1 @@
+s1(25Mar2025:17:38:19):  xrun -clean -access r -64bit ../../../common/packages/EE_pkg.sv -input probes.tcl -rnm_tech -gui -nowarn NSVCER -nowarn SAWSTP -status -y ../src +libext+.sv NMOS_tb.sv 

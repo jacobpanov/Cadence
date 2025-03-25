@@ -1,0 +1,158 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 25, 2025 at 17:38:19 EDT
+xrun
+	-clean
+	-access r
+	-64bit
+	../../../common/packages/EE_pkg.sv
+	-input probes.tcl
+	-rnm_tech
+	-gui
+	-nowarn NSVCER
+	-nowarn SAWSTP
+	-status
+	-y ../src
+	+libext+.sv
+	NMOS_tb.sv
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ../../../common/packages/EE_pkg.sv
+	package worklib.EE_pkg:sv
+		errors: 0, warnings: 0
+file: NMOS_tb.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+file: ../src/NMOSdioG.sv
+	module src.NMOSdioG:sv
+		errors: 0, warnings: 0
+file: ../src/NMOSdioI.sv
+	module src.NMOSdioI:sv
+		errors: 0, warnings: 0
+file: ../src/NMOSdioV.sv
+	module src.NMOSdioV:sv
+		errors: 0, warnings: 0
+xmvlog: Memory Usage - Current physical: 27.4M, Current virtual: 62.0M
+xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.5s, 6.8% cpu)
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: option -RNM_TECH.
+		Caching library 'src' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		EE_pkg
+		$unit_0x4f95b65a
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top:sv <0x7c58f586>
+			streams:  13, words:  9350
+		worklib.EE_pkg:sv <0x3209c434>
+			streams:   2, words:  7713
+		src.NMOSdioG:sv <0x721bed74>
+			streams:   9, words:  6269
+		src.NMOSdioI:sv <0x5002fbff>
+			streams:   2, words:  3673
+		src.NMOSdioV:sv <0x0750ce34>
+			streams:   4, words:  4114
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       4
+		Verilog packages:        1       1
+		Resolved nets:           2       1
+		Registers:              45      45
+		Scalar wires:            3       -
+		Vectored wires:         12       -
+		Always blocks:           3       3
+		Initial blocks:          6       6
+		Cont. assignments:      12      12
+		Compilation units:       1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.top:sv
+xmelab: Memory Usage - Final: 65.4M, Peak: 185.7M, Peak virtual: 273.7M
+xmelab: CPU Usage - 0.1s system + 0.1s user = 0.2s total (0.3s, 53.4% cpu)
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open -shm -into waves.shm waves -default
+Created default SHM database waves
+xcelium> probe -create -database waves -all -depth all
+Created probe 1
+xcelium> run
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=0.0ns  Vn=1.000V  Vd=64.246V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=10.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=20.0ns  Vn=1.000V  Vd=61.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=30.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=40.0ns  Vn=1.000V  Vd=57.569V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=50.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=60.0ns  Vn=1.000V  Vd=53.915V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=70.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=80.0ns  Vn=1.000V  Vd=49.990V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=90.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=100.0ns  Vn=1.000V  Vd=45.721V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=110.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=120.0ns  Vn=1.000V  Vd=41.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=130.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=140.0ns  Vn=1.000V  Vd=35.641V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=150.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=160.0ns  Vn=1.000V  Vd=29.284V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=170.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=180.0ns  Vn=1.000V  Vd=21.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=190.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=260.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=270.0ns  Vn=1.000V  Vd=55.772V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=280.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=290.0ns  Vn=1.000V  Vd=84.666V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=300.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=310.0ns  Vn=1.000V  Vd=55.772V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=320.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=340.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=370.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=380.0ns  Vn=1.000V  Vd=45.721V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=390.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=400.0ns  Vn=1.000V  Vd=23.361V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=410.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=420.0ns  Vn=1.000V  Vd=12.180V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=430.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=440.0ns  Vn=1.000V  Vd=6.590V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=450.0ns  Vn=4.953V  Vd=1.000V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=460.0ns  Vn=3.000V  Vd=3.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=460.0ns  Vn=1.000V  Vd=3.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=470.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=480.0ns  Vn=1.000V  Vd=21.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=490.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=500.0ns  Vn=1.000V  Vd=21.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=510.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=520.0ns  Vn=3.000V  Vd=3.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=520.0ns  Vn=1.000V  Vd=3.000V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=530.0ns  Vn=5.000V  Vd=1.000V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=540.0ns  Vn=2.970V  Vd=2.970V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=570.0ns  Vn=1.980V  Vd=1.980V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=580.0ns  Vn=3.960V  Vd=3.960V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=590.0ns  Vn=7.921V  Vd=7.921V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=600.0ns  Vn=15.842V  Vd=15.842V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=610.0ns  Vn=31.683V  Vd=31.683V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=620.0ns  Vn=63.366V  Vd=63.366V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=630.0ns  Vn=126.733V  Vd=126.733V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=640.0ns  Vn=253.465V  Vd=253.465V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=650.0ns  Vn=506.931V  Vd=506.931V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=660.0ns  Vn=999.000V  Vd=999.000V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=670.0ns  Vn=101.386V  Vd=101.386V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=680.0ns  Vn=10.139V  Vd=10.139V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=690.0ns  Vn=1.008V  Vd=1.008V
+*WARNING* NMOSdioV top.dioV exceeded iterations: T=690.0ns  Vn=1.014V  Vd=1.014V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=700.0ns  Vn=10.139V  Vd=10.139V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=710.0ns  Vn=101.386V  Vd=101.386V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=720.0ns  Vn=999.000V  Vd=999.000V
+*WARNING* NMOSdioI top.dioI exceeded iterations: T=740.0ns  Vn=990.099V  Vd=990.099V
+*WARNING* NMOSdioIG top.dioG exceeded iterations: T=740.0ns  Vn=5.460V  Vd=5.461V
+Simulation stopped via $stop(1) at time 760 NS + 0
+xcelium> ^C
+xcelium> exit
+xmsim: Memory Usage - Final: 69.0M, Peak: 75.5M, Peak virtual: 351.8M
+xmsim: CPU Usage - 1.8s system + 1.1s user = 2.9s total (188.4s, 1.5% cpu)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 25, 2025 at 17:41:29 EDT  (total: 00:03:10)
