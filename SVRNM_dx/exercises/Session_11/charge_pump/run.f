@@ -1,5 +1,6 @@
 ./charge_pump.sv
 ./tb.sv
+-64bit
 -clean
 -rnm_tech
 -access +rwc

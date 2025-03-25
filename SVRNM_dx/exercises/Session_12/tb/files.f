@@ -1,4 +1,7 @@
 -access +rw
+-64bit
+../../../common/packages/EE_pkg.sv
+../../../common/packages/cds_rnm_pkg.sv
 -gui
 -input input.tcl
 -v $COMMON/EEnet/Vvar_ideal.sv
