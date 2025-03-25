@@ -1,1 +1,2 @@
 s1(24Mar2025:19:53:03):  xrun -clean -rnm_tech -input probes.tcl -nowarn NSVCER -nowarn SAWSTP -linedebug -status -gui -timescale 1ns/1ps -access rw -64bit ../../../common/packages/EE_pkg.sv -top VRdiff_tb -y /EEnet -y ../src +libext+.sv VRdiff_tb.sv 
+s2(24Mar2025:20:38:07):  xrun -clean -rnm_tech -input probes.tcl -nowarn NSVCER -nowarn SAWSTP -linedebug -status -gui -timescale 1ns/1ps -access rw -64bit ../../../common/packages/EE_pkg.sv -top VRdiff_tb -y /EEnet -y ../src +libext+.sv VRdiff_tb.sv 

@@ -1,3 +1,3 @@
 xrun -clean -rnm_tech -input probes.tcl -nowarn NSVCER -nowarn SAWSTP \
  -linedebug -status -gui  -timescale 1ns/1ps -access rw  -64bit ../../../common/packages/EE_pkg.sv -top VRdiff_tb \
-  -y $COMMON/EEnet  -y ../src  +libext+.sv  VRdiff_tb.sv  $* &
+  -y ../../../common/EEnet  -y ../src  +libext+.sv  VRdiff_tb.sv  $* &
