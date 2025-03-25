@@ -1,0 +1,98 @@
+xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s010: Started on Mar 24, 2025 at 19:53:03 EDT
+xrun
+	-clean
+	-rnm_tech
+	-input probes.tcl
+	-nowarn NSVCER
+	-nowarn SAWSTP
+	-linedebug
+	-status
+	-gui
+	-timescale 1ns/1ps
+	-access rw
+	-64bit
+	../../../common/packages/EE_pkg.sv
+	-top VRdiff_tb
+	-y /EEnet
+	-y ../src
+	+libext+.sv
+	VRdiff_tb.sv
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: ../../../common/packages/EE_pkg.sv
+	package worklib.EE_pkg:sv
+		errors: 0, warnings: 0
+xmvlog: *W,LIBNOF: Library file or directory "/EEnet" does not exist.
+file: VRdiff_tb.sv
+	module worklib.VRdiff_tb:sv
+		errors: 0, warnings: 0
+file: ../src/VRdiffGD0.sv
+	module src.VRdiffGD0:sv
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+xmvlog: Memory Usage - Current physical: 27.5M, Current virtual: 62.0M
+xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.4s, 7.9% cpu)
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: option -RNM_TECH.
+		Caching library 'worklib' ....... Done
+		Caching library 'src' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		EE_pkg
+		$unit_0x6d70a818
+		VRdiff_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: ...........
+initial $cged(P, Pext);	  // copy P drivers to Pext
+            |
+xmelab: *W,VPISTF (../src/VRdiffGD0.sv,27|12): VPI function has been invoked as a task. Return value will be ignored.
+initial $cged(N, Next);   // copy N drivers to Next
+            |
+xmelab: *W,VPISTF (../src/VRdiffGD0.sv,28|12): VPI function has been invoked as a task. Return value will be ignored.
+......... Done
+	Generating native compiled code:
+		worklib.VRdiff_tb:sv <0x51e1aadc>
+			streams:  12, words: 16960
+		worklib.EE_pkg:sv <0x348431c5>
+			streams:   2, words: 13728
+		src.VRdiffGD0:sv <0x6c404e14>
+			streams:   4, words:  1980
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 5       2
+		Verilog packages:        1       1
+		Resolved nets:          19       1
+		Registers:              38      32
+		Scalar wires:            8       -
+		Vectored wires:         30       -
+		Always blocks:           1       1
+		Initial blocks:          9       3
+		Cont. assignments:      10       4
+		Pseudo assignments:      8       8
+		Compilation units:       1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.VRdiff_tb:sv
+xmelab: Memory Usage - Final: 65.8M, Peak: 185.6M, Peak virtual: 273.7M
+xmelab: CPU Usage - 0.1s system + 0.1s user = 0.1s total (0.3s, 47.8% cpu)
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+Simulating in AMS-SIE mode...
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open -shm -into waves.shm waves -default
+Created default SHM database waves
+xcelium> probe -create -database waves -all -memories -depth all
+Created probe 1
+xcelium> run
+Simulation stopped via $stop(1) at time 445 NS + 0
+xcelium> ^C
+xcelium> exit
+xmsim: Memory Usage - Final: 71.0M, Peak: 77.5M, Peak virtual: 356.4M
+xmsim: CPU Usage - 4.7s system + 3.7s user = 8.4s total (542.0s, 1.5% cpu)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 20:02:06 EDT  (total: 00:09:03)

@@ -1,0 +1,11 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-YDIR
+/EEnet
+-YDIR
+../src
+-LINEDEBUG
+-LIBEXT
+.sv

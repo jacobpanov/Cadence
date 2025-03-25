@@ -90,4 +90,6 @@ xcelium> run
 Simulation stopped via $stop(1) at time 890 NS + 0
 xcelium> run
 xmsim: *W,RNQUIE: Simulation is complete.
-xcelium> 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 24, 2025 at 19:52:06 EDT  (total: 00:27:31)

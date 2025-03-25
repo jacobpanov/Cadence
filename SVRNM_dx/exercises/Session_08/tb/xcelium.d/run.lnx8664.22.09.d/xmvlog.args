@@ -1,0 +1,32 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.22.09.d
+-RUNMODE
+-NOWARN
+NSVCER
+-NOWARN
+SAWSTP
+-LINEDEBUG
+-STATUS
+../../../common/packages/EE_pkg.sv
+-YDIR
+/EEnet
+-YDIR
+../src
+-LIBEXT
+.sv
+VRdiff_tb.sv
+-CDSLIB
+./xcelium.d/run.lnx8664.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.22.09.d/xllibs
+-ALLOWUNBOUND
+-hastop
