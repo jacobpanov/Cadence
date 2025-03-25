@@ -1,0 +1,36 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.22.09.d
+-RUNMODE
+-NOWARN
+NSVCER
+-NOWARN
+SAWSTP
+../../../common/packages/EE_pkg.sv
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/CapGeq.sv
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/VIRsrcG.sv
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/VRsrcD.sv
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/EEIO.sv
+../src/doubler0_full.sv
+../src/doubler0e.sv
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/CapDeq.sv
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/EVIRsrcG.vams
+/home/jpanov/Cadence/SVRNM_dx/common//EEnet/EVmeas.vams
+../src/doubler_full.vams
+doubler_stim.sv
+doubler0_tb.sv
+-CDSLIB
+./xcelium.d/run.lnx8664.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.22.09.d/xllibs
+-ALLOWUNBOUND
+-HASVLOGAMSINPUT
+-amscommfile
+./xcelium.d/AMSD/ams_spice_in/amscomm.list

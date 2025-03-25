@@ -1,0 +1,4 @@
+../src/induc.sv
+../src/cap_gnd.sv
+../src/EEIO.sv
+../src/EEIO.vams

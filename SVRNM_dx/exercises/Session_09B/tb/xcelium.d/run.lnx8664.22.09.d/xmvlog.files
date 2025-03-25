@@ -1,0 +1,17 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/jpanov/Cadence/SVRNM_dx/common/packages/EE_pkg.sv
+/home/jpanov/Cadence/SVRNM_dx/common/EEnet/CapGeq.sv
+/home/jpanov/Cadence/SVRNM_dx/common/EEnet/VIRsrcG.sv
+/home/jpanov/Cadence/SVRNM_dx/common/EEnet/VRsrcD.sv
+/home/jpanov/Cadence/SVRNM_dx/common/EEnet/EEIO.sv
+/home/jpanov/Cadence/SVRNM_dx/examples/chargePumpDoubler/doubler0_full.sv
+/home/jpanov/Cadence/SVRNM_dx/examples/chargePumpDoubler/doubler0e.sv
+/home/jpanov/Cadence/SVRNM_dx/common/EEnet/CapDeq.sv
+/home/jpanov/Cadence/SVRNM_dx/common/EEnet/EVIRsrcG.vams
+/home/jpanov/Cadence/SVRNM_dx/common/EEnet/EVmeas.vams
+/home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/src/doubler_full.vams
+/home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/tb/doubler_stim.sv
+/home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/tb/doubler0_tb.sv

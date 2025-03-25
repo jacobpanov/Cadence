@@ -1,0 +1,55 @@
+HEADER
+"PSFversion" "1.00"
+"Log Generator" "drlLog rev. 1.0"
+"Log Time Stamp" "Tue Mar 25 16:22:14 2025"
+"psfversion" "1.4.0"
+"simulator" "spectre"
+"version" "21.1.0.751.isr19"
+"date" "4:22:14 PM, Tue Mar 25, 2025"
+"design" "//"
+"signalNameType" "spectre"
+"simMode" "Spectre"
+"measdgt" 0
+"ingold" 2
+"sst2usecolon" 0
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING *
+)
+VALUE
+"doit-tran" "analysisInst" (
+"tran"
+"waves.trn"
+"SST2"
+""
+("time")
+"Transient Analysis `doit': time = (0 s -> 10 us)"
+) PROP(
+"data_type" "swept_scalar"
+"UUID" "node1680.palmetto.clemson.edu|x86_64|3045852|1742934117|0"
+"dataset_logical_name" "doit-tran"
+"dataset_partition_priority" 1
+"dataset_partition_type" "digital"
+)
+
+"doit-tran" "analysisInst" (
+"tran"
+"doit.tran.tran"
+"PSF"
+""
+("time")
+"Transient Analysis `doit': time = (0 s -> 10 us)"
+) PROP(
+"data_type" "swept_scalar"
+"UUID" "node1680.palmetto.clemson.edu|x86_64|3045852|1742934117|0"
+"dataset_logical_name" "doit-tran"
+"dataset_partition_priority" 0
+"dataset_partition_type" "analog"
+)
+
+END

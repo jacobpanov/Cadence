@@ -1,0 +1,60 @@
+ahdlcmicompile: Compiling ahdlcmi in xcelium.d/AMSD/ahdlSimDB/anactrl.ahdlSimDB//34c1393a60138db301d5aaadc4761a14.worklib__EVmeas__vams__0x10000001_behavioral.ahdlcmi/Linux-64/ for Linux-64 with optimize using gcc on Tue Mar 25 16:47:46 EDT 2025 [5.0]
+ahdlcmicompile: Generating makefile
+PATH:  /software/commercial/cadence/SPECTRE211/bin:/software/commercial/cadence/SPECTRE211/tools.lnx86/bin/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/bin:/software/commercial/cadence/XCELIUM2209/tools/bin/64bit:/software/commercial/cadence/XCELIUM2209/tools/bin/64bit:/software/commercial/cadence/XCELIUM2209/tools/bin/64bit:/software/commercial/cadence/SPECTRE211/install/bin.lnx86:/software/commercial/cadence/XCELIUM2209/tools.lnx86/bin:/software/commercial/cadence/XCELIUM2209/install/bin.lnx86:/software/commercial/cadence/XCELIUM2209/bin:/software/commercial/TurboVNC/bin:/home/jpanov/.local/bin:/home/jpanov/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin
+LD_LIBRARY_PATH:  /software/commercial/cadence/SPECTRE211/tools.lnx86/giganta/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/mdl/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/mmsim/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/tcltk-8.4.20/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/python/64bit/lib:/software/commercial/cadence/SPECTRE211/tools.lnx86/inca/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/awrmwo/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/dfII/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/fmc/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/lib:/software/commercial/cadence/XCELIUM2209/tools/lib/64bit:/software/commercial/cadence/XCELIUM2209/tools/lib/64bit/SuSE
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/gnumake -j1 -f GNUmakefile
+Cleaning ./obj/optimize/5.0
+rm -f -rf ./obj/optimize/5.0
+Compiling C file worklib__EVmeas__vams__0x10000001_behavioral.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -c worklib__EVmeas__vams__0x10000001_behavioral.c -o obj/optimize/5.0/worklib__EVmeas__vams__0x10000001_behavioral.o || rm -f -f obj/optimize/5.0/worklib__EVmeas__vams__0x10000001_behavioral.o
+<stdin>: In function 'worklib__EVmeas__vams__0x10000001_behavioral_pPrintDescription':
+<stdin>:1002:3: warning: implicit declaration of function 'msgWrite' [-Wimplicit-function-declaration]
+<stdin>:1004:67: warning: implicit declaration of function 'devGetRFinFreqDomain' [-Wimplicit-function-declaration]
+<stdin>: In function 'worklib__EVmeas__vams__0x10000001_behavioral_pGetInstanceParams':
+<stdin>:1233:41: warning: implicit declaration of function 'devGetInstKnotStatus'; did you mean 'devGetInstState'? [-Wimplicit-function-declaration]
+<stdin>: In function 'worklib__EVmeas__vams__0x10000001_behavioral_pDC_Load':
+<stdin>:1517:41: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2836:63: note: expected 'void *' but argument is of type 'long int'
+ 2836 | ASL_FUNC_DECL_START extern void aslDevFillZeorDiagonalElemet( void *, int, unsigned int, struct ahdlFuncModeParam * );
+      |                                                               ^~~~~~
+<stdin>: In function 'worklib__EVmeas__vams__0x10000001_behavioral_pCompare':
+<stdin>:2121:36: warning: assignment to 'long int' from 'long int *' makes integer from pointer without a cast [-Wint-conversion]
+<stdin>:2122:23: warning: passing argument 1 of 'memcpy' makes pointer from integer without a cast [-Wint-conversion]
+In file included from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlPiCmi.h:5,
+                 from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:80,
+                 from <stdin>:24:
+/usr/include/string.h:43:14: note: expected 'void * restrict' but argument is of type 'long int'
+   43 | extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+      |              ^~~~~~
+<stdin>:2122:57: warning: passing argument 2 of 'memcpy' makes pointer from integer without a cast [-Wint-conversion]
+In file included from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlPiCmi.h:5,
+                 from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:80,
+                 from <stdin>:24:
+/usr/include/string.h:43:14: note: expected 'const void * restrict' but argument is of type 'long int'
+   43 | extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+      |              ^~~~~~
+<stdin>:2124:36: warning: assignment to 'long int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+<stdin>: In function 'worklib__EVmeas__vams__0x10000001_behavioral_pGetMatrixPointers':
+<stdin>:2280:33: warning: assignment to 'long int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+<stdin>: In function 'worklib__EVmeas__vams__0x10000001_behavioral_pAnalTranLoad':
+<stdin>:3017:8: warning: implicit declaration of function 'isBeamsFlow' [-Wimplicit-function-declaration]
+<stdin>:3045:42: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2836:63: note: expected 'void *' but argument is of type 'long int'
+ 2836 | ASL_FUNC_DECL_START extern void aslDevFillZeorDiagonalElemet( void *, int, unsigned int, struct ahdlFuncModeParam * );
+      |                                                               ^~~~~~
+<stdin>: In function 'worklib__EVmeas__vams__0x10000001_behavioral_pSaveRestart':
+<stdin>:3306:13: warning: implicit declaration of function 'mmsThreshSR' [-Wimplicit-function-declaration]
+<stdin>:3313:4: warning: implicit declaration of function 'pklAccessDouble' [-Wimplicit-function-declaration]
+<stdin>: In function 'ahdlworklib__EVmeas__vams__0x10000001_behavioralDescInstall':
+<stdin>:3576:2: warning: implicit declaration of function 'descSetDeviceType'; did you mean 'descSetType'? [-Wimplicit-function-declaration]
+<stdin>:3578:2: warning: implicit declaration of function 'descSetSetContrInfoPtr' [-Wimplicit-function-declaration]
+<stdin>:3586:2: warning: implicit declaration of function 'descSetCopySignals'; did you mean 'descSetMapSignals'? [-Wimplicit-function-declaration]
+<stdin>:3613:2: warning: implicit declaration of function 'descSetPrintDescription' [-Wimplicit-function-declaration]
+<stdin>:3618:2: warning: implicit declaration of function 'descSetGetDigitalOffset' [-Wimplicit-function-declaration]
+<stdin>:3619:2: warning: implicit declaration of function 'descSetGetNodeNamesForBranch' [-Wimplicit-function-declaration]
+<stdin>:3620:2: warning: implicit declaration of function 'descSetGetLinearityFactor' [-Wimplicit-function-declaration]
+rm -f -rf worklib__EVmeas__vams__0x10000001_behavioral.c
+/software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc -shared -O3 -m64 -fPIC -o obj/optimize/5.0/libahdlcmi_worklib__EVmeas__vams__0x10000001_behavioral.so ./obj/optimize/5.0/worklib__EVmeas__vams__0x10000001_behavioral.o  -Wl,-rpath,/usr/lib -Wl,-rpath,/lib -s 
+rm -f -f ./obj/optimize/5.0/worklib__EVmeas__vams__0x10000001_behavioral.o 

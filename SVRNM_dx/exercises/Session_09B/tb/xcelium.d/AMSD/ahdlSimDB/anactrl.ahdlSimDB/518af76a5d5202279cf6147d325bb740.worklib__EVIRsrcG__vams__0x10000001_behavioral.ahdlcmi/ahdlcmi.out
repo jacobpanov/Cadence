@@ -1,0 +1,131 @@
+ahdlcmicompile: Compiling ahdlcmi in xcelium.d/AMSD/ahdlSimDB/anactrl.ahdlSimDB//518af76a5d5202279cf6147d325bb740.worklib__EVIRsrcG__vams__0x10000001_behavioral.ahdlcmi/Linux-64/ for Linux-64 with optimize using gcc on Tue Mar 25 16:47:39 EDT 2025 [5.0]
+ahdlcmicompile: Generating makefile
+PATH:  /software/commercial/cadence/SPECTRE211/bin:/software/commercial/cadence/SPECTRE211/tools.lnx86/bin/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/bin:/software/commercial/cadence/XCELIUM2209/tools/bin/64bit:/software/commercial/cadence/XCELIUM2209/tools/bin/64bit:/software/commercial/cadence/XCELIUM2209/tools/bin/64bit:/software/commercial/cadence/SPECTRE211/install/bin.lnx86:/software/commercial/cadence/XCELIUM2209/tools.lnx86/bin:/software/commercial/cadence/XCELIUM2209/install/bin.lnx86:/software/commercial/cadence/XCELIUM2209/bin:/software/commercial/TurboVNC/bin:/home/jpanov/.local/bin:/home/jpanov/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin
+LD_LIBRARY_PATH:  /software/commercial/cadence/SPECTRE211/tools.lnx86/giganta/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/mdl/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/mmsim/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/tcltk-8.4.20/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/python/64bit/lib:/software/commercial/cadence/SPECTRE211/tools.lnx86/inca/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/awrmwo/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/dfII/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/fmc/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/lib/64bit:/software/commercial/cadence/SPECTRE211/tools.lnx86/lib:/software/commercial/cadence/XCELIUM2209/tools/lib/64bit:/software/commercial/cadence/XCELIUM2209/tools/lib/64bit/SuSE
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/gnumake -j1 -f GNUmakefile
+Cleaning ./obj/optimize/5.0
+rm -f -rf ./obj/optimize/5.0
+Compiling C file worklib__EVIRsrcG__vams__0x10000001_behavioral_func.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -c worklib__EVIRsrcG__vams__0x10000001_behavioral_func.c -o obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_func.o || rm -f -f obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_func.o
+rm -f -rf worklib__EVIRsrcG__vams__0x10000001_behavioral_func.c
+Compiling C file worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -c worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad.c -o obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad.o || rm -f -f obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad.o
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad':
+<stdin>:249:113: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2264:62: note: expected 'void *' but argument is of type 'long int'
+ 2264 | ASL_FUNC_DECL_START extern long aslDevInterAddStaticElement( void *, double, struct ahdlFuncModeParam * );
+      |                                                              ^~~~~~
+<stdin>:274:49: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2264:62: note: expected 'void *' but argument is of type 'long int'
+ 2264 | ASL_FUNC_DECL_START extern long aslDevInterAddStaticElement( void *, double, struct ahdlFuncModeParam * );
+      |                                                              ^~~~~~
+rm -f -rf worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad.c
+Compiling C file worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -c worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad.c -o obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad.o || rm -f -f obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad.o
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad':
+<stdin>:245:113: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2264:62: note: expected 'void *' but argument is of type 'long int'
+ 2264 | ASL_FUNC_DECL_START extern long aslDevInterAddStaticElement( void *, double, struct ahdlFuncModeParam * );
+      |                                                              ^~~~~~
+rm -f -rf worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad.c
+Compiling C file worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -c worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad.c -o obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad.o || rm -f -f obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad.o
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad':
+<stdin>:255:113: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2264:62: note: expected 'void *' but argument is of type 'long int'
+ 2264 | ASL_FUNC_DECL_START extern long aslDevInterAddStaticElement( void *, double, struct ahdlFuncModeParam * );
+      |                                                              ^~~~~~
+<stdin>:280:49: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2264:62: note: expected 'void *' but argument is of type 'long int'
+ 2264 | ASL_FUNC_DECL_START extern long aslDevInterAddStaticElement( void *, double, struct ahdlFuncModeParam * );
+      |                                                              ^~~~~~
+rm -f -rf worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad.c
+Compiling C file worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -c worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad.c -o obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad.o || rm -f -f obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad.o
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad':
+<stdin>:251:113: warning: passing argument 1 of 'aslDevInterAddStaticElement' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2264:62: note: expected 'void *' but argument is of type 'long int'
+ 2264 | ASL_FUNC_DECL_START extern long aslDevInterAddStaticElement( void *, double, struct ahdlFuncModeParam * );
+      |                                                              ^~~~~~
+rm -f -rf worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad.c
+Compiling C file worklib__EVIRsrcG__vams__0x10000001_behavioral_OpPointCalc.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -c worklib__EVIRsrcG__vams__0x10000001_behavioral_OpPointCalc.c -o obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_OpPointCalc.o || rm -f -f obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_OpPointCalc.o
+rm -f -rf worklib__EVIRsrcG__vams__0x10000001_behavioral_OpPointCalc.c
+Compiling C file worklib__EVIRsrcG__vams__0x10000001_behavioral_cmi_c.c (optimize)
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/bin/64bit/ahdlcc 0 /software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc  -ffast-math  -fno-unsafe-math-optimizations -O3 -m64 -DSYSV -DSVR4 -D_REENTRANT -fPIC   -DconfigSPECTRE -I. -I/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include -I/software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/include -c worklib__EVIRsrcG__vams__0x10000001_behavioral_cmi_c.c -o obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_cmi_c.o || rm -f -f obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_cmi_c.o
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pPrintDescription':
+<stdin>:719:3: warning: implicit declaration of function 'msgWrite' [-Wimplicit-function-declaration]
+<stdin>:721:67: warning: implicit declaration of function 'devGetRFinFreqDomain' [-Wimplicit-function-declaration]
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pGetInstanceParams':
+<stdin>:950:41: warning: implicit declaration of function 'devGetInstKnotStatus'; did you mean 'devGetInstState'? [-Wimplicit-function-declaration]
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pDC_Load':
+<stdin>:1236:41: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2836:63: note: expected 'void *' but argument is of type 'long int'
+ 2836 | ASL_FUNC_DECL_START extern void aslDevFillZeorDiagonalElemet( void *, int, unsigned int, struct ahdlFuncModeParam * );
+      |                                                               ^~~~~~
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pCompare':
+<stdin>:1881:3: warning: implicit declaration of function 'spReplaceMatrixPointer'; did you mean 'aslDevLaplaceGetMatrixPointer'? [-Wimplicit-function-declaration]
+<stdin>:1889:37: warning: assignment to 'long int' from 'long int *' makes integer from pointer without a cast [-Wint-conversion]
+<stdin>:1890:23: warning: passing argument 1 of 'memcpy' makes pointer from integer without a cast [-Wint-conversion]
+In file included from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlPiCmi.h:5,
+                 from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:80,
+                 from <stdin>:24:
+/usr/include/string.h:43:14: note: expected 'void * restrict' but argument is of type 'long int'
+   43 | extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+      |              ^~~~~~
+<stdin>:1890:58: warning: passing argument 2 of 'memcpy' makes pointer from integer without a cast [-Wint-conversion]
+In file included from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlPiCmi.h:5,
+                 from /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:80,
+                 from <stdin>:24:
+/usr/include/string.h:43:14: note: expected 'const void * restrict' but argument is of type 'long int'
+   43 | extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+      |              ^~~~~~
+<stdin>:1892:37: warning: assignment to 'long int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pMapSignals':
+<stdin>:1952:26: warning: comparison between pointer and integer
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pGetMatrixPointers':
+<stdin>:2073:34: warning: assignment to 'long int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+<stdin>:2075:37: warning: assignment to 'long int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pAnalTranLoad':
+<stdin>:3005:42: warning: passing argument 1 of 'aslDevFillZeorDiagonalElemet' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2836:63: note: expected 'void *' but argument is of type 'long int'
+ 2836 | ASL_FUNC_DECL_START extern void aslDevFillZeorDiagonalElemet( void *, int, unsigned int, struct ahdlFuncModeParam * );
+      |                                                               ^~~~~~
+<stdin>:3007:39: warning: passing argument 1 of 'aslDevFillZeroDiagQuartet' makes pointer from integer without a cast [-Wint-conversion]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:2838:60: note: expected 'void *' but argument is of type 'long int'
+ 2838 | ASL_FUNC_DECL_START extern void aslDevFillZeroDiagQuartet( void *, int, unsigned int, struct ahdlFuncModeParam * );
+      |                                                            ^~~~~~
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pSaveRestart':
+<stdin>:3275:13: warning: implicit declaration of function 'mmsThreshSR' [-Wimplicit-function-declaration]
+<stdin>:3282:4: warning: implicit declaration of function 'pklAccessDouble' [-Wimplicit-function-declaration]
+<stdin>:3283:29: warning: passing argument 2 of 'aslDevAvarSR' from incompatible pointer type [-Wincompatible-pointer-types]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1215:58: note: expected 'struct ahdlAnalogVar *' but argument is of type 'char *'
+ 1215 | ASL_FUNC_DECL_START extern PklError_e aslDevAvarSR( int, struct ahdlAnalogVar *, char *, char *, char *, PklJar_t * );
+      |                                                          ^~~~~~~~~~~~~~~~~~~~~~
+<stdin>: In function 'worklib__EVIRsrcG__vams__0x10000001_behavioral_pSaveRestartInst':
+<stdin>:3362:27: warning: passing argument 2 of 'aslDevAvarSR' from incompatible pointer type [-Wincompatible-pointer-types]
+In file included from <stdin>:24:
+/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/ahdlcmi/include/ahdlDevLibGlobal.h:1215:58: note: expected 'struct ahdlAnalogVar *' but argument is of type 'char *'
+ 1215 | ASL_FUNC_DECL_START extern PklError_e aslDevAvarSR( int, struct ahdlAnalogVar *, char *, char *, char *, PklJar_t * );
+      |                                                          ^~~~~~~~~~~~~~~~~~~~~~
+<stdin>: In function 'ahdlworklib__EVIRsrcG__vams__0x10000001_behavioralDescInstall':
+<stdin>:3585:2: warning: implicit declaration of function 'descSetDeviceType'; did you mean 'descSetType'? [-Wimplicit-function-declaration]
+<stdin>:3587:2: warning: implicit declaration of function 'descSetSetContrInfoPtr' [-Wimplicit-function-declaration]
+<stdin>:3595:2: warning: implicit declaration of function 'descSetCopySignals'; did you mean 'descSetMapSignals'? [-Wimplicit-function-declaration]
+<stdin>:3625:2: warning: implicit declaration of function 'descSetPrintDescription' [-Wimplicit-function-declaration]
+<stdin>:3630:2: warning: implicit declaration of function 'descSetGetDigitalOffset' [-Wimplicit-function-declaration]
+<stdin>:3631:2: warning: implicit declaration of function 'descSetGetNodeNamesForBranch' [-Wimplicit-function-declaration]
+<stdin>:3632:2: warning: implicit declaration of function 'descSetGetLinearityFactor' [-Wimplicit-function-declaration]
+rm -f -rf worklib__EVIRsrcG__vams__0x10000001_behavioral_cmi_c.c
+/software/commercial/cadence/SPECTRE211/tools.lnx86/cdsgcc/gcc/9.3/bin/gcc -shared -O3 -m64 -fPIC -o obj/optimize/5.0/libahdlcmi_worklib__EVIRsrcG__vams__0x10000001_behavioral.so ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_func.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_OpPointCalc.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_cmi_c.o  -Wl,-rpath,/usr/lib -Wl,-rpath,/lib -s 
+rm -f -f ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_func.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncDerLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_DcFuncLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncDerLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_TranFuncLoad.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_OpPointCalc.o ./obj/optimize/5.0/worklib__EVIRsrcG__vams__0x10000001_behavioral_cmi_c.o 

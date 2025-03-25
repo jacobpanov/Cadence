@@ -1,0 +1,13 @@
+1742845398 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/src/doubler_full.vams
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/CapDeq.sv
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/VIRsrcG.sv
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/EVIRsrcG.vams
+1742845396 /home/jpanov/Cadence/SVRNM_dx/examples/chargePumpDoubler/doubler0_full.sv
+1742857672 /home/jpanov/Cadence/SVRNM_dx/common/packages/EE_pkg.sv
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/EEIO.sv
+1742845396 /home/jpanov/Cadence/SVRNM_dx/examples/chargePumpDoubler/doubler0e.sv
+1742845398 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/tb/doubler_stim.sv
+1742845398 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/tb/doubler0_tb.sv
+1742845394 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/VRsrcD.sv
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/CapGeq.sv
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/EVmeas.vams

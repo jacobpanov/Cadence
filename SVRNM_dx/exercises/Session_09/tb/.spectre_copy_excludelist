@@ -1,0 +1,8 @@
+waves.dsn
+waves.trn
+*.tran
+*.sig
+*.psfxl
+dataset.stitch
+.dataset.index
+xrun.log

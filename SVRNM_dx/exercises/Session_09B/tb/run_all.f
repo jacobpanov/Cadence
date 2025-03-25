@@ -6,6 +6,7 @@
 -nowarn SAWSTP
 -64bit
 -iereport
+../../../common/packages/EE_pkg.sv
 $COMMON/EEnet/CapGeq.sv
 $COMMON/EEnet/VIRsrcG.sv
 $COMMON/EEnet/VRsrcD.sv

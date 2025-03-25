@@ -1,5 +1,5 @@
 xrun(64): 22.09-s010: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s010: Started on Mar 25, 2025 at 16:20:02 EDT
+TOOL:	xrun(64)	22.09-s010: Started on Mar 25, 2025 at 16:21:42 EDT
 xrun
 	-clean
 	-rnm_tech
@@ -25,15 +25,324 @@ file: ../../../common/packages/EE_pkg.sv
 	package worklib.EE_pkg:sv
 		errors: 0, warnings: 0
 file: RLC_tb.sv
-IndDeq0 #(.l(L), .ic(0), .tinc(Ts))  L1 (A,B);   // EEnet inductor model
-                                |
-xmvlog: *E,UNDIDN (RLC_tb.sv,42|32): 'Ts': undeclared identifier [12.5(IEEE)].
-CapGeq0 #(.c(C), .ic(0), .tinc(Ts))  C1 (B);     // EEnet capacitor model
-                                |
-xmvlog: *E,UNDIDN (RLC_tb.sv,43|32): 'Ts': undeclared identifier [12.5(IEEE)].
 	module worklib.RLC_tb:sv
-		errors: 2, warnings: 0
-xmvlog: Memory Usage - Current physical: 27.2M, Current virtual: 62.1M
-xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.7s, 6.2% cpu)
-xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-TOOL:	xrun(64)	22.09-s010: Exiting on Mar 25, 2025 at 16:20:10 EDT  (total: 00:00:08)
+		errors: 0, warnings: 0
+file: ../../../common/EEnet/EVIRsrcG.vams
+	module EEnet.EVIRsrcG:vams
+		errors: 0, warnings: 0
+file: ../../../common/EEnet/VIRsrcG.sv
+	module EEnet.VIRsrcG:sv
+		errors: 0, warnings: 0
+file: ../src/induc.vams
+	module src.induc:vams
+		errors: 0, warnings: 0
+file: ../src/cap_gnd.vams
+	module src.cap_gnd:vams
+		errors: 0, warnings: 0
+file: ../src/IndDeq0.sv
+	module src.IndDeq0:sv
+		errors: 0, warnings: 0
+file: ../src/CapGeq0.sv
+	module src.CapGeq0:sv
+		errors: 0, warnings: 0
+file: ../../../common/EEnet/EEIO.sv
+	module EEnet.EEIO:sv
+		errors: 0, warnings: 0
+xmvlog: Memory Usage - Current physical: 29.4M, Current virtual: 63.3M
+xmvlog: CPU Usage - 0.0s system + 0.0s user = 0.1s total (0.7s, 8.6% cpu)
+xmelab: *N,MSFLON: Xcelium will initiate mixed signal elaboration, Reason: option -RNM_TECH.
+		Caching library 'worklib' ....... Done
+		Caching library 'EEnet' ....... Done
+		Caching library 'src' ....... Done
+		Caching library 'EEnet' ....... Done
+		Caching library 'src' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'src' ....... Done
+		Caching library 'EEnet' ....... Done
+	Top level design units:
+		EE_pkg
+		$unit_0x3519044a
+		RLC_tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Discipline resolution Pass...
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.RLC_tb:sv <0x285bf543>
+			streams:  13, words: 15538
+		worklib.EE_pkg:sv <0x462a847c>
+			streams:   2, words: 13728
+		EEnet.EEIO:sv <0x047427b4>
+			streams:   7, words: 19128
+		EEnet.VIRsrcG:sv <0x076ffbc3>
+			streams:   7, words:  9435
+		EEnet.EVIRsrcG:vams <0x1a841ce1>
+			streams:   4, words:  4335
+		src.CapGeq0:sv <0x479414ac>
+			streams:   5, words:  4872
+		src.IndDeq0:sv <0x7570167c>
+			streams:  11, words: 12547
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 9       8
+		Verilog packages:        1       1
+		Resolved nets:           1       1
+		Registers:              93      80
+		Scalar wires:           14       -
+		Vectored wires:         10       -
+		Always blocks:           7       7
+		Initial blocks:         20      15
+		Parallel blocks:         1       1
+		Cont. assignments:      12      10
+		Pseudo assignments:     10      10
+		Interconnect:            3       -
+		Compilation units:       1       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.RLC_tb:sv
+xmelab: Memory Usage - Final: 65.8M, Peak: 236.3M, Peak virtual: 327.3M
+xmelab: CPU Usage - 0.1s system + 0.1s user = 0.2s total (1.2s, 17.7% cpu)
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Starting analog simulation engine...
+AMSD Flexible Release Matrix --- using Spectre from installation:
+    /software/commercial/cadence/SPECTRE211/tools.lnx86/bin/spectre
+AMSD: Using spectre solver with arguments: -ahdllibdir xcelium.d/AMSD/ahdlSimDB.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> source /software/commercial/cadence/XCELIUM2209/tools/xcelium/files/amsrc
+xcelium> database -open -shm -into waves.shm waves -default 
+Created default SHM database waves
+xcelium> probe -create -database waves -all -memories -depth all
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPSWM: Protected signal was excluded from probing.
+xmsim: *W,PRPWML: Protected limit warning count reached (10). Additional warnings will not be reported.
+Created probe 1
+xcelium> run
+
+Spectre (R) Circuit Simulator
+Version 21.1.0.751.isr19 64bit -- 22 May 2023
+Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: jpanov   Host: node1680.palmetto.clemson.edu   HostID: 7D0A9607   PID: 3046415
+Memory  available: 62.6281 GB  physical: 66.9409 GB
+Linux   : Rocky Linux release 8.8 (Green Obsidian)
+CPU Type: Intel(R) Xeon(R) CPU E5-2665 0 @ 2.40GHz
+        Socket: Processors [Frequency]
+        0:       0 [3100.0],  1 [3100.0],  2 [3100.0],  3 [3100.0],  4 [3100.0]
+                 5 [3100.0],  6 [3100.0],  7 [3100.0]
+        1:       8 [3100.0],  9 [3100.0], 10 [2162.6], 11 [3100.0], 12 [3100.0]
+                13 [3100.0], 14 [3100.0], 15 [3100.0]
+        
+System load averages (1min, 5min, 15min) : 1.8 %, 1.9 %, 4.8 %
+Affinity is set by user to processors:  8  9 10 11 
+
+Simulating `amsctrl.ams' on node1680.palmetto.clemson.edu at 4:22:09 PM, Tue Mar 25, 2025 (process id: 3046415).
+Current working directory: /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb
+Command line:
+    /software/commercial/cadence/SPECTRE211/tools.lnx86/bin/spectre -64  \
+        amsctrl.ams +config  \
+        /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/etc/configs/ams.cfg  \
+        -ahdllibdir xcelium.d/AMSD/ahdlSimDB -raw waves.shm  \
+        +ams_control=xcelium.d/AMSD/ams_ctrl/ams_ctrl_3045852_node1680.palmetto.clemson.edu
+Spectre Licensing Information:
+Spectre [16:22:09.258977] Configured Lic search path (21.01-s002): 28070@license8.clemson.edu
+
+Spectre Licensing Information:
+Spectre [16:22:09.413187] Periodic Lic check successful
+
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libphilips_o_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+Reading file:  /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb/amsctrl.ams
+
+Notice from spectre during circuit read-in.
+    Configuration file used: `/software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/etc/configs/ams.cfg'.
+
+Reading file:  /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb/xcelium.d/AMSD/ahdlSimDB/EEnet__EVIRsrcG__vams__0x10000001_behavioral.flex.va
+Reading file:  /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/etc/ahdl/constants.vams
+Reading file:  /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb/amsctrl.scs
+Reading file:  /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/etc/configs/ams.cfg
+Time for NDB Parsing: CPU = 131.029 ms, elapsed = 559.637 ms.
+Time accumulated: CPU = 196.807 ms, elapsed = 559.64 ms.
+Peak resident memory used = 162 Mbytes.
+
+Created directory xcelium.d/AMSD/ahdlSimDB/amsctrl.ahdlSimDB/ (775)
+Created directory xcelium.d/AMSD/ahdlSimDB/amsctrl.ahdlSimDB//790b1b1021be315c478c8086e5aadc23.EEnet__EVIRsrcG__vams__0x10000001_behavioral.ahdlcmi/ (775)
+Created directory xcelium.d/AMSD/ahdlSimDB/amsctrl.ahdlSimDB//790b1b1021be315c478c8086e5aadc23.EEnet__EVIRsrcG__vams__0x10000001_behavioral.ahdlcmi/Linux-64/ (775)
+Compiling ahdlcmi module library for EEnet__EVIRsrcG__vams__0x10000001_behavioral.
+Finished compilation in 4.24 s (elapsed) for EEnet__EVIRsrcG__vams__0x10000001_behavioral.
+Installed compiled interface for EEnet__EVIRsrcG__vams__0x10000001_behavioral.
+Time for Elaboration: CPU = 50.551 ms, elapsed = 4.45134 s.
+Time accumulated: CPU = 247.444 ms, elapsed = 5.01106 s.
+Peak resident memory used = 175 Mbytes.
+
+
+Time for EDB Visiting: CPU = 1.089 ms, elapsed = 13.16 ms.
+Time accumulated: CPU = 248.632 ms, elapsed = 5.02433 s.
+Peak resident memory used = 175 Mbytes.
+
+
+Notice from spectre during topology check.
+    Only one connection to node `0'.
+
+
+Global user options:
+               save = all
+       saveahdlvars = all
+
+Scoped user options:
+
+Circuit inventory:
+              nodes 2
+          capacitor 1     
+EEnet__EVIRsrcG__vams__0x10000001_behavioral 1     
+           inductor 1     
+
+Analysis and control statement inventory:
+               tran 1     
+
+Output statements:
+             .probe 0     
+           .measure 0     
+               save 11    
+
+Time for parsing: CPU = 3.441 ms, elapsed = 50.0269 ms.
+Time accumulated: CPU = 252.147 ms, elapsed = 5.07443 s.
+Peak resident memory used = 179 Mbytes.
+
+~~~~~~~~~~~~~~~~~~~~~~
+Pre-Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+
+************************************************
+Transient Analysis `doit': time = (0 s -> 10 us)
+************************************************
+
+Notice from spectre during IC analysis, during transient analysis `doit'.
+    RLC_tb.L1e.ind: Initial condition computed for node RLC_tb.L1e.ind:1 is in error by 1.99999 nA.
+        Decrease `rforce' to reduce error in computed initial conditions.  However, setting rforce too small may result in convergence difficulties or in the matrix becoming singular.
+
+DC simulation time: CPU = 1.785 ms, elapsed = 18.3952 ms.
+
+Opening the PSFXL file waves.shm/doit.tran.tran ...
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 10 us
+    step = 10 ns
+    maxstep = 100 ns
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 100e-06
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = conservative
+    method = trap
+    lteratio = 10
+    relref = alllocal
+    cmin = 0 F
+    gmin = 1 pS
+
+
+Output and IC/nodeset summary:
+                 save   2       (current)
+                 save   6       (voltage)
+                 others 4       
+                 save   1       (unitless)
+
+......9MEASURED PERIODS:  Analog 62.96ns  EEnet 63.18ns  Diff  0.22ns ( 0.35%)
+Simulation stopped via $stop(1) at time 1001 NS + 0
+xcelium> ^C
+xcelium> exit
+
+`AutoStop = yes'. Analysis finished at 1.00221 us.
+
+Number of accepted tran steps =             618
+
+Maximum value achieved for any signal of each quantity: 
+V: V(RLC_tb.Be) = 3.455 V
+I: I(RLC_tb.VRe._cds_internal_EVIRsrcG_:P_flow) = 2.007 mA
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post-Transient Simulation Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -   To further speed up simulation, consider
+          add ++aps on command line
+   -   Non-default settings that could significantly slow down simulation
+          errpreset = conservative, default moderate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+During simulation, the CPU load for active processors is :
+         8 (1.3 %)       9 (1.3 %)      10 (1.2 %)      11 (1.4 %)
+        Total: 8.7%
+Initial condition solution time: CPU = 1.827 ms, elapsed = 18.4391 ms.
+Intrinsic tran analysis time:    CPU = 3.24256 s, elapsed = 1.44749 ks.
+
+**** AMSD: Mixed-Signal Activity Statistics ****
+Number of A-to-D events:                     620
+  Number of A-to-D events in IEs:            620
+Number of D-to-A events:                       8
+  Number of D-to-A events in IEs:              0
+Number of VHDL-AMS Breaks:                     0
+Number of direct digital accesses:               9
+
+**** AMSD: IE Additional Activity Statistics ****
+Number of IEs with D-to-A X edge:                    0
+Number of IEs with D-to-A Z edge:                    0
+Number of IEs with A-to-D X edge:                    0
+Number of IEs with A-to-D Z edge:                    0
+IE with max number of D-to-A edges:
+IE with max number of A-to-D edges:
+Number of reporting IEs / total IEs:               0/0
+Number of IEs with Vin/Vdd limit checked:            0
+
+Total time required for tran analysis `doit': CPU = 3.24756 s, elapsed = 1.44755 ks (24m  7.6s), util. = 224e-03%.
+Time accumulated: CPU = 3.50979 s, elapsed = 1.45289 ks (24m  12.9s).
+Peak resident memory used = 198 Mbytes.
+
+...Regained control from SimVision
+-------------------------------------
+Simulation complete via transient analysis stoptime at time 1002207954 FS
+Spectre Licensing Information:
+Spectre Lic Summary:
+[16:46:22.156394] Cdslmd servers:28070@license8.clemson.edu
+[16:46:22.156435] Feature usage summary:
+[16:46:22.156440] Virtuoso_Multi_mode_Simulation
+[16:46:22.156440] Spectre_AMS_MMSIM_Lk
+
+
+Aggregate audit (4:46:22 PM, Tue Mar 25, 2025):
+Time used: CPU = 3.51 s, elapsed = 1.45 ks (24m  12.9s), util. = 242e-03%.
+Time spent in licensing: elapsed = 82.5 ms.
+Peak memory used = 199 Mbytes.
+Simulation started at: 4:22:09 PM, Tue Mar 25, 2025, ended at: 4:46:22 PM, Tue Mar 25, 2025, with elapsed time (wall clock): 1.45 ks (24m  12.9s).
+spectre completes with 0 errors, 0 warnings, and 4 notices.
+Total License Acquisition Time : 0.583 s.
+  xmsim  : License Acquisition Time -- 0.5 s.
+  spectre: License Acquisition Time -- 0.0825 s.
+xmsim: Memory Usage - Final: 87.7M, Peak: 97.4M, Peak virtual: 419.0M
+xmsim: CPU Usage - 20.0s system + 7.9s user = 27.8s total (1471.2s, 1.9% cpu)
+TOOL:	xrun(64)	22.09-s010: Exiting on Mar 25, 2025 at 16:46:22 EDT  (total: 00:24:40)

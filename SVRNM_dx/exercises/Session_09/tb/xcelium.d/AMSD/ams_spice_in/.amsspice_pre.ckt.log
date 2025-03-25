@@ -5,20 +5,20 @@ Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwi
 
 Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
 
-User: jpanov   Host: node1680.palmetto.clemson.edu   HostID: 7D0A9607   PID: 3045636
-Memory  available: 62.7897 GB  physical: 66.9409 GB
+User: jpanov   Host: node1680.palmetto.clemson.edu   HostID: 7D0A9607   PID: 3045985
+Memory  available: 62.7861 GB  physical: 66.9409 GB
 Linux   : Rocky Linux release 8.8 (Green Obsidian)
 CPU Type: Intel(R) Xeon(R) CPU E5-2665 0 @ 2.40GHz
         Socket: Processors [Frequency]
         0:       0 [3100.0],  1 [3100.0],  2 [3100.0],  3 [3100.0],  4 [3100.0]
                  5 [3100.0],  6 [3100.0],  7 [3100.0]
-        1:       8 [3100.0],  9 [3100.0], 10 [2037.7], 11 [3100.0], 12 [3100.0]
+        1:       8 [3100.0],  9 [3100.0], 10 [2141.0], 11 [3100.0], 12 [3100.0]
                 13 [3100.0], 14 [3100.0], 15 [3100.0]
         
-System load averages (1min, 5min, 15min) : 1.2 %, 2.2 %, 5.2 %
+System load averages (1min, 5min, 15min) : 0.8 %, 1.8 %, 4.8 %
 Affinity is set by user to processors:  8  9 10 11 
 
-Simulating `./xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt' on node1680.palmetto.clemson.edu at 4:20:08 PM, Tue Mar 25, 2025 (process id: 3045636).
+Simulating `./xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt' on node1680.palmetto.clemson.edu at 4:21:45 PM, Tue Mar 25, 2025 (process id: 3045985).
 Current working directory: /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb
 Environment variable:
     SPECTRE_DEFAULTS=
@@ -29,10 +29,10 @@ Command line:
         xcelium.d/AMSD/ams_spice_in/ahdlSimDB =log  \
         ./xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt.log +mts  \
         -token  \
-        0001AF26C83A239465DFBB2CC00A229E73C4B63DFD3B60CB2080FE71B870359768D3A13CC50411B6749FEA2FE10B0F887DC39431F37A3ED44FD9EB2FB063238B7DC3BD10E17135D560C2EE2FEB6735CB2282ED3DDF0E50FB3080A83DEEB8537F10B0973DD20350FB10B0FD6EBB6368CB2186F365ED7C7ECB2A84A83DED3C50FB10B0A83DED3C50FB10B0CFDEE2C95F0E77530000428D
+        0001AF26C83A239465DFBB2CC00A229E73C4B63DFD3B60CB2080FE71B870359768D3A13CC50411B6749FEA2FE10B0F887DC39431F37A3ED44FD9EB2FB063238B7DC3BD10E17135D560C2B92BEB6735CB7586ED3D880A50FB3080A83DEEB8537F10B0973DD20350FB10B0FD6EBB6368CB2186F365ED7C7ECB2A84A83DED3C50FB10B0A83DED3C50FB10B0CFDEFD6B40AC77530000426F
 
 Licensing Information:
-[16:20:08.258953] Configured Lic search path (21.01-s002): 28070@license8.clemson.edu
+[16:21:45.258969] Configured Lic search path (21.01-s002): 28070@license8.clemson.edu
 
 Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
 Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libphilips_o_sh.so ...
@@ -42,12 +42,12 @@ Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/li
 Reading file:  /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb/xcelium.d/AMSD/ams_spice_in/.amsspice_pre.ckt
 Reading file:  /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/etc/configs/spectre.cfg
 Reading file:  /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb/amsctrl.scs
-Time for NDB Parsing: CPU = 113.716 ms, elapsed = 972.167 ms.
-Time accumulated: CPU = 188.688 ms, elapsed = 972.17 ms.
-Peak resident memory used = 151 Mbytes.
+Time for NDB Parsing: CPU = 75.626 ms, elapsed = 185.383 ms.
+Time accumulated: CPU = 147.105 ms, elapsed = 185.386 ms.
+Peak resident memory used = 154 Mbytes.
 
 Licensing Information:
 Lic Summary:
-[16:20:09.223081] Cdslmd servers:28070@license8.clemson.edu
-[16:20:09.223096] Feature usage summary:
+[16:21:45.093616] Cdslmd servers:28070@license8.clemson.edu
+[16:21:45.093625] Feature usage summary:
 

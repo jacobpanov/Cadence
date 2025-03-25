@@ -1,0 +1,53 @@
+
+Spectre (R) Circuit Simulator
+Version 21.1.0.751.isr19 64bit -- 22 May 2023
+Copyright (C) 1989-2023 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: jpanov   Host: node1680.palmetto.clemson.edu   HostID: 7D0A9607   PID: 3047463
+Memory  available: 62.7633 GB  physical: 66.9409 GB
+Linux   : Rocky Linux release 8.8 (Green Obsidian)
+CPU Type: Intel(R) Xeon(R) CPU E5-2665 0 @ 2.40GHz
+        Socket: Processors [Frequency]
+        0:       0 [3100.0],  1 [3100.0],  2 [3100.0],  3 [3100.0],  4 [3100.0]
+                 5 [3100.0],  6 [3100.0],  7 [3100.0]
+        1:       8 [3100.0],  9 [3100.0], 10 [3100.0], 11 [2227.7], 12 [3100.0]
+                13 [3100.0], 14 [3100.0], 15 [3100.0]
+        
+System load averages (1min, 5min, 15min) : 0.1 %, 0.2 %, 1.1 %
+Affinity is set by user to processors:  8  9 10 11 
+
+Simulating `./xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt' on node1680.palmetto.clemson.edu at 4:47:14 PM, Tue Mar 25, 2025 (process id: 3047463).
+Current working directory: /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/tb
+Environment variable:
+    SPECTRE_DEFAULTS=
+Command line:
+    /software/commercial/cadence/SPECTRE211/tools.lnx86/bin/spectre -64  \
+        ./xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt +dcopt=0  \
+        -va,amsspice_pre -ahdllibdir  \
+        xcelium.d/AMSD/ams_spice_in/ahdlSimDB =log  \
+        ./xcelium.d/AMSD/ams_spice_in/./.amsspice_pre.ckt.log +mts  \
+        -token  \
+        0001AF26C83A239465DFBB2CC00A229E73C4B63DFD3B60CB2080FE71B870359768D3A13CC50411B6749FEA2FE10B0F887DC39431F37A3ED44FD9EB2FB063238B7DC3BD10E17135D560C2BA24BF6061CC7689FE1D8E5D50FB20B0A83DEEB8537F10B0973DD20350FB10B0FD6EBB6368CB2186F365ED7C7ECB2A84A83DED3C50FB10B0A83DED3C50FB10B0CFDEFB6C46AB775300004289
+
+Licensing Information:
+[16:47:14.259001] Configured Lic search path (21.01-s002): 28070@license8.clemson.edu
+
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libphilips_o_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /software/commercial/cadence/SPECTRE211/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+Reading file:  /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/tb/xcelium.d/AMSD/ams_spice_in/.amsspice_pre.ckt
+Reading file:  /software/commercial/cadence/SPECTRE211/tools.lnx86/spectre/etc/configs/spectre.cfg
+Reading file:  /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09B/tb/anactrl.scs
+Time for NDB Parsing: CPU = 75.551 ms, elapsed = 199.082 ms.
+Time accumulated: CPU = 145.166 ms, elapsed = 199.084 ms.
+Peak resident memory used = 148 Mbytes.
+
+Licensing Information:
+Lic Summary:
+[16:47:14.237171] Cdslmd servers:28070@license8.clemson.edu
+[16:47:14.237185] Feature usage summary:
+

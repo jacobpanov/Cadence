@@ -1,2 +1,9 @@
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/VIRsrcG.sv
+1742845397 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/src/cap_gnd.vams
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/EVIRsrcG.vams
 1742857672 /home/jpanov/Cadence/SVRNM_dx/common/packages/EE_pkg.sv
-1742933701 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb/RLC_tb.sv
+1742845395 /home/jpanov/Cadence/SVRNM_dx/common/EEnet/EEIO.sv
+1742845397 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/src/induc.vams
+1742845397 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/src/IndDeq0.sv
+1742845397 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/src/CapGeq0.sv
+1742934098 /home/jpanov/Cadence/SVRNM_dx/exercises/Session_09/tb/RLC_tb.sv
