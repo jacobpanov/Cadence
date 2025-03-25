@@ -39,6 +39,9 @@ VIRsrcG #(.tr(Tr))   VR (A, Vin,0.0,Rs);     // EEnet VIR driver with risetime
 
 //>>>>>  ADD EENET-BASED INDUCTOR AND CAPACITOR INSTANCES HERE! 
 
+IndDeq0 #(.l(L), .ic(0), .tinc(Ts))  L1 (A,B);   // EEnet inductor model
+CapGeq0 #(.c(C), .ic(0), .tinc(Ts))  C1 (B);     // EEnet capacitor model
+
 
 
 // Move currents to local variables:
